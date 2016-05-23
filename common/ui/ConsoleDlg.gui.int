@@ -1,0 +1,77 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ConsoleDlg) {
+   profile = "GuiDefaultProfile";
+   
+   new GuiWindowCtrl()
+   {
+      profile = "GuiWindowProfile";
+      position = "0 0";
+      extent = "640 370";
+      text = "Console";
+      
+      new GuiScrollCtrl()
+      {
+         profile = "GuiScrollProfile";
+         position = "0 0";
+         extent = "640 350";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         horizSizing = "width";
+         vertSizing = "height";
+      
+         new GuiConsole("testArrayCtrl")
+         {
+            profile = "GuiConsoleProfile";
+            position = "0 0";
+         };
+      };
+      
+      new GuiConsoleEditCtrl("ConsoleEntry")
+      {
+         profile = "GuiTextEditProfile";
+         position = "0 350";
+         extent = "640 20";
+         historySize = 20;
+         altCommand = "ConsoleEntry::eval();";
+         horizSizing = "width";
+         vertSizing = "top";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ConsoleEntry::eval()
+{
+   %text = ConsoleEntry.getValue();
+   user("==>" @ %text);
+	%return = eval(%text);
+	if (%return !$= "")
+		echo("(Returned value \"" @ %return @ "\")");
+   ConsoleEntry.setValue("");
+}
+
+function ToggleConsole(%make)
+{
+   if (%make)
+   {
+      if (ConsoleDlg.isAwake())
+      {
+         if ( $enableDirectInput )
+            activateKeyboard();
+         Canvas.popDialog(ConsoleDlg);
+      }
+      else
+      {
+         if ( $enableDirectInput )
+            deactivateKeyboard();
+         Canvas.pushDialog(ConsoleDlg, 99);
+      }
+   }
+}
+
+// to go along with echo, warn, and error
+function user(%message)
+{
+	echo("\c3" @ %message);
+}
+

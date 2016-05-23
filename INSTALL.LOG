@@ -1,0 +1,1128 @@
+***  Installation Started 08/27/2014 14:00  ***
+Title: Marble Blast Gold Installation
+Source: C:\Users\schulzcc\AppData\Local\Temp\Rar$EXa0.814\Marble_Blast_Gold_v1.4.exe | 06-19-2005 | 14:09:04 | 23765447
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\UNWISE.EXE | 05-24-2001 | 12:59:30 | | 162304 | 432c52a3
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Marble Blast Gold
+RegDB Val: Marble Blast Gold
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Old: Marble Blast Gold
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Marble Blast Gold
+RegDB Val: C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1\UNWISE.EXE C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+RegDB Old: C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MARBLE~1\UNWISE.EXE C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MARBLE~1\INSTALL.LOG
+File Overwrite: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\Unwise.exe | 05-24-2001 | 12:59:30 | | 127472 | 6c2ff5b6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\theUninstallFile.txt | 08-09-2003 | 00:54:16 | | 65497 | 517defa5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\theUninstallFile0.txt | 08-09-2003 | 00:54:16 | | 19282 | dbcc1db5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\main.cs | 08-09-2003 | 00:53:56 | | 7991 | b13397c6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\ogg.dll | 08-09-2003 | 00:53:58 | | 20992 | 95453d34
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\glu2d3d.dll | 08-09-2003 | 00:53:58 | | 23040 | 1b0b690
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\openal32.dll | 08-09-2003 | 00:53:58 | 0.9.8.9 | 60416 | 259d456c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\opengl2d3d.dll | 08-09-2003 | 00:53:58 | | 97280 | 5a879a6f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\vorbis.dll | 08-09-2003 | 00:53:58 | | 974848 | 224643ac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marbleblast.exe | 08-09-2003 | 01:17:14 | | 2957312 | f21248e7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\setup.ini | 08-09-2003 | 00:54:02 | | 218 | 8e063e81
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\launch.ini | 08-09-2003 | 00:54:02 | | 302 | 86852e62
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\version.txt | 08-09-2003 | 00:54:06 | | 32 | 522b4759
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\readme.txt | 08-09-2003 | 00:54:06 | | 4576 | 2fd2d8cb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\license.txt | 08-09-2003 | 00:54:06 | | 8843 | 6f6c4223
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\main.cs | 08-09-2003 | 00:53:56 | | 4297 | 7548525b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\main.cs.dso | 08-09-2003 | 00:54:00 | | 3649 | 5f098ab6
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\lighting
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\lighting\whitenoalpha.png | 08-09-2003 | 00:54:04 | | 164 | cca95f08
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\lighting\whitealpha255.png | 08-09-2003 | 00:54:04 | | 165 | 68b153b5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\lighting\lightfalloffmono.png | 08-09-2003 | 00:54:06 | | 68495 | 9b0fcc75
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\defaultprofiles.cs | 08-09-2003 | 00:53:56 | | 12391 | 82477c24
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\frameoverlaygui.gui.dso | 08-09-2003 | 00:54:00 | | 789 | e2706d60
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\messagepopupdlg.gui.dso | 08-09-2003 | 00:54:00 | | 1247 | edcf0487
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\consoledlg.gui.dso | 08-09-2003 | 00:54:00 | | 1666 | 7e8215d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\messageboxyesnodlg.gui.dso | 08-09-2003 | 00:54:00 | | 1927 | 7c736c08
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\messageboxokcanceldlg.gui.dso | 08-09-2003 | 00:54:00 | | 1994 | f9de09ff
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\messageboxokdlg.gui.dso | 08-09-2003 | 00:54:00 | | 2061 | d1399079
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\inspectaddfielddlg.gui.dso | 08-09-2003 | 00:54:00 | | 2412 | f97e5d0e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\helpdlg.gui.dso | 08-09-2003 | 00:54:00 | | 2721 | ca05d4d9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\loadfiledlg.gui.dso | 08-09-2003 | 00:54:00 | | 3308 | a164d1ae
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\inspectdlg.gui.dso | 08-09-2003 | 00:54:00 | | 5079 | 471d0c5f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\savefiledlg.gui.dso | 08-09-2003 | 00:54:00 | | 5237 | d996dd41
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\guieditorgui.gui.dso | 08-09-2003 | 00:54:00 | | 10309 | ecde040f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\torqueradio.png | 08-09-2003 | 00:54:04 | | 480 | 3ee59e97
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\torquecheck.png | 08-09-2003 | 00:54:04 | | 503 | 2597d1b9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cur_3darrow.png | 08-09-2003 | 00:54:04 | | 615 | 67682038
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\torquemenu.png | 08-09-2003 | 00:54:04 | | 1923 | 31d9e9f4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\osxmenu.png | 08-09-2003 | 00:54:04 | | 1923 | 31d9e9f4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\darkscroll.png | 08-09-2003 | 00:54:04 | | 1965 | f1718c3c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\osxcheck.png | 08-09-2003 | 00:54:04 | | 1997 | 8b842bde
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\osxradio.png | 08-09-2003 | 00:54:04 | | 2295 | 51c671cb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\darkwindow.png | 08-09-2003 | 00:54:04 | | 3020 | 570082e7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\window.png | 08-09-2003 | 00:54:04 | | 6151 | c1fedf80
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\osxwindow.png | 08-09-2003 | 00:54:04 | | 6179 | fbb8b01c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\yes_n.png | 08-09-2003 | 00:54:04 | | 6682 | af8d9624
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\yes_d.png | 08-09-2003 | 00:54:04 | | 6690 | 29847dad
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\yes_h.png | 08-09-2003 | 00:54:04 | | 6732 | a4da5e1c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\ok_n.png | 08-09-2003 | 00:54:04 | | 7022 | 39e4c332
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\ok_h.png | 08-09-2003 | 00:54:04 | | 7121 | c1389ca8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\no_d.png | 08-09-2003 | 00:54:04 | | 7203 | 99f50826
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\ok_d.png | 08-09-2003 | 00:54:04 | | 7333 | b92ee7e7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\no_n.png | 08-09-2003 | 00:54:04 | | 7365 | 8909aacc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\no_h.png | 08-09-2003 | 00:54:04 | | 7434 | eba818cf
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\osxscroll.png | 08-09-2003 | 00:54:04 | | 7950 | 57869e50
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\darkborder.png | 08-09-2003 | 00:54:04 | | 8733 | bd67cf8f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\restart_n.png | 08-09-2003 | 00:54:04 | | 9069 | 5bd40eed
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\restart_d.png | 08-09-2003 | 00:54:04 | | 9216 | 187bd93e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\restart_h.png | 08-09-2003 | 00:54:04 | | 9295 | dcc06cb6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\dialog.png | 08-09-2003 | 00:54:04 | | 23896 | aaa9ef73
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial_12.gft | 08-09-2003 | 00:54:02 | | 5821 | a839735d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial_13.gft | 08-09-2003 | 00:54:02 | | 6006 | 6061759
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial_14.gft | 08-09-2003 | 00:54:02 | | 6622 | 31ce723c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\lucida console_12.gft | 08-09-2003 | 00:54:02 | | 6703 | 76b1462b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial bold_14.gft | 08-09-2003 | 00:54:02 | | 6772 | 735f67ac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial italic_14.gft | 08-09-2003 | 00:54:02 | | 7527 | d10cb653
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial_16.gft | 08-09-2003 | 00:54:02 | | 7641 | 9c40afd6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\domcasuald_24.gft | 08-09-2003 | 00:54:02 | | 12299 | e27d02d3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\arial_24.gft | 08-09-2003 | 00:54:02 | | 13087 | 75150878
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\domcasuald_32.gft | 08-09-2003 | 00:54:02 | | 17620 | d65640d6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\expo_32.gft | 08-09-2003 | 00:54:02 | | 20615 | 39ba1258
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\ui\cache\expo_50.gft | 08-09-2003 | 00:54:02 | | 35902 | 86ed889c
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cursors.cs | 08-09-2003 | 00:53:56 | | 1309 | 7393f82e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\editorrender.cs | 08-09-2003 | 00:53:56 | | 2077 | 13d90916
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\editor.cs | 08-09-2003 | 00:53:56 | | 3009 | a49cf32f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\editor.bind.cs | 08-09-2003 | 00:53:56 | | 7134 | effd06ce
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\editorgui.cs | 08-09-2003 | 00:53:56 | | 87725 | 75ec0304
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\worldeditorsettingsdlg.gui.dso | 08-09-2003 | 00:54:00 | | 12626 | 660fed45
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\objectbuildergui.gui.dso | 08-09-2003 | 00:54:00 | | 19067 | 728a7bd1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\editorgui.gui.dso | 08-09-2003 | 00:54:00 | | 64225 | 2f773857
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\defaulthandle.png | 08-09-2003 | 00:54:04 | | 179 | 9069b855
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\selecthandle.png | 08-09-2003 | 00:54:04 | | 179 | 26747c22
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\lockedhandle.png | 08-09-2003 | 00:54:04 | | 243 | 60b83d67
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_3darrow.png | 08-09-2003 | 00:54:04 | | 604 | e99a2c12
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_3dleftright.png | 08-09-2003 | 00:54:04 | | 607 | a42b5a9e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_3dupdown.png | 08-09-2003 | 00:54:04 | | 630 | fe55ddd7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_grab.png | 08-09-2003 | 00:54:04 | | 769 | e44a6b50
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_3ddiagleft.png | 08-09-2003 | 00:54:04 | | 842 | cde07d3b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_3ddiagright.png | 08-09-2003 | 00:54:04 | | 847 | f00c6201
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_hand.png | 08-09-2003 | 00:54:04 | | 884 | 962d1e0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\editor\cur_rotate.png | 08-09-2003 | 00:54:04 | | 1145 | d52d16bd
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\audio.cs | 08-09-2003 | 00:53:56 | | 922 | 3c545a9a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\kickban.cs | 08-09-2003 | 00:53:56 | | 949 | 39daa0e1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\commands.cs | 08-09-2003 | 00:53:56 | | 1613 | 6cbcd456
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\missioninfo.cs | 08-09-2003 | 00:53:56 | | 2910 | 9d44e386
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\game.cs | 08-09-2003 | 00:53:56 | | 3388 | c5e9d521
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\missiondownload.cs | 08-09-2003 | 00:53:56 | | 3666 | 20a5c36a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\server.cs | 08-09-2003 | 00:53:56 | | 3902 | 6cd5e808
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\missionload.cs | 08-09-2003 | 00:53:56 | | 4377 | 43074bed
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\message.cs | 08-09-2003 | 00:53:56 | | 5837 | d3088241
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\server\clientconnection.cs | 08-09-2003 | 00:53:56 | | 6462 | 10060283
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\mission.cs | 08-09-2003 | 00:53:56 | | 918 | f746cb5e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\audio.cs | 08-09-2003 | 00:53:56 | | 1247 | cb79b083
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\help.cs | 08-09-2003 | 00:53:56 | | 1518 | ad7af72c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\screenshot.cs | 08-09-2003 | 00:53:56 | | 1526 | 91efd9c2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\actionmap.cs | 08-09-2003 | 00:53:56 | | 1555 | b7e6455f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\canvas.cs | 08-09-2003 | 00:53:56 | | 1739 | 459dc87c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\cursor.cs | 08-09-2003 | 00:53:56 | | 2859 | 46ce66a6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\missiondownload.cs | 08-09-2003 | 00:53:56 | | 2940 | ebd85356
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\message.cs | 08-09-2003 | 00:53:56 | | 3012 | 35321b91
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\messagebox.cs | 08-09-2003 | 00:53:56 | | 3663 | c92d700e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\client\metrics.cs | 08-09-2003 | 00:53:56 | | 5513 | 73c44bf4
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\debugger
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\debugger\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\help
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\common\help\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\main.cs | 08-09-2003 | 00:53:56 | | 3893 | c03376b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\main.cs.dso | 08-09-2003 | 00:54:00 | | 3517 | 3d2cbbf5
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\defaults.cs | 08-09-2003 | 00:53:56 | | 2694 | d12db75f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\init.cs | 08-09-2003 | 00:53:56 | | 9279 | a252da82
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\defaults.cs.dso | 08-09-2003 | 00:54:00 | | 2734 | 9679ab62
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\demos
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\demos\ordeal.rec | 08-09-2003 | 00:54:06 | | 8423 | a2de5c25
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\demos\whirl.rec | 08-09-2003 | 00:54:06 | | 22864 | f86b71db
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\help
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\help\help_window.png | 08-09-2003 | 00:54:04 | | 22447 | 4c5fac64
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\help\help_gui.png | 08-09-2003 | 00:54:04 | | 36884 | 5e978de2
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\demo.cs | 08-09-2003 | 00:53:56 | | 238 | 90736cfc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\endgamegui.cs | 08-09-2003 | 00:53:56 | | 326 | b70d742e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\loadinggui.cs | 08-09-2003 | 00:53:56 | | 1126 | ccdc27a0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\version.cs | 08-09-2003 | 00:53:56 | | 1419 | 1cb767dc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\client.cs | 08-09-2003 | 00:53:56 | | 1544 | e3d1afca
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\centerprint.cs | 08-09-2003 | 00:53:56 | | 2342 | 878db3fd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\audioprofiles.cs | 08-09-2003 | 00:53:56 | | 2556 | 491bcc2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\messagehud.cs | 08-09-2003 | 00:53:56 | | 2988 | 3f8dd34d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\missiondownload.cs | 08-09-2003 | 00:53:56 | | 4424 | cadf737d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\game.cs | 08-09-2003 | 00:53:56 | | 4967 | 1dee62ce
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\serverconnection.cs | 08-09-2003 | 00:53:56 | | 5551 | e2f7d7ed
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\playgui.cs | 08-09-2003 | 00:53:56 | | 6277 | 62c27bcc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\helpcredits.cs | 08-09-2003 | 00:53:56 | | 8138 | 3fed2c33
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\default.bind.cs | 08-09-2003 | 00:53:56 | | 8448 | 8dadada3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\chathud.cs | 08-09-2003 | 00:53:56 | | 12231 | 58ae40d5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\scripts\optionsdlg.cs | 08-09-2003 | 00:53:56 | | 18351 | 6c55e701
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\defaultgameprofiles.cs | 08-09-2003 | 00:53:56 | | 3865 | a89824dc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\minishotgui.gui.dso | 08-09-2003 | 00:54:00 | | 975 | b89f2918
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\titlegui.gui.dso | 08-09-2003 | 00:54:00 | | 1029 | 3ff93d86
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\productiongui.gui.dso | 08-09-2003 | 00:54:00 | | 1046 | aeaaf5d3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\presentsgui.gui.dso | 08-09-2003 | 00:54:00 | | 1307 | 5dcf388e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\messagehud.gui.dso | 08-09-2003 | 00:54:00 | | 1375 | 16b4daba
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\remapdlg.gui.dso | 08-09-2003 | 00:54:00 | | 1522 | 37e50633
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgamegui.gui.dso | 08-09-2003 | 00:54:00 | | 1852 | a1ea8642
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\mainchathud.gui.dso | 08-09-2003 | 00:54:00 | | 2037 | 202a0be
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\enternamedlg.gui.dso | 08-09-2003 | 00:54:00 | | 2185 | 52e91cc6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loadinggui.gui.dso | 08-09-2003 | 00:54:00 | | 2260 | 77b5b33d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\exitgamedlg.gui.dso | 08-09-2003 | 00:54:00 | | 2308 | 819d28c4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\aboutdlg.gui.dso | 08-09-2003 | 00:54:00 | | 2534 | 8f3610e3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\playerlist.gui.dso | 08-09-2003 | 00:54:00 | | 3053 | 40dc1488
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\choosegui.gui.dso | 08-09-2003 | 00:54:00 | | 3099 | 4115312a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motdgui.gui.dso | 08-09-2003 | 00:54:00 | | 4153 | b2f263f9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\mainmenugui.gui.dso | 08-09-2003 | 00:54:00 | | 4604 | 11112010
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\ignitionstatusgui.gui.dso | 08-09-2003 | 00:54:00 | | 5246 | 658615fb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\startmissiongui.gui.dso | 08-09-2003 | 00:54:00 | | 5785 | 9707df1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\playgui.gui.dso | 08-09-2003 | 00:54:00 | | 7728 | a04bfee5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\joinservergui.gui.dso | 08-09-2003 | 00:54:00 | | 8041 | 9d1d3135
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\helpcreditsgui.gui.dso | 08-09-2003 | 00:54:00 | | 9935 | be336e87
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\playmissiongui.gui.dso | 08-09-2003 | 00:54:00 | | 16973 | 2d0d6cc8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\optionsdlg.gui.dso | 08-09-2003 | 00:54:00 | | 19508 | 633c0092
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\presents.jpg | 08-09-2003 | 00:54:02 | | 35025 | 52dcd14f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\background.jpg | 08-09-2003 | 00:54:02 | | 58227 | 96c88854
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\title.jpg | 08-09-2003 | 00:54:04 | | 101012 | f75b7768
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\production.jpg | 08-09-2003 | 00:54:04 | | 113350 | fbc34338
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\crosshair.png | 08-09-2003 | 00:54:04 | | 309 | a60ff157
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\hudfill.png | 08-09-2003 | 00:54:04 | | 510 | abae9696
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\lagicon.png | 08-09-2003 | 00:54:04 | | 2941 | 4de8dfc2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\ok_n.png | 08-09-2003 | 00:54:04 | | 7611 | 6528ab34
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\ok_d.png | 08-09-2003 | 00:54:04 | | 7624 | c043d060
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\ok_h.png | 08-09-2003 | 00:54:04 | | 7662 | 4a456018
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\optionsgui.png | 08-09-2003 | 00:54:04 | | 42756 | a1530665
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\gglogo150.png | 08-09-2003 | 00:54:04 | | 45503 | 10042d2f
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\exit_d.png | 08-09-2003 | 00:54:04 | | 19178 | 18a7510d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\help_h.png | 08-09-2003 | 00:54:04 | | 20547 | c707de13
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\help_n.png | 08-09-2003 | 00:54:04 | | 20824 | e104d804
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\exit_h.png | 08-09-2003 | 00:54:04 | | 21164 | eb909014
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\help_d.png | 08-09-2003 | 00:54:04 | | 21901 | 76275489
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\exit_n.png | 08-09-2003 | 00:54:04 | | 22165 | 933353c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\options_h.png | 08-09-2003 | 00:54:04 | | 23303 | 9d2befcb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\options_n.png | 08-09-2003 | 00:54:04 | | 24169 | 9e5a2355
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\options_d.png | 08-09-2003 | 00:54:04 | | 24923 | 82e4e04f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\play_h.png | 08-09-2003 | 00:54:04 | | 28594 | 5ea8998b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\play_n.png | 08-09-2003 | 00:54:04 | | 29901 | 2166d560
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\play_d.png | 08-09-2003 | 00:54:04 | | 30943 | abd1c55b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\home\homegui.png | 08-09-2003 | 00:54:06 | | 76549 | 508eb9cf
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading\cancel_d.png | 08-09-2003 | 00:54:04 | | 7521 | 65a15f75
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading\cancel_n.png | 08-09-2003 | 00:54:04 | | 7530 | c36e3b74
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading\cancel_h.png | 08-09-2003 | 00:54:04 | | 7794 | 54a505d8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading\overlay.png | 08-09-2003 | 00:54:04 | | 13774 | f129d3c2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\loading\loadinggui.png | 08-09-2003 | 00:54:04 | | 57176 | e6a93910
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\replay_i.png | 08-09-2003 | 00:54:04 | | 6720 | e1382b21
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\replay_n.png | 08-09-2003 | 00:54:04 | | 8888 | 88e14f52
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\continue_n.png | 08-09-2003 | 00:54:04 | | 8989 | 25141ec4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\replay_h.png | 08-09-2003 | 00:54:04 | | 9259 | 2640bfa9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\continue_d.png | 08-09-2003 | 00:54:04 | | 9327 | 61d2f354
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\replay_d.png | 08-09-2003 | 00:54:04 | | 9379 | b32ea52f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\endgame\continue_h.png | 08-09-2003 | 00:54:04 | | 9412 | be7c0b31
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_chkbx_h.png | 08-09-2003 | 00:54:04 | | 4456 | a4e75b0f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_chkbx_n.png | 08-09-2003 | 00:54:04 | | 4540 | 12b1ec40
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_chkbx_d.png | 08-09-2003 | 00:54:04 | | 6050 | debd7a3d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\ok_n.png | 08-09-2003 | 00:54:04 | | 7130 | 8705f131
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\ok_h.png | 08-09-2003 | 00:54:04 | | 7302 | dae49d0d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\ok_d.png | 08-09-2003 | 00:54:04 | | 7405 | e883194
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_buttn_n.png | 08-09-2003 | 00:54:04 | | 14377 | 86efc350
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_buttn_h.png | 08-09-2003 | 00:54:04 | | 14546 | 7922acce
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\motd_buttn_d.png | 08-09-2003 | 00:54:04 | | 14577 | 9e092889
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\motd_buttn_n.png | 08-09-2003 | 00:54:04 | | 14738 | e73d9ae9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\motd_buttn_h.png | 08-09-2003 | 00:54:04 | | 15074 | 67868cdb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\mess_buttn_d.png | 08-09-2003 | 00:54:04 | | 15175 | 99ecab51
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\motd\new_mess_base.png | 08-09-2003 | 00:54:04 | | 27839 | 8bf04a61
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_mus_knb.png | 08-09-2003 | 00:54:04 | | 2802 | 993d5851
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_snd_knb.png | 08-09-2003 | 00:54:04 | | 2891 | 1e92719f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_knb.png | 08-09-2003 | 00:54:04 | | 2970 | 736c0273
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf_chkbx_h.png | 08-09-2003 | 00:54:04 | | 4512 | 3b95f68e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_freel_h.png | 08-09-2003 | 00:54:04 | | 4607 | 2fa11ace
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf_chkbx_n.png | 08-09-2003 | 00:54:04 | | 4639 | 738a3fbe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_invrt_h.png | 08-09-2003 | 00:54:04 | | 4644 | d676a46d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_freel_n.png | 08-09-2003 | 00:54:04 | | 4732 | 43e6b6a2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_invrt_n.png | 08-09-2003 | 00:54:04 | | 4746 | 8afe50af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_lft_h.png | 08-09-2003 | 00:54:04 | | 4968 | 8b3e8ef
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_lft_n.png | 08-09-2003 | 00:54:04 | | 5193 | 7ebf78b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_rt_h.png | 08-09-2003 | 00:54:04 | | 5373 | 2fdfdf2b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_dwn_h.png | 08-09-2003 | 00:54:04 | | 5439 | 5e1ac7b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_lft_d.png | 08-09-2003 | 00:54:04 | | 5599 | a3e606b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_rt_n.png | 08-09-2003 | 00:54:04 | | 5606 | abb53546
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_dwn_n.png | 08-09-2003 | 00:54:04 | | 5775 | 54b579a6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_rt_d.png | 08-09-2003 | 00:54:04 | | 5949 | 860bc040
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_invrt_d.png | 08-09-2003 | 00:54:04 | | 6024 | 587a1a6a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_freel_d.png | 08-09-2003 | 00:54:04 | | 6059 | a73fbee7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf_chkbx_d.png | 08-09-2003 | 00:54:04 | | 6078 | 6e101fd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_dwn_d.png | 08-09-2003 | 00:54:04 | | 6134 | 68241cdf
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_bttn_n.png | 08-09-2003 | 00:54:04 | | 6401 | a25288ac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_bttn_h.png | 08-09-2003 | 00:54:04 | | 6412 | 46b4190
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafful_h.png | 08-09-2003 | 00:54:04 | | 6487 | 6720107d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafful_n.png | 08-09-2003 | 00:54:04 | | 6631 | 88467f90
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafful_d.png | 08-09-2003 | 00:54:04 | | 6685 | da6656d5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_up_h.png | 08-09-2003 | 00:54:04 | | 6772 | cc6d2532
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf640_n.png | 08-09-2003 | 00:54:04 | | 6860 | a319a59c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_bttn_d.png | 08-09-2003 | 00:54:04 | | 6941 | 7f94ff62
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_up_n.png | 08-09-2003 | 00:54:04 | | 7075 | 2558e26b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf640_h.png | 08-09-2003 | 00:54:04 | | 7107 | e15236f0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf640_d.png | 08-09-2003 | 00:54:04 | | 7164 | d18f4d5f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_cam_up_d.png | 08-09-2003 | 00:54:04 | | 7284 | de58a899
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_lft_h.png | 08-09-2003 | 00:54:04 | | 7333 | 998843b5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_rt_h.png | 08-09-2003 | 00:54:04 | | 7387 | f07b309c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafdir3d_n.png | 08-09-2003 | 00:54:04 | | 7462 | 7d21120
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_lft_n.png | 08-09-2003 | 00:54:04 | | 7570 | 4c76422d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_rt_n.png | 08-09-2003 | 00:54:04 | | 7613 | 6435b89e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafapply_n.png | 08-09-2003 | 00:54:04 | | 7627 | f59b78d8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_bak_h.png | 08-09-2003 | 00:54:04 | | 7648 | 684aae5e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf32bt_n.png | 08-09-2003 | 00:54:04 | | 7736 | c84c58df
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafapply_h.png | 08-09-2003 | 00:54:04 | | 7756 | 3d0e3f9b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_rt_d.png | 08-09-2003 | 00:54:04 | | 7841 | ffbf8197
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafdir3d_h.png | 08-09-2003 | 00:54:04 | | 7865 | 85512361
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf32bt_h.png | 08-09-2003 | 00:54:04 | | 7898 | 4021bb21
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafdir3d_d.png | 08-09-2003 | 00:54:04 | | 7903 | a86b2ea4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf32bt_d.png | 08-09-2003 | 00:54:04 | | 7960 | bcedad09
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_lft_d.png | 08-09-2003 | 00:54:04 | | 7962 | 350c0f13
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\mainm_d.png | 08-09-2003 | 00:54:04 | | 7981 | 2937ff29
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_bak_n.png | 08-09-2003 | 00:54:04 | | 7996 | 1dabaa05
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf_txt.png | 08-09-2003 | 00:54:04 | | 8020 | 8a62b7e1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafapply_d.png | 08-09-2003 | 00:54:04 | | 8065 | 686e5834
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\mainm_n.png | 08-09-2003 | 00:54:04 | | 8083 | 63089c7a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_jmp_h.png | 08-09-2003 | 00:54:04 | | 8231 | fbfced4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\mainm_h.png | 08-09-2003 | 00:54:04 | | 8238 | 5abbf11c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_bak_d.png | 08-09-2003 | 00:54:04 | | 8246 | 9cb5a3f7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf16bt_h.png | 08-09-2003 | 00:54:04 | | 8375 | 20415ada
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf1024_n.png | 08-09-2003 | 00:54:04 | | 8389 | a16632c7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_jmp_n.png | 08-09-2003 | 00:54:04 | | 8477 | 6db3379a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf16bt_d.png | 08-09-2003 | 00:54:04 | | 8588 | 2113e90e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf16bt_n.png | 08-09-2003 | 00:54:04 | | 8612 | 8f3c8fa7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf800_h.png | 08-09-2003 | 00:54:04 | | 8641 | 8a723172
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_jmp_d.png | 08-09-2003 | 00:54:04 | | 8668 | 5e819767
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf1024_h.png | 08-09-2003 | 00:54:04 | | 8702 | 1d7f8305
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_pwr_h.png | 08-09-2003 | 00:54:04 | | 8736 | e867e669
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf800_d.png | 08-09-2003 | 00:54:04 | | 8743 | 1f61028
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf1024_d.png | 08-09-2003 | 00:54:04 | | 8792 | 4d580724
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafwindo_n.png | 08-09-2003 | 00:54:04 | | 8817 | 68a20d66
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf800_n.png | 08-09-2003 | 00:54:04 | | 8825 | a4ddd4bb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_fw_h.png | 08-09-2003 | 00:54:04 | | 8846 | c2f1850d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_mus_slide.png | 08-09-2003 | 00:54:04 | | 8908 | f2f4754e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafwindo_h.png | 08-09-2003 | 00:54:04 | | 8936 | 4bac088a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_pwr_n.png | 08-09-2003 | 00:54:04 | | 9002 | 77554dc5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_tab.png | 08-09-2003 | 00:54:04 | | 9050 | 5c8f71f2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_pwr_d.png | 08-09-2003 | 00:54:04 | | 9050 | d3e338ab
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafwindo_d.png | 08-09-2003 | 00:54:04 | | 9098 | 69116382
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_fw_n.png | 08-09-2003 | 00:54:04 | | 9162 | a65a90d5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_mrb_fw_d.png | 08-09-2003 | 00:54:04 | | 9294 | c72c0936
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_snd_slide.png | 08-09-2003 | 00:54:04 | | 9379 | 2aa156a0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafopgl_d.png | 08-09-2003 | 00:54:04 | | 9951 | f26fa387
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafopgl_h.png | 08-09-2003 | 00:54:04 | | 9970 | c6d4c384
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\grafopgl_n.png | 08-09-2003 | 00:54:04 | | 10208 | c019d79c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntr_tab.png | 08-09-2003 | 00:54:04 | | 11634 | 2d5b37c6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\graf_tab.png | 08-09-2003 | 00:54:04 | | 13707 | b3485dc7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\aud_txt_wndo.png | 08-09-2003 | 00:54:04 | | 20781 | bc6e6244
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\options_base.png | 08-09-2003 | 00:54:04 | | 33158 | 2a73a03d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_mous_base.png | 08-09-2003 | 00:54:06 | | 87621 | d4e4b98f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_marb_bse.png | 08-09-2003 | 00:54:06 | | 118122 | 80c50da2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\Options\cntrl_cam_bse.png | 08-09-2003 | 00:54:06 | | 130134 | 894b833c
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\goldscore.png | 08-09-2003 | 00:54:04 | | 1480 | a6261a6a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\tab_adv.png | 08-09-2003 | 00:54:04 | | 6730 | d218d731
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\back_i.png | 08-09-2003 | 00:54:04 | | 7522 | c8e13d61
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\prev_i.png | 08-09-2003 | 00:54:04 | | 7830 | 439c5368
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\next_i.png | 08-09-2003 | 00:54:04 | | 7887 | 1655b4e4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\back_d.png | 08-09-2003 | 00:54:04 | | 8390 | 7fe6b843
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\play_i.png | 08-09-2003 | 00:54:04 | | 8632 | d32f7634
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\back_n.png | 08-09-2003 | 00:54:04 | | 8635 | c0c1ab51
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\prev_h.png | 08-09-2003 | 00:54:04 | | 8646 | 4fdc4fc4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\next_h.png | 08-09-2003 | 00:54:04 | | 8718 | b73dee0f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\back_h.png | 08-09-2003 | 00:54:04 | | 8731 | e37c29ff
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\prev_d.png | 08-09-2003 | 00:54:04 | | 8763 | e3a933cf
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\prev_n.png | 08-09-2003 | 00:54:04 | | 8792 | b4d78d9c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\tab_begin.png | 08-09-2003 | 00:54:04 | | 8814 | 84687593
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\next_d.png | 08-09-2003 | 00:54:04 | | 8931 | be5c70af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\next_n.png | 08-09-2003 | 00:54:04 | | 8982 | 977a9b5b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\play_n.png | 08-09-2003 | 00:54:04 | | 9220 | f07890d3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\play_h.png | 08-09-2003 | 00:54:04 | | 9399 | 2804bf8d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\play_d.png | 08-09-2003 | 00:54:04 | | 9621 | 2eaea15f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\tab_inter.png | 08-09-2003 | 00:54:04 | | 9714 | 8b3e8780
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\cust_tab.png | 08-09-2003 | 00:54:04 | | 11518 | 681c33af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\text_window.png | 08-09-2003 | 00:54:04 | | 15971 | 58b9ad5f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\level_window.png | 08-09-2003 | 00:54:04 | | 17923 | 9ab93433
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\play\playgui.png | 08-09-2003 | 00:54:04 | | 47772 | 19f6b71a
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\powerup.png | 08-09-2003 | 00:54:04 | | 5237 | c275a261
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\set.png | 08-09-2003 | 00:54:04 | | 9327 | 5820860a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\go.png | 08-09-2003 | 00:54:04 | | 12759 | 740f2fe2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\ready.png | 08-09-2003 | 00:54:04 | | 15931 | 38d5bfb5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\outofbounds.png | 08-09-2003 | 00:54:04 | | 27375 | 23b12b78
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\point.png | 08-09-2003 | 00:54:04 | | 871 | fe399ef5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\dash.png | 08-09-2003 | 00:54:04 | | 927 | 3fb44c1b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\colon.png | 08-09-2003 | 00:54:04 | | 1264 | ce2510fb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\slash.png | 08-09-2003 | 00:54:04 | | 1365 | 1f77b201
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\1.png | 08-09-2003 | 00:54:04 | | 1858 | d55014a7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\7.png | 08-09-2003 | 00:54:04 | | 2097 | e2b58e92
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\4.png | 08-09-2003 | 00:54:04 | | 2216 | ddc32fe0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\5.png | 08-09-2003 | 00:54:04 | | 2303 | 341e44b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\2.png | 08-09-2003 | 00:54:04 | | 2384 | 3fe0f3fc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\3.png | 08-09-2003 | 00:54:04 | | 2495 | 7d329dd7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\0.png | 08-09-2003 | 00:54:04 | | 2588 | 9dfc25bd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\9.png | 08-09-2003 | 00:54:04 | | 2608 | 1a836212
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\6.png | 08-09-2003 | 00:54:04 | | 2641 | 531131b2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\game\numbers\8.png | 08-09-2003 | 00:54:04 | | 3075 | b0c3cad5
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\choose
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\choose\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\rebrands
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\client\ui\rebrands\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\init.cs | 08-09-2003 | 00:53:56 | | 3637 | 1e49fb6c
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\spark.png | 08-09-2003 | 00:54:04 | | 1426 | e637dbc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\twirl.png | 08-09-2003 | 00:54:04 | | 1707 | 9fafdafe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\smoke.png | 08-09-2003 | 00:54:04 | | 1751 | 362e6a3a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\saturn.png | 08-09-2003 | 00:54:04 | | 1983 | f29f2bc3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\star.png | 08-09-2003 | 00:54:04 | | 2250 | 2fac827a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\particles\bubble.png | 08-09-2003 | 00:54:04 | | 3653 | 355e7ec9
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\shell.ogg | 08-09-2003 | 00:54:04 | | 368494 | 480d4423
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\classic vibe.ogg | 08-09-2003 | 00:54:04 | | 630638 | e047ce9f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\groovepolice.ogg | 08-09-2003 | 00:54:04 | | 852158 | 278db8ee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\beach party.ogg | 08-09-2003 | 00:54:04 | | 971415 | c196d14d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\buttonpress.wav | 08-09-2003 | 00:54:06 | | 1410 | 9beabd5d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\jump.wav | 08-09-2003 | 00:54:06 | | 2984 | 106b821b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\buttonover.wav | 08-09-2003 | 00:54:06 | | 4868 | 9cbb74b9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bouncehard4.wav | 08-09-2003 | 00:54:06 | | 6458 | efbb1c10
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bouncehard2.wav | 08-09-2003 | 00:54:06 | | 8636 | e2e70fe0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bouncehard1.wav | 08-09-2003 | 00:54:06 | | 9984 | 82278a41
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bouncehard3.wav | 08-09-2003 | 00:54:06 | | 10844 | a36812b2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\whoosh.wav | 08-09-2003 | 00:54:06 | | 13516 | e33ed3b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\infotutorial.wav | 08-09-2003 | 00:54:06 | | 17318 | 60f70be2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bumper1.wav | 08-09-2003 | 00:54:06 | | 20024 | 389ada90
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\gotpowerup.wav | 08-09-2003 | 00:54:06 | | 20404 | 9a6eade5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\missinggems.wav | 08-09-2003 | 00:54:06 | | 24274 | 3514ceca
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\set.wav | 08-09-2003 | 00:54:06 | | 27326 | 751c81b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\bumperding1.wav | 08-09-2003 | 00:54:06 | | 27486 | 89970c64
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\ready.wav | 08-09-2003 | 00:54:06 | | 29320 | c9806095
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\testing.wav | 08-09-2003 | 00:54:06 | | 30222 | d614d322
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\platformlowering.wav | 08-09-2003 | 00:54:06 | | 36288 | 3512c1da
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\timetravelactive.wav | 08-09-2003 | 00:54:06 | | 44144 | 6ce83fb2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\go.wav | 08-09-2003 | 00:54:06 | | 46732 | 6a860842
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\spawn.wav | 08-09-2003 | 00:54:06 | | 48284 | e5ba9467
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\trapdooropen.wav | 08-09-2003 | 00:54:06 | | 52670 | 7f9c14e4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\gotgem.wav | 08-09-2003 | 00:54:06 | | 52982 | 7aa69a89
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\forcefield.wav | 08-09-2003 | 00:54:06 | | 53988 | 84d43d9d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\superbounceactive.wav | 08-09-2003 | 00:54:06 | | 59314 | 46d3fe8f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\fan_loop.wav | 08-09-2003 | 00:54:06 | | 65724 | b99f74d9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\gotallgems.wav | 08-09-2003 | 00:54:06 | | 69574 | 4f1cecf1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\dosuperjump.wav | 08-09-2003 | 00:54:06 | | 72054 | 77bacc9c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\pusuperjumpvoice.wav | 08-09-2003 | 00:54:06 | | 76926 | e110e9e3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\firewrks.wav | 08-09-2003 | 00:54:06 | | 79828 | 10530b9e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\dosuperspeed.wav | 08-09-2003 | 00:54:06 | | 80112 | b64dfa84
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\pusuperspeedvoice.wav | 08-09-2003 | 00:54:06 | | 82892 | 53a28b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\rolling_hard.wav | 08-09-2003 | 00:54:06 | | 83836 | 85723075
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\explode1.wav | 08-09-2003 | 00:54:06 | | 85152 | 10530d49
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\pushockabsorbervoice.wav | 08-09-2003 | 00:54:08 | | 86726 | 7d7a0a7c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\movingblockloop.wav | 08-09-2003 | 00:54:08 | | 92342 | 4d8e567e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\use_gyrocopter.wav | 08-09-2003 | 00:54:08 | | 97442 | 416885b6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\putimetravelvoice.wav | 08-09-2003 | 00:54:08 | | 99446 | 3b1f98c2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\pugyrocoptervoice.wav | 08-09-2003 | 00:54:08 | | 102856 | 7907cc26
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\pusuperbouncevoice.wav | 08-09-2003 | 00:54:08 | | 108878 | cf8ced2c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\marble_fall.wav | 08-09-2003 | 00:54:08 | | 116148 | d13eb512
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\gravitychange.wav | 08-09-2003 | 00:54:08 | | 130840 | b9cf9a98
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\sliding.wav | 08-09-2003 | 00:54:08 | | 139214 | c56a21b1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\sound\tornado.wav | 08-09-2003 | 00:54:08 | | 168442 | 54aa7ee
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_day.dml | 08-09-2003 | 00:54:00 | | 60 | 61b7cdda
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\enviro_map.jpg | 08-09-2003 | 00:54:04 | | 73740 | 64b1bee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_up.jpg | 08-09-2003 | 00:54:04 | | 82174 | 9480beb6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_bk.jpg | 08-09-2003 | 00:54:04 | | 143242 | 2134d0e9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_rt.jpg | 08-09-2003 | 00:54:04 | | 160452 | 198966af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_lf.jpg | 08-09-2003 | 00:54:04 | | 161537 | 773b440
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_fr.jpg | 08-09-2003 | 00:54:04 | | 170236 | 2e54a4ef
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\skies\sky_dn.jpg | 08-09-2003 | 00:54:04 | | 258028 | 36428a03
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\quicksand.dts | 08-09-2003 | 00:54:00 | | 2551 | 508664a6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\blah.jpg | 08-09-2003 | 00:54:02 | | 20622 | d01a3dff
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signwood.jpg | 08-09-2003 | 00:54:02 | | 44164 | 70a54731
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bitmaptest.png | 08-09-2003 | 00:54:04 | | 1605 | 8eb36e91
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\balls
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\balls\ball-superball.dts | 08-09-2003 | 00:54:00 | | 22115 | ecd82407
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\balls\base.marble.png | 08-09-2003 | 00:54:06 | | 129023 | 3cc64522
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\endarea.dts | 08-09-2003 | 00:54:00 | | 8298 | 27601e5a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\startarea.dts | 08-09-2003 | 00:54:00 | | 8305 | 99291e69
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\whiteblue.ifl | 08-09-2003 | 00:54:02 | | 25 | f45aa21e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\bluewhite.ifl | 08-09-2003 | 00:54:02 | | 25 | a7f4f81b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\whitegreen.ifl | 08-09-2003 | 00:54:02 | | 26 | abd8c075
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\greenwhite.ifl | 08-09-2003 | 00:54:02 | | 26 | f86d97e9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\white.jpg | 08-09-2003 | 00:54:02 | | 2313 | ddffac62
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\green.jpg | 08-09-2003 | 00:54:02 | | 2335 | 4179748c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\blue.jpg | 08-09-2003 | 00:54:02 | | 2343 | 26f23502
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\red.jpg | 08-09-2003 | 00:54:02 | | 2365 | 4c1a26d1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\exit.jpg | 08-09-2003 | 00:54:02 | | 54673 | 8041314
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\pads\spawn.jpg | 08-09-2003 | 00:54:02 | | 66133 | 14e2f44
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\buttons
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\buttons\pushbutton.dts | 08-09-2003 | 00:54:00 | | 6683 | 51629ee7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\buttons\button.png | 08-09-2003 | 00:54:04 | | 3071 | 88af555
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\buttons\button-box.png | 08-09-2003 | 00:54:04 | | 5899 | a2fb0fdc
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\images
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\images\glow_bounce.dts | 08-09-2003 | 00:54:00 | | 5393 | fbb70754
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\images\helicopter.dts | 08-09-2003 | 00:54:00 | | 9368 | 84af6045
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\images\helicopter.jpg | 08-09-2003 | 00:54:02 | | 7627 | 58a47d9f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\images\glow_bounce.png | 08-09-2003 | 00:54:06 | | 125428 | 71cce30c
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball_tri.dts | 08-09-2003 | 00:54:00 | | 5236 | 4125dae0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball_round.dts | 08-09-2003 | 00:54:00 | | 9248 | c6f82284
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball-round-bottm.jpg | 08-09-2003 | 00:54:02 | | 11450 | 3e4727a3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\triang-side.png | 08-09-2003 | 00:54:04 | | 2543 | 551eb34d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball-round-side.png | 08-09-2003 | 00:54:04 | | 14789 | 8bdb72f0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball-round-bottm.png | 08-09-2003 | 00:54:04 | | 17882 | 11b47530
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\triang-top.png | 08-09-2003 | 00:54:04 | | 30216 | f8460d23
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\bumpers\pball-round-top.png | 08-09-2003 | 00:54:04 | | 30409 | 43fcd9f3
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\oilslick.dts | 08-09-2003 | 00:54:00 | | 4872 | 53a5d5fa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\trapdoor.dts | 08-09-2003 | 00:54:00 | | 10049 | d91c1e9e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\landmine.dts | 08-09-2003 | 00:54:00 | | 10638 | 7df60e2b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\tornado.dts | 08-09-2003 | 00:54:00 | | 16558 | 9f804aea
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\ductfan.dts | 08-09-2003 | 00:54:00 | | 16990 | 7dc5e642
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\fan-side.jpg | 08-09-2003 | 00:54:02 | | 310 | e1fd8d0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\friction_none2.jpg | 08-09-2003 | 00:54:02 | | 5678 | 77eb4288
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\fan-spiral.jpg | 08-09-2003 | 00:54:02 | | 8320 | 58cae33a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\landmine_spikes.jpg | 08-09-2003 | 00:54:02 | | 8815 | 8d51aec9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\landmine_grs.jpg | 08-09-2003 | 00:54:02 | | 8995 | fb91685e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\friction_none.jpg | 08-09-2003 | 00:54:02 | | 10486 | b389fdb9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\friction_low2.jpg | 08-09-2003 | 00:54:02 | | 11719 | 67a2b67d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\ice.slick.jpg | 08-09-2003 | 00:54:02 | | 15848 | 373ba693
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\friction_high.jpg | 08-09-2003 | 00:54:02 | | 15939 | 9e783236
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\fan-top.jpg | 08-09-2003 | 00:54:02 | | 21081 | c8e4c206
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\friction_low.jpg | 08-09-2003 | 00:54:02 | | 21149 | 28737b6b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\base.slick.jpg | 08-09-2003 | 00:54:02 | | 28638 | 1ab87143
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\trapdoor_t0.jpg | 08-09-2003 | 00:54:04 | | 118161 | 5a218614
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\null.png | 08-09-2003 | 00:54:04 | | 204 | 6e73cafe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\fan-grate.png | 08-09-2003 | 00:54:04 | | 3267 | c98d68d2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\hazards\tornado_tex.png | 08-09-2003 | 00:54:04 | | 18745 | 24243d19
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\gem.dts | 08-09-2003 | 00:54:00 | | 4611 | 3539e7e9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\superspeed.dts | 08-09-2003 | 00:54:00 | | 7406 | 523919f0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\timetravel.dts | 08-09-2003 | 00:54:00 | | 12264 | bc312737
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\superjump.dts | 08-09-2003 | 00:54:00 | | 16194 | 15784536
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\superbounce.dts | 08-09-2003 | 00:54:00 | | 16266 | d6bdd5b6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\shockabsorber.dts | 08-09-2003 | 00:54:00 | | 18154 | ee1ad211
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\antigravity.dts | 08-09-2003 | 00:54:00 | | 23637 | 6eb0a112
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\enviro1.jpg | 08-09-2003 | 00:54:02 | | 380 | 3bf24f29
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\itemarrow.jpg | 08-09-2003 | 00:54:02 | | 4494 | 8d57617c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\timetravelitem_sand.jpg | 08-09-2003 | 00:54:02 | | 5750 | fb578b83
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\hourglasswood.jpg | 08-09-2003 | 00:54:02 | | 11843 | f46a04a1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\trampoline128_t0.jpg | 08-09-2003 | 00:54:02 | | 18495 | 31f96262
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\rocket.jpg | 08-09-2003 | 00:54:02 | | 19536 | 1fa01878
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\antigravity.png | 08-09-2003 | 00:54:04 | | 235 | 3267c771
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\shockabsorber.png | 08-09-2003 | 00:54:04 | | 1394 | 90e0ccd5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\gem.png | 08-09-2003 | 00:54:04 | | 6974 | ff4034c3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\black.gem.png | 08-09-2003 | 00:54:04 | | 8534 | 3174c84e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\sji_shinysteel.png | 08-09-2003 | 00:54:04 | | 11188 | a395f2fe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\gemshine.png | 08-09-2003 | 00:54:04 | | 14647 | 379c71d9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\turquoise.gem.png | 08-09-2003 | 00:54:04 | | 15047 | 19fbdbd4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\base.gem.png | 08-09-2003 | 00:54:04 | | 15286 | eb24e02b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\yellow.gem.png | 08-09-2003 | 00:54:04 | | 15296 | 2456448a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\purple.gem.png | 08-09-2003 | 00:54:04 | | 15507 | d00aded9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\blue.gem.png | 08-09-2003 | 00:54:04 | | 15537 | e6495b8e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\green.gem.png | 08-09-2003 | 00:54:04 | | 15546 | 95e6a79d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\orange.gem.png | 08-09-2003 | 00:54:04 | | 15607 | ee373a8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\red.gem.png | 08-09-2003 | 00:54:04 | | 15844 | f6a72f4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\timetravelitem_glass.png | 08-09-2003 | 00:54:04 | | 15990 | 1b12fae0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\items\powerup-bounce.png | 08-09-2003 | 00:54:04 | | 34837 | 435b2d2
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\plainsign.dts | 08-09-2003 | 00:54:00 | | 4039 | 9ef9bdb9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\cautionsign.dts | 08-09-2003 | 00:54:00 | | 5483 | 2921b76f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishlinesign.dts | 08-09-2003 | 00:54:00 | | 24560 | feb1a6eb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback.ifl | 08-09-2003 | 00:54:02 | | 314 | d0a66561
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign.ifl | 08-09-2003 | 00:54:02 | | 314 | 8378eed2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\cautionsign_pole.jpg | 08-09-2003 | 00:54:02 | | 7317 | 5538152a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\plainsignwood.jpg | 08-09-2003 | 00:54:02 | | 9898 | 7f69ca5f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\base.plainsign.jpg | 08-09-2003 | 00:54:02 | | 9898 | 7f69ca5f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\signwood.jpg | 08-09-2003 | 00:54:02 | | 11843 | f46a04a1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\custom_woodblockside.jpg | 08-09-2003 | 00:54:02 | | 11843 | f46a04a1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\signwood2.jpg | 08-09-2003 | 00:54:02 | | 14757 | 72663d25
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\cautionsignwood.jpg | 08-09-2003 | 00:54:02 | | 17322 | fdc5f5e2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\down.plainsign.jpg | 08-09-2003 | 00:54:02 | | 23639 | 73b20b9d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\up.plainsign.jpg | 08-09-2003 | 00:54:02 | | 23645 | a2a93341
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\left.plainsign.jpg | 08-09-2003 | 00:54:02 | | 26488 | 3232da64
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\right.plainsign.jpg | 08-09-2003 | 00:54:02 | | 26608 | 32f2484b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\base.cautionsign.jpg | 08-09-2003 | 00:54:02 | | 32298 | 8296e56c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\danger.cautionsign.jpg | 08-09-2003 | 00:54:02 | | 40168 | 1bfc4c94
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\caution.cautionsign.jpg | 08-09-2003 | 00:54:02 | | 40954 | ba8b9910
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_purple.png | 08-09-2003 | 00:54:04 | | 305 | c1ff3bb6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_metal.png | 08-09-2003 | 00:54:04 | | 8461 | 10781c6b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_01.png | 08-09-2003 | 00:54:06 | | 82282 | 2a80cfc1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback_01.png | 08-09-2003 | 00:54:06 | | 84503 | 91a0339d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_02.png | 08-09-2003 | 00:54:06 | | 89906 | 62b1082a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_03.png | 08-09-2003 | 00:54:06 | | 90007 | a324caa4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback_04.png | 08-09-2003 | 00:54:06 | | 90111 | 4ddcb31b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback_03.png | 08-09-2003 | 00:54:06 | | 90187 | bccdf4ec
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_04.png | 08-09-2003 | 00:54:06 | | 90309 | 791c55c4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback_02.png | 08-09-2003 | 00:54:06 | | 90433 | d3036db3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishsign_05.png | 08-09-2003 | 00:54:06 | | 92697 | 194c655c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\signs\finishback_05.png | 08-09-2003 | 00:54:06 | | 92945 | 4d88b2bf
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\markers
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\markers\octahedron.dts | 08-09-2003 | 00:54:00 | | 536 | 802d04af
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\parts
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\parts\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\traps
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\traps\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\explosives
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\explosives\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\trophies
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\shapes\trophies\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_warm2.jpg | 08-09-2003 | 00:54:02 | | 744 | 4220b4c1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_white.jpg | 08-09-2003 | 00:54:02 | | 861 | 5af871d0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_neutral1.jpg | 08-09-2003 | 00:54:02 | | 997 | fdb7a557
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_cool2.jpg | 08-09-2003 | 00:54:02 | | 1032 | c6335493
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_neutral3.jpg | 08-09-2003 | 00:54:02 | | 1048 | db6631ab
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_cool1.jpg | 08-09-2003 | 00:54:02 | | 1083 | 21922675
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_warm2.jpg | 08-09-2003 | 00:54:02 | | 1100 | 7be5c8dc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_neutral2.jpg | 08-09-2003 | 00:54:02 | | 1158 | 5637c58f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_warm1.jpg | 08-09-2003 | 00:54:02 | | 1178 | 21e4fb2d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_white.jpg | 08-09-2003 | 00:54:02 | | 2001 | 6a0658e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_white.jpg | 08-09-2003 | 00:54:02 | | 2111 | a5e6bdbe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_white2.jpg | 08-09-2003 | 00:54:02 | | 2310 | ea12f1b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_cool3.jpg | 08-09-2003 | 00:54:02 | | 3743 | b9b7e73d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_warm1.jpg | 08-09-2003 | 00:54:02 | | 4271 | f660f23c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_cool1.jpg | 08-09-2003 | 00:54:02 | | 4299 | b0048955
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_warm2.jpg | 08-09-2003 | 00:54:02 | | 4301 | 7ea178ed
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_cool2.jpg | 08-09-2003 | 00:54:02 | | 4301 | d876b7af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_neutral1.jpg | 08-09-2003 | 00:54:02 | | 4305 | 22f159b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\solid_neutral2.jpg | 08-09-2003 | 00:54:02 | | 4305 | 7aeffe0a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\tube_cool.jpg | 08-09-2003 | 00:54:02 | | 4338 | e9e3cc31
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_cool2.jpg | 08-09-2003 | 00:54:02 | | 4653 | eabd52b1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_cool1.jpg | 08-09-2003 | 00:54:02 | | 4659 | 543cf55
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_neutral1.jpg | 08-09-2003 | 00:54:02 | | 4667 | e082b7c8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_warm2.jpg | 08-09-2003 | 00:54:02 | | 4667 | 5fa374d9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_warm1.jpg | 08-09-2003 | 00:54:02 | | 4671 | 68d086ba
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\edge_neutral2.jpg | 08-09-2003 | 00:54:02 | | 4691 | c19ed89e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\tube_neutral.jpg | 08-09-2003 | 00:54:02 | | 4716 | 2163fbac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\wall_warm3.jpg | 08-09-2003 | 00:54:02 | | 4814 | d7df6137
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_white1.jpg | 08-09-2003 | 00:54:02 | | 4878 | 89b37d2b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_neutral1.jpg | 08-09-2003 | 00:54:02 | | 5611 | 4baf7ef7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_neutral2.jpg | 08-09-2003 | 00:54:02 | | 6427 | cadcc1d8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_cool.jpg | 08-09-2003 | 00:54:02 | | 6449 | 393d91b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_warm.jpg | 08-09-2003 | 00:54:02 | | 6653 | 739434f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_neutral.jpg | 08-09-2003 | 00:54:02 | | 6679 | 5b39397b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_caution.jpg | 08-09-2003 | 00:54:02 | | 6711 | ab67b049
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_warm1.jpg | 08-09-2003 | 00:54:02 | | 6718 | 42ca9d7a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\stripe_cool2.jpg | 08-09-2003 | 00:54:02 | | 6725 | 27040202
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_neutral2.jpg | 08-09-2003 | 00:54:02 | | 6799 | ea973c02
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_neutral2.jpg | 08-09-2003 | 00:54:02 | | 6826 | b4c4ea58
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_warm3.jpg | 08-09-2003 | 00:54:02 | | 6992 | 843d7c7e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\tube_warm.jpg | 08-09-2003 | 00:54:02 | | 7257 | 5fbb8971
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\arrow_neutral2.jpg | 08-09-2003 | 00:54:02 | | 7693 | c02e7b32
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_warm2.jpg | 08-09-2003 | 00:54:02 | | 7740 | d31fb74d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\arrow_cool1.jpg | 08-09-2003 | 00:54:02 | | 7872 | a0c0a55
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_cool2.jpg | 08-09-2003 | 00:54:02 | | 7996 | 3f2f35da
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_neutral.jpg | 08-09-2003 | 00:54:02 | | 7997 | 48d181c4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_warm4.jpg | 08-09-2003 | 00:54:02 | | 8040 | a624877a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\arrow_neutral1.jpg | 08-09-2003 | 00:54:02 | | 8049 | 58f5f852
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_white2.jpg | 08-09-2003 | 00:54:02 | | 8087 | 3908265f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_warm1.jpg | 08-09-2003 | 00:54:02 | | 8306 | ad057eef
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\arrow_warm1.jpg | 08-09-2003 | 00:54:02 | | 8443 | b29b7380
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_warm2.jpg | 08-09-2003 | 00:54:02 | | 8525 | b760c83d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_neutral4.jpg | 08-09-2003 | 00:54:02 | | 8531 | efd6cd32
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_neutral1.jpg | 08-09-2003 | 00:54:02 | | 8942 | 74ae2f2e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_neutral3.jpg | 08-09-2003 | 00:54:02 | | 9297 | 7fa773c3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\trim_cool1.jpg | 08-09-2003 | 00:54:02 | | 10041 | 7b352686
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_water.jpg | 08-09-2003 | 00:54:02 | | 10363 | f7b9e340
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\friction_none.jpg | 08-09-2003 | 00:54:02 | | 10486 | b389fdb9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_warm.jpg | 08-09-2003 | 00:54:02 | | 10616 | 2cef9579
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_cool4.jpg | 08-09-2003 | 00:54:02 | | 10755 | b573c8ac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_cool3.jpg | 08-09-2003 | 00:54:02 | | 11687 | d895b34
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_water_lft.jpg | 08-09-2003 | 00:54:02 | | 11715 | e001d29f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_woodblockside.jpg | 08-09-2003 | 00:54:02 | | 11843 | f46a04a1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_water_top.jpg | 08-09-2003 | 00:54:02 | | 11986 | 9ca3c4f4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_water_bttm.jpg | 08-09-2003 | 00:54:02 | | 12289 | 3c979ae7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_water_rte.jpg | 08-09-2003 | 00:54:02 | | 12472 | 6e6d214d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_logend.jpg | 08-09-2003 | 00:54:02 | | 12795 | 31bde106
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_sand.jpg | 08-09-2003 | 00:54:02 | | 12919 | bdeb51db
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_woodblocktop.jpg | 08-09-2003 | 00:54:02 | | 13250 | 9da3e66
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_cool.jpg | 08-09-2003 | 00:54:02 | | 13721 | d7b6c34f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\grid_cool2.jpg | 08-09-2003 | 00:54:02 | | 14042 | 49f66610
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_neutral2.jpg | 08-09-2003 | 00:54:02 | | 15343 | 3b8cdb34
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\friction_high.jpg | 08-09-2003 | 00:54:02 | | 15939 | 9e783236
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_cool1.jpg | 08-09-2003 | 00:54:02 | | 15944 | ff1c081f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_neutral2.jpg | 08-09-2003 | 00:54:02 | | 18886 | 14048035
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_cool2.jpg | 08-09-2003 | 00:54:02 | | 19148 | cc883d33
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_warm2.jpg | 08-09-2003 | 00:54:02 | | 19874 | 7be0993c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_neutral.jpg | 08-09-2003 | 00:54:02 | | 20516 | b8e8090b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_warm.jpg | 08-09-2003 | 00:54:02 | | 20693 | 7736e501
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_warm1.jpg | 08-09-2003 | 00:54:02 | | 21125 | 90430fa1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\friction_low.jpg | 08-09-2003 | 00:54:02 | | 21149 | 28737b6b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_neutral3.jpg | 08-09-2003 | 00:54:02 | | 22118 | bd629e89
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_warm3.jpg | 08-09-2003 | 00:54:02 | | 22936 | d8aa8fbe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\friction_ramp_yellow.jpg | 08-09-2003 | 00:54:02 | | 23075 | d0e40cd2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\chevron_cool.jpg | 08-09-2003 | 00:54:02 | | 24301 | 2ab0297b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_crate.jpg | 08-09-2003 | 00:54:02 | | 25312 | c5ce9ceb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_cool2.jpg | 08-09-2003 | 00:54:02 | | 26143 | 70817878
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_logside.jpg | 08-09-2003 | 00:54:02 | | 28364 | 89d3946a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_red_brick.jpg | 08-09-2003 | 00:54:02 | | 28556 | 817548c6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_woodbox.jpg | 08-09-2003 | 00:54:02 | | 32121 | dd2cfc87
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_dirt.jpg | 08-09-2003 | 00:54:02 | | 35446 | 6283c700
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_warm4.jpg | 08-09-2003 | 00:54:02 | | 49763 | cc8b67db
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_neutral1.jpg | 08-09-2003 | 00:54:02 | | 54524 | c49101ec
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_mid_track.jpg | 08-09-2003 | 00:54:04 | | 71464 | 7d8df719
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_insd_track.jpg | 08-09-2003 | 00:54:04 | | 73600 | 3e8669b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_parking.jpg | 08-09-2003 | 00:54:04 | | 73815 | dda83e93
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\pattern_warm2.jpg | 08-09-2003 | 00:54:04 | | 77016 | aade9153
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_road.jpg | 08-09-2003 | 00:54:04 | | 110345 | 1d258be9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\custom_skyscrape2.jpg | 08-09-2003 | 00:54:04 | | 132828 | 40f772fb
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\shockdrop.dif | 08-09-2003 | 00:53:56 | | 10886 | e1d49348
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\aroundtheworld.dif | 08-09-2003 | 00:53:56 | | 11717 | eeae4af8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward0.dif | 08-09-2003 | 00:53:56 | | 18815 | b642c169
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\fan_lift.dif | 08-09-2003 | 00:53:56 | | 24432 | a91cba29
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\tornadotoss.dif | 08-09-2003 | 00:53:56 | | 30827 | 11fdeb27
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward2.dif | 08-09-2003 | 00:53:56 | | 55972 | 55a12df8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\leapoffaith.dif | 08-09-2003 | 00:53:56 | | 71262 | 54ab1b45
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward5.dif | 08-09-2003 | 00:53:56 | | 80997 | 182f13
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward4.dif | 08-09-2003 | 00:53:56 | | 81423 | 1f031ab1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\hopskipjump.dif | 08-09-2003 | 00:53:56 | | 90763 | 2d089c6c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\intskeeball.dif | 08-09-2003 | 00:53:56 | | 92773 | 518f5e2d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward1.dif | 08-09-2003 | 00:53:56 | | 102292 | 8d9a33f5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\wind_tunnel.dif | 08-09-2003 | 00:53:56 | | 103776 | 4d372307
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\rampmatrix.dif | 08-09-2003 | 00:53:56 | | 123573 | f7fc70f1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\marbletris.dif | 08-09-2003 | 00:53:56 | | 123666 | a6b948df
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\compass_points.dif | 08-09-2003 | 00:53:56 | | 138598 | f05c8d9b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\skyscraper.dif | 08-09-2003 | 00:53:56 | | 140134 | ffd65ca7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\obstacle_course1.dif | 08-09-2003 | 00:53:56 | | 149796 | 4d45f28d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\upward3.dif | 08-09-2003 | 00:53:58 | | 151835 | d9b823f3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\gauntlet.dif | 08-09-2003 | 00:53:58 | | 170172 | 407e7705
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\greatdivide.dif | 08-09-2003 | 00:53:58 | | 201831 | d88d6f41
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\highway.dif | 08-09-2003 | 00:53:58 | | 214527 | e2734ba0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\racetrack.dif | 08-09-2003 | 00:53:58 | | 222529 | ea10640b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\moebius.dif | 08-09-2003 | 00:53:58 | | 223061 | 3eca6af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\tornado_jump.dif | 08-09-2003 | 00:53:58 | | 232617 | f9fa5a52
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\spaceslide.dif | 08-09-2003 | 00:53:58 | | 248919 | 1e231879
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\intsteppingstones.dif | 08-09-2003 | 00:53:58 | | 277835 | df2e3032
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\tree.dif | 08-09-2003 | 00:53:58 | | 295538 | c0c185bd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\motomarblecross.dif | 08-09-2003 | 00:53:58 | | 313893 | a1212f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\the_wave.dif | 08-09-2003 | 00:53:58 | | 423148 | c5ceb33b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\intermediate\inthighroadlowroad.dif | 08-09-2003 | 00:53:58 | | 567627 | 22482a7b
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\backagain.dif | 08-09-2003 | 00:53:56 | | 7592 | cd95bada
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_time.dif | 08-09-2003 | 00:53:56 | | 9700 | 2b59ec4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_speed.dif | 08-09-2003 | 00:53:56 | | 12482 | aedd15a5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_airmove.dif | 08-09-2003 | 00:53:56 | | 13661 | a53119b4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_fans.dif | 08-09-2003 | 00:53:56 | | 16182 | 85f912dd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_shock.dif | 08-09-2003 | 00:53:56 | | 17479 | 8eec3aee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_copter.dif | 08-09-2003 | 00:53:56 | | 17719 | cdb95ee1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_gravity.dif | 08-09-2003 | 00:53:56 | | 19184 | bb069687
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_jump.dif | 08-09-2003 | 00:53:56 | | 20737 | 9d759336
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_bounce.dif | 08-09-2003 | 00:53:56 | | 21320 | 7282297
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_elevator.dif | 08-09-2003 | 00:53:56 | | 21326 | b9637f6f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_platform.dif | 08-09-2003 | 00:53:56 | | 26419 | 63b2c484
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training1.dif | 08-09-2003 | 00:53:56 | | 27060 | f2957bf6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_bumpers.dif | 08-09-2003 | 00:53:56 | | 27168 | 69390af0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_jewel.dif | 08-09-2003 | 00:53:56 | | 27393 | f5af55fe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_mines.dif | 08-09-2003 | 00:53:56 | | 31383 | c691a8b9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training2.dif | 08-09-2003 | 00:53:56 | | 32899 | c74ca659
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_trapdoor.dif | 08-09-2003 | 00:53:56 | | 33206 | bc7642f1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_tornado.dif | 08-09-2003 | 00:53:56 | | 36619 | 29fb2c98
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training_friction.dif | 08-09-2003 | 00:53:56 | | 38018 | 14bc0f99
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\training3.dif | 08-09-2003 | 00:53:56 | | 45484 | fe3afa3f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\pitfall.dif | 08-09-2003 | 00:53:56 | | 98218 | 244372af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\platformparty.dif | 08-09-2003 | 00:53:56 | | 98296 | 6dab2bf7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\windingroad.dif | 08-09-2003 | 00:53:56 | | 102140 | 8c0f2ee4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\tritwist.dif | 08-09-2003 | 00:53:56 | | 105564 | e2c07251
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\goforgreen.dif | 08-09-2003 | 00:53:56 | | 112622 | 90c2e436
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\jumpjumpjump.dif | 08-09-2003 | 00:53:56 | | 125073 | b2c59593
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\beginner_finish.dif | 08-09-2003 | 00:53:56 | | 139346 | ada24b1e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\hoops.dif | 08-09-2003 | 00:53:56 | | 142207 | bb6e6902
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\skatepark.dif | 08-09-2003 | 00:53:58 | | 153938 | b1dc5d2f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\beginner_playground.dif | 08-09-2003 | 00:53:58 | | 193286 | 2127d9d9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\beginner\forkinroad.dif | 08-09-2003 | 00:53:58 | | 219669 | 8904095b
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain4.dif | 08-09-2003 | 00:53:56 | | 7241 | b7d223b7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\smallplatform.dif | 08-09-2003 | 00:53:56 | | 7389 | e152b4db
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall5.dif | 08-09-2003 | 00:53:56 | | 8831 | b65b4d2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall1.dif | 08-09-2003 | 00:53:56 | | 11476 | c5fc20b8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall3.dif | 08-09-2003 | 00:53:56 | | 11885 | ad32f6f5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\daedalus3.dif | 08-09-2003 | 00:53:56 | | 12253 | 44278077
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\arrowsign.dif | 08-09-2003 | 00:53:56 | | 12466 | 7fdd1bd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ski3.dif | 08-09-2003 | 00:53:56 | | 13997 | 20fe8ebd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall2.dif | 08-09-2003 | 00:53:56 | | 14588 | a616247e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe.dif | 08-09-2003 | 00:53:56 | | 15346 | 160c21f5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\arch_blue.dif | 08-09-2003 | 00:53:56 | | 15567 | 2900a0ee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\arch_purple.dif | 08-09-2003 | 00:53:56 | | 15567 | d05f93b8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\arch_red.dif | 08-09-2003 | 00:53:56 | | 15567 | 8eca0be3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\arch_green.dif | 08-09-2003 | 00:53:56 | | 15570 | 55aaf31e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipecap.dif | 08-09-2003 | 00:53:56 | | 17379 | bc3c8100
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain5.dif | 08-09-2003 | 00:53:56 | | 17810 | d084dfc5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall4.dif | 08-09-2003 | 00:53:56 | | 18087 | 6ca259fe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain2.dif | 08-09-2003 | 00:53:56 | | 19261 | f4add2ea
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection2.dif | 08-09-2003 | 00:53:56 | | 20732 | 57a43c52
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection3.dif | 08-09-2003 | 00:53:56 | | 22018 | 4c06e4f3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ski2.dif | 08-09-2003 | 00:53:56 | | 22588 | e9917af8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\shimmy.dif | 08-09-2003 | 00:53:56 | | 22660 | cd26e447
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\airwalk.dif | 08-09-2003 | 00:53:56 | | 24633 | a632caef
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipeturn.dif | 08-09-2003 | 00:53:56 | | 25903 | f256b2b5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain6.dif | 08-09-2003 | 00:53:56 | | 29521 | 8f44ba12
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain7.dif | 08-09-2003 | 00:53:56 | | 30286 | 2a85733c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\daedalus1.dif | 08-09-2003 | 00:53:56 | | 32139 | 1be3a72a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe3way.dif | 08-09-2003 | 00:53:56 | | 32286 | 8d66cf48
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain3.dif | 08-09-2003 | 00:53:56 | | 39627 | 2e328502
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\kingofthemountain1.dif | 08-09-2003 | 00:53:56 | | 42070 | 656b32a3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection1.dif | 08-09-2003 | 00:53:56 | | 47232 | 8cc1d332
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe0.dif | 08-09-2003 | 00:53:56 | | 49526 | dbabfa7d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pinball2.dif | 08-09-2003 | 00:53:56 | | 49673 | 65ae5558
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl3.dif | 08-09-2003 | 00:53:56 | | 50820 | 308b535
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\freefall0.dif | 08-09-2003 | 00:53:56 | | 51214 | 56255341
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\eyeofthestorm.dif | 08-09-2003 | 00:53:56 | | 52732 | 51487c3e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl0.dif | 08-09-2003 | 00:53:56 | | 54138 | 6f81e402
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\acrobat2.dif | 08-09-2003 | 00:53:56 | | 55798 | d2a71d58
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pinball4.dif | 08-09-2003 | 00:53:56 | | 56790 | 80b8417a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\acrobat1.dif | 08-09-2003 | 00:53:56 | | 58085 | 206405b6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection5.dif | 08-09-2003 | 00:53:56 | | 58415 | d949b58c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl1.dif | 08-09-2003 | 00:53:56 | | 58797 | 59bf6152
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl4.dif | 08-09-2003 | 00:53:56 | | 62137 | 356d8493
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe4.dif | 08-09-2003 | 00:53:56 | | 62145 | 956b39eb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe5.dif | 08-09-2003 | 00:53:56 | | 62161 | 2877bd56
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection4.dif | 08-09-2003 | 00:53:56 | | 64212 | 5b70ff44
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\dive1.dif | 08-09-2003 | 00:53:56 | | 65589 | 92c384bb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ski1.dif | 08-09-2003 | 00:53:56 | | 66583 | e4c5fb5e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\mudslide.dif | 08-09-2003 | 00:53:56 | | 67651 | 3f76f7ce
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\acrobat3.dif | 08-09-2003 | 00:53:56 | | 67938 | 2a733c7d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pinball0.dif | 08-09-2003 | 00:53:56 | | 69811 | ce4ed32b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pinball3.dif | 08-09-2003 | 00:53:56 | | 74528 | dc677faa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ski0.dif | 08-09-2003 | 00:53:56 | | 74840 | 4a859cad
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl2.dif | 08-09-2003 | 00:53:56 | | 77343 | c63b9eb7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\whorl5.dif | 08-09-2003 | 00:53:56 | | 79445 | 76830ff
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\dive0.dif | 08-09-2003 | 00:53:56 | | 79908 | d2cba14
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\construction.dif | 08-09-2003 | 00:53:56 | | 86716 | 2cf0961d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\reloaded.dif | 08-09-2003 | 00:53:56 | | 94014 | 5d6f1636
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\dive4.dif | 08-09-2003 | 00:53:56 | | 98014 | 9ce313ff
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ordeal0.dif | 08-09-2003 | 00:53:56 | | 103203 | aa984cd4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\plumbing.dif | 08-09-2003 | 00:53:56 | | 108507 | fdb5b486
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe7.dif | 08-09-2003 | 00:53:56 | | 109662 | 5c354f1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe2.dif | 08-09-2003 | 00:53:56 | | 110859 | 9634e9b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\dive3.dif | 08-09-2003 | 00:53:56 | | 112407 | 1bccfa1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pinball1.dif | 08-09-2003 | 00:53:56 | | 112565 | 5bfc245a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\bounce.dif | 08-09-2003 | 00:53:56 | | 114734 | 5b8f609b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\leastresist.dif | 08-09-2003 | 00:53:56 | | 123300 | c00aad93
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\battlements.dif | 08-09-2003 | 00:53:56 | | 127679 | 1b31e020
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\scaffold.dif | 08-09-2003 | 00:53:56 | | 127768 | c08a34d0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\tightrope.dif | 08-09-2003 | 00:53:56 | | 128276 | 50f3266
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\selection0.dif | 08-09-2003 | 00:53:56 | | 131786 | 5dbd72b1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\towermaze.dif | 08-09-2003 | 00:53:56 | | 142750 | 3d1d5920
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe6.dif | 08-09-2003 | 00:53:56 | | 146164 | bf5c41b1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe3.dif | 08-09-2003 | 00:53:56 | | 151334 | c20e2b1a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\ordeal1.dif | 08-09-2003 | 00:53:58 | | 153996 | cf24885d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\siege.dif | 08-09-2003 | 00:53:58 | | 173549 | 9f1247a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pipe1.dif | 08-09-2003 | 00:53:58 | | 188034 | 5f3e3c50
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\daedalus2.dif | 08-09-2003 | 00:53:58 | | 211397 | deffaa96
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\dive2.dif | 08-09-2003 | 00:53:58 | | 226760 | 3a5ac653
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\pathways.dif | 08-09-2003 | 00:53:58 | | 249367 | 43a8af51
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\addon\darwin.dif | 08-09-2003 | 00:53:58 | | 273114 | fe550c64
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\trapdoor.dif | 08-09-2003 | 00:53:56 | | 7410 | 919f91c1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\platform_circle.dif | 08-09-2003 | 00:53:56 | | 59396 | 8755448c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\slipslide.dif | 08-09-2003 | 00:53:56 | | 64152 | da548c85
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\half-pipe0.dif | 08-09-2003 | 00:53:56 | | 97666 | 367af28a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\half-pipe1.dif | 08-09-2003 | 00:53:56 | | 97766 | bb18aa43
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\blockparty.dif | 08-09-2003 | 00:53:56 | | 107394 | 96a12473
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\platform_circle_huge.dif | 08-09-2003 | 00:53:56 | | 114864 | c3318eb4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\tothemoon.dif | 08-09-2003 | 00:53:56 | | 135519 | aa382b0c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\thrillride.dif | 08-09-2003 | 00:53:58 | | 170627 | a73da9f5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\half-pipe2.dif | 08-09-2003 | 00:53:58 | | 185201 | 37edb0ee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\survival.dif | 08-09-2003 | 00:53:58 | | 209743 | 1d18493e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\a-maze-ing.dif | 08-09-2003 | 00:53:58 | | 212583 | 83b97893
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\greatdivide2.dif | 08-09-2003 | 00:53:58 | | 228583 | c3378e7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\escher.dif | 08-09-2003 | 00:53:58 | | 288106 | c190b7c0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\twisting.dif | 08-09-2003 | 00:53:58 | | 302771 | f7ff7a10
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\willowisp.dif | 08-09-2003 | 00:53:58 | | 309171 | 5c876419
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\texturesource
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\advanced\texturesource\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\quarksource
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\quarksource\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\levels
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\levels\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\texturesource
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\texturesource\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\test
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\test\maps
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\test\maps\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\white.jpg | 08-09-2003 | 00:54:02 | | 351 | b27a8f70
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes\tube_long.dif | 08-09-2003 | 00:53:56 | | 74558 | e7a8a222
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes\tube_turn.dif | 08-09-2003 | 00:53:58 | | 152884 | 3ef5b040
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes\tube_lintersect.dif | 08-09-2003 | 00:53:58 | | 297050 | 798d4494
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes\blue_grid2.jpg | 08-09-2003 | 00:54:02 | | 2026 | 1361bf09
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\tubes\blue_grid.jpg | 08-09-2003 | 00:54:02 | | 4338 | e9e3cc31
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\halftubes
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\halftubes\halftube_long.dif | 08-09-2003 | 00:53:56 | | 40055 | 46c4295c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\halftubes\blue_grid2.jpg | 08-09-2003 | 00:54:02 | | 2026 | 1361bf09
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\halftubes\blue_grid.jpg | 08-09-2003 | 00:54:02 | | 4716 | 2163fbac
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\boxes
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\boxes\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\pads
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\pads\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\jumps
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\jumps\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\obstacles
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\obstacles\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\segments
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\segments\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\platforms
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\interiors\parts\platforms\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\timetrial.jpg | 08-09-2003 | 00:54:02 | | 18948 | 19e1db85
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\gems.jpg | 08-09-2003 | 00:54:02 | | 20020 | de28be63
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\copter.jpg | 08-09-2003 | 00:54:02 | | 21294 | 3eb00ff5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\trapdoor.jpg | 08-09-2003 | 00:54:02 | | 21880 | b5d4b621
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\superspeed.jpg | 08-09-2003 | 00:54:02 | | 21899 | f65f6113
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\backagain.jpg | 08-09-2003 | 00:54:02 | | 22369 | f9630d4b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\gravity.jpg | 08-09-2003 | 00:54:02 | | 23911 | f8ebe209
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\elevator.jpg | 08-09-2003 | 00:54:02 | | 24532 | 64c22b81
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\ductfan.jpg | 08-09-2003 | 00:54:02 | | 25191 | fb949f2e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\bumpers.jpg | 08-09-2003 | 00:54:02 | | 25289 | 59b04cba
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\shock.jpg | 08-09-2003 | 00:54:02 | | 25391 | 5e2def1e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\mine.jpg | 08-09-2003 | 00:54:02 | | 25903 | 411b5324
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\powerjump.jpg | 08-09-2003 | 00:54:02 | | 26024 | 16f95f6b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\friction.jpg | 08-09-2003 | 00:54:02 | | 26414 | ef87f94a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\jumping.jpg | 08-09-2003 | 00:54:02 | | 27609 | 561d409e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\windingroad.jpg | 08-09-2003 | 00:54:02 | | 27927 | 800d94
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\platform.jpg | 08-09-2003 | 00:54:02 | | 28043 | c1a77935
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\airmove.jpg | 08-09-2003 | 00:54:02 | | 28060 | e935bffe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\tornado.jpg | 08-09-2003 | 00:54:02 | | 28533 | b81915d3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\pitfall.jpg | 08-09-2003 | 00:54:02 | | 30398 | b14fb4bb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\movement.jpg | 08-09-2003 | 00:54:02 | | 31237 | a0e32154
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\bounce.jpg | 08-09-2003 | 00:54:02 | | 31280 | 79862b23
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\finale.jpg | 08-09-2003 | 00:54:02 | | 31445 | a8379857
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\platformparty.jpg | 08-09-2003 | 00:54:02 | | 32971 | 3344c041
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\pitfall.mis | 08-09-2003 | 00:54:04 | | 3450 | 2fa1e088
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\copter.mis | 08-09-2003 | 00:54:04 | | 3588 | bbc29550
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\shock.mis | 08-09-2003 | 00:54:04 | | 3689 | dfe57e52
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\bounce.mis | 08-09-2003 | 00:54:04 | | 3701 | 90af7ffa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\superspeed.mis | 08-09-2003 | 00:54:04 | | 3827 | b7c63b1d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\airmove.mis | 08-09-2003 | 00:54:04 | | 3855 | bfdeec30
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\jumping.mis | 08-09-2003 | 00:54:04 | | 3890 | 4f90fec
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\timetrial.mis | 08-09-2003 | 00:54:04 | | 4046 | 6ee116c3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\powerjump.mis | 08-09-2003 | 00:54:04 | | 4238 | 27e693ad
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\backagain.mis | 08-09-2003 | 00:54:04 | | 4239 | 790b4b71
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\gravity.mis | 08-09-2003 | 00:54:04 | | 4559 | c576d5e2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\ductfan.mis | 08-09-2003 | 00:54:04 | | 4608 | 2c5ea95b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\windingroad.mis | 08-09-2003 | 00:54:04 | | 4719 | b4d11202
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\platform.mis | 08-09-2003 | 00:54:04 | | 4811 | 152ffacc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\tornado.mis | 08-09-2003 | 00:54:04 | | 4828 | 4609e077
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\gems.mis | 08-09-2003 | 00:54:04 | | 4891 | 25b854e6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\movement.mis | 08-09-2003 | 00:54:04 | | 4958 | f0ad479a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\friction.mis | 08-09-2003 | 00:54:04 | | 5043 | 9f887100
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\elevator.mis | 08-09-2003 | 00:54:04 | | 5196 | e84ed7a1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\bumpers.mis | 08-09-2003 | 00:54:04 | | 5897 | dd896b24
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\platformparty.mis | 08-09-2003 | 00:54:04 | | 8256 | 77406ae3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\mine.mis | 08-09-2003 | 00:54:04 | | 9471 | 447686f2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\trapdoor.mis | 08-09-2003 | 00:54:04 | | 10381 | 62169651
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\beginner\finale.mis | 08-09-2003 | 00:54:04 | | 23786 | 1e3b5337
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\racequalifying.jpg | 08-09-2003 | 00:54:02 | | 18488 | 5749cb23
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\racetrack.jpg | 08-09-2003 | 00:54:02 | | 21344 | dd24a113
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\skatepark.jpg | 08-09-2003 | 00:54:02 | | 22671 | c8a0e135
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\skeeball.jpg | 08-09-2003 | 00:54:02 | | 24285 | 3d79ab89
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\motomarblecross.jpg | 08-09-2003 | 00:54:02 | | 24566 | 57bda1cb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\spaceslide.jpg | 08-09-2003 | 00:54:02 | | 25270 | 346a4ae0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\halfpipe.jpg | 08-09-2003 | 00:54:02 | | 25606 | 316e8a32
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\thewave.jpg | 08-09-2003 | 00:54:02 | | 26059 | b06c3aba
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\hopskipjump.jpg | 08-09-2003 | 00:54:02 | | 26491 | c353e075
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\tornado.jpg | 08-09-2003 | 00:54:02 | | 26543 | 9d2c80e4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\jumpjumpjump.jpg | 08-09-2003 | 00:54:02 | | 28432 | 8a37082e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\rampmatrix.jpg | 08-09-2003 | 00:54:02 | | 28587 | dc8e9932
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\shockdrop.jpg | 08-09-2003 | 00:54:02 | | 28674 | 37e52512
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\upward.jpg | 08-09-2003 | 00:54:02 | | 28681 | 552519c1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\tritwist.jpg | 08-09-2003 | 00:54:02 | | 28971 | f1ed806d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\forkinroad2.jpg | 08-09-2003 | 00:54:02 | | 29251 | 8dc6a05e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\greatdivide.jpg | 08-09-2003 | 00:54:02 | | 29792 | c026647f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\hoops.jpg | 08-09-2003 | 00:54:02 | | 30013 | cd2866ee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\gauntlet.jpg | 08-09-2003 | 00:54:02 | | 31208 | 28fbf1bc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\marbletris.jpg | 08-09-2003 | 00:54:02 | | 31540 | 6800daa9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\forkinroad.jpg | 08-09-2003 | 00:54:02 | | 31796 | 5f3faa72
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\highroadlowroad.jpg | 08-09-2003 | 00:54:02 | | 32010 | cb77d840
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\playground.jpg | 08-09-2003 | 00:54:02 | | 33612 | 299f9dfe
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\goforgreen.jpg | 08-09-2003 | 00:54:02 | | 37871 | 32be7a8b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\forkinroad.mis | 08-09-2003 | 00:54:04 | | 3046 | 5d8c62d0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\tornado.mis | 08-09-2003 | 00:54:04 | | 3840 | 5ae66fac
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\goforgreen.mis | 08-09-2003 | 00:54:04 | | 3908 | 19a5f42a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\shockdrop.mis | 08-09-2003 | 00:54:04 | | 4173 | 580e408c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\highroadlowroad.mis | 08-09-2003 | 00:54:04 | | 4361 | 672f0275
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\hopskipjump.mis | 08-09-2003 | 00:54:04 | | 4471 | a34807
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\jumpjumpjump.mis | 08-09-2003 | 00:54:04 | | 5362 | fe273228
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\forkinroad2.mis | 08-09-2003 | 00:54:04 | | 5512 | c79a86d7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\tritwist.mis | 08-09-2003 | 00:54:04 | | 5626 | 43093fa1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\halfpipe.mis | 08-09-2003 | 00:54:04 | | 5749 | 120f36f7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\skeeball.mis | 08-09-2003 | 00:54:04 | | 6009 | 5d7ff7bf
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\upward.mis | 08-09-2003 | 00:54:04 | | 6432 | f457c55b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\rampmatrix.mis | 08-09-2003 | 00:54:04 | | 6761 | c62151f2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\skatepark.mis | 08-09-2003 | 00:54:04 | | 6784 | 3b4e1a8e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\racequalifying.mis | 08-09-2003 | 00:54:04 | | 7292 | 27210f33
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\motomarblecross.mis | 08-09-2003 | 00:54:04 | | 7588 | 64fe5b8a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\spaceslide.mis | 08-09-2003 | 00:54:04 | | 9778 | fba758a5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\racetrack.mis | 08-09-2003 | 00:54:04 | | 11228 | 9543875b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\gauntlet.mis | 08-09-2003 | 00:54:04 | | 11795 | 44e24fd6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\hoops.mis | 08-09-2003 | 00:54:04 | | 12793 | 9a1bb1e0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\playground.mis | 08-09-2003 | 00:54:04 | | 13662 | f93ee999
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\greatdivide.mis | 08-09-2003 | 00:54:04 | | 21000 | 2e9e4296
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\marbletris.mis | 08-09-2003 | 00:54:04 | | 27509 | c7bc7d3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\intermediate\thewave.mis | 08-09-2003 | 00:54:04 | | 119011 | dbcbb64f
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\skyscraper.jpg | 08-09-2003 | 00:54:02 | | 17459 | 38a8e102
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\willowisp.jpg | 08-09-2003 | 00:54:02 | | 22551 | 4b19d318
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\greatdivide2.jpg | 08-09-2003 | 00:54:02 | | 23917 | 9fcb47c7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\trapdoor.jpg | 08-09-2003 | 00:54:02 | | 26223 | 65f22cdb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\slipslide.jpg | 08-09-2003 | 00:54:02 | | 26420 | f743d0b9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\highway.jpg | 08-09-2003 | 00:54:02 | | 26791 | 1101e0bd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tree.jpg | 08-09-2003 | 00:54:02 | | 27030 | f36e007d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\moebius.jpg | 08-09-2003 | 00:54:02 | | 27147 | 854466d1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\halfpipe2.jpg | 08-09-2003 | 00:54:02 | | 27649 | 14026da3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\leapoffaith.jpg | 08-09-2003 | 00:54:02 | | 27797 | ce69fe48
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\obstacle.jpg | 08-09-2003 | 00:54:02 | | 28289 | 5f242765
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\survival.jpg | 08-09-2003 | 00:54:02 | | 28821 | aac02906
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\3foldmaze.jpg | 08-09-2003 | 00:54:02 | | 28938 | 68183044
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\aroundtheworld.jpg | 08-09-2003 | 00:54:02 | | 29198 | 53eabe54
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\thrillride.jpg | 08-09-2003 | 00:54:02 | | 29208 | f17e468f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tothemoon.jpg | 08-09-2003 | 00:54:02 | | 29406 | e4d9e199
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tubetreasure.jpg | 08-09-2003 | 00:54:02 | | 29544 | 3c562a69
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\fan_lift.jpg | 08-09-2003 | 00:54:02 | | 30592 | ca4e0764
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\blockparty.jpg | 08-09-2003 | 00:54:02 | | 30766 | 90de225a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\steppingstones.jpg | 08-09-2003 | 00:54:02 | | 30781 | 98f83f09
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\compasspoints.jpg | 08-09-2003 | 00:54:02 | | 32038 | ed36a467
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\a-maze-ing.jpg | 08-09-2003 | 00:54:02 | | 32407 | bdefb3b6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\3foldmaze2.jpg | 08-09-2003 | 00:54:02 | | 34240 | aa3f6e81
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\twisting.jpg | 08-09-2003 | 00:54:02 | | 35954 | 4ae69120
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\leapoffaith.mis | 08-09-2003 | 00:54:04 | | 3927 | ac41d7ee
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\fan_lift.mis | 08-09-2003 | 00:54:04 | | 4152 | 6023241b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\construction.mis | 08-09-2003 | 00:54:04 | | 4581 | 1ec9d1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\aroundtheworld.mis | 08-09-2003 | 00:54:04 | | 5287 | 406e93c8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\ski.mis | 08-09-2003 | 00:54:04 | | 5453 | 9061684c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\shimmy.mis | 08-09-2003 | 00:54:04 | | 5553 | e0bee6d8
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\steppingstones.mis | 08-09-2003 | 00:54:04 | | 5659 | 52c9be1b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\reloaded.mis | 08-09-2003 | 00:54:04 | | 5708 | b5120074
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\eyeofthestorm.mis | 08-09-2003 | 00:54:04 | | 5777 | 39f58fad
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\halfpipe2.mis | 08-09-2003 | 00:54:04 | | 5924 | a753f6b3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\icarus.mis | 08-09-2003 | 00:54:04 | | 6475 | 8175bdcc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\leastresist.mis | 08-09-2003 | 00:54:04 | | 6872 | 80f6b7cd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\mudslide.mis | 08-09-2003 | 00:54:04 | | 7068 | eef1d15b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tango.mis | 08-09-2003 | 00:54:04 | | 7133 | e3c75e84
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\blockparty.mis | 08-09-2003 | 00:54:04 | | 7276 | 91486c7f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\scaffold.mis | 08-09-2003 | 00:54:04 | | 7503 | ce8b4bdc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pipedreams.mis | 08-09-2003 | 00:54:04 | | 7708 | 8bbc4718
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\slipslide.mis | 08-09-2003 | 00:54:04 | | 8090 | c4d05a3c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\3foldmaze.mis | 08-09-2003 | 00:54:04 | | 8422 | f02197f0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\acrobat.mis | 08-09-2003 | 00:54:04 | | 8509 | 2fd28d3b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\freefall.mis | 08-09-2003 | 00:54:04 | | 8638 | bc74472c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tubetreasure.mis | 08-09-2003 | 00:54:04 | | 8910 | e2cbe4b0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\moebius.mis | 08-09-2003 | 00:54:04 | | 9065 | a0764c28
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\3foldmaze2.mis | 08-09-2003 | 00:54:04 | | 9578 | 367c4c0a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\towermaze.mis | 08-09-2003 | 00:54:04 | | 9792 | 435b1355
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\whorl.mis | 08-09-2003 | 00:54:04 | | 9932 | 5070de54
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\siege.mis | 08-09-2003 | 00:54:04 | | 11436 | 469d5060
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\survival.mis | 08-09-2003 | 00:54:04 | | 12478 | 241581b1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tree.mis | 08-09-2003 | 00:54:04 | | 12636 | e3895d66
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\thrillride.mis | 08-09-2003 | 00:54:04 | | 13507 | e1b5f7fb
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\plumbing.mis | 08-09-2003 | 00:54:04 | | 13751 | 127613e4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\airwalk.mis | 08-09-2003 | 00:54:04 | | 14120 | 9d91f188
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\dive.mis | 08-09-2003 | 00:54:04 | | 14858 | 574fa385
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tightrope.mis | 08-09-2003 | 00:54:04 | | 15375 | e2d775e9
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\willowisp.mis | 08-09-2003 | 00:54:04 | | 15944 | 8d2fdf11
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\daedalus.mis | 08-09-2003 | 00:54:04 | | 16556 | e55ec16
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\compasspoints.mis | 08-09-2003 | 00:54:04 | | 17746 | 89c4d5c2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\battlements.mis | 08-09-2003 | 00:54:04 | | 18801 | 9c30a8fc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\trapdoor.mis | 08-09-2003 | 00:54:04 | | 20101 | 55f0ee38
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\greatdivide2.mis | 08-09-2003 | 00:54:04 | | 20660 | 91595262
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\darwin.mis | 08-09-2003 | 00:54:04 | | 21901 | c8d02273
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\kingofthemountain.mis | 08-09-2003 | 00:54:04 | | 22274 | 740cfab1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\obstacle.mis | 08-09-2003 | 00:54:04 | | 23126 | 1c1cad6
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tothemoon.mis | 08-09-2003 | 00:54:04 | | 23934 | 765b5371
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\a-maze-ing.mis | 08-09-2003 | 00:54:04 | | 24823 | 732410af
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\ordeal.mis | 08-09-2003 | 00:54:04 | | 25475 | b6f99671
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\skyscraper.mis | 08-09-2003 | 00:54:04 | | 25655 | 6f246b57
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pinball.mis | 08-09-2003 | 00:54:04 | | 30033 | cf773239
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\selection.mis | 08-09-2003 | 00:54:04 | | 30117 | 65444ce
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pathways.mis | 08-09-2003 | 00:54:04 | | 35615 | 6b39e061
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\twisting.mis | 08-09-2003 | 00:54:04 | | 45524 | e19798e5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\highway.mis | 08-09-2003 | 00:54:04 | | 51985 | e020932
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\acrobat.png | 08-09-2003 | 00:54:04 | | 45647 | 544fdd1f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\mudslide.png | 08-09-2003 | 00:54:06 | | 59536 | bbcfeef0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tightrope.png | 08-09-2003 | 00:54:06 | | 62708 | eda97bf1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\battlements.png | 08-09-2003 | 00:54:06 | | 63203 | d32dfc0f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pipedreams.png | 08-09-2003 | 00:54:06 | | 64202 | 100c7c4b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\darwin.png | 08-09-2003 | 00:54:06 | | 69003 | 49b05dfa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\kingofthemountain.png | 08-09-2003 | 00:54:06 | | 70163 | 50533e5a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pathways.png | 08-09-2003 | 00:54:06 | | 71418 | 8aeca19e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\selection.png | 08-09-2003 | 00:54:06 | | 72801 | fae6d3be
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\icarus.png | 08-09-2003 | 00:54:06 | | 72867 | 5c54ede5
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\eyeofthestorm.png | 08-09-2003 | 00:54:06 | | 74700 | 10b707c2
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\shimmy.png | 08-09-2003 | 00:54:06 | | 75452 | ee58a664
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\ordeal.png | 08-09-2003 | 00:54:06 | | 77464 | fd79c83
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\leastresist.png | 08-09-2003 | 00:54:06 | | 78889 | 9a079799
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\dive.png | 08-09-2003 | 00:54:06 | | 78967 | f962206
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\plumbing.png | 08-09-2003 | 00:54:06 | | 80217 | 535d64aa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\pinball.png | 08-09-2003 | 00:54:06 | | 81297 | d5621f4f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\towermaze.png | 08-09-2003 | 00:54:06 | | 82301 | d0238031
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\airwalk.png | 08-09-2003 | 00:54:06 | | 82709 | 6d6ef528
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\scaffold.png | 08-09-2003 | 00:54:06 | | 85445 | 5189bb3
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\daedalus.png | 08-09-2003 | 00:54:06 | | 85540 | a8634b0f
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\construction.png | 08-09-2003 | 00:54:06 | | 85714 | 850180c7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\freefall.png | 08-09-2003 | 00:54:06 | | 86006 | 7d9b416c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\ski.png | 08-09-2003 | 00:54:06 | | 86874 | 69f8fe7b
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\tango.png | 08-09-2003 | 00:54:06 | | 87006 | cbe36cea
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\siege.png | 08-09-2003 | 00:54:06 | | 89204 | 57720b86
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\reloaded.png | 08-09-2003 | 00:54:06 | | 98726 | cddaf2aa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\advanced\whorl.png | 08-09-2003 | 00:54:06 | | 98728 | 28e1b81
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\custom
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\data\missions\custom\_
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\banlist.cs
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\defaults.cs | 08-09-2003 | 00:53:56 | | 1916 | 17047783
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\init.cs | 08-09-2003 | 00:53:56 | | 3234 | 92aedcbc
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\defaults.cs.dso | 08-09-2003 | 00:54:00 | | 800 | 154dcab4
+Made Dir: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\staticshape.cs | 08-09-2003 | 00:53:56 | | 809 | e1b2fda1
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\pads.cs | 08-09-2003 | 00:53:56 | | 1045 | ec26d06d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\markers.cs | 08-09-2003 | 00:53:56 | | 1078 | 8ef75b9a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\triggers.cs | 08-09-2003 | 00:53:56 | | 1372 | 1e44fb1a
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\platformpart.cs | 08-09-2003 | 00:53:56 | | 1434 | fd51f6bd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\bumpers.cs | 08-09-2003 | 00:53:56 | | 1678 | b2fbfc5e
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\pathedinteriors.cs | 08-09-2003 | 00:53:56 | | 2039 | 7d649ead
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\signs.cs | 08-09-2003 | 00:53:56 | | 2261 | d1a9f3e4
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\buttons.cs | 08-09-2003 | 00:53:56 | | 2281 | d5f1322d
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\radiusdamage.cs | 08-09-2003 | 00:53:56 | | 2390 | 5a8bd8ef
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\shapebase.cs | 08-09-2003 | 00:53:56 | | 2391 | a5b311ad
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\camera.cs | 08-09-2003 | 00:53:56 | | 2424 | e6fc62f0
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\centerprint.cs | 08-09-2003 | 00:53:56 | | 2468 | b8cfdb30
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\item.cs | 08-09-2003 | 00:53:56 | | 2741 | c28b40e7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\gems.cs | 08-09-2003 | 00:53:56 | | 2757 | db36a16c
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\commands.cs | 08-09-2003 | 00:53:56 | | 3378 | a48c5cb7
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\audioprofiles.cs | 08-09-2003 | 00:53:56 | | 5061 | a6dacf89
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\inventory.cs | 08-09-2003 | 00:53:56 | | 8067 | 2a5977dd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\powerups.cs | 08-09-2003 | 00:53:56 | | 9728 | f3c35caa
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\hazards.cs | 08-09-2003 | 00:53:56 | | 9851 | 82d30a08
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\fireworks.cs | 08-09-2003 | 00:53:56 | | 10428 | 658480ed
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\marble.cs | 08-09-2003 | 00:53:56 | | 10555 | 508648fd
+File Copy: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marble\server\scripts\game.cs | 08-09-2003 | 00:53:56 | | 17467 | 3c0962e8
+Shell Link: C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Marble Blast Gold\Marble Blast Gold.lnk
+Link Info: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marbleblast.exe | C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1 |  | 0 | 1 | 0 | 
+Shell Link: C:\Users\Administrator\Desktop\Marble Blast Gold.lnk
+Link Info: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\marbleblast.exe | C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1 |  | 0 | 1 | 0 | 
+Shell Link: C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Marble Blast Gold\Read Me.lnk
+Link Info: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\readme.txt | C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1 |  | 0 | 1 | 0 | 
+Shell Link: C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Marble Blast Gold\Uninstall.lnk
+Link Info: C:\Users\schulzcc\Documents\Personal\Installed Games\MBG Reference Copy\Unwise.exe | C:\Users\schulzcc\DOCUME~1\Personal\INSTAL~1\MBGREF~1 |  | 0 | 1 | 0 | 
+User Rights: Admin

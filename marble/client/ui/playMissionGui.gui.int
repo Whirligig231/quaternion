@@ -1,0 +1,392 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(playMissionGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background.jpg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiControl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "-1 44";
+      extent = "641 392";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiBitmapCtrl(PM_Box) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "153 112";
+         extent = "336 173";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./play/playGui.png";
+         wrap = "0";
+
+         new GuiBitmapButtonCtrl() {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "27 79";
+            extent = "79 61";
+            minExtent = "8 8";
+            visible = "1";
+            command = "disconnect(); Canvas.setContent(MainMenuGui);";
+            accelerator = "escape";
+            helpTag = "0";
+            text = "play";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./play/back";
+         };
+         new GuiTextListCtrl(PM_missionList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "80 8";
+            minExtent = "8 8";
+            visible = "0";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               noDuplicates = "false";
+         };
+         new GuiBitmapButtonCtrl(PM_play) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "151 78";
+            extent = "121 62";
+            minExtent = "8 8";
+            visible = "1";
+            command = "LevelTeleport(LevelNumberTextBox.getValue(), PadNumberTextBox.getValue());";
+            helpTag = "0";
+            text = "play";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            repeatPeriod = "1000";
+            repeatDecay = "1";
+            bitmap = "./play/play";
+         };
+         new GuiTextEditCtrl(LevelNumberTextBox) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "119 44";
+            extent = "64 18";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "Level";
+            maxLength = "255";
+            maxPixelWidth = "0";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(PadNumberTextBox) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "246 46";
+            extent = "64 18";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "Pad";
+            maxLength = "255";
+            maxPixelWidth = "0";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+//----------------------------------------
+
+function PMSetMissionTab(%tab)
+{
+   $MissionType = %tab;
+   %par = PM_Box.getGroup();
+   RootGroup.add(PM_Box);
+   RootGroup.add("PM_Tab" @ %tab);
+   RootGroup.add(PM_TabButtons);
+   RootGroup.add(PM_TabButtons2);
+   %par.add(PM_Box);
+   %par.add("PM_Tab" @ %tab);
+   %par.add(PM_TabButtons);
+   %par.add(PM_TabButtons2);
+   buildMissionList();
+}
+
+function sortByLevel(%grp)
+{
+   %ngrp = new SimGroup();
+   // take all the objects out of grp and put them in ngrp
+   while((%obj = %grp.getObject(0)) != -1)
+      %ngrp.add(%obj);
+
+   while(%ngrp.getCount() != 0)
+   {
+      %lowest = %ngrp.getObject(0).level;
+      %lowestIndex = 0;
+      for(%i = 1; %i < %ngrp.getCount(); %i++)
+      {
+         %level = %ngrp.getObject(%i).level;
+         if(%level < %lowest)
+         {
+            %lowest = %level;
+            %lowestIndex = %i;
+         }
+      }
+      %obj = %ngrp.getObject(%lowestIndex);
+      %grp.add(%obj);
+      %obj.level = %grp.getCount();
+   }
+   %ngrp.delete();
+}
+
+function buildMissionList()
+{
+   if (!isObject(PlayMissionGroup))
+   {
+      new SimGroup(PlayMissionGroup);
+      RootGroup.add(PlayMissionGroup);
+
+      for(%file = findFirstFile($Server::MissionFileSpec);
+            %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
+      { 
+         if (strStr(%file, "CVS/") == -1 && strStr(%file, "common/") == -1)
+            getMissionObject(%file);
+      }
+      for(%i = 0;(%grp = PlayMissionGroup.getObject(%i)) != -1; %i++)
+         sortByLevel(%grp);
+   }
+   PM_missionList.clear();
+   %cnt = 0;
+   for(%i = 0;(%grp = PlayMissionGroup.getObject(%i)) != -1; %i++)
+   {
+      if($MissionType $= "" || %grp.getName() $= ("MTYPE_" @ $MissionType))
+      {
+         for(%j = 0; (%mission = %grp.getObject(%j)) != -1; %j++)
+         {
+            PM_missionList.addRow(%cnt++, %mission.level TAB %mission);
+         }
+      }
+   }
+   // Select mission level, or highest qualified
+   if(isObject(MissionInfo) && $LastMissionType $= $MissionType)
+   {
+      if($Game::Qualified)
+         %level = MissionInfo.level + 1;
+      else
+         %level = MissionInfo.level;
+   }
+   else
+      %level = $Pref::QualifiedLevel[$MissionType];
+   %selected = PM_missionList.rowCount() - 1;
+   for (%row = 0; %row < PM_missionList.rowCount(); %row++)
+   {
+      %mission = getField(PM_missionList.getRowText(%row), 1);
+      if (%mission.level + 0 == %level)
+      {
+         %selected = %row;
+         break;
+      }
+   }
+
+   PM_setSelected(%selected);
+} 
+
+function PM_skipQualify()
+{
+   %row = PM_MissionList.getRowNumById(PM_MissionList.getSelectedId());
+   if($MissionType !$= "" && %row == $pref::QualifiedLevel[$MissionType])
+   {
+      $pref::QualifiedLevel[$MissionType]++;
+      PM_setSelected(%row);
+   }
+}
+
+//----------------------------------------
+function PM_StartMission()
+{
+
+   %id = PM_missionList.getSelectedId();
+   %mission = getField(PM_missionList.getRowTextById(%id), 1);
+   $LastMissionType = %mission.type;
+
+   //
+   if ($pref::HostMultiPlayer)
+      %serverType = "MultiPlayer";
+   else
+      %serverType = "SinglePlayer";
+
+   // We need to start a server if one isn't already running
+   if ($Server::ServerType $= "") {
+      if($doRecordDemo)
+         recordDemo("~/client/demos/demo.rec", %mission.file);
+      createServer(%serverType, %mission.file);
+      %conn = new GameConnection(ServerConnection);
+      RootGroup.add(ServerConnection);
+      %conn.setConnectArgs($pref::Player::Name);
+      %conn.setJoinPassword($Client::Password);
+      %conn.connectLocal();
+   }
+   else
+      loadMission(%mission.file);
+   if(isObject(MissionInfo))
+      MissionInfo.level = %mission.level;
+}
+
+function onDemoPlay(%misFile)
+{
+   $playingDemo = true;
+   createServer("SinglePlayer", %misFile);
+   %conn = new GameConnection(ServerConnection);
+   RootGroup.add(ServerConnection);
+   %conn.setConnectArgs($pref::Player::Name);
+   %conn.setJoinPassword($Client::Password);
+   %conn.connectLocal();
+}
+
+function onDemoPlayDone(%forced)
+{
+   $playingDemo = false;
+   disconnect();
+   if(%forced)
+      Canvas.setContent(MainMenuGui);
+   else
+      runPresentation();
+}
+
+//----------------------------------------
+function PM_setSelected( %row )
+{
+   %playEnabled = (PM_missionList.rowCount() > 0) && ($testCheats || ($MissionType $= "") || (%row < $pref::QualifiedLevel[$MissionType]));
+   
+   PM_NoQualOverlay.setVisible(!%playEnabled);
+   PM_NoQualText.setText(%playEnabled ? "" : "<color:CCCCCC><font:DomCasualD:32><just:center>Not Qualified!");
+   
+   PM_missionList.setSelectedRow(%row);
+   %id = PM_missionList.getSelectedId();
+   %mission = getField(PM_missionList.getRowTextById(%id), 1);
+   
+   // set the preview info
+   %levelText = "<font:DomCasualD:24><just:center>" @ upperFirst(%mission.type) @ " Level " @ (%mission.level+0);
+   PM_level_fgnd.setText("<color:FFFFFF>" @ %levelText);
+   PM_level_bkgnd.setText("<color:000000>" @ %levelText);
+   %descText = "<spush><font:DomCasualD:24>" @ %mission.name @ 
+               "<spop><lmargin:10>\n\n" @ 
+               %mission.desc;
+   if(%mission.time)
+      %descText = %descText @ "<spush><font:DomCasualD:24><lmargin:0>\nTime to Qualify: " @ formatTime(%mission.time) @ "<spop>";
+
+   %file = %mission.file;
+   getBestTimes(%file);
+   %descText = %descText @ "<lmargin:0>\n\n<spush><font:DomCasualD:24>Best Times:<spop><lmargin:10><tab:0,130,180><font:Arial Bold:14>\n\n";
+   for(%i = 0; %i < 3; %i++)
+   {
+      %time = getField($hs[%i], 0);
+      %descText = %descText @ "<shadow:1:1><color:000000><shadowcolor:ffffff4f>" @ (%i + 1) @ ". " @ getField($hs[%i], 1) TAB formatTime(%time) TAB ((%time < %mission.goldTime) ? "<bitmap:marble/client/ui/play/goldscore.png>\n" : "\n");
+   }
+
+   PM_description.setValue( %descText );
+   
+   PM_preview.setBitmap(filePath(%mission.file) @ "/" @fileBase(%mission.file));
+
+   %next = %row+1;
+   PM_next.setActive(%next < PM_missionList.rowCount());
+
+   if (%next >= PM_missionList.rowCount())
+      %next = PM_missionList.rowCount() - 1;
+   PM_next.command = "PM_setSelected(" @ %next @ ");";
+
+   %prev = %row-1;
+   PM_prev.setActive(%prev >= 0);
+   if (%prev < 0 )
+      %prev = 0;
+   PM_prev.command = "PM_setSelected(" @ %prev @ ");";
+}
+
+
+//----------------------------------------
+function getMissionObject( %missionFile ) 
+{
+   %file = new FileObject();
+   
+   %missionInfoObject = "";
+   
+   if ( %file.openForRead( %missionFile ) ) {
+		%inInfoBlock = false;
+		
+		while ( !%file.isEOF() ) {
+			%line = %file.readLine();
+			%line = trim( %line );
+			
+			if( %line $= "new ScriptObject(MissionInfo) {" ) {
+				%line = "new ScriptObject() {";
+				%inInfoBlock = true;
+			}
+			else if( %inInfoBlock && %line $= "};" ) {
+				%inInfoBlock = false;
+				%missionInfoObject = %missionInfoObject @ %line; 
+				break;
+			}
+			
+			if( %inInfoBlock )
+			   %missionInfoObject = %missionInfoObject @ %line @ " "; 	
+		}
+		
+		%file.close();
+	}
+	%missionInfoObject = "%missionInfoObject = " @ %missionInfoObject;
+		error(%missionInfoObject);
+	eval( %missionInfoObject );
+
+   // find the directory this file belongs in:
+
+   %path = filePath(%missionFile);
+   %misPath = filePath(%path);
+
+   if(%misPath !$= "marble/data/missions")
+      %groupTab = "custom";
+   else
+      %groupTab = fileBase(%path);
+
+   %grp = nameToId("MTYPE_" @ %groupTab);
+   if(%grp == -1)
+   {
+      %grp = new SimGroup("MTYPE_" @ %groupTab);
+      PlayMissionGroup.add(%grp);
+   }
+   %missionInfoObject.type = %groupTab;
+   %missionInfoObject.setName("");
+   %grp.add(%missionInfoObject);
+	%missionInfoObject.file = %missionFile;
+   %file.delete();
+}
+

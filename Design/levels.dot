@@ -1,0 +1,38 @@
+digraph QuaternionLevels {
+    node [style=filled];
+    Lights [fillcolor="#ffe6e6"];
+    Security [fillcolor="#ffcccc"];
+    Moving [fillcolor="#ffcccc"];
+    Water [fillcolor="#ffcccc"];
+    Boss1 [fillcolor="#ff9999"];
+    Rotating [fillcolor="#ccffcc"];
+    Wind [fillcolor="#ccffcc"];
+    Balls [fillcolor="#ccffcc"];
+    Gravity [fillcolor="#ccffcc"];
+    Boss2 [fillcolor="#99ff99"];
+    Grapple [fillcolor="#ccccff"];
+    Warping [fillcolor="#ccccff"];
+    Tubes [fillcolor="#ccccff"];
+    Climbing [fillcolor="#ccccff"];
+    Final [fillcolor="#9999ff"];
+	Wind -> Grapple -> Final;
+	Lights -> Security;
+    Lights -> Moving;
+    Moving -> Rotating;
+    Rotating -> Wind;
+    Moving -> Boss1;
+    Boss1 -> Balls;
+    Rotating -> Boss2;
+    Balls -> Boss2;
+    Boss2 -> Tubes;
+    Tubes -> Final;
+    Security -> Boss1;
+    Gravity -> Climbing;
+    Warping -> Final;
+    Moving -> Water;
+    Boss1 -> Gravity;
+    Boss2 -> Warping;
+    Boss2 -> Climbing;
+    Water -> Gravity;
+    Climbing -> Final;
+}

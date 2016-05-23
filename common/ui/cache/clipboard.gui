@@ -1,0 +1,15 @@
+new SimSet(guiClipboard) {
+
+   new GameTSCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "0 0";
+      extent = "320 240";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      cameraZRot = "0";
+      forceFOV = "0";
+   };
+};

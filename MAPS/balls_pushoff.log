@@ -1,0 +1,1325 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Tube"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Tube.181"
+         from "Tube" to "Tube.181".
+       Changed dts object and node name for Blender mesh "Tube.180"
+         from "Tube" to "Tube.180".
+       Changed dts object and node name for Blender mesh "Tube.179"
+         from "Tube" to "Tube.179".
+       Changed dts object and node name for Blender mesh "Tube.178"
+         from "Tube" to "Tube.178".
+       Changed dts object and node name for Blender mesh "Tube.177"
+         from "Tube" to "Tube.177".
+       Changed dts object and node name for Blender mesh "Tube.176"
+         from "Tube" to "Tube.176".
+       Changed dts object and node name for Blender mesh "Tube.175"
+         from "Tube" to "Tube.175".
+       Changed dts object and node name for Blender mesh "Tube.174"
+         from "Tube" to "Tube.174".
+       Changed dts object and node name for Blender mesh "Tube.173"
+         from "Tube" to "Tube.173".
+       Changed dts object and node name for Blender mesh "Tube.172"
+         from "Tube" to "Tube.172".
+       Changed dts object and node name for Blender mesh "Tube.171"
+         from "Tube" to "Tube.171".
+       Changed dts object and node name for Blender mesh "Tube.170"
+         from "Tube" to "Tube.170".
+       Changed dts object and node name for Blender mesh "Tube.168"
+         from "Tube" to "Tube.168".
+       Changed dts object and node name for Blender mesh "Tube.167"
+         from "Tube" to "Tube.167".
+       Changed dts object and node name for Blender mesh "Tube.166"
+         from "Tube" to "Tube.166".
+       Changed dts object and node name for Blender mesh "Tube.165"
+         from "Tube" to "Tube.165".
+       Changed dts object and node name for Blender mesh "Tube.164"
+         from "Tube" to "Tube.164".
+       Changed dts object and node name for Blender mesh "Tube.163"
+         from "Tube" to "Tube.163".
+       Changed dts object and node name for Blender mesh "Tube.162"
+         from "Tube" to "Tube.162".
+       Changed dts object and node name for Blender mesh "Tube.161"
+         from "Tube" to "Tube.161".
+       Changed dts object and node name for Blender mesh "Tube.160"
+         from "Tube" to "Tube.160".
+       Changed dts object and node name for Blender mesh "Tube.159"
+         from "Tube" to "Tube.159".
+       Changed dts object and node name for Blender mesh "Tube.158"
+         from "Tube" to "Tube.158".
+       Changed dts object and node name for Blender mesh "Tube.157"
+         from "Tube" to "Tube.157".
+       Changed dts object and node name for Blender mesh "Tube.156"
+         from "Tube" to "Tube.156".
+       Changed dts object and node name for Blender mesh "Tube.155"
+         from "Tube" to "Tube.155".
+       Changed dts object and node name for Blender mesh "Tube.154"
+         from "Tube" to "Tube.154".
+       Changed dts object and node name for Blender mesh "Tube.153"
+         from "Tube" to "Tube.153".
+       Changed dts object and node name for Blender mesh "Tube.152"
+         from "Tube" to "Tube.152".
+       Changed dts object and node name for Blender mesh "Tube.151"
+         from "Tube" to "Tube.151".
+       Changed dts object and node name for Blender mesh "Tube.150"
+         from "Tube" to "Tube.150".
+       Changed dts object and node name for Blender mesh "Tube.149"
+         from "Tube" to "Tube.149".
+       Changed dts object and node name for Blender mesh "Tube.148"
+         from "Tube" to "Tube.148".
+       Changed dts object and node name for Blender mesh "Tube.147"
+         from "Tube" to "Tube.147".
+       Changed dts object and node name for Blender mesh "Tube.146"
+         from "Tube" to "Tube.146".
+       Changed dts object and node name for Blender mesh "Tube.145"
+         from "Tube" to "Tube.145".
+       Changed dts object and node name for Blender mesh "Tube.143"
+         from "Tube" to "Tube.143".
+       Changed dts object and node name for Blender mesh "Tube.142"
+         from "Tube" to "Tube.142".
+       Changed dts object and node name for Blender mesh "Tube.141"
+         from "Tube" to "Tube.141".
+       Changed dts object and node name for Blender mesh "Tube.140"
+         from "Tube" to "Tube.140".
+       Changed dts object and node name for Blender mesh "Tube.139"
+         from "Tube" to "Tube.139".
+       Changed dts object and node name for Blender mesh "Tube.138"
+         from "Tube" to "Tube.138".
+       Changed dts object and node name for Blender mesh "Tube.137"
+         from "Tube" to "Tube.137".
+       Changed dts object and node name for Blender mesh "Tube.136"
+         from "Tube" to "Tube.136".
+       Changed dts object and node name for Blender mesh "Tube.135"
+         from "Tube" to "Tube.135".
+       Changed dts object and node name for Blender mesh "Tube.134"
+         from "Tube" to "Tube.134".
+       Changed dts object and node name for Blender mesh "Tube.133"
+         from "Tube" to "Tube.133".
+       Changed dts object and node name for Blender mesh "Tube.132"
+         from "Tube" to "Tube.132".
+       Changed dts object and node name for Blender mesh "Tube.131"
+         from "Tube" to "Tube.131".
+       Changed dts object and node name for Blender mesh "Tube.130"
+         from "Tube" to "Tube.130".
+       Changed dts object and node name for Blender mesh "Tube.129"
+         from "Tube" to "Tube.129".
+       Changed dts object and node name for Blender mesh "Tube.128"
+         from "Tube" to "Tube.128".
+       Changed dts object and node name for Blender mesh "Tube.127"
+         from "Tube" to "Tube.127".
+       Changed dts object and node name for Blender mesh "Tube.126"
+         from "Tube" to "Tube.126".
+       Changed dts object and node name for Blender mesh "Tube.125"
+         from "Tube" to "Tube.125".
+       Changed dts object and node name for Blender mesh "Tube.124"
+         from "Tube" to "Tube.124".
+       Changed dts object and node name for Blender mesh "Tube.123"
+         from "Tube" to "Tube.123".
+       Changed dts object and node name for Blender mesh "Tube.122"
+         from "Tube" to "Tube.122".
+       Changed dts object and node name for Blender mesh "Tube.121"
+         from "Tube" to "Tube.121".
+       Changed dts object and node name for Blender mesh "Tube.120"
+         from "Tube" to "Tube.120".
+       Changed dts object and node name for Blender mesh "Tube.119"
+         from "Tube" to "Tube.119".
+       Changed dts object and node name for Blender mesh "Tube.118"
+         from "Tube" to "Tube.118".
+       Changed dts object and node name for Blender mesh "Tube.117"
+         from "Tube" to "Tube.117".
+       Changed dts object and node name for Blender mesh "Tube.116"
+         from "Tube" to "Tube.116".
+       Changed dts object and node name for Blender mesh "Tube.115"
+         from "Tube" to "Tube.115".
+       Changed dts object and node name for Blender mesh "Tube.114"
+         from "Tube" to "Tube.114".
+       Changed dts object and node name for Blender mesh "Tube.113"
+         from "Tube" to "Tube.113".
+       Changed dts object and node name for Blender mesh "Tube.112"
+         from "Tube" to "Tube.112".
+       Changed dts object and node name for Blender mesh "Tube.111"
+         from "Tube" to "Tube.111".
+       Changed dts object and node name for Blender mesh "Tube.110"
+         from "Tube" to "Tube.110".
+       Changed dts object and node name for Blender mesh "Tube.109"
+         from "Tube" to "Tube.109".
+       Changed dts object and node name for Blender mesh "Tube.108"
+         from "Tube" to "Tube.108".
+       Changed dts object and node name for Blender mesh "Tube.107"
+         from "Tube" to "Tube.107".
+       Changed dts object and node name for Blender mesh "Tube.106"
+         from "Tube" to "Tube.106".
+       Changed dts object and node name for Blender mesh "Tube.105"
+         from "Tube" to "Tube.105".
+       Changed dts object and node name for Blender mesh "Tube.104"
+         from "Tube" to "Tube.104".
+       Changed dts object and node name for Blender mesh "Tube.103"
+         from "Tube" to "Tube.103".
+       Changed dts object and node name for Blender mesh "Tube.102"
+         from "Tube" to "Tube.102".
+       Changed dts object and node name for Blender mesh "Tube.101"
+         from "Tube" to "Tube.101".
+       Changed dts object and node name for Blender mesh "Tube.100"
+         from "Tube" to "Tube.100".
+       Changed dts object and node name for Blender mesh "Tube.099"
+         from "Tube" to "Tube.099".
+       Changed dts object and node name for Blender mesh "Tube.098"
+         from "Tube" to "Tube.098".
+       Changed dts object and node name for Blender mesh "Tube.097"
+         from "Tube" to "Tube.097".
+       Changed dts object and node name for Blender mesh "Tube.096"
+         from "Tube" to "Tube.096".
+       Changed dts object and node name for Blender mesh "Tube.095"
+         from "Tube" to "Tube.095".
+       Changed dts object and node name for Blender mesh "Tube.094"
+         from "Tube" to "Tube.094".
+       Changed dts object and node name for Blender mesh "Tube.093"
+         from "Tube" to "Tube.093".
+       Changed dts object and node name for Blender mesh "Tube.092"
+         from "Tube" to "Tube.092".
+       Changed dts object and node name for Blender mesh "Tube.091"
+         from "Tube" to "Tube.091".
+       Changed dts object and node name for Blender mesh "Tube.090"
+         from "Tube" to "Tube.090".
+       Changed dts object and node name for Blender mesh "Tube.089"
+         from "Tube" to "Tube.089".
+       Changed dts object and node name for Blender mesh "Tube.088"
+         from "Tube" to "Tube.088".
+       Changed dts object and node name for Blender mesh "Tube.087"
+         from "Tube" to "Tube.087".
+       Changed dts object and node name for Blender mesh "Tube.086"
+         from "Tube" to "Tube.086".
+       Changed dts object and node name for Blender mesh "Tube.085"
+         from "Tube" to "Tube.085".
+       Changed dts object and node name for Blender mesh "Tube.084"
+         from "Tube" to "Tube.084".
+       Changed dts object and node name for Blender mesh "Tube.083"
+         from "Tube" to "Tube.083".
+       Changed dts object and node name for Blender mesh "Tube.082"
+         from "Tube" to "Tube.082".
+       Changed dts object and node name for Blender mesh "Tube.081"
+         from "Tube" to "Tube.081".
+       Changed dts object and node name for Blender mesh "Tube.080"
+         from "Tube" to "Tube.080".
+       Changed dts object and node name for Blender mesh "Tube.079"
+         from "Tube" to "Tube.079".
+       Changed dts object and node name for Blender mesh "Tube.078"
+         from "Tube" to "Tube.078".
+       Changed dts object and node name for Blender mesh "Tube.077"
+         from "Tube" to "Tube.077".
+       Changed dts object and node name for Blender mesh "Tube.076"
+         from "Tube" to "Tube.076".
+       Changed dts object and node name for Blender mesh "Tube.075"
+         from "Tube" to "Tube.075".
+       Changed dts object and node name for Blender mesh "Tube.074"
+         from "Tube" to "Tube.074".
+       Changed dts object and node name for Blender mesh "Tube.073"
+         from "Tube" to "Tube.073".
+       Changed dts object and node name for Blender mesh "Tube.072"
+         from "Tube" to "Tube.072".
+       Changed dts object and node name for Blender mesh "Tube.071"
+         from "Tube" to "Tube.071".
+       Changed dts object and node name for Blender mesh "Tube.070"
+         from "Tube" to "Tube.070".
+       Changed dts object and node name for Blender mesh "Tube.069"
+         from "Tube" to "Tube.069".
+       Changed dts object and node name for Blender mesh "Tube.068"
+         from "Tube" to "Tube.068".
+       Changed dts object and node name for Blender mesh "Tube.067"
+         from "Tube" to "Tube.067".
+       Changed dts object and node name for Blender mesh "Tube.066"
+         from "Tube" to "Tube.066".
+       Changed dts object and node name for Blender mesh "Tube.065"
+         from "Tube" to "Tube.065".
+       Changed dts object and node name for Blender mesh "Tube.064"
+         from "Tube" to "Tube.064".
+       Changed dts object and node name for Blender mesh "Tube.063"
+         from "Tube" to "Tube.063".
+       Changed dts object and node name for Blender mesh "Tube.062"
+         from "Tube" to "Tube.062".
+       Changed dts object and node name for Blender mesh "Tube.061"
+         from "Tube" to "Tube.061".
+       Changed dts object and node name for Blender mesh "Tube.060"
+         from "Tube" to "Tube.060".
+       Changed dts object and node name for Blender mesh "Tube.059"
+         from "Tube" to "Tube.059".
+       Changed dts object and node name for Blender mesh "Tube.058"
+         from "Tube" to "Tube.058".
+       Changed dts object and node name for Blender mesh "Tube.057"
+         from "Tube" to "Tube.057".
+       Changed dts object and node name for Blender mesh "Tube.056"
+         from "Tube" to "Tube.056".
+       Changed dts object and node name for Blender mesh "Tube.055"
+         from "Tube" to "Tube.055".
+       Changed dts object and node name for Blender mesh "Tube.054"
+         from "Tube" to "Tube.054".
+       Changed dts object and node name for Blender mesh "Tube.053"
+         from "Tube" to "Tube.053".
+       Changed dts object and node name for Blender mesh "Tube.052"
+         from "Tube" to "Tube.052".
+       Changed dts object and node name for Blender mesh "Tube.051"
+         from "Tube" to "Tube.051".
+       Changed dts object and node name for Blender mesh "Tube.050"
+         from "Tube" to "Tube.050".
+       Changed dts object and node name for Blender mesh "Tube.049"
+         from "Tube" to "Tube.049".
+       Changed dts object and node name for Blender mesh "Tube.048"
+         from "Tube" to "Tube.048".
+       Changed dts object and node name for Blender mesh "Tube.047"
+         from "Tube" to "Tube.047".
+       Changed dts object and node name for Blender mesh "Tube.046"
+         from "Tube" to "Tube.046".
+       Changed dts object and node name for Blender mesh "Tube.045"
+         from "Tube" to "Tube.045".
+       Changed dts object and node name for Blender mesh "Tube.044"
+         from "Tube" to "Tube.044".
+       Changed dts object and node name for Blender mesh "Tube.043"
+         from "Tube" to "Tube.043".
+       Changed dts object and node name for Blender mesh "Tube.042"
+         from "Tube" to "Tube.042".
+       Changed dts object and node name for Blender mesh "Tube.041"
+         from "Tube" to "Tube.041".
+       Changed dts object and node name for Blender mesh "Tube.040"
+         from "Tube" to "Tube.040".
+       Changed dts object and node name for Blender mesh "Tube.039"
+         from "Tube" to "Tube.039".
+       Changed dts object and node name for Blender mesh "Tube.038"
+         from "Tube" to "Tube.038".
+       Changed dts object and node name for Blender mesh "Tube.037"
+         from "Tube" to "Tube.037".
+       Changed dts object and node name for Blender mesh "Tube.036"
+         from "Tube" to "Tube.036".
+       Changed dts object and node name for Blender mesh "Tube.035"
+         from "Tube" to "Tube.035".
+       Changed dts object and node name for Blender mesh "Tube.034"
+         from "Tube" to "Tube.034".
+       Changed dts object and node name for Blender mesh "Tube.033"
+         from "Tube" to "Tube.033".
+       Changed dts object and node name for Blender mesh "Tube.032"
+         from "Tube" to "Tube.032".
+       Changed dts object and node name for Blender mesh "Tube.031"
+         from "Tube" to "Tube.031".
+       Changed dts object and node name for Blender mesh "Tube.030"
+         from "Tube" to "Tube.030".
+       Changed dts object and node name for Blender mesh "Tube.029"
+         from "Tube" to "Tube.029".
+       Changed dts object and node name for Blender mesh "Tube.028"
+         from "Tube" to "Tube.028".
+       Changed dts object and node name for Blender mesh "Tube.027"
+         from "Tube" to "Tube.027".
+       Changed dts object and node name for Blender mesh "Tube.026"
+         from "Tube" to "Tube.026".
+       Changed dts object and node name for Blender mesh "Tube.025"
+         from "Tube" to "Tube.025".
+       Changed dts object and node name for Blender mesh "Tube.024"
+         from "Tube" to "Tube.024".
+       Changed dts object and node name for Blender mesh "Tube.023"
+         from "Tube" to "Tube.023".
+       Changed dts object and node name for Blender mesh "Tube.022"
+         from "Tube" to "Tube.022".
+       Changed dts object and node name for Blender mesh "Tube.021"
+         from "Tube" to "Tube.021".
+       Changed dts object and node name for Blender mesh "Tube.020"
+         from "Tube" to "Tube.020".
+       Changed dts object and node name for Blender mesh "Tube.019"
+         from "Tube" to "Tube.019".
+       Changed dts object and node name for Blender mesh "Tube.018"
+         from "Tube" to "Tube.018".
+       Changed dts object and node name for Blender mesh "Tube.017"
+         from "Tube" to "Tube.017".
+       Changed dts object and node name for Blender mesh "Tube.016"
+         from "Tube" to "Tube.016".
+       Changed dts object and node name for Blender mesh "Tube.015"
+         from "Tube" to "Tube.015".
+       Changed dts object and node name for Blender mesh "Tube.014"
+         from "Tube" to "Tube.014".
+       Changed dts object and node name for Blender mesh "Tube.013"
+         from "Tube" to "Tube.013".
+       Changed dts object and node name for Blender mesh "Tube.012"
+         from "Tube" to "Tube.012".
+       Changed dts object and node name for Blender mesh "Tube.011"
+         from "Tube" to "Tube.011".
+       Changed dts object and node name for Blender mesh "Tube.010"
+         from "Tube" to "Tube.010".
+       Changed dts object and node name for Blender mesh "Tube.009"
+         from "Tube" to "Tube.009".
+       Changed dts object and node name for Blender mesh "Tube.008"
+         from "Tube" to "Tube.008".
+       Changed dts object and node name for Blender mesh "Tube.007"
+         from "Tube" to "Tube.007".
+       Changed dts object and node name for Blender mesh "Tube.006"
+         from "Tube" to "Tube.006".
+       Changed dts object and node name for Blender mesh "Tube.005"
+         from "Tube" to "Tube.005".
+       Changed dts object and node name for Blender mesh "Tube.003"
+         from "Tube" to "Tube.003".
+       Changed dts object and node name for Blender mesh "Tube.001"
+         from "Tube" to "Tube.001".
+       Changed dts object and node name for Blender mesh "Tube"
+         from "Tube" to "Tube".
+       Changed dts object and node name for Blender mesh "Tube.004"
+         from "Tube" to "Tube.004".
+       Changed dts object and node name for Blender mesh "Tube.002"
+         from "Tube" to "Tube.002".
+   ****************************************************************************
+
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Cube"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Cube.066"
+         from "Cube" to "Cube.066".
+       Changed dts object and node name for Blender mesh "Cube.065"
+         from "Cube" to "Cube.065".
+       Changed dts object and node name for Blender mesh "Cube.064"
+         from "Cube" to "Cube.064".
+       Changed dts object and node name for Blender mesh "Cube.063"
+         from "Cube" to "Cube.063".
+       Changed dts object and node name for Blender mesh "Cube.062"
+         from "Cube" to "Cube.062".
+       Changed dts object and node name for Blender mesh "Cube.061"
+         from "Cube" to "Cube.061".
+       Changed dts object and node name for Blender mesh "Cube.060"
+         from "Cube" to "Cube.060".
+       Changed dts object and node name for Blender mesh "Cube.059"
+         from "Cube" to "Cube.059".
+       Changed dts object and node name for Blender mesh "Cube.058"
+         from "Cube" to "Cube.058".
+       Changed dts object and node name for Blender mesh "Cube.057"
+         from "Cube" to "Cube.057".
+       Changed dts object and node name for Blender mesh "Cube.056"
+         from "Cube" to "Cube.056".
+       Changed dts object and node name for Blender mesh "Cube.055"
+         from "Cube" to "Cube.055".
+       Changed dts object and node name for Blender mesh "Cube.054"
+         from "Cube" to "Cube.054".
+       Changed dts object and node name for Blender mesh "Cube.053"
+         from "Cube" to "Cube.053".
+       Changed dts object and node name for Blender mesh "Cube.052"
+         from "Cube" to "Cube.052".
+       Changed dts object and node name for Blender mesh "Cube.051"
+         from "Cube" to "Cube.051".
+       Changed dts object and node name for Blender mesh "Cube.050"
+         from "Cube" to "Cube.050".
+       Changed dts object and node name for Blender mesh "Cube.049"
+         from "Cube" to "Cube.049".
+       Changed dts object and node name for Blender mesh "Cube.048"
+         from "Cube" to "Cube.048".
+       Changed dts object and node name for Blender mesh "Cube.047"
+         from "Cube" to "Cube.047".
+       Changed dts object and node name for Blender mesh "Cube.046"
+         from "Cube" to "Cube.046".
+       Changed dts object and node name for Blender mesh "Cube.045"
+         from "Cube" to "Cube.045".
+       Changed dts object and node name for Blender mesh "Cube.044"
+         from "Cube" to "Cube.044".
+       Changed dts object and node name for Blender mesh "Cube.043"
+         from "Cube" to "Cube.043".
+       Changed dts object and node name for Blender mesh "Cube.042"
+         from "Cube" to "Cube.042".
+       Changed dts object and node name for Blender mesh "Cube.041"
+         from "Cube" to "Cube.041".
+       Changed dts object and node name for Blender mesh "Cube.040"
+         from "Cube" to "Cube.040".
+       Changed dts object and node name for Blender mesh "Cube.039"
+         from "Cube" to "Cube.039".
+       Changed dts object and node name for Blender mesh "Cube.038"
+         from "Cube" to "Cube.038".
+       Changed dts object and node name for Blender mesh "Cube.037"
+         from "Cube" to "Cube.037".
+       Changed dts object and node name for Blender mesh "Cube.036"
+         from "Cube" to "Cube.036".
+       Changed dts object and node name for Blender mesh "Cube.035"
+         from "Cube" to "Cube.035".
+       Changed dts object and node name for Blender mesh "Cube.033"
+         from "Cube" to "Cube.033".
+       Changed dts object and node name for Blender mesh "Cube.031"
+         from "Cube" to "Cube.031".
+       Changed dts object and node name for Blender mesh "Cube.030"
+         from "Cube" to "Cube.030".
+       Changed dts object and node name for Blender mesh "Cube.029"
+         from "Cube" to "Cube.029".
+       Changed dts object and node name for Blender mesh "Cube.028"
+         from "Cube" to "Cube.028".
+       Changed dts object and node name for Blender mesh "Cube.027"
+         from "Cube" to "Cube.027".
+       Changed dts object and node name for Blender mesh "Cube.026"
+         from "Cube" to "Cube.026".
+       Changed dts object and node name for Blender mesh "Cube.025"
+         from "Cube" to "Cube.025".
+       Changed dts object and node name for Blender mesh "Cube.024"
+         from "Cube" to "Cube.024".
+       Changed dts object and node name for Blender mesh "Cube.023"
+         from "Cube" to "Cube.023".
+       Changed dts object and node name for Blender mesh "Cube.022"
+         from "Cube" to "Cube.022".
+       Changed dts object and node name for Blender mesh "Cube.021"
+         from "Cube" to "Cube.021".
+       Changed dts object and node name for Blender mesh "Cube.020"
+         from "Cube" to "Cube.020".
+       Changed dts object and node name for Blender mesh "Cube.019"
+         from "Cube" to "Cube.019".
+       Changed dts object and node name for Blender mesh "Cube.018"
+         from "Cube" to "Cube.018".
+       Changed dts object and node name for Blender mesh "Cube.017"
+         from "Cube" to "Cube.017".
+       Changed dts object and node name for Blender mesh "Cube.016"
+         from "Cube" to "Cube.016".
+       Changed dts object and node name for Blender mesh "Cube.015"
+         from "Cube" to "Cube.015".
+       Changed dts object and node name for Blender mesh "Cube.014"
+         from "Cube" to "Cube.014".
+       Changed dts object and node name for Blender mesh "Cube.013"
+         from "Cube" to "Cube.013".
+       Changed dts object and node name for Blender mesh "Cube.012"
+         from "Cube" to "Cube.012".
+       Changed dts object and node name for Blender mesh "Cube.011"
+         from "Cube" to "Cube.011".
+       Changed dts object and node name for Blender mesh "Cube.010"
+         from "Cube" to "Cube.010".
+       Changed dts object and node name for Blender mesh "Cube.009"
+         from "Cube" to "Cube.009".
+       Changed dts object and node name for Blender mesh "Cube.008"
+         from "Cube" to "Cube.008".
+       Changed dts object and node name for Blender mesh "Cube.007"
+         from "Cube" to "Cube.007".
+       Changed dts object and node name for Blender mesh "Cube.006"
+         from "Cube" to "Cube.006".
+       Changed dts object and node name for Blender mesh "Cube.005"
+         from "Cube" to "Cube.005".
+       Changed dts object and node name for Blender mesh "Cube.004"
+         from "Cube" to "Cube.004".
+       Changed dts object and node name for Blender mesh "Cube.003"
+         from "Cube" to "Cube.003".
+       Changed dts object and node name for Blender mesh "Cube.002"
+         from "Cube" to "Cube.002".
+       Changed dts object and node name for Blender mesh "Cube.001"
+         from "Cube" to "Cube.001".
+       Changed dts object and node name for Blender mesh "Cube"
+         from "Cube" to "Cube".
+       Changed dts object and node name for Blender mesh "Cube.032"
+         from "Cube" to "Cube.032".
+   ****************************************************************************
+
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Torus"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Torus.071"
+         from "Torus" to "Torus.071".
+       Changed dts object and node name for Blender mesh "Torus.070"
+         from "Torus" to "Torus.070".
+       Changed dts object and node name for Blender mesh "Torus.069"
+         from "Torus" to "Torus.069".
+       Changed dts object and node name for Blender mesh "Torus.068"
+         from "Torus" to "Torus.068".
+       Changed dts object and node name for Blender mesh "Torus.067"
+         from "Torus" to "Torus.067".
+       Changed dts object and node name for Blender mesh "Torus.066"
+         from "Torus" to "Torus.066".
+       Changed dts object and node name for Blender mesh "Torus.065"
+         from "Torus" to "Torus.065".
+       Changed dts object and node name for Blender mesh "Torus.064"
+         from "Torus" to "Torus.064".
+       Changed dts object and node name for Blender mesh "Torus.063"
+         from "Torus" to "Torus.063".
+       Changed dts object and node name for Blender mesh "Torus.062"
+         from "Torus" to "Torus.062".
+       Changed dts object and node name for Blender mesh "Torus.061"
+         from "Torus" to "Torus.061".
+       Changed dts object and node name for Blender mesh "Torus.060"
+         from "Torus" to "Torus.060".
+       Changed dts object and node name for Blender mesh "Torus.059"
+         from "Torus" to "Torus.059".
+       Changed dts object and node name for Blender mesh "Torus.058"
+         from "Torus" to "Torus.058".
+       Changed dts object and node name for Blender mesh "Torus.057"
+         from "Torus" to "Torus.057".
+       Changed dts object and node name for Blender mesh "Torus.056"
+         from "Torus" to "Torus.056".
+       Changed dts object and node name for Blender mesh "Torus.055"
+         from "Torus" to "Torus.055".
+       Changed dts object and node name for Blender mesh "Torus.054"
+         from "Torus" to "Torus.054".
+       Changed dts object and node name for Blender mesh "Torus.053"
+         from "Torus" to "Torus.053".
+       Changed dts object and node name for Blender mesh "Torus.052"
+         from "Torus" to "Torus.052".
+       Changed dts object and node name for Blender mesh "Torus.051"
+         from "Torus" to "Torus.051".
+       Changed dts object and node name for Blender mesh "Torus.050"
+         from "Torus" to "Torus.050".
+       Changed dts object and node name for Blender mesh "Torus.049"
+         from "Torus" to "Torus.049".
+       Changed dts object and node name for Blender mesh "Torus.048"
+         from "Torus" to "Torus.048".
+       Changed dts object and node name for Blender mesh "Torus.047"
+         from "Torus" to "Torus.047".
+       Changed dts object and node name for Blender mesh "Torus.046"
+         from "Torus" to "Torus.046".
+       Changed dts object and node name for Blender mesh "Torus.045"
+         from "Torus" to "Torus.045".
+       Changed dts object and node name for Blender mesh "Torus.044"
+         from "Torus" to "Torus.044".
+       Changed dts object and node name for Blender mesh "Torus.043"
+         from "Torus" to "Torus.043".
+       Changed dts object and node name for Blender mesh "Torus.042"
+         from "Torus" to "Torus.042".
+       Changed dts object and node name for Blender mesh "Torus.041"
+         from "Torus" to "Torus.041".
+       Changed dts object and node name for Blender mesh "Torus.040"
+         from "Torus" to "Torus.040".
+       Changed dts object and node name for Blender mesh "Torus.039"
+         from "Torus" to "Torus.039".
+       Changed dts object and node name for Blender mesh "Torus.038"
+         from "Torus" to "Torus.038".
+       Changed dts object and node name for Blender mesh "Torus.037"
+         from "Torus" to "Torus.037".
+       Changed dts object and node name for Blender mesh "Torus.036"
+         from "Torus" to "Torus.036".
+       Changed dts object and node name for Blender mesh "Torus.035"
+         from "Torus" to "Torus.035".
+       Changed dts object and node name for Blender mesh "Torus.034"
+         from "Torus" to "Torus.034".
+       Changed dts object and node name for Blender mesh "Torus.033"
+         from "Torus" to "Torus.033".
+       Changed dts object and node name for Blender mesh "Torus.032"
+         from "Torus" to "Torus.032".
+       Changed dts object and node name for Blender mesh "Torus.031"
+         from "Torus" to "Torus.031".
+       Changed dts object and node name for Blender mesh "Torus.030"
+         from "Torus" to "Torus.030".
+       Changed dts object and node name for Blender mesh "Torus.029"
+         from "Torus" to "Torus.029".
+       Changed dts object and node name for Blender mesh "Torus.028"
+         from "Torus" to "Torus.028".
+       Changed dts object and node name for Blender mesh "Torus.027"
+         from "Torus" to "Torus.027".
+       Changed dts object and node name for Blender mesh "Torus.026"
+         from "Torus" to "Torus.026".
+       Changed dts object and node name for Blender mesh "Torus.025"
+         from "Torus" to "Torus.025".
+       Changed dts object and node name for Blender mesh "Torus.024"
+         from "Torus" to "Torus.024".
+       Changed dts object and node name for Blender mesh "Torus.023"
+         from "Torus" to "Torus.023".
+       Changed dts object and node name for Blender mesh "Torus.022"
+         from "Torus" to "Torus.022".
+       Changed dts object and node name for Blender mesh "Torus.021"
+         from "Torus" to "Torus.021".
+       Changed dts object and node name for Blender mesh "Torus.020"
+         from "Torus" to "Torus.020".
+       Changed dts object and node name for Blender mesh "Torus.019"
+         from "Torus" to "Torus.019".
+       Changed dts object and node name for Blender mesh "Torus.018"
+         from "Torus" to "Torus.018".
+       Changed dts object and node name for Blender mesh "Torus.017"
+         from "Torus" to "Torus.017".
+       Changed dts object and node name for Blender mesh "Torus.016"
+         from "Torus" to "Torus.016".
+       Changed dts object and node name for Blender mesh "Torus.015"
+         from "Torus" to "Torus.015".
+       Changed dts object and node name for Blender mesh "Torus.014"
+         from "Torus" to "Torus.014".
+       Changed dts object and node name for Blender mesh "Torus.013"
+         from "Torus" to "Torus.013".
+       Changed dts object and node name for Blender mesh "Torus.012"
+         from "Torus" to "Torus.012".
+       Changed dts object and node name for Blender mesh "Torus.011"
+         from "Torus" to "Torus.011".
+       Changed dts object and node name for Blender mesh "Torus.010"
+         from "Torus" to "Torus.010".
+       Changed dts object and node name for Blender mesh "Torus.009"
+         from "Torus" to "Torus.009".
+       Changed dts object and node name for Blender mesh "Torus.008"
+         from "Torus" to "Torus.008".
+       Changed dts object and node name for Blender mesh "Torus.007"
+         from "Torus" to "Torus.007".
+       Changed dts object and node name for Blender mesh "Torus.006"
+         from "Torus" to "Torus.006".
+       Changed dts object and node name for Blender mesh "Torus.005"
+         from "Torus" to "Torus.005".
+       Changed dts object and node name for Blender mesh "Torus.004"
+         from "Torus" to "Torus.004".
+       Changed dts object and node name for Blender mesh "Torus.003"
+         from "Torus" to "Torus.003".
+       Changed dts object and node name for Blender mesh "Torus.002"
+         from "Torus" to "Torus.002".
+       Changed dts object and node name for Blender mesh "Torus.001"
+         from "Torus" to "Torus.001".
+       Changed dts object and node name for Blender mesh "Torus"
+         from "Torus" to "Torus".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\MAPS\balls_pushoff.dts'.
+ Processing...
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Camera] (parent -1)
+      ^^ Bone [Cube] (parent -1)
+      ^^ Bone [Cube.001] (parent -1)
+      ^^ Bone [Cube.002] (parent -1)
+      ^^ Bone [Cube.003] (parent -1)
+      ^^ Bone [Cube.004] (parent -1)
+      ^^ Bone [Cube.005] (parent -1)
+      ^^ Bone [Cube.006] (parent -1)
+      ^^ Bone [Cube.007] (parent -1)
+      ^^ Bone [Cube.008] (parent -1)
+      ^^ Bone [Cube.009] (parent -1)
+      ^^ Bone [Cube.010] (parent -1)
+      ^^ Bone [Cube.011] (parent -1)
+      ^^ Bone [Cube.012] (parent -1)
+      ^^ Bone [Cube.013] (parent -1)
+      ^^ Bone [Cube.014] (parent -1)
+      ^^ Bone [Cube.015] (parent -1)
+      ^^ Bone [Cube.016] (parent -1)
+      ^^ Bone [Cube.017] (parent -1)
+      ^^ Bone [Cube.018] (parent -1)
+      ^^ Bone [Cube.019] (parent -1)
+      ^^ Bone [Cube.020] (parent -1)
+      ^^ Bone [Cube.021] (parent -1)
+      ^^ Bone [Cube.022] (parent -1)
+      ^^ Bone [Cube.023] (parent -1)
+      ^^ Bone [Cube.024] (parent -1)
+      ^^ Bone [Cube.025] (parent -1)
+      ^^ Bone [Cube.026] (parent -1)
+      ^^ Bone [Cube.027] (parent -1)
+      ^^ Bone [Cube.028] (parent -1)
+      ^^ Bone [Cube.029] (parent -1)
+      ^^ Bone [Cube.030] (parent -1)
+      ^^ Bone [Cube.031] (parent -1)
+      ^^ Bone [Cube.032] (parent -1)
+      ^^ Bone [Cube.033] (parent -1)
+      ^^ Bone [Cube.035] (parent -1)
+      ^^ Bone [Cube.036] (parent -1)
+      ^^ Bone [Cube.037] (parent -1)
+      ^^ Bone [Cube.038] (parent -1)
+      ^^ Bone [Cube.039] (parent -1)
+      ^^ Bone [Cube.040] (parent -1)
+      ^^ Bone [Cube.041] (parent -1)
+      ^^ Bone [Cube.042] (parent -1)
+      ^^ Bone [Cube.043] (parent -1)
+      ^^ Bone [Cube.044] (parent -1)
+      ^^ Bone [Cube.045] (parent -1)
+      ^^ Bone [Cube.046] (parent -1)
+      ^^ Bone [Cube.047] (parent -1)
+      ^^ Bone [Cube.048] (parent -1)
+      ^^ Bone [Cube.049] (parent -1)
+      ^^ Bone [Cube.050] (parent -1)
+      ^^ Bone [Cube.051] (parent -1)
+      ^^ Bone [Cube.052] (parent -1)
+      ^^ Bone [Cube.053] (parent -1)
+      ^^ Bone [Cube.054] (parent -1)
+      ^^ Bone [Cube.055] (parent -1)
+      ^^ Bone [Cube.056] (parent -1)
+      ^^ Bone [Cube.057] (parent -1)
+      ^^ Bone [Cube.058] (parent -1)
+      ^^ Bone [Cube.059] (parent -1)
+      ^^ Bone [Cube.060] (parent -1)
+      ^^ Bone [Cube.061] (parent -1)
+      ^^ Bone [Cube.062] (parent -1)
+      ^^ Bone [Cube.063] (parent -1)
+      ^^ Bone [Cube.064] (parent -1)
+      ^^ Bone [Cube.065] (parent -1)
+      ^^ Bone [Cube.066] (parent -1)
+      ^^ Bone [Lamp] (parent -1)
+      ^^ Bone [Torus] (parent -1)
+      ^^ Bone [Torus.001] (parent -1)
+      ^^ Bone [Torus.002] (parent -1)
+      ^^ Bone [Torus.003] (parent -1)
+      ^^ Bone [Torus.004] (parent -1)
+      ^^ Bone [Torus.005] (parent -1)
+      ^^ Bone [Torus.006] (parent -1)
+      ^^ Bone [Torus.007] (parent -1)
+      ^^ Bone [Torus.008] (parent -1)
+      ^^ Bone [Torus.009] (parent -1)
+      ^^ Bone [Torus.010] (parent -1)
+      ^^ Bone [Torus.011] (parent -1)
+      ^^ Bone [Torus.012] (parent -1)
+      ^^ Bone [Torus.013] (parent -1)
+      ^^ Bone [Torus.014] (parent -1)
+      ^^ Bone [Torus.015] (parent -1)
+      ^^ Bone [Torus.016] (parent -1)
+      ^^ Bone [Torus.017] (parent -1)
+      ^^ Bone [Torus.018] (parent -1)
+      ^^ Bone [Torus.019] (parent -1)
+      ^^ Bone [Torus.020] (parent -1)
+      ^^ Bone [Torus.021] (parent -1)
+      ^^ Bone [Torus.022] (parent -1)
+      ^^ Bone [Torus.023] (parent -1)
+      ^^ Bone [Torus.024] (parent -1)
+      ^^ Bone [Torus.025] (parent -1)
+      ^^ Bone [Torus.026] (parent -1)
+      ^^ Bone [Torus.027] (parent -1)
+      ^^ Bone [Torus.028] (parent -1)
+      ^^ Bone [Torus.029] (parent -1)
+      ^^ Bone [Torus.030] (parent -1)
+      ^^ Bone [Torus.031] (parent -1)
+      ^^ Bone [Torus.032] (parent -1)
+      ^^ Bone [Torus.033] (parent -1)
+      ^^ Bone [Torus.034] (parent -1)
+      ^^ Bone [Torus.035] (parent -1)
+      ^^ Bone [Torus.036] (parent -1)
+      ^^ Bone [Torus.037] (parent -1)
+      ^^ Bone [Torus.038] (parent -1)
+      ^^ Bone [Torus.039] (parent -1)
+      ^^ Bone [Torus.040] (parent -1)
+      ^^ Bone [Torus.041] (parent -1)
+      ^^ Bone [Torus.042] (parent -1)
+      ^^ Bone [Torus.043] (parent -1)
+      ^^ Bone [Torus.044] (parent -1)
+      ^^ Bone [Torus.045] (parent -1)
+      ^^ Bone [Torus.046] (parent -1)
+      ^^ Bone [Torus.047] (parent -1)
+      ^^ Bone [Torus.048] (parent -1)
+      ^^ Bone [Torus.049] (parent -1)
+      ^^ Bone [Torus.050] (parent -1)
+      ^^ Bone [Torus.051] (parent -1)
+      ^^ Bone [Torus.052] (parent -1)
+      ^^ Bone [Torus.053] (parent -1)
+      ^^ Bone [Torus.054] (parent -1)
+      ^^ Bone [Torus.055] (parent -1)
+      ^^ Bone [Torus.056] (parent -1)
+      ^^ Bone [Torus.057] (parent -1)
+      ^^ Bone [Torus.058] (parent -1)
+      ^^ Bone [Torus.059] (parent -1)
+      ^^ Bone [Torus.060] (parent -1)
+      ^^ Bone [Torus.061] (parent -1)
+      ^^ Bone [Torus.062] (parent -1)
+      ^^ Bone [Torus.063] (parent -1)
+      ^^ Bone [Torus.064] (parent -1)
+      ^^ Bone [Torus.065] (parent -1)
+      ^^ Bone [Torus.066] (parent -1)
+      ^^ Bone [Torus.067] (parent -1)
+      ^^ Bone [Torus.068] (parent -1)
+      ^^ Bone [Torus.069] (parent -1)
+      ^^ Bone [Torus.070] (parent -1)
+      ^^ Bone [Torus.071] (parent -1)
+      ^^ Bone [Tube] (parent -1)
+      ^^ Bone [Tube.001] (parent -1)
+      ^^ Bone [Tube.002] (parent -1)
+      ^^ Bone [Tube.003] (parent -1)
+      ^^ Bone [Tube.004] (parent -1)
+      ^^ Bone [Tube.005] (parent -1)
+      ^^ Bone [Tube.006] (parent -1)
+      ^^ Bone [Tube.007] (parent -1)
+      ^^ Bone [Tube.008] (parent -1)
+      ^^ Bone [Tube.009] (parent -1)
+      ^^ Bone [Tube.010] (parent -1)
+      ^^ Bone [Tube.011] (parent -1)
+      ^^ Bone [Tube.012] (parent -1)
+      ^^ Bone [Tube.013] (parent -1)
+      ^^ Bone [Tube.014] (parent -1)
+      ^^ Bone [Tube.015] (parent -1)
+      ^^ Bone [Tube.016] (parent -1)
+      ^^ Bone [Tube.017] (parent -1)
+      ^^ Bone [Tube.018] (parent -1)
+      ^^ Bone [Tube.019] (parent -1)
+      ^^ Bone [Tube.020] (parent -1)
+      ^^ Bone [Tube.021] (parent -1)
+      ^^ Bone [Tube.022] (parent -1)
+      ^^ Bone [Tube.023] (parent -1)
+      ^^ Bone [Tube.024] (parent -1)
+      ^^ Bone [Tube.025] (parent -1)
+      ^^ Bone [Tube.026] (parent -1)
+      ^^ Bone [Tube.027] (parent -1)
+      ^^ Bone [Tube.028] (parent -1)
+      ^^ Bone [Tube.029] (parent -1)
+      ^^ Bone [Tube.030] (parent -1)
+      ^^ Bone [Tube.031] (parent -1)
+      ^^ Bone [Tube.032] (parent -1)
+      ^^ Bone [Tube.033] (parent -1)
+      ^^ Bone [Tube.034] (parent -1)
+      ^^ Bone [Tube.035] (parent -1)
+      ^^ Bone [Tube.036] (parent -1)
+      ^^ Bone [Tube.037] (parent -1)
+      ^^ Bone [Tube.038] (parent -1)
+      ^^ Bone [Tube.039] (parent -1)
+      ^^ Bone [Tube.040] (parent -1)
+      ^^ Bone [Tube.041] (parent -1)
+      ^^ Bone [Tube.042] (parent -1)
+      ^^ Bone [Tube.043] (parent -1)
+      ^^ Bone [Tube.044] (parent -1)
+      ^^ Bone [Tube.045] (parent -1)
+      ^^ Bone [Tube.046] (parent -1)
+      ^^ Bone [Tube.047] (parent -1)
+      ^^ Bone [Tube.048] (parent -1)
+      ^^ Bone [Tube.049] (parent -1)
+      ^^ Bone [Tube.050] (parent -1)
+      ^^ Bone [Tube.051] (parent -1)
+      ^^ Bone [Tube.052] (parent -1)
+      ^^ Bone [Tube.053] (parent -1)
+      ^^ Bone [Tube.054] (parent -1)
+      ^^ Bone [Tube.055] (parent -1)
+      ^^ Bone [Tube.056] (parent -1)
+      ^^ Bone [Tube.057] (parent -1)
+      ^^ Bone [Tube.058] (parent -1)
+      ^^ Bone [Tube.059] (parent -1)
+      ^^ Bone [Tube.060] (parent -1)
+      ^^ Bone [Tube.061] (parent -1)
+      ^^ Bone [Tube.062] (parent -1)
+      ^^ Bone [Tube.063] (parent -1)
+      ^^ Bone [Tube.064] (parent -1)
+      ^^ Bone [Tube.065] (parent -1)
+      ^^ Bone [Tube.066] (parent -1)
+      ^^ Bone [Tube.067] (parent -1)
+      ^^ Bone [Tube.068] (parent -1)
+      ^^ Bone [Tube.069] (parent -1)
+      ^^ Bone [Tube.070] (parent -1)
+      ^^ Bone [Tube.071] (parent -1)
+      ^^ Bone [Tube.072] (parent -1)
+      ^^ Bone [Tube.073] (parent -1)
+      ^^ Bone [Tube.074] (parent -1)
+      ^^ Bone [Tube.075] (parent -1)
+      ^^ Bone [Tube.076] (parent -1)
+      ^^ Bone [Tube.077] (parent -1)
+      ^^ Bone [Tube.078] (parent -1)
+      ^^ Bone [Tube.079] (parent -1)
+      ^^ Bone [Tube.080] (parent -1)
+      ^^ Bone [Tube.081] (parent -1)
+      ^^ Bone [Tube.082] (parent -1)
+      ^^ Bone [Tube.083] (parent -1)
+      ^^ Bone [Tube.084] (parent -1)
+      ^^ Bone [Tube.085] (parent -1)
+      ^^ Bone [Tube.086] (parent -1)
+      ^^ Bone [Tube.087] (parent -1)
+      ^^ Bone [Tube.088] (parent -1)
+      ^^ Bone [Tube.089] (parent -1)
+      ^^ Bone [Tube.090] (parent -1)
+      ^^ Bone [Tube.091] (parent -1)
+      ^^ Bone [Tube.092] (parent -1)
+      ^^ Bone [Tube.093] (parent -1)
+      ^^ Bone [Tube.094] (parent -1)
+      ^^ Bone [Tube.095] (parent -1)
+      ^^ Bone [Tube.096] (parent -1)
+      ^^ Bone [Tube.097] (parent -1)
+      ^^ Bone [Tube.098] (parent -1)
+      ^^ Bone [Tube.099] (parent -1)
+      ^^ Bone [Tube.100] (parent -1)
+      ^^ Bone [Tube.101] (parent -1)
+      ^^ Bone [Tube.102] (parent -1)
+      ^^ Bone [Tube.103] (parent -1)
+      ^^ Bone [Tube.104] (parent -1)
+      ^^ Bone [Tube.105] (parent -1)
+      ^^ Bone [Tube.106] (parent -1)
+      ^^ Bone [Tube.107] (parent -1)
+      ^^ Bone [Tube.108] (parent -1)
+      ^^ Bone [Tube.109] (parent -1)
+      ^^ Bone [Tube.110] (parent -1)
+      ^^ Bone [Tube.111] (parent -1)
+      ^^ Bone [Tube.112] (parent -1)
+      ^^ Bone [Tube.113] (parent -1)
+      ^^ Bone [Tube.114] (parent -1)
+      ^^ Bone [Tube.115] (parent -1)
+      ^^ Bone [Tube.116] (parent -1)
+      ^^ Bone [Tube.117] (parent -1)
+      ^^ Bone [Tube.118] (parent -1)
+      ^^ Bone [Tube.119] (parent -1)
+      ^^ Bone [Tube.120] (parent -1)
+      ^^ Bone [Tube.121] (parent -1)
+      ^^ Bone [Tube.122] (parent -1)
+      ^^ Bone [Tube.123] (parent -1)
+      ^^ Bone [Tube.124] (parent -1)
+      ^^ Bone [Tube.125] (parent -1)
+      ^^ Bone [Tube.126] (parent -1)
+      ^^ Bone [Tube.127] (parent -1)
+      ^^ Bone [Tube.128] (parent -1)
+      ^^ Bone [Tube.129] (parent -1)
+      ^^ Bone [Tube.130] (parent -1)
+      ^^ Bone [Tube.131] (parent -1)
+      ^^ Bone [Tube.132] (parent -1)
+      ^^ Bone [Tube.133] (parent -1)
+      ^^ Bone [Tube.134] (parent -1)
+      ^^ Bone [Tube.135] (parent -1)
+      ^^ Bone [Tube.136] (parent -1)
+      ^^ Bone [Tube.137] (parent -1)
+      ^^ Bone [Tube.138] (parent -1)
+      ^^ Bone [Tube.139] (parent -1)
+      ^^ Bone [Tube.140] (parent -1)
+      ^^ Bone [Tube.141] (parent -1)
+      ^^ Bone [Tube.142] (parent -1)
+      ^^ Bone [Tube.143] (parent -1)
+      ^^ Bone [Tube.145] (parent -1)
+      ^^ Bone [Tube.146] (parent -1)
+      ^^ Bone [Tube.147] (parent -1)
+      ^^ Bone [Tube.148] (parent -1)
+      ^^ Bone [Tube.149] (parent -1)
+      ^^ Bone [Tube.150] (parent -1)
+      ^^ Bone [Tube.151] (parent -1)
+      ^^ Bone [Tube.152] (parent -1)
+      ^^ Bone [Tube.153] (parent -1)
+      ^^ Bone [Tube.154] (parent -1)
+      ^^ Bone [Tube.155] (parent -1)
+      ^^ Bone [Tube.156] (parent -1)
+      ^^ Bone [Tube.157] (parent -1)
+      ^^ Bone [Tube.158] (parent -1)
+      ^^ Bone [Tube.159] (parent -1)
+      ^^ Bone [Tube.160] (parent -1)
+      ^^ Bone [Tube.161] (parent -1)
+      ^^ Bone [Tube.162] (parent -1)
+      ^^ Bone [Tube.163] (parent -1)
+      ^^ Bone [Tube.164] (parent -1)
+      ^^ Bone [Tube.165] (parent -1)
+      ^^ Bone [Tube.166] (parent -1)
+      ^^ Bone [Tube.167] (parent -1)
+      ^^ Bone [Tube.168] (parent -1)
+      ^^ Bone [Tube.170] (parent -1)
+      ^^ Bone [Tube.171] (parent -1)
+      ^^ Bone [Tube.172] (parent -1)
+      ^^ Bone [Tube.173] (parent -1)
+      ^^ Bone [Tube.174] (parent -1)
+      ^^ Bone [Tube.175] (parent -1)
+      ^^ Bone [Tube.176] (parent -1)
+      ^^ Bone [Tube.177] (parent -1)
+      ^^ Bone [Tube.178] (parent -1)
+      ^^ Bone [Tube.179] (parent -1)
+      ^^ Bone [Tube.180] (parent -1)
+      ^^ Bone [Tube.181] (parent -1)
+    > Objects
+     'Cube' : Standard Standard 
+     'Cube.001' : Standard Standard 
+     'Cube.002' : Standard Standard 
+     'Cube.003' : Standard Standard 
+     'Cube.004' : Standard Standard 
+     'Cube.005' : Standard Standard 
+     'Cube.006' : Standard Standard 
+     'Cube.007' : Standard Standard 
+     'Cube.008' : Standard Standard 
+     'Cube.009' : Standard Standard 
+     'Cube.010' : Standard Standard 
+     'Cube.011' : Standard Standard 
+     'Cube.012' : Standard Standard 
+     'Cube.013' : Standard Standard 
+     'Cube.014' : Standard Standard 
+     'Cube.015' : Standard Standard 
+     'Cube.016' : Standard Standard 
+     'Cube.017' : Standard Standard 
+     'Cube.018' : Standard Standard 
+     'Cube.019' : Standard Standard 
+     'Cube.020' : Standard Standard 
+     'Cube.021' : Standard Standard 
+     'Cube.022' : Standard Standard 
+     'Cube.023' : Standard Standard 
+     'Cube.024' : Standard Standard 
+     'Cube.025' : Standard Standard 
+     'Cube.026' : Standard Standard 
+     'Cube.027' : Standard Standard 
+     'Cube.028' : Standard Standard 
+     'Cube.029' : Standard Standard 
+     'Cube.030' : Standard Standard 
+     'Cube.031' : Standard Standard 
+     'Cube.032' : Standard Standard 
+     'Cube.033' : Standard Standard 
+     'Cube.035' : Standard Standard 
+     'Cube.036' : Standard Standard 
+     'Cube.037' : Standard Standard 
+     'Cube.038' : Standard Standard 
+     'Cube.039' : Standard Standard 
+     'Cube.040' : Standard Standard 
+     'Cube.041' : Standard Standard 
+     'Cube.042' : Standard Standard 
+     'Cube.043' : Standard Standard 
+     'Cube.044' : Standard Standard 
+     'Cube.045' : Standard Standard 
+     'Cube.046' : Standard Standard 
+     'Cube.047' : Standard Standard 
+     'Cube.048' : Standard Standard 
+     'Cube.049' : Standard Standard 
+     'Cube.050' : Standard Standard 
+     'Cube.051' : Standard Standard 
+     'Cube.052' : Standard Standard 
+     'Cube.053' : Standard Standard 
+     'Cube.054' : Standard Standard 
+     'Cube.055' : Standard Standard 
+     'Cube.056' : Standard Standard 
+     'Cube.057' : Standard Standard 
+     'Cube.058' : Standard Standard 
+     'Cube.059' : Standard Standard 
+     'Cube.060' : Standard Standard 
+     'Cube.061' : Standard Standard 
+     'Cube.062' : Standard Standard 
+     'Cube.063' : Standard Standard 
+     'Cube.064' : Standard Standard 
+     'Cube.065' : Standard Standard 
+     'Cube.066' : Standard Standard 
+     'Torus' : Standard Standard 
+     'Torus.001' : Standard Standard 
+     'Torus.002' : Standard Standard 
+     'Torus.003' : Standard Standard 
+     'Torus.004' : Standard Standard 
+     'Torus.005' : Standard Standard 
+     'Torus.006' : Standard Standard 
+     'Torus.007' : Standard Standard 
+     'Torus.008' : Standard Standard 
+     'Torus.009' : Standard Standard 
+     'Torus.010' : Standard Standard 
+     'Torus.011' : Standard Standard 
+     'Torus.012' : Standard Standard 
+     'Torus.013' : Standard Standard 
+     'Torus.014' : Standard Standard 
+     'Torus.015' : Standard Standard 
+     'Torus.016' : Standard Standard 
+     'Torus.017' : Standard Standard 
+     'Torus.018' : Standard Standard 
+     'Torus.019' : Standard Standard 
+     'Torus.020' : Standard Standard 
+     'Torus.021' : Standard Standard 
+     'Torus.022' : Standard Standard 
+     'Torus.023' : Standard Standard 
+     'Torus.024' : Standard Standard 
+     'Torus.025' : Standard Standard 
+     'Torus.026' : Standard Standard 
+     'Torus.027' : Standard Standard 
+     'Torus.028' : Standard Standard 
+     'Torus.029' : Standard Standard 
+     'Torus.030' : Standard Standard 
+     'Torus.031' : Standard Standard 
+     'Torus.032' : Standard Standard 
+     'Torus.033' : Standard Standard 
+     'Torus.034' : Standard Standard 
+     'Torus.035' : Standard Standard 
+     'Torus.036' : Standard Standard 
+     'Torus.037' : Standard Standard 
+     'Torus.038' : Standard Standard 
+     'Torus.039' : Standard Standard 
+     'Torus.040' : Standard Standard 
+     'Torus.041' : Standard Standard 
+     'Torus.042' : Standard Standard 
+     'Torus.043' : Standard Standard 
+     'Torus.044' : Standard Standard 
+     'Torus.045' : Standard Standard 
+     'Torus.046' : Standard Standard 
+     'Torus.047' : Standard Standard 
+     'Torus.048' : Standard Standard 
+     'Torus.049' : Standard Standard 
+     'Torus.050' : Standard Standard 
+     'Torus.051' : Standard Standard 
+     'Torus.052' : Standard Standard 
+     'Torus.053' : Standard Standard 
+     'Torus.054' : Standard Standard 
+     'Torus.055' : Standard Standard 
+     'Torus.056' : Standard Standard 
+     'Torus.057' : Standard Standard 
+     'Torus.058' : Standard Standard 
+     'Torus.059' : Standard Standard 
+     'Torus.060' : Standard Standard 
+     'Torus.061' : Standard Standard 
+     'Torus.062' : Standard Standard 
+     'Torus.063' : Standard Standard 
+     'Torus.064' : Standard Standard 
+     'Torus.065' : Standard Standard 
+     'Torus.066' : Standard Standard 
+     'Torus.067' : Standard Standard 
+     'Torus.068' : Standard Standard 
+     'Torus.069' : Standard Standard 
+     'Torus.070' : Standard Standard 
+     'Torus.071' : Standard Standard 
+     'Tube' : Standard Standard 
+     'Tube.001' : Standard Standard 
+     'Tube.002' : Standard Standard 
+     'Tube.003' : Standard Standard 
+     'Tube.004' : Standard Standard 
+     'Tube.005' : Standard Standard 
+     'Tube.006' : Standard Standard 
+     'Tube.007' : Standard Standard 
+     'Tube.008' : Standard Standard 
+     'Tube.009' : Standard Standard 
+     'Tube.010' : Standard Standard 
+     'Tube.011' : Standard Standard 
+     'Tube.012' : Standard Standard 
+     'Tube.013' : Standard Standard 
+     'Tube.014' : Standard Standard 
+     'Tube.015' : Standard Standard 
+     'Tube.016' : Standard Standard 
+     'Tube.017' : Standard Standard 
+     'Tube.018' : Standard Standard 
+     'Tube.019' : Standard Standard 
+     'Tube.020' : Standard Standard 
+     'Tube.021' : Standard Standard 
+     'Tube.022' : Standard Standard 
+     'Tube.023' : Standard Standard 
+     'Tube.024' : Standard Standard 
+     'Tube.025' : Standard Standard 
+     'Tube.026' : Standard Standard 
+     'Tube.027' : Standard Standard 
+     'Tube.028' : Standard Standard 
+     'Tube.029' : Standard Standard 
+     'Tube.030' : Standard Standard 
+     'Tube.031' : Standard Standard 
+     'Tube.032' : Standard Standard 
+     'Tube.033' : Standard Standard 
+     'Tube.034' : Standard Standard 
+     'Tube.035' : Standard Standard 
+     'Tube.036' : Standard Standard 
+     'Tube.037' : Standard Standard 
+     'Tube.038' : Standard Standard 
+     'Tube.039' : Standard Standard 
+     'Tube.040' : Standard Standard 
+     'Tube.041' : Standard Standard 
+     'Tube.042' : Standard Standard 
+     'Tube.043' : Standard Standard 
+     'Tube.044' : Standard Standard 
+     'Tube.045' : Standard Standard 
+     'Tube.046' : Standard Standard 
+     'Tube.047' : Standard Standard 
+     'Tube.048' : Standard Standard 
+     'Tube.049' : Standard Standard 
+     'Tube.050' : Standard Standard 
+     'Tube.051' : Standard Standard 
+     'Tube.052' : Standard Standard 
+     'Tube.053' : Standard Standard 
+     'Tube.054' : Standard Standard 
+     'Tube.055' : Standard Standard 
+     'Tube.056' : Standard Standard 
+     'Tube.057' : Standard Standard 
+     'Tube.058' : Standard Standard 
+     'Tube.059' : Standard Standard 
+     'Tube.060' : Standard Standard 
+     'Tube.061' : Standard Standard 
+     'Tube.062' : Standard Standard 
+     'Tube.063' : Standard Standard 
+     'Tube.064' : Standard Standard 
+     'Tube.065' : Standard Standard 
+     'Tube.066' : Standard Standard 
+     'Tube.067' : Standard Standard 
+     'Tube.068' : Standard Standard 
+     'Tube.069' : Standard Standard 
+     'Tube.070' : Standard Standard 
+     'Tube.071' : Standard Standard 
+     'Tube.072' : Standard Standard 
+     'Tube.073' : Standard Standard 
+     'Tube.074' : Standard Standard 
+     'Tube.075' : Standard Standard 
+     'Tube.076' : Standard Standard 
+     'Tube.077' : Standard Standard 
+     'Tube.078' : Standard Standard 
+     'Tube.079' : Standard Standard 
+     'Tube.080' : Standard Standard 
+     'Tube.081' : Standard Standard 
+     'Tube.082' : Standard Standard 
+     'Tube.083' : Standard Standard 
+     'Tube.084' : Standard Standard 
+     'Tube.085' : Standard Standard 
+     'Tube.086' : Standard Standard 
+     'Tube.087' : Standard Standard 
+     'Tube.088' : Standard Standard 
+     'Tube.089' : Standard Standard 
+     'Tube.090' : Standard Standard 
+     'Tube.091' : Standard Standard 
+     'Tube.092' : Standard Standard 
+     'Tube.093' : Standard Standard 
+     'Tube.094' : Standard Standard 
+     'Tube.095' : Standard Standard 
+     'Tube.096' : Standard Standard 
+     'Tube.097' : Standard Standard 
+     'Tube.098' : Standard Standard 
+     'Tube.099' : Standard Standard 
+     'Tube.100' : Standard Standard 
+     'Tube.101' : Standard Standard 
+     'Tube.102' : Standard Standard 
+     'Tube.103' : Standard Standard 
+     'Tube.104' : Standard Standard 
+     'Tube.105' : Standard Standard 
+     'Tube.106' : Standard Standard 
+     'Tube.107' : Standard Standard 
+     'Tube.108' : Standard Standard 
+     'Tube.109' : Standard Standard 
+     'Tube.110' : Standard Standard 
+     'Tube.111' : Standard Standard 
+     'Tube.112' : Standard Standard 
+     'Tube.113' : Standard Standard 
+     'Tube.114' : Standard Standard 
+     'Tube.115' : Standard Standard 
+     'Tube.116' : Standard Standard 
+     'Tube.117' : Standard Standard 
+     'Tube.118' : Standard Standard 
+     'Tube.119' : Standard Standard 
+     'Tube.120' : Standard Standard 
+     'Tube.121' : Standard Standard 
+     'Tube.122' : Standard Standard 
+     'Tube.123' : Standard Standard 
+     'Tube.124' : Standard Standard 
+     'Tube.125' : Standard Standard 
+     'Tube.126' : Standard Standard 
+     'Tube.127' : Standard Standard 
+     'Tube.128' : Standard Standard 
+     'Tube.129' : Standard Standard 
+     'Tube.130' : Standard Standard 
+     'Tube.131' : Standard Standard 
+     'Tube.132' : Standard Standard 
+     'Tube.133' : Standard Standard 
+     'Tube.134' : Standard Standard 
+     'Tube.135' : Standard Standard 
+     'Tube.136' : Standard Standard 
+     'Tube.137' : Standard Standard 
+     'Tube.138' : Standard Standard 
+     'Tube.139' : Standard Standard 
+     'Tube.140' : Standard Standard 
+     'Tube.141' : Standard Standard 
+     'Tube.142' : Standard Standard 
+     'Tube.143' : Standard Standard 
+     'Tube.145' : Standard Standard 
+     'Tube.146' : Standard Standard 
+     'Tube.147' : Standard Standard 
+     'Tube.148' : Standard Standard 
+     'Tube.149' : Standard Standard 
+     'Tube.150' : Standard Standard 
+     'Tube.151' : Standard Standard 
+     'Tube.152' : Standard Standard 
+     'Tube.153' : Standard Standard 
+     'Tube.154' : Standard Standard 
+     'Tube.155' : Standard Standard 
+     'Tube.156' : Standard Standard 
+     'Tube.157' : Standard Standard 
+     'Tube.158' : Standard Standard 
+     'Tube.159' : Standard Standard 
+     'Tube.160' : Standard Standard 
+     'Tube.161' : Standard Standard 
+     'Tube.162' : Standard Standard 
+     'Tube.163' : Standard Standard 
+     'Tube.164' : Standard Standard 
+     'Tube.165' : Standard Standard 
+     'Tube.166' : Standard Standard 
+     'Tube.167' : Standard Standard 
+     'Tube.168' : Standard Standard 
+     'Tube.170' : Standard Standard 
+     'Tube.171' : Standard Standard 
+     'Tube.172' : Standard Standard 
+     'Tube.173' : Standard Standard 
+     'Tube.174' : Standard Standard 
+     'Tube.175' : Standard Standard 
+     'Tube.176' : Standard Standard 
+     'Tube.177' : Standard Standard 
+     'Tube.178' : Standard Standard 
+     'Tube.179' : Standard Standard 
+     'Tube.180' : Standard Standard 
+     'Tube.181' : Standard Standard 
+    > Materials
+       grid_cool
+       grid_warm
+       struct_warm
+       struct_warm.003
+       struct_warm.004
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+ Writing out DTS...
+ Done.
+ Finished.
+ 

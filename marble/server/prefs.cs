@@ -1,0 +1,11 @@
+$Pref::Server::BanTime = 1800;
+$Pref::Server::ConnectionError = "ERROR";
+$Pref::Server::FloodProtectionEnabled = 1;
+$Pref::Server::Info = "This is a Torque Game Engine Test Server.";
+$Pref::Server::KickBanTime = 300;
+$Pref::Server::MaxChatLen = 120;
+$Pref::Server::MaxPlayers = 64;
+$Pref::Server::Name = "Torque Test Server";
+$Pref::Server::Port = 28000;
+$Pref::Server::RegionMask = 2;
+$Pref::Server::TimeLimit = 20;

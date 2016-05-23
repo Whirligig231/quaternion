@@ -1,0 +1,21 @@
+// Torque Input Map File
+moveMap.delete();
+new ActionMap(moveMap);
+moveMap.bindCmd(keyboard, "escape", "", "escapeFromGame();");
+moveMap.bind(keyboard, "s", moveleft);
+moveMap.bind(keyboard, "space", mouseFire);
+moveMap.bind(keyboard, "alt c", toggleCamera);
+moveMap.bind(keyboard, "f8", dropCameraAtPlayer);
+moveMap.bind(keyboard, "f7", dropPlayerAtCamera);
+moveMap.bind(keyboard, "4", moveforward);
+moveMap.bind(keyboard, "f", moveright);
+moveMap.bind(keyboard, "d", movebackward);
+moveMap.bind(keyboard, "e", jump);
+moveMap.bind(keyboard, "3", panUp);
+moveMap.bind(keyboard, "5", panDown);
+moveMap.bind(keyboard, "r", turnRight);
+moveMap.bind(keyboard, "w", turnLeft);
+moveMap.bind(keyboard, "v", freelook);
+moveMap.bind(mouse0, "xaxis", yaw);
+moveMap.bind(mouse0, "yaxis", pitch);
+

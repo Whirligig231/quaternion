@@ -1,0 +1,51 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Circle"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Circle.004"
+         from "Circle" to "Circle.004".
+       Changed dts object and node name for Blender mesh "Circle.003"
+         from "Circle" to "Circle.003".
+       Changed dts object and node name for Blender mesh "Circle.001"
+         from "Circle" to "Circle.001".
+       Changed dts object and node name for Blender mesh "Circle"
+         from "Circle" to "Circle".
+       Changed dts object and node name for Blender mesh "Circle.002"
+         from "Circle" to "Circle.002".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Shared\ions\ionpack.dts'.
+ Processing...
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Camera] (parent -1)
+      ^^ Bone [Circle] (parent -1)
+      ^^ Bone [Circle.001] (parent -1)
+      ^^ Bone [Circle.002] (parent -1)
+      ^^ Bone [Circle.003] (parent -1)
+      ^^ Bone [Circle.004] (parent -1)
+      ^^ Bone [Lamp] (parent -1)
+    > Objects
+     'Circle' : Standard Standard 
+     'Circle.001' : Standard Standard 
+     'Circle.002' : Standard Standard 
+     'Circle.003' : Standard Standard 
+     'Circle.004' : Standard Standard 
+    > Materials
+       blackwhite
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+ Writing out DTS...
+ Done.
+ Finished.
+ 

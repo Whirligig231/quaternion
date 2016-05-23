@@ -1,0 +1,15 @@
+datablock StaticShapeData(PressSwitch) {
+	category = "Switches";
+	shapeFile = "~/data/Shared/switches/button.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "0.5 0.5 0.05";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+function PressSwitch::onCollision(%this, %obj, %col) {
+	call(%obj.callback);
+}
+

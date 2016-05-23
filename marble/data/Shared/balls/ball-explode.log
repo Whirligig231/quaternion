@@ -1,0 +1,116 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Detail1 all reduce to the same DTS
+    Object name: "Cube"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Cube.018"
+         from "Cube" to "Cube.018".
+       Changed dts object and node name for Blender mesh "Cube.017"
+         from "Cube" to "Cube.017".
+       Changed dts object and node name for Blender mesh "Cube.016"
+         from "Cube" to "Cube.016".
+       Changed dts object and node name for Blender mesh "Cube.015"
+         from "Cube" to "Cube.015".
+       Changed dts object and node name for Blender mesh "Cube.014"
+         from "Cube" to "Cube.014".
+       Changed dts object and node name for Blender mesh "Cube.013"
+         from "Cube" to "Cube.013".
+       Changed dts object and node name for Blender mesh "Cube.012"
+         from "Cube" to "Cube.012".
+       Changed dts object and node name for Blender mesh "Cube.011"
+         from "Cube" to "Cube.011".
+       Changed dts object and node name for Blender mesh "Cube.010"
+         from "Cube" to "Cube.010".
+       Changed dts object and node name for Blender mesh "Cube.009"
+         from "Cube" to "Cube.009".
+       Changed dts object and node name for Blender mesh "Cube.008"
+         from "Cube" to "Cube.008".
+       Changed dts object and node name for Blender mesh "Cube.007"
+         from "Cube" to "Cube.007".
+       Changed dts object and node name for Blender mesh "Cube.006"
+         from "Cube" to "Cube.006".
+       Changed dts object and node name for Blender mesh "Cube.005"
+         from "Cube" to "Cube.005".
+       Changed dts object and node name for Blender mesh "Cube.004"
+         from "Cube" to "Cube.004".
+       Changed dts object and node name for Blender mesh "Cube.003"
+         from "Cube" to "Cube.003".
+       Changed dts object and node name for Blender mesh "Cube.002"
+         from "Cube" to "Cube.002".
+       Changed dts object and node name for Blender mesh "Cube.001"
+         from "Cube" to "Cube.001".
+       Changed dts object and node name for Blender mesh "Cube"
+         from "Cube" to "Cube".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Shared\balls\ball-explode.dts'.
+ Processing...
+ Error: Vertex index limit exceeded for mesh Cube.013, truncating mesh!
+    Loading sequence 'explode'...
+       Frames: 250 
+       Animates: loc rot 
+    Loaded sequence 'explode'.
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Camera] (parent -1)
+      ^^ Bone [Cube] (parent -1)
+      ^^ Bone [Cube.001] (parent -1)
+      ^^ Bone [Cube.002] (parent -1)
+      ^^ Bone [Cube.003] (parent -1)
+      ^^ Bone [Cube.004] (parent -1)
+      ^^ Bone [Cube.005] (parent -1)
+      ^^ Bone [Cube.006] (parent -1)
+      ^^ Bone [Cube.007] (parent -1)
+      ^^ Bone [Cube.008] (parent -1)
+      ^^ Bone [Cube.009] (parent -1)
+      ^^ Bone [Cube.010] (parent -1)
+      ^^ Bone [Cube.011] (parent -1)
+      ^^ Bone [Cube.012] (parent -1)
+      ^^ Bone [Cube.013] (parent -1)
+      ^^ Bone [Cube.014] (parent -1)
+      ^^ Bone [Cube.015] (parent -1)
+      ^^ Bone [Cube.016] (parent -1)
+      ^^ Bone [Cube.017] (parent -1)
+      ^^ Bone [Cube.018] (parent -1)
+      ^^ Bone [Lamp] (parent -1)
+    > Objects
+     'Cube' : Standard 
+     'Cube.001' : Standard 
+     'Cube.002' : Standard 
+     'Cube.003' : Standard 
+     'Cube.004' : Standard 
+     'Cube.005' : Standard 
+     'Cube.006' : Standard 
+     'Cube.007' : Standard 
+     'Cube.008' : Standard 
+     'Cube.009' : Standard 
+     'Cube.010' : Standard 
+     'Cube.011' : Standard 
+     'Cube.012' : Standard 
+     'Cube.013' : Standard 
+     'Cube.014' : Standard 
+     'Cube.015' : Standard 
+     'Cube.016' : Standard 
+     'Cube.017' : Standard 
+     'Cube.018' : Standard 
+    > Materials
+       base.marble
+    > Detail Levels
+       Detail-1 (size : 1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+     - explode
+        Animates: loc rot 
+        Frames: 250
+        Ground Frames: 0
+        Triggers: 0
+ Writing out DTS...
+ Done.
+ Finished.
+ 

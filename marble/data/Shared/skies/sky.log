@@ -1,0 +1,37 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Shared\skies\sky.dts'.
+ Processing...
+    Loading sequence 'ambient'...
+       Frames: 40 
+       Animates: rot 
+    Loaded sequence 'ambient'.
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Camera] (parent -1)
+      ^^ Bone [Cube] (parent -1)
+      ^^ Bone [Lamp] (parent -1)
+    > Objects
+     'Cube' : Standard 
+    > Materials
+       sky_FR
+       sky_LF
+       sky_BK
+       sky_DN
+       sky_RT
+       sky_UP
+    > Detail Levels
+       Detail-1 (size : 1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+     - ambient
+        Animates: rot 
+        Frames: 40
+        Ground Frames: 0
+        Triggers: 0
+ Writing out DTS...
+ Done.
+ Finished.
+ 

@@ -1,0 +1,593 @@
+DtsRaw("LightsLevel", "level", "Lights");
+DtsRaw("LightsLevelN", "level_n", "Lights");
+DtsRaw("LightsLevelE", "level_e", "Lights");
+DtsRaw("LightsLevelS", "level_s", "Lights");
+DtsRaw("LightsLevelW", "level_w", "Lights");
+
+DtsRaw("BpxBridge", "bpxbridge_nomp", "Lights");
+
+datablock StaticShapeData(LightsBox) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/box.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "1 1 1";
+	btMass = 0.3;
+	btFriction = 0.7;
+	btRestitution = 0.7;
+};
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
+         type = "Beginner";
+         level = "1";
+         name = "Learning to Roll";
+         artist = "Alex Swanson";
+         goldTime = "4750";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.900000 0.900000 0.900000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      materialList = "~/data/Shared/skies/sky_day.dml";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.544508 0.439467 -0.714409";
+      color = "0.200000 0.200000 0.200000 1.000000";
+      ambient = "0.800000 0.800000 0.800000 1.000000";
+   };
+   new StaticShape(StartPoint) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         initialWorldBox = "-1.00917 -1.00917 -1.4469e-005 1.00917 1.00917 0.399978";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "0 0 0 1 0 0 0";
+         btBody = "0";
+   };
+   new StaticShape(LL) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LightsLevel";
+         initialWorldBox = "-66 -66 -2 98 100.796 44";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "0 0 0 1 0 0 0";
+         btBody = "1";
+   };
+   new StaticShape(bb) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BpxBridge";
+   };
+   new StaticShape(LLN) {
+      position = "16 68 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelN";
+         initialWorldBox = "-4 48 2 36 88 4";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "16 68 2 1 0 0 0";
+         btBody = "2";
+   };
+   new StaticShape(LLW) {
+      position = "-36 16 2";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelW";
+         initialWorldBox = "-56.0001 -4.00007 2 -15.9999 36.0001 8";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "-36 16 2 0 0 -1 1.5708";
+         btBody = "3";
+   };
+   new StaticShape(LLE) {
+      position = "68 16 2";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelE";
+         initialWorldBox = "47.9999 -4.00007 2 88.0001 36.0001 6";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "68 16 2 0 0 1 1.5708";
+         btBody = "4";
+   };
+   new StaticShape(LLS) {
+      position = "16 -36 2";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelS";
+         initialWorldBox = "-4.00005 -56 2 36 -16 4";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "16 -36 2 0 0 1 3.14159";
+         btBody = "5";
+   };
+   new StaticShape() {
+      position = "-22.8828 24.2334 3.45036";
+      rotation = "0 0 1 28.6479";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "-24.2398 22.8764 2.45036 -21.5258 25.5904 4.45036";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "-22.8828 24.2334 3.45036 0 0 1 0.5";
+         btBody = "6";
+   };
+   new StaticShape() {
+      position = "-22.8828 24.2334 5.75036";
+      rotation = "0 0 -1 28.6479";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "-24.2398 22.8764 4.75036 -21.5258 25.5904 6.75036";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "-22.8828 24.2334 5.75036 0 0 -1 0.5";
+         btBody = "7";
+   };
+   new StaticShape() {
+      position = "76.054 18.8899 3.54333";
+      rotation = "0 0 1 14.8969";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "74.8305 17.6664 2.54333 77.2775 20.1134 4.54333";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "76.054 18.8899 3.54333 0 0 1 0.26";
+         btBody = "8";
+   };
+   new StaticShape() {
+      position = "21.4815 -23.3073 3.27547";
+      rotation = "0 0 1 37.2422";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "20.0802 -24.7086 2.27547 22.8828 -21.906 4.27547";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "21.4815 -23.3073 3.27547 0 0 1 0.649999";
+         btBody = "9";
+   };
+   new StaticShape() {
+      position = "7.29916 -21.6582 3.12192";
+      rotation = "0 0 -1 32.0856";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "5.92072 -23.0366 2.12192 8.6776 -20.2798 4.12192";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "7.29916 -21.6582 3.12192 0 0 -1 0.559999";
+         btBody = "10";
+   };
+   new StaticShape() {
+      position = "23.6085 54.5028 3.00652";
+      rotation = "0 0 1 33.8045";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "22.2212 53.1155 2.00652 24.9958 55.8901 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "23.6085 54.5028 3.00652 0 0 1 0.59";
+         btBody = "11";
+   };
+   new StaticShape() {
+      position = "28.6079 60.6494 3.00652";
+      rotation = "0 0 1 78.4952";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "27.4285 59.47 2.00652 29.7873 61.8288 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "28.6079 60.6494 3.00652 0 0 1 1.37";
+         btBody = "12";
+   };
+   new StaticShape() {
+      position = "25.683 68.1437 3.00652";
+      rotation = "0 0 1 8.59429";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "24.5448 67.0055 2.00652 26.8212 69.2819 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "25.683 68.1437 3.00652 0 0 0.999998 0.15";
+         btBody = "13";
+   };
+   new StaticShape() {
+      position = "29.0212 73.1293 3.00652";
+      rotation = "0 0 1 41.253";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "27.61 71.7181 2.00652 30.4324 74.5405 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "29.0212 73.1293 3.00652 0 0 1 0.720001";
+         btBody = "14";
+   };
+   new StaticShape() {
+      position = "19.2161 79.6944 3.00652";
+      rotation = "0 0 1 81.933";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "18.0857 78.564 2.00652 20.3465 80.8248 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "19.2161 79.6944 3.00652 0 0 1 1.43";
+         btBody = "15";
+   };
+   new StaticShape() {
+      position = "8.56566 79.6047 3.00652";
+      rotation = "0 0 1 85.9437";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "7.49743 78.5365 2.00652 9.63389 80.6729 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "8.56566 79.6047 3.00652 0 0 1 1.5";
+         btBody = "16";
+   };
+   new StaticShape() {
+      position = "2.33442 70.2982 3.00652";
+      rotation = "0 0 1 145.531";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "0.944028 68.9078 2.00652 3.72481 71.6886 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "2.33442 70.2982 3.00652 0 0 1 2.54";
+         btBody = "17";
+   };
+   new StaticShape() {
+      position = "7.24643 57.8631 3.00652";
+      rotation = "0 0 1 76.2034";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+         initialWorldBox = "6.0368 56.6535 2.00652 8.45605 59.0727 4.00652";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "7.24643 57.8631 3.00652 0 0 1 1.33";
+         btBody = "18";
+   };
+   new StaticShape(fannnnn) {
+      position = "0 10 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Fan";
+   };
+   new StaticShape(switchC) {
+      position = "32 30 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous0";
+         activated = "0";
+         initialWorldBox = "31.5 29.5 3.72529e-009 32.5 30.5 0.1";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "32 30 0.05 1 0 0 0";
+         btBody = "19";
+   };
+   new StaticShape(switchN) {
+      position = "16 74 4.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous1";
+         activated = "1";
+         initialWorldBox = "15.5 73.5 4 16.5 74.5 4.1";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "16 74 4.05 1 0 0 0";
+         btBody = "20";
+   };
+   new StaticShape(switchE) {
+      position = "74 16 6.05";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous2";
+         activated = "0";
+         initialWorldBox = "73.5 15.5 6 74.5 16.5 6.1";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "74 16 6.05 0 0 1 1.5708";
+         btBody = "21";
+   };
+   new StaticShape(switchS) {
+      position = "8 -36 4.05";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous4";
+         activated = "0";
+         initialWorldBox = "7.5 -36.5 4 8.5 -35.5 4.1";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "8 -36 4.05 0 0 1 3.14159";
+         btBody = "22";
+   };
+   new StaticShape(switchW) {
+      position = "-41 16 8.05";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous3";
+         activated = "0";
+         initialWorldBox = "-41.5 15.5 8 -40.5 16.5 8.1";
+         locked = "0";
+         syncId = "-1";
+         initialTransform = "-41 16 8.05 0 0 -1 1.5708";
+         btBody = "23";
+   };
+   new Trigger(htStart) {
+      position = "-5 5 -5";
+      rotation = "1 0 0 0";
+      scale = "10 10 10";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "8";
+         collisionCache2 = "0";
+         text = "Welcome to Quaternion! Use <func:bind moveforward>, <func:bind moveleft>, <func:bind moveright>, and <func:bind movebackward> to move the marble.";
+         collisionCache0 = "0";
+         btBody = "24";
+   };
+   new Trigger(htSwitches) {
+      position = "23.4 42 -2.4";
+      rotation = "1 0 0 0";
+      scale = "17.2015 1.54345 6.09865";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "9";
+         collisionCache2 = "0";
+         text = "There are four other switches around this area. Use them to turn on other parts of the level. You\'ll need to do some block-pushing.";
+         collisionCache0 = "0";
+         btBody = "25";
+   };
+   new Trigger(htButton) {
+      position = "23.4 26.6 -5";
+      rotation = "1 0 0 0";
+      scale = "17.2015 1.54345 6.09865";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "10";
+         collisionCache2 = "0";
+         text = "Hit the switch to turn the lights on in this section of the level.";
+         collisionCache0 = "0";
+         btBody = "26";
+   };
+   new Trigger(htJump) {
+      position = "23.4 36.6 -5";
+      rotation = "1 0 0 0";
+      scale = "17.2015 1.54345 6.09865";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "11";
+         collisionCache2 = "0";
+         text = "You can press <func:bind jump> to jump.";
+         collisionCache0 = "0";
+         btBody = "27";
+   };
+   new Trigger(Bounds) {
+      position = "-98.63 117.665 -8.76045";
+      rotation = "1 0 0 0";
+      scale = "225.93 210.41 71.4779";
+      dataBlock = "InBoundsTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "12";
+         collisionCache2 = "1";
+         collisionCache0 = "1";
+         btBody = "28";
+   };
+   new Trigger(htEnding) {
+      position = "-2.51924 62.8809 -0.6";
+      rotation = "1 0 0 0";
+      scale = "37.765 1.54345 6.09865";
+      dataBlock = "HelpTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "13";
+         collisionCache2 = "0";
+         text = "Turn on all of the lights to activate the teleporter.";
+         collisionCache0 = "0";
+         btBody = "29";
+   };
+   new Item() {
+      position = "80 24 2.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "14";
+         collisionCache2 = "0";
+         initialWorldBox = "34.8232 -55.1 4.32322 35.1768 -54.9 4.67678";
+         syncId = "18";
+         collisionCache0 = "0";
+         initialTransform = "35 -55 4.5 1 0 0 0";
+         btBody = "30";
+         index = "0";
+   };
+   new Item() {
+      position = "35 -55 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "18";
+         collisionCache2 = "0";
+         initialWorldBox = "79.8232 23.9 2.32322 80.1768 24.1 2.67678";
+         syncId = "18";
+         collisionCache0 = "0";
+         initialTransform = "80 24 2.5 1 0 0 0";
+         btBody = "34";
+         index = "4";
+   };
+   new Item() {
+      position = "29 89 2.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "15";
+         collisionCache2 = "0";
+         initialWorldBox = "79.8232 23.9 2.32322 80.1768 24.1 2.67678";
+         syncId = "18";
+         collisionCache0 = "0";
+         initialTransform = "80 24 2.5 1 0 0 0";
+         btBody = "31";
+         index = "1";
+   };
+   new Item() {
+      position = "-39 14 2.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "16";
+         collisionCache2 = "0";
+         initialWorldBox = "79.8232 23.9 2.32322 80.1768 24.1 2.67678";
+         syncId = "18";
+         collisionCache0 = "0";
+         initialTransform = "80 24 2.5 1 0 0 0";
+         btBody = "32";
+         index = "2";
+   };
+   new Item() {
+      position = "-13 -65 2.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         isColliding = "0";
+         btShape = "17";
+         collisionCache2 = "0";
+         initialWorldBox = "79.8232 23.9 2.32322 80.1768 24.1 2.67678";
+         syncId = "18";
+         collisionCache0 = "0";
+         initialTransform = "80 24 2.5 1 0 0 0";
+         btBody = "33";
+         index = "3";
+   };
+   new ScriptObject() {
+         powerUp = "0";
+         pad = "1493";
+         bonusTime = "0";
+         gemCount = "0";
+         penaltyTime = "0";
+         time = "0";
+   };
+   new StaticShape(EndPoint) {
+      position = "16 68 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+         initialWorldBox = "14.9908 66.9908 1.99999 17.0092 69.0092 4.1";
+         locked = "0";
+         syncId = "32";
+         initialTransform = "16 68 2 1 0 0 0";
+         btBody = "36";
+         level = 2;
+         index = 1;
+   };
+   new StaticShape(Foot1) {
+      position = "16 68 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+   };
+   new StaticShape(Foot2) {
+      position = "16 68 2";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+   };
+   new StaticShape(Foot3) {
+      position = "16 68 2";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+   };
+   new StaticShape(Foot4) {
+      position = "16 68 2";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/Shared/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+};
+//--- OBJECT WRITE END ---
+
+switchC.callback = anonymous("LL.setSkinName(\"on\"); if (!MissionInfo.mp) {MissionInfo.mp = 1; playGameMusic();} return 0;");
+switchN.callback = anonymous("LLN.setSkinName(\"on\"); Foot1.setSkinName(\"on\"); MissionInfo.ns++; if (MissionInfo.ns >= 4) EndPoint.activated = 1; return 0;");
+switchE.callback = anonymous("LLE.setSkinName(\"on\"); Foot2.setSkinName(\"on\"); MissionInfo.ns++; if (MissionInfo.ns >= 4) EndPoint.activated = 1; return 0;");
+switchW.callback = anonymous("LLW.setSkinName(\"on\"); Foot3.setSkinName(\"on\"); MissionInfo.ns++; if (MissionInfo.ns >= 4) EndPoint.activated = 1; return 0;");
+switchS.callback = anonymous("LLS.setSkinName(\"on\"); Foot4.setSkinName(\"on\"); MissionInfo.ns++; if (MissionInfo.ns >= 4) EndPoint.activated = 1; return 0;");

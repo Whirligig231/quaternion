@@ -1,0 +1,257 @@
+datablock StaticShapeData(LightsLevel) {
+	category = "Level - Lights";
+	
+	shapeFile = "~/data/Lights/level.dts";
+	
+	btShapeType = "raw";
+	btShapeFile = "~/data/Lights/level.raw";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(LightsLevelN) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/level_n.dts";
+	
+	btShapeType = "raw";
+	btShapeFile = "~/data/Lights/level_n.raw";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(LightsLevelE) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/level_e.dts";
+	
+	btShapeType = "raw";
+	btShapeFile = "~/data/Lights/level_e.raw";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(LightsLevelS) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/level_s.dts";
+	
+	btShapeType = "raw";
+	btShapeFile = "~/data/Lights/level_s.raw";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(LightsLevelW) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/level_w.dts";
+	
+	btShapeType = "raw";
+	btShapeFile = "~/data/Lights/level_w.raw";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(LightsBox) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/box.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "1 1 1";
+	btMass = 0.3;
+	btFriction = 0.7;
+	btRestitution = 0.7;
+};
+
+function LightsBox::onCollision(%this, %obj, %col)
+{
+	echo("HELLO THERE" SPC %obj SPC %col);
+}
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         name = "Learning to Roll";
+         artist = "Alex Swanson";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
+         goldTime = "4750";
+         level = "1";
+         type = "Beginner";
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.900000 0.900000 0.900000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      materialList = "~/data/Shared/skies/sky_day.dml";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.544508 0.439467 -0.714409";
+      color = "1.400000 1.200000 0.400000 1.000000";
+      ambient = "0.300000 0.300000 0.400000 1.000000";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         position = "0 0 0";
+   };
+   new StaticShape(StartPoint) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         locked = "0";
+         syncId = "0";
+         index = "1";
+   };
+   new StaticShape() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LightsLevel";
+   };
+   new StaticShape() {
+      position = "16 68 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelN";
+   };
+   new StaticShape() {
+      position = "-36 16 2";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelW";
+   };
+   new StaticShape() {
+      position = "68 16 2";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelE";
+   };
+   new StaticShape() {
+      position = "16 -36 2";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "LightsLevelS";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/Shared/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new StaticShape() {
+      position = "-22.8828 24.2334 3.45036";
+      rotation = "0 0 1 28.6479";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "-22.8828 24.2334 5.75036";
+      rotation = "0 0 1 -28.6479";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "76.054 18.8899 3.54333";
+      rotation = "0 0 1 14.8969";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "21.4815 -23.3073 3.27547";
+      rotation = "0 0 1 37.2422";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "7.29916 -21.6582 3.12192";
+      rotation = "0 0 -1 32.0856";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "23.6085 54.5028 3.00652";
+      rotation = "0 0 1 33.8045";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "28.6079 60.6494 3.00652";
+      rotation = "0 0 1 78.4952";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "25.683 68.1437 3.00652";
+      rotation = "0 0 1 8.59438";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "29.0212 73.1293 3.00652";
+      rotation = "0 0 1 41.253";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "19.2161 79.6944 3.00652";
+      rotation = "0 0 1 81.9329";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "8.56566 79.6047 3.00652";
+      rotation = "0 0 1 85.9436";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "2.33442 70.2982 3.00652";
+      rotation = "0 0 1 145.531";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+   new StaticShape() {
+      position = "7.24643 57.8631 3.00652";
+      rotation = "0 0 1 76.2034";
+      scale = "1 1 1";
+      dataBlock = "LightsBox";
+   };
+};
+//--- OBJECT WRITE END ---
+

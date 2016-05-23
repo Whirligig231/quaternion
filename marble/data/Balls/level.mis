@@ -1,0 +1,1521 @@
+DifRaw("BallsBridge", "balls_bridge", "Balls");
+DtsRaw("BallsBridgeMP", "balls_bridge_mp_new", "Balls");
+DifRaw("Balls2x2", "balls_2x2", "Balls");
+DifRaw("BallsPain", "balls_pain", "Balls");
+DtsRaw("BallsPush", "balls_push", "Balls");
+DtsRaw("BallsEntry", "balls_entry", "Balls");
+DtsRaw("BallsXor", "balls_xor", "Balls");
+DtsRaw("BallsPushoff", "balls_pushoff", "Balls");
+DtsRaw("BallsPassage", "balls_passage", "Balls");
+
+function BallsBridgeMP::onAdd(%this, %obj) {
+	Parent::onAdd(%this, %obj);
+	%obj.targetTransform = "";
+}
+
+datablock StaticShapeData(BallsPushoffMP) {
+	category = "Level - Balls";
+
+	shapeFile = "~/data/Balls/balls_mp.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "4 4 0.5";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(BallBig) {
+	category = "Level - Balls";
+
+	shapeFile = "~/data/Balls/ball-beach.dts";
+	
+	btShapeType = "sphere";
+	btRadius = 0.5;
+	btMass = 0.15;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+    btAngularDamping = 0.9;
+    
+    btCallback = true;
+};
+
+datablock StaticShapeData(BallBigger) {
+	category = "Level - Balls";
+
+	shapeFile = "~/data/Balls/ball-beach.dts";
+	
+	btShapeType = "sphere";
+	btRadius = 1;
+	btMass = 0.02;
+	btFriction = 0.05;
+	btRestitution = 0.7;
+    btAngularDamping = 0.2;
+    
+    btCallback = true;
+};
+
+function BallBigger::onAdd(%this, %obj) {
+	Parent::onAdd(%this, %obj);
+	%obj.setScale("2 2 2");
+}
+
+function BallBig::onFrame(%this, %obj, %timeDelta) {
+	Parent::onFrame(%this, %obj, %timeDelta);
+	if (getWord(%obj.getTransform(), 2) < -100)
+		%this.autoRespawn(%obj);
+}
+
+function BallBig::autoRespawn(%this, %obj) {
+	%obj.setCloaked(1);
+	schedule(1000, 0, "bbar1", %obj);
+}
+
+function bbar1(%obj) {
+	%obj.setVelocity("0 0 0");
+	%obj.setAngularVelocity("0 0 0");
+	%obj.setFactor("0 0 0");
+	%obj.setTransform(%obj.initialTransform);
+	schedule(1000, 0, "bbar2", %obj);
+}
+
+function bbar2(%obj) {
+	%obj.setFactor("1 1 1");
+	%obj.setCloaked(0);
+}
+
+datablock StaticShapeData(BallsField) {
+	category = "Level - Balls";
+	
+	shapeFile = "~/data/Security/security_field.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "4 4 0.05";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+datablock StaticShapeData(PermanentField) {
+	category = "Level - Balls";
+	
+	shapeFile = "~/data/balls/permanent_field.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "1 4 0.05";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         level = "3";
+         name = "Learning to Roll";
+         type = "Beginner";
+         goldTime = "4750";
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+         artist = "Alex Swanson";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.900000 0.900000 0.900000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      materialList = "~/data/Shared/skies/sky_day.dml";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+         locked = "true";
+   };
+   new StaticShape() {
+      position = "-83.0483 165.058 3.54354";
+      rotation = "1 0 0 0";
+      scale = "250 250 250";
+      dataBlock = "SkyShape";
+         locked = "0";
+         
+   };
+   new Sun() {
+      direction = "0.544508 0.439467 -0.714409";
+      color = "0.200000 0.200000 0.200000 1.000000";
+      ambient = "0.800000 0.800000 0.800000 1.000000";
+   };
+   new StaticShape(StartPoint) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         locked = "0";
+         btBody = "0";
+         initialWorldBox = "-1.00917 -1.00917 -1.4469e-005 1.00917 1.00917 0.399978";
+         
+         initialTransform = "0 0 0 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsEntry";
+         locked = "0";
+         btBody = "1";
+         initialWorldBox = "-34 -6 -4 34 46 15.5";
+         
+         initialTransform = "0 0 0 1 0 0 0";
+   };
+   new StaticShape(BS) {
+      position = "0 36 -2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous39";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "2";
+         collisionCache2 = "0";
+         initialWorldBox = "-2 34 -4 2 38 -2";
+         isColliding = "0";
+         offCallback = "_anonymous40";
+         collisionCache0 = "0";
+         initialTransform = "0 36 -2 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "0 12 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "3";
+         initialWorldBox = "-0.5 11.5 1.5 0.5 12.5 2.5";
+         
+         initialTransform = "0 12 2 1 0 0 0";
+   };
+   new StaticShape(BF1) {
+      position = "-7 36 2";
+      rotation = "0 1 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "0";
+         locked = "0";
+         btBody = "4";
+         initialWorldBox = "-7.00001 32 -2 -6.99999 40 6";
+         
+         initialTransform = "-7 36 2 0 1 0 1.5708";
+   };
+   new StaticShape(BF2) {
+      position = "7 36 2";
+      rotation = "0 1 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "1";
+         locked = "0";
+         btBody = "5";
+         initialWorldBox = "6.99999 32 -2 7.00001 40 6";
+         
+         initialTransform = "7 36 2 0 1 0 1.5708";
+   };
+   new StaticShape(BSX4) {
+      position = "20 56 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous44";
+         collisionCache1 = "0";
+         locked = "0";
+         btBody = "6";
+         collisionCache2 = "0";
+         initialWorldBox = "18 54 -2 22 58 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous44";
+         collisionCache0 = "0";
+         
+         initialTransform = "20 56 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "22 56 4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "7";
+         initialWorldBox = "21.5 55.5 3.5 22.5 56.5 4.5";
+         
+         initialTransform = "22 56 4 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "24 44 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsXor";
+         locked = "0";
+         btBody = "8";
+         initialWorldBox = "14 44 -2 34 82 15.5";
+         
+         initialTransform = "24 44 0 1 0 0 0";
+   };
+   new StaticShape(BSX1) {
+      position = "20 50 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous41";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "9";
+         collisionCache2 = "0";
+         initialWorldBox = "18 48 -2 22 52 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous41";
+         collisionCache0 = "0";
+         initialTransform = "20 50 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "22.2714 58.9819 0.500001";
+      rotation = "-0.582094 0.670282 0.460313 204.308";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "10";
+         initialWorldBox = "21.5538 58.2628 -0.322258 22.989 59.701 1.32226";
+         
+         initialTransform = "22.2714 58.9819 0.500001 -0.582094 0.670282 0.460313 3.56585";
+   };
+   new StaticShape(BSX2) {
+      position = "28 50 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous42";
+         collisionCache1 = "0";
+         locked = "0";
+         btBody = "11";
+         collisionCache2 = "0";
+         initialWorldBox = "26 48 -2 30 52 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous42";
+         collisionCache0 = "0";
+         
+         initialTransform = "28 50 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "26 50 4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "12";
+         initialWorldBox = "25.5 49.5 3.5 26.5 50.5 4.5";
+         
+         initialTransform = "26 50 4 1 0 0 0";
+   };
+   new StaticShape(BSX3) {
+      position = "28 56 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous43";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "13";
+         collisionCache2 = "0";
+         initialWorldBox = "26 54 -2 30 58 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous43";
+         collisionCache0 = "0";
+         syncId = "-1";
+         initialTransform = "28 56 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "26 56 4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "14";
+         initialWorldBox = "25.5 55.5 3.5 26.5 56.5 4.5";
+         
+         initialTransform = "26 56 4 1 0 0 0";
+   };
+   new StaticShape(BFX1) {
+      position = "24 67 4";
+      rotation = "1 0 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "0";
+         locked = "0";
+         btBody = "15";
+         initialWorldBox = "20 67 -9.53674e-007 28 67 8";
+         
+         initialTransform = "24 67 4 1 0 0 1.5708";
+   };
+   new StaticShape(BFX4) {
+      position = "24 81 3.99995";
+      rotation = "1 0 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "0";
+         locked = "0";
+         btBody = "16";
+         initialWorldBox = "20 81 -5.10216e-005 28 81 7.99995";
+         
+         initialTransform = "24 81 3.99995 1 0 0 1.5708";
+   };
+   new StaticShape(BFX2) {
+      position = "24 71 3.99999";
+      rotation = "1 0 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "0";
+         locked = "0";
+         btBody = "17";
+         initialWorldBox = "20 71 -1.09673e-005 28 71 7.99999";
+         
+         initialTransform = "24 71 3.99999 1 0 0 1.5708";
+   };
+   new StaticShape(BFX3) {
+      position = "24 75 3.99997";
+      rotation = "1 0 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         inactive = "0";
+         locked = "0";
+         btBody = "18";
+         initialWorldBox = "20 75 -3.09944e-005 28 75 7.99997";
+         
+         initialTransform = "24 75 3.99997 1 0 0 1.5708";
+   };
+   new StaticShape() {
+      position = "19 77 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "19";
+         initialWorldBox = "19 76 2.14577e-006 19 78 8";
+         
+         initialTransform = "19 77 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "24 73 9";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "20";
+         initialWorldBox = "20 72 9 28 74 9";
+         
+         initialTransform = "24 73 9 0 0 1 1.5708";
+   };
+   new StaticShape() {
+      position = "24 69 9";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "21";
+         initialWorldBox = "20 68 9 28 70 9";
+         
+         initialTransform = "24 69 9 0 0 1 1.5708";
+   };
+   new StaticShape() {
+      position = "24 77 9";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "22";
+         initialWorldBox = "20 76 9 28 78 9";
+         
+         initialTransform = "24 77 9 0 0 1 1.5708";
+   };
+   new StaticShape() {
+      position = "29 77 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "23";
+         initialWorldBox = "29 76 2.14577e-006 29 78 8";
+         
+         initialTransform = "29 77 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "29 73 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "24";
+         initialWorldBox = "29 72 2.14577e-006 29 74 8";
+         
+         initialTransform = "29 73 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "29 69 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "25";
+         initialWorldBox = "29 68 2.14577e-006 29 70 8";
+         
+         initialTransform = "29 69 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "19 69 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "26";
+         initialWorldBox = "19 68 2.14577e-006 19 70 8";
+         
+         initialTransform = "19 69 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "19 73 4";
+      rotation = "-0.57735 0.57735 0.57735 120";
+      scale = "1 1 1";
+      dataBlock = "PermanentField";
+         locked = "0";
+         btBody = "27";
+         initialWorldBox = "19 72 2.14577e-006 19 74 8";
+         
+         initialTransform = "19 73 4 -0.57735 0.57735 0.57735 2.09439";
+   };
+   new StaticShape() {
+      position = "-24 44 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoff";
+         locked = "0";
+         btBody = "28";
+         initialWorldBox = "-80 44 -4 -14 142 23.5";
+         
+         initialTransform = "-24 44 0 1 0 0 0";
+   };
+   new StaticShape(BSP1) {
+      position = "-20 56 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous45";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "29";
+         collisionCache2 = "0";
+         initialWorldBox = "-22 54 -2 -18 58 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous46";
+         collisionCache0 = "0";
+         initialTransform = "-20 56 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSP2) {
+      position = "-52 56 3.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous47";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "30";
+         collisionCache2 = "0";
+         initialWorldBox = "-54 54 1.5 -50 58 3.5";
+         isColliding = "0";
+         offCallback = "_anonymous48";
+         collisionCache0 = "0";
+         initialTransform = "-52 56 3.5 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSP3) {
+      position = "-55 91 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitchSmall";
+         onCallback = "_anonymous49";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "31";
+         collisionCache2 = "0";
+         initialWorldBox = "-56 90 -2.2 -54 92 4.47035e-008";
+         isColliding = "0";
+         offCallback = "_anonymous50";
+         collisionCache0 = "0";
+         initialTransform = "-55 91 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSP4) {
+      position = "-47 117 -1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitchSmall";
+         onCallback = "_anonymous51";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "32";
+         collisionCache2 = "0";
+         initialWorldBox = "-48 116 -3.2 -46 118 -1";
+         isColliding = "0";
+         offCallback = "_anonymous52";
+         collisionCache0 = "0";
+         initialTransform = "-47 117 -1 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSP5) {
+      position = "-76 56 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous53";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "33";
+         collisionCache2 = "0";
+         initialWorldBox = "-78 54 -2 -74 58 4.47035e-008";
+         isColliding = "0";
+         collisionCache0 = "0";
+         initialTransform = "-76 56 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BMP2) {
+      position = "-52 64 3.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoffMP";
+         locked = "0";
+         btBody = "34";
+         initialWorldBox = "-56 60 3 -48 68 4";
+         
+         initialTransform = "-52 64 3.5 1 0 0 0";
+   };
+   new Path(BPP2) {
+
+      new Marker(BMP21) {
+         position = "-52 64 3.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "0";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP22) {
+         position = "-52 64 7.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "1";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+   };
+   new StaticShape(BMP1) {
+      position = "-28 64 -0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoffMP";
+         locked = "0";
+         btBody = "35";
+         initialWorldBox = "-32 60 -1 -24 68 0";
+         
+         initialTransform = "-28 64 -0.5 1 0 0 0";
+   };
+   new Path(BPP1) {
+
+      new Marker(BMP11) {
+         position = "-28 64 -0.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "0";
+         msToNext = "5000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP12) {
+         position = "-28 64 3.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "1";
+         msToNext = "5000";
+         smoothingType = "Accelerate";
+      };
+   };
+   new StaticShape(BMP3) {
+      position = "-52 96 3.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoffMP";
+         locked = "0";
+         btBody = "36";
+         initialWorldBox = "-56 92 3 -48 100 4";
+         
+         initialTransform = "-52 96 3.5 1 0 0 0";
+   };
+   new Path(BPP3) {
+
+      new Marker(BMP31) {
+         position = "-52 96 3.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "0";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP32) {
+         position = "-52 96 -0.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "1";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP33) {
+         position = "-52 96 -0.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "2";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+   };
+   new StaticShape(BMP4) {
+      position = "-44 128 -0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoffMP";
+         locked = "0";
+         btBody = "37";
+         initialWorldBox = "-48 124 -1 -40 132 0";
+         
+         initialTransform = "-44 128 -0.5 1 0 0 0";
+   };
+   new StaticShape(BMP42) {
+      position = "-52 136 7.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallsPushoffMP";
+         locked = "0";
+         btBody = "38";
+         initialWorldBox = "-56 132 7 -48 140 8";
+         
+         initialTransform = "-52 136 7.5 1 0 0 0";
+   };
+   new Path(BPP4) {
+
+      new Marker(BMP4m1) {
+         position = "-44 128 -0.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "0";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP4m2) {
+         position = "-44 128 3.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "1";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+   };
+   new Path(BPP42) {
+
+      new Marker(BMP42m1) {
+         position = "-52 136 7.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "0";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+      new Marker(BMP42m2) {
+         position = "-52 136 3.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         seqNum = "1";
+         msToNext = "1000";
+         smoothingType = "Accelerate";
+      };
+   };
+   new StaticShape(BFP5) {
+      position = "-61 56 8";
+      rotation = "0 1 0 90.0002";
+      scale = "4 4 4";
+      dataBlock = "BallsField";
+         locked = "0";
+         btBody = "39";
+         initialWorldBox = "-61 52 4 -61 60 12";
+         
+         initialTransform = "-61 56 8 0 1 0 1.5708";
+   };
+   new StaticShape() {
+      position = "-28 54 0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "40";
+         initialWorldBox = "-28.5 53.5 2.08616e-007 -27.5 54.5 1";
+         
+         initialTransform = "-28 54 0.5 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-36 130 0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "41";
+         initialWorldBox = "-36.5 129.5 2.08616e-007 -35.5 130.5 1";
+         
+         initialTransform = "-36 130 0.5 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-44 58 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "42";
+         initialWorldBox = "-44.5 57.5 4 -43.5 58.5 5";
+         
+         initialTransform = "-44 58 4.5 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-50 88 0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "43";
+         initialWorldBox = "-50.5 87.5 2.08616e-007 -49.5 88.5 1";
+         
+         initialTransform = "-50 88 0.5 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-38 126 0.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "44";
+         initialWorldBox = "-38.5 125.5 2.08616e-007 -37.5 126.5 1";
+         
+         initialTransform = "-38 126 0.5 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "44 102 -2";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsPain";
+         locked = "0";
+         btBody = "45";
+         initialWorldBox = "44 102 -2 44 102 -2";
+         interior = "1798";
+         
+         initialTransform = "44 102 -2 0 0 1 1.5708";
+   };
+   new StaticShape() {
+      position = "24 102 0";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "BallsPassage";
+         locked = "0";
+         btBody = "46";
+         initialWorldBox = "18 82 -2 36 122 10";
+         
+         initialTransform = "24 102 0 0 0 1 3.14159";
+   };
+   new StaticShape(BSG1) {
+      position = "43 97 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitchSmall";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "47";
+         collisionCache2 = "0";
+         initialWorldBox = "42 96 -2.2 44 98 4.47035e-008";
+         isColliding = "0";
+         collisionCache0 = "0";
+         initialTransform = "43 97 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSG2) {
+      position = "43 107 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitchSmall";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "48";
+         collisionCache2 = "0";
+         initialWorldBox = "42 106 -2.2 44 108 4.47035e-008";
+         isColliding = "0";
+         collisionCache0 = "0";
+         initialTransform = "43 107 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSG3) {
+      position = "67 119 18";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitchSmall";
+         onCallback = "_anonymous54";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "49";
+         collisionCache2 = "0";
+         initialWorldBox = "66 118 15.8 68 120 18";
+         isColliding = "0";
+         offCallback = "_anonymous55";
+         collisionCache0 = "0";
+         initialTransform = "67 119 18 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSG4) {
+      position = "42 102 12";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallSwitch";
+         onCallback = "_anonymous56";
+         collisionCache1 = "0";
+         locked = "1";
+         btBody = "50";
+         collisionCache2 = "0";
+         initialWorldBox = "40 100 10 44 104 12";
+         isColliding = "0";
+         offCallback = "_anonymous57";
+         collisionCache0 = "0";
+         initialTransform = "42 102 12 1 0 0 0";
+         activated = "0";
+   };
+   new Item(PainPack) {
+      position = "80 102 19";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonPackItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         collisionCache1 = "0";
+         btBody = "51";
+         collisionCache2 = "0";
+         isColliding = "0";
+         btShape = "30";
+         
+         collisionCache0 = "0";
+   };
+   new StaticShape() {
+      position = "41.6 88.2 11";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "52";
+         initialWorldBox = "41.1 87.7 10.5 42.1 88.7 11.5";
+         
+         initialTransform = "41.6 88.2 11 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "66.2 123 19.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBig";
+         locked = "0";
+         btBody = "53";
+         initialWorldBox = "65.7 122.5 18.7 66.7 123.5 19.7";
+         
+         initialTransform = "66.2 123 19.2 1 0 0 0";
+   };
+   new StaticShape(BMB5) {
+      position = "-111 75 10";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridgeMP";
+         locked = "0";
+         btBody = "54";
+         initialWorldBox = "-111 75 10 -111 75 10";
+         interior = "1809";
+         
+         initialTransform = "-111 75 10 0 0 -1 1.5708";
+         targetTransform = "-111 75 6 0 0 1 1.5708";
+   };
+   new StaticShape() {
+      position = "-110 120 -12";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridge";
+         btBody = "55";
+         locked = "0";
+         initialWorldBox = "-110 120 -12 -110 120 -12";
+         interior = "1811";
+         
+         initialTransform = "-110 120 -12 0 0 -1 1.5708";
+   };
+   new StaticShape(BMB1) {
+      position = "-111 147 10";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridgeMP";
+         locked = "0";
+         btBody = "56";
+         initialWorldBox = "-111 147 10 -111 147 10";
+         interior = "1813";
+         
+         initialTransform = "-111 147 10 0 0 -1 1.5708";
+         targetTransform = "-111 147 10 0 0 -1 1.5708";
+   };
+   new StaticShape(BMB2) {
+      position = "-111 129 10";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridgeMP";
+         locked = "0";
+         btBody = "57";
+         initialWorldBox = "-111 129 10 -111 129 10";
+         interior = "1815";
+         
+         initialTransform = "-111 129 10 0 0 -1 1.5708";
+         targetTransform = "-111 129 6 0 0 -1 1.5708";
+   };
+   new StaticShape(BMB3) {
+      position = "-111 111 10";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridgeMP";
+         locked = "0";
+         btBody = "58";
+         initialWorldBox = "-111 111 10 -111 111 10";
+         interior = "1817";
+         
+         initialTransform = "-111 111 10 0 0 -1 1.5708";
+         targetTransform = "-111 111 2 0 0 -1 1.5708";
+   };
+   new StaticShape(BMB4) {
+      position = "-111 93 10";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BallsBridgeMP";
+         locked = "0";
+         btBody = "59";
+         initialWorldBox = "-111 93 10 -111 93 10";
+         interior = "1819";
+         
+         initialTransform = "-111 93 10 0 0 -1 1.5708";
+         targetTransform = "-111 93 2 0 0 1 1.5708";
+   };
+   new StaticShape(BSB5R) {
+      position = "-85 81 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous77";
+         btBody = "60";
+         locked = "0";
+         initialWorldBox = "-85.5 80.5 -9.68575e-008 -84.5 81.5 0.0999999";
+         
+         initialTransform = "-85 81 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape() {
+      position = "-86 82 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Balls2x2";
+         btBody = "61";
+         locked = "0";
+         initialWorldBox = "-86 82 -1e-006 -86 82 1e-006";
+         interior = "1822";
+         
+         initialTransform = "-86 82 0 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-86 96 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Balls2x2";
+         btBody = "62";
+         locked = "0";
+         initialWorldBox = "-86 96 -1e-006 -86 96 1e-006";
+         interior = "1824";
+         
+         initialTransform = "-86 96 0 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-86 110 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Balls2x2";
+         btBody = "63";
+         locked = "0";
+         initialWorldBox = "-86 110 -1e-006 -86 110 1e-006";
+         interior = "1826";
+         
+         initialTransform = "-86 110 0 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-86 124 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Balls2x2";
+         btBody = "64";
+         locked = "0";
+         initialWorldBox = "-86 124 -1e-006 -86 124 1e-006";
+         interior = "1828";
+         
+         initialTransform = "-86 124 0 1 0 0 0";
+   };
+   new StaticShape() {
+      position = "-86 138 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Balls2x2";
+         btBody = "65";
+         locked = "0";
+         initialWorldBox = "-86 138 -1e-006 -86 138 1e-006";
+         interior = "1830";
+         
+         initialTransform = "-86 138 0 1 0 0 0";
+   };
+   new StaticShape(BSB510) {
+      position = "-87 81 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous74";
+         btBody = "66";
+         locked = "0";
+         initialWorldBox = "-87.5 80.5 -9.68575e-008 -86.5 81.5 0.0999999";
+         
+         initialTransform = "-87 81 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB56) {
+      position = "-87 83 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous75";
+         btBody = "67";
+         locked = "0";
+         initialWorldBox = "-87.5 82.5 -9.68575e-008 -86.5 83.5 0.0999999";
+         
+         initialTransform = "-87 83 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB52) {
+      position = "-85 83 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous76";
+         btBody = "68";
+         locked = "0";
+         initialWorldBox = "-85.5 82.5 3.72529e-009 -84.5 83.5 0.1";
+         
+         initialTransform = "-85 83 0.05 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB12) {
+      position = "-85 139 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous60";
+         btBody = "69";
+         locked = "0";
+         initialWorldBox = "-85.5 138.5 3.72529e-009 -84.5 139.5 0.1";
+         
+         initialTransform = "-85 139 0.05 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB4R) {
+      position = "-85 95 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous73";
+         btBody = "70";
+         locked = "0";
+         initialWorldBox = "-85.5 94.5 -9.68575e-008 -84.5 95.5 0.0999999";
+         
+         initialTransform = "-85 95 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB410) {
+      position = "-87 95 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous70";
+         btBody = "71";
+         locked = "0";
+         initialWorldBox = "-87.5 94.5 -9.68575e-008 -86.5 95.5 0.0999999";
+         
+         initialTransform = "-87 95 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB46) {
+      position = "-87 97 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous71";
+         btBody = "72";
+         locked = "0";
+         initialWorldBox = "-87.5 96.5 -9.68575e-008 -86.5 97.5 0.0999999";
+         
+         initialTransform = "-87 97 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB42) {
+      position = "-85 97 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous72";
+         btBody = "73";
+         locked = "0";
+         initialWorldBox = "-85.5 96.5 3.72529e-009 -84.5 97.5 0.1";
+         
+         initialTransform = "-85 97 0.05 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB3R) {
+      position = "-85 109 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous69";
+         btBody = "74";
+         locked = "0";
+         initialWorldBox = "-85.5 108.5 -9.68575e-008 -84.5 109.5 0.0999999";
+         
+         initialTransform = "-85 109 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB310) {
+      position = "-87 109 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous66";
+         btBody = "75";
+         locked = "0";
+         initialWorldBox = "-87.5 108.5 -9.68575e-008 -86.5 109.5 0.0999999";
+         
+         initialTransform = "-87 109 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB36) {
+      position = "-87 111 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous67";
+         btBody = "76";
+         locked = "0";
+         initialWorldBox = "-87.5 110.5 -9.68575e-008 -86.5 111.5 0.0999999";
+         
+         initialTransform = "-87 111 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB32) {
+      position = "-85 111 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous68";
+         btBody = "77";
+         locked = "0";
+         initialWorldBox = "-85.5 110.5 3.72529e-009 -84.5 111.5 0.1";
+         
+         initialTransform = "-85 111 0.05 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB2R) {
+      position = "-85 123 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous65";
+         btBody = "78";
+         locked = "0";
+         initialWorldBox = "-85.5 122.5 -9.68575e-008 -84.5 123.5 0.0999999";
+         
+         initialTransform = "-85 123 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB210) {
+      position = "-87 123 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous62";
+         btBody = "79";
+         locked = "0";
+         initialWorldBox = "-87.5 122.5 -9.68575e-008 -86.5 123.5 0.0999999";
+         
+         initialTransform = "-87 123 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB26) {
+      position = "-87 125 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous63";
+         btBody = "80";
+         locked = "0";
+         initialWorldBox = "-87.5 124.5 -9.68575e-008 -86.5 125.5 0.0999999";
+         
+         initialTransform = "-87 125 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB22) {
+      position = "-85 125 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous64";
+         btBody = "81";
+         locked = "0";
+         initialWorldBox = "-85.5 124.5 3.72529e-009 -84.5 125.5 0.1";
+         
+         initialTransform = "-85 125 0.05 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB1R) {
+      position = "-85 137 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous61";
+         btBody = "82";
+         locked = "0";
+         initialWorldBox = "-85.5 136.5 -9.68575e-008 -84.5 137.5 0.0999999";
+         
+         initialTransform = "-85 137 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB110) {
+      position = "-87 137 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous58";
+         btBody = "83";
+         locked = "0";
+         initialWorldBox = "-87.5 136.5 -9.68575e-008 -86.5 137.5 0.0999999";
+         
+         initialTransform = "-87 137 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSB16) {
+      position = "-87 139 0.0499999";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "_anonymous59";
+         btBody = "84";
+         locked = "0";
+         initialWorldBox = "-87.5 138.5 -9.68575e-008 -86.5 139.5 0.0999999";
+         
+         initialTransform = "-87 139 0.0499999 1 0 0 0";
+         activated = "0";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/Shared/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new StaticShape(BSBA) {
+      position = "-87 163 0.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         btBody = "86";
+         locked = "0";
+         initialWorldBox = "-0.5 -0.5 -0.05 0.5 0.5 0.05";
+         initialTransform = "0 0 0 1 0 0 0";
+         activated = "0";
+   };
+   new StaticShape(BSBB) {
+      position = "-111 163 15";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BallBigger";
+         locked = "0";
+         btBody = "12";
+         initialWorldBox = "25.5 49.5 3.5 26.5 50.5 4.5";
+         
+         initialTransform = "26 50 4 1 0 0 0";
+   };
+};
+//--- OBJECT WRITE END ---
+
+function BallsField::setActive(%this, %obj, %act) {
+	%obj.startFade(0,0,!%act);
+	btSetSolid(%obj.btBody, %act);
+    %obj.inactive = !%act;
+}
+
+function BallsField::isActive(%this, %obj) {
+    return !%obj.inactive;
+}
+
+function onLoad() {
+    BallsField.setActive(BF2, 0);
+    
+    btCreatePathedMovement(BMP1.btBody, BPP1);
+    btSetTargetPosition(BMP1.btBody, 0);
+    btCreatePathedMovement(BMP2.btBody, BPP2);
+    btSetTargetPosition(BMP2.btBody, 0);
+    btCreatePathedMovement(BMP3.btBody, BPP3);
+    btSetTargetPosition(BMP3.btBody, 0);
+    btCreatePathedMovement(BMP4.btBody, BPP4);
+    btSetTargetPosition(BMP4.btBody, 0);
+    btCreatePathedMovement(BMP42.btBody, BPP42);
+    btSetTargetPosition(BMP42.btBody, 0);
+	
+	btCreateApproachMovement(BMB1.btBody, 8, 6);
+	btCreateApproachMovement(BMB2.btBody, 8, 6);
+	btCreateApproachMovement(BMB3.btBody, 8, 6);
+	btCreateApproachMovement(BMB4.btBody, 8, 6);
+	btCreateApproachMovement(BMB5.btBody, 8, 6);
+}
+
+BS.onCallback = anonymous("BallsField.setActive(BF2, 1); BallsField.setActive(BF1, 0);");
+BS.offCallback = anonymous("BallsField.setActive(BF1, 1); BallsField.setActive(BF2, 0);");
+
+function tf(%field) {
+    BallsField.setActive(%field, !BallsField.isActive(%field));
+}
+
+BSX1.onCallback = anonymous("tf(BFX1); tf(BFX3);");
+BSX1.offCallback = BSX1.onCallback;
+BSX2.onCallback = anonymous("tf(BFX2); tf(BFX3); tf(BFX4);");
+BSX2.offCallback = BSX2.onCallback;
+BSX3.onCallback = anonymous("tf(BFX1); tf(BFX3); tf(BFX4);");
+BSX3.offCallback = BSX3.onCallback;
+BSX4.onCallback = anonymous("tf(BFX1); tf(BFX2); tf(BFX3);");
+BSX4.offCallback = BSX4.onCallback;
+
+BSP1.onCallback = anonymous("btSetTargetPosition(BMP1.btBody, -1);");
+BSP1.offCallback = anonymous("echo(btGetPathPosition(BMP1.btBody)); btSetTargetPosition(BMP1.btBody, btGetPathPosition(BMP1.btBody));");
+
+BSP2.onCallback = anonymous("btSetTargetPosition(BMP2.btBody, 1000);");
+BSP2.offCallback = anonymous("btSetTargetPosition(BMP2.btBody, 0);");
+
+BSP3.onCallback = anonymous("btSetTargetPosition(BMP3.btBody, 2000);");
+BSP3.offCallback = anonymous("btSetTargetPosition(BMP3.btBody, 0);");
+
+BSP4.onCallback = anonymous("btSetTargetPosition(BMP4.btBody, 1000); btSetTargetPosition(BMP42.btBody, 1000);");
+BSP4.offCallback = anonymous("btSetTargetPosition(BMP4.btBody, 0); btSetTargetPosition(BMP42.btBody, 0);");
+
+BSP5.onCallback = anonymous("BallsField.setActive(BFP5, 0);");
+
+$painSwitching = 0;
+
+function checkPain() {
+	if ($painSwitching == 3)
+		PainPack.hide(false);
+}
+
+function painSwitch(%on, %num) {
+	$painSwitching = ($painSwitching & (~(1 << %num))) | (%on << %num);
+	checkPain();
+}
+
+BSG3.onCallback = anonymous("painSwitch(1, 0);");
+BSG3.offCallback = anonymous("painSwitch(0, 0);");
+BSG4.onCallback = anonymous("painSwitch(1, 1);");
+BSG4.offCallback = anonymous("painSwitch(0, 1);");
+
+PainPack.hide(true);
+
+function setZ(%plat, %z) {
+	%t = %plat.targetTransform;
+	if (%t $= "")
+		%t = %plat.getTransform();
+	%t = getWords(%t, 0, 1) SPC %z SPC getWords(%t, 3);
+	%plat.targetTransform = %t;
+	btSetTargetTransform(%plat.btBody, %t);
+}
+
+function toggleR(%plat) {
+	%t = %plat.targetTransform;
+	if (%t $= "")
+		%t = %plat.getTransform();
+	%t = getWords(%t, 0, 4) SPC -getWord(%t, 5) SPC getWord(%t, 6);
+	%plat.targetTransform = %t;
+	btSetTargetTransform(%plat.btBody, %t);
+}
+
+function reset(%this) {
+	schedule(1000, 0, anonymous("%this.activated = 0; %this.setSkinName(\"base\");"), %this);
+}
+
+BSB110.callback = anonymous("setZ(BMB1, 10); reset(%this);");
+BSB16.callback = anonymous("setZ(BMB1, 6); reset(%this);");
+BSB12.callback = anonymous("setZ(BMB1, 2); reset(%this);");
+BSB1R.callback = anonymous("toggleR(BMB1); reset(%this);");
+
+BSB210.callback = anonymous("setZ(BMB2, 10); reset(%this);");
+BSB26.callback = anonymous("setZ(BMB2, 6); reset(%this);");
+BSB22.callback = anonymous("setZ(BMB2, 2); reset(%this);");
+BSB2R.callback = anonymous("toggleR(BMB2); reset(%this);");
+
+BSB310.callback = anonymous("setZ(BMB3, 10); reset(%this);");
+BSB36.callback = anonymous("setZ(BMB3, 6); reset(%this);");
+BSB32.callback = anonymous("setZ(BMB3, 2); reset(%this);");
+BSB3R.callback = anonymous("toggleR(BMB3); reset(%this);");
+
+BSB410.callback = anonymous("setZ(BMB4, 10); reset(%this);");
+BSB46.callback = anonymous("setZ(BMB4, 6); reset(%this);");
+BSB42.callback = anonymous("setZ(BMB4, 2); reset(%this);");
+BSB4R.callback = anonymous("toggleR(BMB4); reset(%this);");
+
+BSB510.callback = anonymous("setZ(BMB5, 10); reset(%this);");
+BSB56.callback = anonymous("setZ(BMB5, 6); reset(%this);");
+BSB52.callback = anonymous("setZ(BMB5, 2); reset(%this);");
+BSB5R.callback = anonymous("toggleR(BMB5); reset(%this);");
+
+function resetBSBB() {
+	BSBB.setVelocity("0 -15 0");
+	BSBB.setAngularVelocity("0 0 0");
+	BSBB.setTransform(BSBB.initialTransform);
+}
+
+BSBA.callback = anonymous("resetBSBB(); reset(%this);");

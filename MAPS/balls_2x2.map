@@ -1,0 +1,23 @@
+// This map has been written by the Torque Constructor
+// For more information see http://www.garagegames.com
+
+{
+   "classname" "worldspawn"
+   "detail_number" "0"
+   "min_pixels" "250"
+   "geometry_scale" "32"
+   "light_geometry_scale" "32"
+   "ambient_color" "0 0 0"
+   "emergency_ambient_color" "0 0 0"
+   "mapversion" "220"
+
+   // Brush 0
+   {
+      ( 64 -64 -64 ) ( 64 -64 0 ) ( 64 64 0 ) Quaternion/grid_cool [ 0 1 0 512 ] [ 0 0 -1 -512 ] 0 0.125 0.125
+      ( -64 -64 -64 ) ( -64 64 -64 ) ( -64 64 0 ) Quaternion/grid_cool [ 0 -1 0 512 ] [ 0 0 -1 -512 ] 0 0.125 0.125
+      ( -64 64 -64 ) ( 64 64 -64 ) ( 64 64 0 ) Quaternion/grid_cool [ -1 0 0 512 ] [ 0 0 -1 -512 ] 0 0.125 0.125
+      ( -64 -64 -64 ) ( -64 -64 0 ) ( 64 -64 0 ) Quaternion/grid_cool [ 1 0 0 512 ] [ 0 0 -1 -512 ] 0 0.125 0.125
+      ( -64 -64 0 ) ( -64 64 0 ) ( 64 64 0 ) Quaternion/grid_cool [ 1 0 0 512 ] [ 0 -1 0 -512 ] 0 0.125 0.125
+      ( -64 -64 -64 ) ( 64 -64 -64 ) ( 64 64 -64 ) Quaternion/grid_cool [ -1 0 0 512 ] [ 0 -1 0 -512 ] 0 0.125 0.125
+   }
+}

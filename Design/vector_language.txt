@@ -1,0 +1,37 @@
+x + y: add x to y (scalar, vector)
+x - y: x + (-y)
+-x: negate x (scalar, vector)
+x * y: multiply x by y (scalar, scalar-vector, vector-scalar, vector dot, rotation, matrix, matrix*point, rotation*vector)
+x # y: entrywise product (scalar, vector)
+x >< y: vector cross product
+x / y: x * (/y)
+x \ y: (/y) * x
+/x: inverse of x (scalar, vector, rotation, matrix)
+x ** y: exponentiation (scalar, rotation-integer, matrix-integer)
+x @ y: concatenation
+x ~ y: space concatenation
+~ x: space prefix
+x ~: space suffix
+x % y: mod
+#x: positional part (matrix)
+@x: rotational part (matrix)
+x !! y: word subscript
+x !| y: project
+x !- y: reject
+^x: vector magnitude
+^!x: vector normalize
+
+function MatrixPoint(%mat,%pt,%vec) {
+   %st = getWords(%mat,0,2);
+   if (%vec $= "")
+      %vec = "0 0 1";
+   %next = VectorSub(%st,%pt);
+   %r = VectorRot(%vec,%next);
+   return %st SPC %r;
+}
+
+function MatrixPoint(%mat,%pt,%vec) {
+   if (%vec $= "")
+      %vec = "0 0 1";
+   return #{#%mat~VectorRot(%vec,#%mat-%pt)}#;
+}

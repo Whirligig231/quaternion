@@ -1,0 +1,73 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Cube"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Cube.006"
+         from "Cube" to "Cube.006".
+       Changed dts object and node name for Blender mesh "Cube.005"
+         from "Cube" to "Cube.005".
+       Changed dts object and node name for Blender mesh "Cube.003"
+         from "Cube" to "Cube.003".
+       Changed dts object and node name for Blender mesh "Cube.004"
+         from "Cube" to "Cube.004".
+       Changed dts object and node name for Blender mesh "Cube.002"
+         from "Cube" to "Cube.002".
+       Changed dts object and node name for Blender mesh "Cube.001"
+         from "Cube" to "Cube.001".
+       Changed dts object and node name for Blender mesh "Cube"
+         from "Cube" to "Cube".
+       Changed dts object and node name for Blender mesh "Cube.081"
+         from "Cube" to "Cube.081".
+       Changed dts object and node name for Blender mesh "Cube.079"
+         from "Cube" to "Cube.079".
+       Changed dts object and node name for Blender mesh "Cube.031"
+         from "Cube" to "Cube.031".
+       Changed dts object and node name for Blender mesh "Cube.020"
+         from "Cube" to "Cube.020".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Lights\level_n.dts'.
+ Processing...
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Cube] (parent -1)
+      ^^ Bone [Cube.001] (parent -1)
+      ^^ Bone [Cube.002] (parent -1)
+      ^^ Bone [Cube.003] (parent -1)
+      ^^ Bone [Cube.004] (parent -1)
+      ^^ Bone [Cube.005] (parent -1)
+      ^^ Bone [Cube.006] (parent -1)
+      ^^ Bone [Cube.020] (parent -1)
+      ^^ Bone [Cube.031] (parent -1)
+      ^^ Bone [Cube.079] (parent -1)
+      ^^ Bone [Cube.081] (parent -1)
+    > Objects
+     'Cube' : Standard Standard 
+     'Cube.001' : Standard Standard 
+     'Cube.002' : Standard Standard 
+     'Cube.003' : Standard Standard 
+     'Cube.004' : Standard Standard 
+     'Cube.005' : Standard Standard 
+     'Cube.006' : Standard Standard 
+     'Cube.020' : Standard Standard 
+     'Cube.031' : Standard Standard 
+     'Cube.079' : Standard Standard 
+     'Cube.081' : Standard Standard 
+    > Materials
+       base.grid_cool
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+ Writing out DTS...
+ Done.
+ Finished.
+ 

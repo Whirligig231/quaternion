@@ -1,0 +1,44 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Plane"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Plane.002"
+         from "Plane" to "Plane.002".
+       Changed dts object and node name for Blender mesh "Plane.001"
+         from "Plane" to "Plane.001".
+       Changed dts object and node name for Blender mesh "Plane"
+         from "Plane" to "Plane".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\Quaternion\MAPS\balls_bridge_mp_new.dts'.
+ Processing...
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Cube] (parent -1)
+      ^^ Bone [Plane] (parent -1)
+      ^^ Bone [Plane.001] (parent -1)
+      ^^ Bone [Plane.002] (parent -1)
+    > Objects
+     'Cube' : Standard Standard 
+     'Plane' : Standard Standard 
+     'Plane.001' : Standard Standard 
+     'Plane.002' : Standard Standard 
+    > Materials
+       grid_neutral
+       transp_neutral
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+ Writing out DTS...
+ Done.
+ Finished.
+ 

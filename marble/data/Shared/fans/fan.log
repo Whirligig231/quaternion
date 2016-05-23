@@ -1,0 +1,98 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Tube"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Tube.010"
+         from "Tube" to "Tube.010".
+       Changed dts object and node name for Blender mesh "Tube.008"
+         from "Tube" to "Tube.008".
+       Changed dts object and node name for Blender mesh "Tube.006"
+         from "Tube" to "Tube.006".
+       Changed dts object and node name for Blender mesh "Tube.005"
+         from "Tube" to "Tube.005".
+       Changed dts object and node name for Blender mesh "Tube.003"
+         from "Tube" to "Tube.003".
+       Changed dts object and node name for Blender mesh "Tube.001"
+         from "Tube" to "Tube.001".
+       Changed dts object and node name for Blender mesh "Tube"
+         from "Tube" to "Tube".
+   ****************************************************************************
+
+   ****************************************************************************
+   Warning: Multiple Blender mesh names in Collision-1 all reduce to the same DTS
+    Object name: "Circle"
+     The exporter will use the original names for these meshes and any nodes
+     generated from them.  This may result in duplicate or unneccesary nodes,
+     extra animation tracks, and inefficent mesh packing in the exported dts
+     file.
+       Changed dts object and node name for Blender mesh "Circle.003"
+         from "Circle" to "Circle.003".
+       Changed dts object and node name for Blender mesh "Circle.002"
+         from "Circle" to "Circle.002".
+       Changed dts object and node name for Blender mesh "Circle.001"
+         from "Circle" to "Circle.001".
+       Changed dts object and node name for Blender mesh "Circle"
+         from "Circle" to "Circle".
+   ****************************************************************************
+
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Shared\fans\fan.dts'.
+ Processing...
+    Loading sequence 'spin'...
+       Frames: 16 
+       Animates: rot 
+    Loaded sequence 'spin'.
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Camera] (parent -1)
+      ^^ Bone [Lamp] (parent -1)
+      ^^ Bone [Tube] (parent -1)
+       ^^ Bone [Circle] (parent 3)
+       ^^ Bone [Circle.001] (parent 3)
+       ^^ Bone [Circle.002] (parent 3)
+       ^^ Bone [Circle.003] (parent 3)
+       ^^ Bone [Sphere] (parent 3)
+      ^^ Bone [Tube.001] (parent -1)
+      ^^ Bone [Tube.003] (parent -1)
+      ^^ Bone [Tube.005] (parent -1)
+      ^^ Bone [Tube.006] (parent -1)
+      ^^ Bone [Tube.008] (parent -1)
+      ^^ Bone [Tube.010] (parent -1)
+    > Objects
+     'Tube' : Standard Standard 
+     'Circle' : Standard Standard 
+     'Circle.001' : Standard Standard 
+     'Circle.002' : Standard Standard 
+     'Circle.003' : Standard Standard 
+     'Sphere' : Standard Standard 
+     'Tube.001' : Standard Standard 
+     'Tube.003' : Standard Standard 
+     'Tube.005' : Standard Standard 
+     'Tube.006' : Standard Standard 
+     'Tube.008' : Standard Standard 
+     'Tube.010' : Standard Standard 
+    > Materials
+       struct_cool
+       triangle_deep
+       triangle_cool
+       struct_warm
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+     - spin
+        Animates: rot 
+        Frames: 16
+        Ground Frames: 0
+        Triggers: 0
+ Writing out DTS...
+ Done.
+ Finished.
+ 

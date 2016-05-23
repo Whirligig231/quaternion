@@ -1,0 +1,24 @@
+Torque Exporter 0.97 Beta3 
+ Using blender, version 249
+ Exporting...
+ Writing shape to  'C:\Users\schulzcc\Documents\Personal\Creations\Games\Quaternion\marble\data\Shared\switches\ballswitch.dts'.
+ Processing...
+ > Shape Details
+    > Nodes
+      ^^ Bone [Exp-Catch-Root] (parent -1)
+      ^^ Bone [Circle] (parent -1)
+    > Objects
+     'Circle' : Standard Standard 
+    > Materials
+       base.circlebutton
+       struct_deep
+       base.buttonside
+    > Detail Levels
+       Detail-1 (size : 1)
+       Collision-1 (size : -1)
+       Smallest : Detail-1 (size : 1)
+    > Internal Sequences
+ Writing out DTS...
+ Done.
+ Finished.
+ 

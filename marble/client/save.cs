@@ -1,0 +1,14 @@
+$save::hasIonCell1_0 = 1;
+$save::hasIonCell1_1 = 1;
+$save::hasIonCell1_2 = 1;
+$save::hasIonCell1_3 = 1;
+$save::hasIonCell1_4 = 1;
+$save::hasIonCell2_0 = 1;
+$save::hasIonCell2_1 = 1;
+$save::hasIonCell2_2 = 1;
+$save::hasIonCell2_3 = 1;
+$save::hasIonCell2_4 = 1;
+$save::hasIonPack2_0 = 1;
+$save::hasIonPack2_1 = 1;
+$save::hasIonPack3_ = 1;
+$save::ionPacks = 5;

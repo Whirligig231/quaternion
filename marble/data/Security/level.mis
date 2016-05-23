@@ -1,0 +1,1687 @@
+DtsRaw("SecurityLevel", "level", "Security");
+DtsRaw("Pillar", "pillar", "Security");
+DtsRaw("Dome", "dome", "Security");
+DtsRaw("Tent", "tent", "Security");
+DtsRaw("Lamp", "lamp", "Security");
+
+datablock StaticShapeData(SecurityTile) {
+	category = "Level - Security";
+	
+	shapeFile = "~/data/Security/security_tile.dts";
+};
+
+datablock StaticShapeData(SecurityField) {
+	category = "Level - Security";
+	
+	shapeFile = "~/data/Security/security_field.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "3 3 0.05";
+	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+         level = "2";
+         artist = "Alex Swanson";
+         type = "Beginner";
+         goldTime = "4750";
+         name = "Learning to Roll";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.900000 0.900000 0.900000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      materialList = "~/data/Shared/skies/sky_day.dml";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+         locked = "true";
+   };
+   new StaticShape() {
+      dataBlock = "SkyShape";
+   };
+   new Sun() {
+      direction = "0.544508 0.439467 -0.714409";
+      color = "0.200000 0.200000 0.200000 1.000000";
+      ambient = "0.800000 0.800000 0.800000 1.000000";
+   };
+   new StaticShape(StartPoint) {
+      position = "0 -58 1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+         locked = "0";
+         initialWorldBox = "-1.00917 -59.0092 0.999986 1.00917 -56.9908 1.39998";
+         index = "1";
+         syncId = "-1";
+         initialTransform = "0 -58 1 1 0 0 0";
+         btBody = "82";
+   };
+   new StaticShape(SL) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SecurityLevel";
+         locked = "0";
+         initialWorldBox = "-55 -73 -20 67 115 70";
+         syncId = "-1";
+         initialTransform = "0 0 0 1 0 0 0";
+         btBody = "83";
+   };
+   new StaticShape(YellowField) {
+      position = "-28 20 4";
+      rotation = "0 1 0 90.0002";
+      scale = "3 3 3";
+      dataBlock = "SecurityField";
+         comboObj1 = "Yellow2";
+         comboSkin1 = "yellow";
+         comboObj2 = "Yellow3";
+         comboSkin2 = "num10";
+         locked = "0";
+         initialWorldBox = "-28 17 1 -28 23 7";
+         comboNum = "3";
+         comboObj0 = "Yellow1";
+         syncId = "-1";
+         initialTransform = "-28 20 4 0 1 0 1.5708";
+         btBody = "84";
+         comboSkin0 = "square";
+   };
+   new StaticShape(BlueS1) {
+      position = "-2 86 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "BlueField";
+         callback = "securitySwitch";
+         tile = "Blue1";
+         locked = "0";
+         initialWorldBox = "-2.5 85.5 -9 -1.5 86.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-2 86 -8.95 1 0 0 0";
+         btBody = "85";
+   };
+   new ScriptObject() {
+         bonusTime = "0";
+         gemCount = "0";
+         powerUp = "0";
+         time = "0";
+         pad = "1493";
+         penaltyTime = "0";
+   };
+   new StaticShape(RedField) {
+      position = "28 20 4";
+      rotation = "0 1 0 90.0002";
+      scale = "3 3 3";
+      dataBlock = "SecurityField";
+         comboObj1 = "Red2";
+         comboSkin1 = "red";
+         comboObj2 = "Red3";
+         comboSkin2 = "num1";
+         locked = "0";
+         initialWorldBox = "28 17 1 28 23 7";
+         comboNum = "3";
+         comboObj0 = "Red1";
+         syncId = "-1";
+         initialTransform = "28 20 4 0 1 0 1.5708";
+         btBody = "86";
+         comboSkin0 = "circle";
+   };
+   new StaticShape(BlueField) {
+      position = "0 92 -6";
+      rotation = "1 0 0 90.0002";
+      scale = "3 3 3";
+      dataBlock = "SecurityField";
+         comboObj1 = "Blue2";
+         comboSkin1 = "blue";
+         comboObj2 = "Blue3";
+         comboSkin2 = "num5";
+         locked = "0";
+         initialWorldBox = "-3 92 -9 3 92 -3";
+         comboNum = "3";
+         comboObj0 = "Blue1";
+         syncId = "-1";
+         initialTransform = "0 92 -6 1 0 0 1.5708";
+         btBody = "87";
+         comboSkin0 = "rectangle";
+   };
+   new StaticShape(Yellow2) {
+      position = "-26.8 20 8";
+      rotation = "-0.576203 0.577583 0.578262 120.517";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "1";
+         initialWorldBox = "-26.8108 18.9952 6.9952 -26.7892 21.0048 9.0048";
+         initialTransform = "-26.8 20 8 -0.576203 0.577583 0.578262 2.10342";
+   };
+   new StaticShape(Yellow3) {
+      position = "-26.7856 21.9999 8.00963";
+      rotation = "-0.576203 0.577583 0.578262 120.517";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "0";
+         initialWorldBox = "-26.7964 20.9951 7.00483 -26.7748 23.0047 9.01443";
+         initialTransform = "-26.7856 21.9999 8.00963 -0.576203 0.577583 0.578262 2.10342";
+   };
+   new StaticShape(Yellow1) {
+      position = "-26.8144 18.0001 7.99037";
+      rotation = "-0.576203 0.577583 0.578262 120.517";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "4";
+         initialWorldBox = "-26.8252 16.9953 6.98557 -26.8036 19.0049 8.99517";
+         initialTransform = "-26.8144 18.0001 7.99037 -0.576203 0.577583 0.578262 2.10342";
+   };
+   new StaticShape(Red3) {
+      position = "26.8224 18.0002 8.00963";
+      rotation = "0.572789 0.582039 0.577186 239.67";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "3";
+         initialWorldBox = "26.8076 16.9954 7.00483 26.8372 19.005 9.01443";
+         initialTransform = "26.8224 18.0002 8.00963 0.572789 0.582039 0.577186 4.18303";
+   };
+   new StaticShape(Red1) {
+      position = "26.7776 21.9998 7.99037";
+      rotation = "0.572789 0.582038 0.577187 239.67";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "2";
+         initialWorldBox = "26.7628 20.995 6.98557 26.7924 23.0046 8.99517";
+         initialTransform = "26.7776 21.9998 7.99037 0.572789 0.582038 0.577187 4.18303";
+   };
+   new StaticShape(Red2) {
+      position = "26.8 20 8";
+      rotation = "0.572789 0.582038 0.577187 239.669";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "0";
+         initialWorldBox = "26.7852 18.9952 6.99521 26.8148 21.0048 9.00479";
+         initialTransform = "26.8 20 8 0.572789 0.582038 0.577187 4.18301";
+   };
+   new StaticShape(Blue3) {
+      position = "1.99993 90.8008 -1.99037";
+      rotation = "-0.00185005 0.708379 0.70583 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "1";
+         initialWorldBox = "0.995115 90.7968 -2.99518 3.00475 90.8048 -0.985563";
+         initialTransform = "1.99993 90.8008 -1.99037 -0.00185005 0.708379 0.70583 3.14472";
+   };
+   new StaticShape(Blue1) {
+      position = "-1.99993 90.7992 -2.00963";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "1";
+         initialWorldBox = "-3.00474 90.7952 -3.01444 -0.995116 90.8032 -1.00482";
+         initialTransform = "-1.99993 90.7992 -2.00963 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(Blue2) {
+      position = "1.04308e-005 90.8 -2";
+      rotation = "-0.00184983 0.708382 0.705827 180.178";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "3";
+         initialWorldBox = "-1.00479 90.796 -3.00479 1.00481 90.804 -0.995205";
+         initialTransform = "1.04308e-005 90.8 -2 -0.00184983 0.708382 0.705827 3.1447";
+   };
+   new StaticShape(BlueS3) {
+      position = "2 86 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "BlueField";
+         callback = "securitySwitch";
+         tile = "Blue3";
+         locked = "0";
+         initialWorldBox = "1.5 85.5 -9 2.5 86.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "2 86 -8.95 1 0 0 0";
+         btBody = "88";
+   };
+   new StaticShape(YellowS1) {
+      position = "-22 18 1.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "YellowField";
+         callback = "securitySwitch";
+         tile = "Yellow1";
+         locked = "0";
+         initialWorldBox = "-22.5 17.5 1 -21.5 18.5 1.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-22 18 1.05 1 0 0 0";
+         btBody = "89";
+   };
+   new StaticShape(YellowS3) {
+      position = "-22 22 1.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "YellowField";
+         callback = "securitySwitch";
+         tile = "Yellow3";
+         locked = "0";
+         initialWorldBox = "-22.5 21.5 1 -21.5 22.5 1.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-22 22 1.05 1 0 0 0";
+         btBody = "90";
+   };
+   new StaticShape(RedS3) {
+      position = "22 18 1.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "RedField";
+         callback = "securitySwitch";
+         tile = "Red3";
+         locked = "0";
+         initialWorldBox = "21.5 17.5 1 22.5 18.5 1.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "22 18 1.05 1 0 0 0";
+         btBody = "91";
+   };
+   new StaticShape(RedS1) {
+      position = "22 22 1.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "RedField";
+         callback = "securitySwitch";
+         tile = "Red1";
+         locked = "0";
+         initialWorldBox = "21.5 21.5 1 22.5 22.5 1.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "22 22 1.05 1 0 0 0";
+         btBody = "92";
+   };
+   new StaticShape(End53) {
+      position = "3.99176 112.602 -6.15903";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "4";
+         initialWorldBox = "2.98695 112.598 -7.16384 4.99657 112.606 -5.15422";
+         initialTransform = "3.99176 112.602 -6.15903 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End32) {
+      position = "-0.00819418 112.6 -4.17833";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "2";
+         initialWorldBox = "-1.01301 112.596 -5.18314 0.99662 112.604 -3.17352";
+         initialTransform = "-0.00819418 112.6 -4.17833 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End22) {
+      position = "-2.00817 112.599 -4.18798";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "1";
+         initialWorldBox = "-3.01298 112.595 -5.19279 -1.00336 112.603 -3.18317";
+         initialTransform = "-2.00817 112.599 -4.18798 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End12) {
+      position = "-4.00815 112.598 -4.19763";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "0";
+         initialWorldBox = "-5.01296 112.594 -5.20244 -3.00334 112.602 -3.19282";
+         initialTransform = "-4.00815 112.598 -4.19763 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End42) {
+      position = "1.99178 112.601 -4.16868";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "3";
+         initialWorldBox = "0.986966 112.597 -5.17349 2.99659 112.605 -3.16387";
+         initialTransform = "1.99178 112.601 -4.16868 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End52) {
+      position = "3.99176 112.602 -4.15903";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "color";
+         tileInd = "4";
+         initialWorldBox = "2.98695 112.598 -5.16384 4.99657 112.606 -3.15422";
+         initialTransform = "3.99176 112.602 -4.15903 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End11) {
+      position = "-4.00815 112.598 -2.19763";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "0";
+         initialWorldBox = "-5.01296 112.594 -3.20244 -3.00334 112.602 -1.19282";
+         initialTransform = "-4.00815 112.598 -2.19763 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End21) {
+      position = "-2.00817 112.599 -2.18798";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "1";
+         initialWorldBox = "-3.01298 112.595 -3.19279 -1.00336 112.603 -1.18317";
+         initialTransform = "-2.00817 112.599 -2.18798 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End31) {
+      position = "-0.00819418 112.6 -2.17833";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "2";
+         initialWorldBox = "-1.01301 112.596 -3.18314 0.99662 112.604 -1.17352";
+         initialTransform = "-0.00819418 112.6 -2.17833 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End41) {
+      position = "1.99178 112.601 -2.16868";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "3";
+         initialWorldBox = "0.986966 112.597 -3.17349 2.99659 112.605 -1.16387";
+         initialTransform = "1.99178 112.601 -2.16868 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End51) {
+      position = "3.99176 112.602 -2.15903";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "shape";
+         tileInd = "4";
+         initialWorldBox = "2.98695 112.598 -3.16384 4.99657 112.606 -1.15422";
+         initialTransform = "3.99176 112.602 -2.15903 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End13) {
+      position = "-4.00815 112.598 -6.19763";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "0";
+         initialWorldBox = "-5.01296 112.594 -7.20244 -3.00334 112.602 -5.19282";
+         initialTransform = "-4.00815 112.598 -6.19763 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End23) {
+      position = "-2.00817 112.599 -6.18798";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "1";
+         initialWorldBox = "-3.01298 112.595 -7.19279 -1.00336 112.603 -5.18317";
+         initialTransform = "-2.00817 112.599 -6.18798 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End33) {
+      position = "-0.00819418 112.6 -6.17833";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "2";
+         initialWorldBox = "-1.01301 112.596 -7.18314 0.99662 112.604 -5.17352";
+         initialTransform = "-0.00819418 112.6 -6.17833 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(End43) {
+      position = "1.99178 112.601 -6.16868";
+      rotation = "-0.00184946 0.708378 0.705831 180.179";
+      scale = "1 1 1";
+      dataBlock = "SecurityTile";
+         tileType = "number";
+         tileInd = "3";
+         initialWorldBox = "0.986966 112.597 -7.17349 2.99659 112.605 -5.16387";
+         initialTransform = "1.99178 112.601 -6.16868 -0.00184946 0.708378 0.705831 3.14472";
+   };
+   new StaticShape(EndS51) {
+      position = "4 100 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End51";
+         locked = "0";
+         initialWorldBox = "3.5 99.5 -9 4.5 100.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "4 100 -8.95 1 0 0 0";
+         btBody = "93";
+   };
+   new StaticShape(EndS23) {
+      position = "-2 98 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End23";
+         locked = "0";
+         initialWorldBox = "-2.5 97.5 -9 -1.5 98.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-2 98 -8.95 1 0 0 0";
+         btBody = "94";
+   };
+   new StaticShape(EndS43) {
+      position = "2 98 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End43";
+         locked = "0";
+         initialWorldBox = "1.5 97.5 -9 2.5 98.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "2 98 -8.95 1 0 0 0";
+         btBody = "95";
+   };
+   new StaticShape(EndS33) {
+      position = "0 98 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End33";
+         locked = "0";
+         initialWorldBox = "-0.5 97.5 -9 0.5 98.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "0 98 -8.95 1 0 0 0";
+         btBody = "96";
+   };
+   new StaticShape(EndS13) {
+      position = "-4 98 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End13";
+         locked = "0";
+         initialWorldBox = "-4.5 97.5 -9 -3.5 98.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-4 98 -8.95 1 0 0 0";
+         btBody = "97";
+   };
+   new StaticShape(EndS53) {
+      position = "4 98 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End53";
+         locked = "0";
+         initialWorldBox = "3.5 97.5 -9 4.5 98.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "4 98 -8.95 1 0 0 0";
+         btBody = "98";
+   };
+   new StaticShape(EndS41) {
+      position = "2 100 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End41";
+         locked = "0";
+         initialWorldBox = "1.5 99.5 -9 2.5 100.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "2 100 -8.95 1 0 0 0";
+         btBody = "99";
+   };
+   new StaticShape(EndS31) {
+      position = "0 100 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End31";
+         locked = "0";
+         initialWorldBox = "-0.5 99.5 -9 0.5 100.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "0 100 -8.95 1 0 0 0";
+         btBody = "100";
+   };
+   new StaticShape(EndS21) {
+      position = "-2 100 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End21";
+         locked = "0";
+         initialWorldBox = "-2.5 99.5 -9 -1.5 100.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-2 100 -8.95 1 0 0 0";
+         btBody = "101";
+   };
+   new StaticShape(EndS11) {
+      position = "-4 100 -8.95";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "securitySwitch";
+         tile = "End11";
+         locked = "0";
+         initialWorldBox = "-4.5 99.5 -9 -3.5 100.5 -8.9";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "-4 100 -8.95 1 0 0 0";
+         btBody = "102";
+   };
+   new StaticShape(TTT1) {
+      position = "8 53 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "7.5 52.5 34 8.5 53.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "8 53 34.05 1 0 0 0";
+         btBody = "103";
+   };
+   new StaticShape(TTT2) {
+      position = "12 53 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "11.5 52.5 34 12.5 53.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "12 53 34.05 1 0 0 0";
+         btBody = "104";
+   };
+   new StaticShape(TTT3) {
+      position = "16 53 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "15.5 52.5 34 16.5 53.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "16 53 34.05 1 0 0 0";
+         btBody = "105";
+   };
+   new StaticShape(TTT4) {
+      position = "8 57 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "7.5 56.5 34 8.5 57.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "8 57 34.05 1 0 0 0";
+         btBody = "106";
+   };
+   new StaticShape(TTT5) {
+      position = "12 57 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "11.5 56.5 34 12.5 57.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "12 57 34.05 1 0 0 0";
+         btBody = "107";
+   };
+   new StaticShape(TTT6) {
+      position = "16 57 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "15.5 56.5 34 16.5 57.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "16 57 34.05 1 0 0 0";
+         btBody = "108";
+   };
+   new StaticShape(TTT7) {
+      position = "8 61 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "7.5 60.5 34 8.5 61.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "8 61 34.05 1 0 0 0";
+         btBody = "109";
+   };
+   new StaticShape(TTT8) {
+      position = "12 61 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "11.5 60.5 34 12.5 61.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "12 61 34.05 1 0 0 0";
+         btBody = "110";
+   };
+   new StaticShape(TTT9) {
+      position = "16 61 34.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         callback = "tttCallback";
+         locked = "0";
+         initialWorldBox = "15.5 60.5 34 16.5 61.5 34.1";
+         activated = "0";
+         syncId = "-1";
+         initialTransform = "16 61 34.05 1 0 0 0";
+         btBody = "111";
+   };
+   new StaticShape() {
+      position = "48.9354 -70.554 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "44.9354 -74.554 -4.4558 52.9354 -66.554 33.5442";
+         syncId = "-1";
+         initialTransform = "48.9354 -70.554 29.5442 1 0 0 0";
+         btBody = "112";
+   };
+   new StaticShape() {
+      position = "39.9354 -41.3536 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "35.9354 -45.3536 -4.4558 43.9354 -37.3536 33.5442";
+         syncId = "75";
+         initialTransform = "39.9354 -41.3536 29.5442 1 0 0 0";
+         btBody = "113";
+   };
+   new StaticShape() {
+      position = "10.301 -28.1733 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "6.301 -32.1733 -4.4558 14.301 -24.1733 33.5442";
+         syncId = "73";
+         initialTransform = "10.301 -28.1733 29.5442 1 0 0 0";
+         btBody = "114";
+   };
+   new StaticShape() {
+      position = "-45.4646 -48.5536 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "-49.4646 -52.5536 -4.4558 -41.4646 -44.5536 33.5442";
+         syncId = "66";
+         initialTransform = "-45.4646 -48.5536 29.5442 1 0 0 0";
+         btBody = "115";
+   };
+   new StaticShape() {
+      position = "-24.2646 -25.7536 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "-28.2646 -29.7536 -4.4558 -20.2646 -21.7536 33.5442";
+         syncId = "74";
+         initialTransform = "-24.2646 -25.7536 29.5442 1 0 0 0";
+         btBody = "116";
+   };
+   new StaticShape() {
+      position = "-18.6646 33.6464 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "-22.6646 29.6464 -4.4558 -14.6646 37.6464 33.5442";
+         syncId = "-1";
+         initialTransform = "-18.6646 33.6464 29.5442 1 0 0 0";
+         btBody = "117";
+   };
+   new StaticShape() {
+      position = "-55.0646 59.2464 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "-59.0646 55.2464 -4.4558 -51.0646 63.2464 33.5442";
+         syncId = "-1";
+         initialTransform = "-55.0646 59.2464 29.5442 1 0 0 0";
+         btBody = "118";
+   };
+   new StaticShape() {
+      position = "-20.8646 82.8464 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "-24.8646 78.8464 -4.4558 -16.8646 86.8464 33.5442";
+         syncId = "-1";
+         initialTransform = "-20.8646 82.8464 29.5442 1 0 0 0";
+         btBody = "119";
+   };
+   new StaticShape() {
+      position = "25.5354 103.046 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "21.5354 99.046 -4.4558 29.5354 107.046 33.5442";
+         syncId = "-1";
+         initialTransform = "25.5354 103.046 29.5442 1 0 0 0";
+         btBody = "120";
+   };
+   new StaticShape() {
+      position = "48.1354 80.846 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "44.1354 76.846 -4.4558 52.1354 84.846 33.5442";
+         syncId = "-1";
+         initialTransform = "48.1354 80.846 29.5442 1 0 0 0";
+         btBody = "121";
+   };
+   new StaticShape() {
+      position = "60.9354 55.446 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "56.9354 51.446 -4.4558 64.9354 59.446 33.5442";
+         syncId = "-1";
+         initialTransform = "60.9354 55.446 29.5442 1 0 0 0";
+         btBody = "122";
+   };
+   new StaticShape() {
+      position = "51.9354 23.446 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "47.9354 19.446 -4.4558 55.9354 27.446 33.5442";
+         syncId = "-1";
+         initialTransform = "51.9354 23.446 29.5442 1 0 0 0";
+         btBody = "123";
+   };
+   new StaticShape() {
+      position = "73.9354 -1.154 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "69.9354 -5.154 -4.4558 77.9354 2.846 33.5442";
+         syncId = "-1";
+         initialTransform = "73.9354 -1.154 29.5442 1 0 0 0";
+         btBody = "124";
+   };
+   new StaticShape() {
+      position = "63.9354 -34.954 29.5442";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "0";
+         initialWorldBox = "59.9354 -38.954 -4.4558 67.9354 -30.954 33.5442";
+         syncId = "-1";
+         initialTransform = "63.9354 -34.954 29.5442 1 0 0 0";
+         btBody = "125";
+   };
+   new Item() {
+      position = "0 104 7.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "47";
+         initialWorldBox = "-18.8414 33.5464 33.8232 -18.4878 33.7464 34.1768";
+         collisionCache2 = "0";
+         index = "4";
+         syncId = "114";
+         initialTransform = "-18.6646 33.6464 34 1 0 0 0";
+         btBody = "126";
+         collisionCache0 = "0";
+   };
+   new Item() {
+      position = "0 0 70.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonPackItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "48";
+         initialWorldBox = "11.6535 56.9 34.6535 12.3465 57.1 35.3465";
+         collisionCache2 = "0";
+         index = "0";
+         syncId = "111";
+         initialTransform = "12 57 35 1 0 0 0";
+         btBody = "127";
+         collisionCache0 = "0";
+   };
+   new Item(TTTIonPack) {
+      position = "12 57 35";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonPackItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "49";
+         initialWorldBox = "-0.346482 -0.1 70.1535 0.346482 0.1 70.8465";
+         collisionCache2 = "0";
+         index = "1";
+         syncId = "111";
+         initialTransform = "0 0 70.5 1 0 0 0";
+         btBody = "128";
+         collisionCache0 = "0";
+   };
+   new Item() {
+      position = "0 0 40.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "50";
+         initialWorldBox = "-0.176777 -0.1 40.3232 0.176777 0.1 40.6768";
+         collisionCache2 = "0";
+         index = "0";
+         syncId = "113";
+         initialTransform = "0 0 40.5 1 0 0 0";
+         btBody = "129";
+         collisionCache0 = "0";
+   };
+   new Item() {
+      position = "-18.6646 33.6464 34";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "51";
+         initialWorldBox = "-0.176777 103.9 7.32322 0.176777 104.1 7.67678";
+         collisionCache2 = "0";
+         index = "1";
+         syncId = "114";
+         initialTransform = "0 104 7.5 1 0 0 0";
+         btBody = "130";
+         collisionCache0 = "0";
+   };
+   new Item() {
+      position = "-34 70 25.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "52";
+         initialWorldBox = "-18.8414 33.5464 33.8232 -18.4878 33.7464 34.1768";
+         collisionCache2 = "0";
+         index = "2";
+         syncId = "114";
+         initialTransform = "-18.6646 33.6464 34 1 0 0 0";
+         btBody = "131";
+         collisionCache0 = "0";
+   };
+   new Item() {
+      position = "0 104 17.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "IonCellItem";
+      collideable = "0";
+      static = "1";
+      rotate = "1";
+         isColliding = "0";
+         collisionCache1 = "0";
+         btShape = "53";
+         initialWorldBox = "-18.8414 33.5464 33.8232 -18.4878 33.7464 34.1768";
+         collisionCache2 = "0";
+         index = "3";
+         syncId = "114";
+         initialTransform = "-18.6646 33.6464 34 1 0 0 0";
+         btBody = "132";
+         collisionCache0 = "0";
+   };
+   new StaticShape(StartS) {
+      position = "-9.08971e-007 -54 1.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "PressSwitch";
+         field = "StartField";
+         callback = "StartSwitch";
+         locked = "0";
+         initialWorldBox = "-0.500001 -54.5 1 0.499999 -53.5 1.1";
+         activated = "0";
+         syncId = "68";
+         initialTransform = "-9.08971e-007 -54 1.05 1 0 0 0";
+         btBody = "133";
+   };
+   new StaticShape(StartField) {
+      position = "0 -50 4.00049";
+      rotation = "1 0 0 90.0002";
+      scale = "3 3 3";
+      dataBlock = "SecurityField";
+         locked = "0";
+         initialWorldBox = "-3 -50 1.00049 3 -50 7.00049";
+         syncId = "69";
+         initialTransform = "0 -50 4.00049 1 0 0 1.5708";
+         btBody = "134";
+   };
+   new StaticShape() {
+      position = "12 57 34";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Tent";
+         locked = "0";
+         initialWorldBox = "4.99999 50 34 19 64 47";
+         syncId = "-1";
+         initialTransform = "12 57 34 1 0 0 0";
+         btBody = "135";
+   };
+   new StaticShape() {
+      position = "0 -40 1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "-7.06418 -47.0642 1 7.06418 -32.9358 10.0914";
+         syncId = "70";
+         initialTransform = "0 -40 1 1 0 0 0";
+         btBody = "136";
+   };
+   new StaticShape() {
+      position = "0 -40 17";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "-7.06418 -47.0642 17 7.06418 -32.9358 26.0914";
+         syncId = "71";
+         initialTransform = "0 -40 17 1 0 0 0";
+         btBody = "137";
+   };
+   new StaticShape() {
+      position = "-50 -12 20";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "-57.0642 -19.0642 20 -42.9358 -4.93582 29.0914";
+         syncId = "-1";
+         initialTransform = "-50 -12 20 1 0 0 0";
+         btBody = "138";
+   };
+   new StaticShape() {
+      position = "-50 12 20";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "-57.0642 4.93582 20 -42.9358 19.0642 29.0914";
+         syncId = "-1";
+         initialTransform = "-50 12 20 1 0 0 0";
+         btBody = "139";
+   };
+   new StaticShape() {
+      position = "48 0 20";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "40.9358 -7.06418 20 55.0642 7.06418 29.0914";
+         syncId = "-1";
+         initialTransform = "48 0 20 1 0 0 0";
+         btBody = "140";
+   };
+   new StaticShape() {
+      position = "0 20 1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Dome";
+         locked = "0";
+         initialWorldBox = "-7.06418 12.9358 1 7.06418 27.0642 10.0914";
+         syncId = "-1";
+         initialTransform = "0 20 1 1 0 0 0";
+         btBody = "141";
+   };
+   new StaticShape() {
+      position = "1 -10 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Lamp";
+         locked = "0";
+         initialWorldBox = "1.19209e-007 -8 3.5 2 -6 7";
+         syncId = "76";
+         initialTransform = "1 -10 4.5 1 0 0 0";
+         btBody = "145";
+   };
+   new StaticShape() {
+      position = "-1 4 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Lamp";
+         locked = "0";
+         initialWorldBox = "-2 6 3.5 -2.38419e-007 8 7";
+         syncId = "-1";
+         initialTransform = "-1 4 4.5 1 0 0 0";
+         btBody = "142";
+   };
+   new StaticShape() {
+      position = "1 0 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Lamp";
+         locked = "0";
+         initialWorldBox = "1.19209e-007 2 3.5 2 4 7";
+         syncId = "-1";
+         initialTransform = "1 0 4.5 1 0 0 0";
+         btBody = "143";
+   };
+   new StaticShape() {
+      position = "-1 -6 4.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Lamp";
+         locked = "0";
+         initialWorldBox = "-2 -4 3.5 -2.38419e-007 -2 7";
+         syncId = "-1";
+         initialTransform = "-1 -6 4.5 1 0 0 0";
+         btBody = "144";
+   };
+   new AudioProfile(MusicProfile) {
+      fileName = "~/data/Shared/sound/Shell.ogg";
+      description = "AudioMusic";
+      preload = "0";
+   };
+   new StaticShape(EndPoint) {
+      position = "0 108 -9";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EndPad";
+         locked = "0";
+         level = 1;
+         index = 1;
+         initialWorldBox = "-1.00917 106.991 -9.00001 1.00917 109.009 -6.9";
+         teleporting = "0";
+         syncId = "152";
+         initialTransform = "0 108 -9 1 0 0 0";
+         btBody = "147";
+   };
+   new StaticShape(Foot1) {
+      position = "0 108 -9";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+         locked = "0";
+         initialWorldBox = "0.636396 108.636 -9 1.41421 109.414 -8.6";
+         syncId = "153";
+         initialTransform = "0 108 -9 1 0 0 0";
+         btBody = "148";
+   };
+   new StaticShape(Foot2) {
+      position = "0 108 -9";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+         locked = "0";
+         initialWorldBox = "0.636396 108.636 -9 1.41421 109.414 -8.6";
+         syncId = "153";
+         initialTransform = "0 108 -9 1 0 0 0";
+         btBody = "148";
+   };
+   new StaticShape(Foot3) {
+      position = "0 108 -9";
+      rotation = "0 0 1 180";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+         locked = "0";
+         initialWorldBox = "0.636396 108.636 -9 1.41421 109.414 -8.6";
+         syncId = "153";
+         initialTransform = "0 108 -9 1 0 0 0";
+         btBody = "148";
+   };
+   new StaticShape(Foot4) {
+      position = "0 108 -9";
+      rotation = "0 0 1 -90";
+      scale = "1 1 1";
+      dataBlock = "EndPadFoot";
+         locked = "0";
+         initialWorldBox = "0.636396 108.636 -9 1.41421 109.414 -8.6";
+         syncId = "153";
+         initialTransform = "0 108 -9 1 0 0 0";
+         btBody = "148";
+   };
+};
+//--- OBJECT WRITE END ---
+
+function SecurityField::setActive(%this, %obj, %act) {
+	%obj.startFade(0,0,!%act);
+	btSetSolid(%obj.btBody, %act);
+}
+
+$tileSkins["color", 0] = "red";
+$tileSkins["color", 1] = "yellow";
+$tileSkins["color", 2] = "green";
+$tileSkins["color", 3] = "blue";
+$tileSkins["color", 4] = "purple";
+
+$tileSkins["shape", 0] = "circle";
+$tileSkins["shape", 1] = "oval";
+$tileSkins["shape", 2] = "square";
+$tileSkins["shape", 3] = "rectangle";
+$tileSkins["shape", 4] = "triangle";
+
+$tileSkins["number", 0] = "num1";
+$tileSkins["number", 1] = "num2";
+$tileSkins["number", 2] = "num5";
+$tileSkins["number", 3] = "num10";
+$tileSkins["number", 4] = "num25";
+
+function SecurityTile::cycleSkin(%this, %obj) {
+	%obj.tileInd++;
+	%obj.tileInd %= 5;
+	%obj.setSkinName($tileSkins[%obj.tileType, %obj.tileInd]);
+}
+
+function checkCombo(%comboObj) {
+	%comboWorks = true;
+	for (%i = 0; %i < %comboObj.comboNum; %i++) {
+		if (%comboObj.comboObj[%i].getSkinName() !$= %comboObj.comboSkin[%i])
+			%comboWorks = false;
+	}
+	return %comboWorks;
+}
+
+function securitySwitch(%obj) {
+	if (!%obj.activated) {
+		SecurityTile.cycleSkin(%obj.tile);
+        if (%obj.field.getName() $= "EndPoint") {
+            Foot1.setSkinName(checkCombo(%obj.field) ? "on" : "base");
+            Foot2.setSkinName(checkCombo(%obj.field) ? "on" : "base");
+            Foot3.setSkinName(checkCombo(%obj.field) ? "on" : "base");
+            Foot4.setSkinName(checkCombo(%obj.field) ? "on" : "base");
+            EndPoint.activated = checkCombo(%obj.field);
+        }
+        else
+            SecurityField.setActive(%obj.field, !checkCombo(%obj.field));
+		schedule(1000, 0, anonymous("%this.activated = 0; %this.setSkinName(\"base\");"), %obj);
+	}
+    return false;
+}
+
+function startSwitch(%obj) {
+    if (!%obj.activated) {
+		SecurityField.setActive(%obj.field, false);
+        if (!MissionInfo.mp) {
+            MissionInfo.mp = 1;
+            playGameMusic();
+        }
+        return false;
+	}
+    return true;
+}
+
+RedS1.tile = Red1;
+RedS3.tile = Red3;
+RedS1.field = RedField;
+RedS3.field = RedField;
+RedS1.callback = "securitySwitch";
+RedS3.callback = "securitySwitch";
+
+Red1.setSkinName("square");
+Red1.tileType = "shape";
+Red1.tileInd = 2;
+
+Red2.setSkinName("red");
+Red2.tileType = "color";
+Red2.tileInd = 0;
+
+Red3.setSkinName("num10");
+Red3.tileType = "number";
+Red3.tileInd = 3;
+
+RedField.comboNum = 3;
+RedField.comboObj[0] = Red1;
+RedField.comboSkin[0] = "circle";
+RedField.comboObj[1] = Red2;
+RedField.comboSkin[1] = "red";
+RedField.comboObj[2] = Red3;
+RedField.comboSkin[2] = "num1";
+
+YellowS1.tile = Yellow1;
+YellowS3.tile = Yellow3;
+YellowS1.field = YellowField;
+YellowS3.field = YellowField;
+YellowS1.callback = "securitySwitch";
+YellowS3.callback = "securitySwitch";
+
+Yellow1.setSkinName("triangle");
+Yellow1.tileType = "shape";
+Yellow1.tileInd = 4;
+
+Yellow2.setSkinName("yellow");
+Yellow2.tileType = "color";
+Yellow2.tileInd = 1;
+
+Yellow3.setSkinName("num1");
+Yellow3.tileType = "number";
+Yellow3.tileInd = 0;
+
+YellowField.comboNum = 3;
+YellowField.comboObj[0] = Yellow1;
+YellowField.comboSkin[0] = "square";
+YellowField.comboObj[1] = Yellow2;
+YellowField.comboSkin[1] = "yellow";
+YellowField.comboObj[2] = Yellow3;
+YellowField.comboSkin[2] = "num10";
+
+BlueS1.tile = Blue1;
+BlueS3.tile = Blue3;
+BlueS1.field = BlueField;
+BlueS3.field = BlueField;
+BlueS1.callback = "securitySwitch";
+BlueS3.callback = "securitySwitch";
+
+Blue1.setSkinName("oval");
+Blue1.tileType = "shape";
+Blue1.tileInd = 1;
+
+Blue2.setSkinName("blue");
+Blue2.tileType = "color";
+Blue2.tileInd = 3;
+
+Blue3.setSkinName("num2");
+Blue3.tileType = "number";
+Blue3.tileInd = 1;
+
+BlueField.comboNum = 3;
+BlueField.comboObj[0] = Blue1;
+BlueField.comboSkin[0] = "rectangle";
+BlueField.comboObj[1] = Blue2;
+BlueField.comboSkin[1] = "blue";
+BlueField.comboObj[2] = Blue3;
+BlueField.comboSkin[2] = "num5";
+
+EndS11.tile = End11;
+EndS13.tile = End13;
+EndS21.tile = End21;
+EndS23.tile = End23;
+EndS31.tile = End31;
+EndS33.tile = End33;
+EndS41.tile = End41;
+EndS43.tile = End43;
+EndS51.tile = End51;
+EndS53.tile = End53;
+EndS11.field = "EndPoint";
+EndS13.field = "EndPoint";
+EndS21.field = "EndPoint";
+EndS23.field = "EndPoint";
+EndS31.field = "EndPoint";
+EndS33.field = "EndPoint";
+EndS41.field = "EndPoint";
+EndS43.field = "EndPoint";
+EndS51.field = "EndPoint";
+EndS53.field = "EndPoint";
+EndS11.callback = "securitySwitch";
+EndS13.callback = "securitySwitch";
+EndS21.callback = "securitySwitch";
+EndS23.callback = "securitySwitch";
+EndS31.callback = "securitySwitch";
+EndS33.callback = "securitySwitch";
+EndS41.callback = "securitySwitch";
+EndS43.callback = "securitySwitch";
+EndS51.callback = "securitySwitch";
+EndS53.callback = "securitySwitch";
+
+End11.setSkinName("circle");
+End11.tileType = "shape";
+End11.tileInd = 0;
+
+End12.setSkinName("red");
+End12.tileType = "color";
+End12.tileInd = 0;
+
+End13.setSkinName("num1");
+End13.tileType = "number";
+End13.tileInd = 0;
+
+End21.setSkinName("oval");
+End21.tileType = "shape";
+End21.tileInd = 1;
+
+End22.setSkinName("yellow");
+End22.tileType = "color";
+End22.tileInd = 1;
+
+End23.setSkinName("num2");
+End23.tileType = "number";
+End23.tileInd = 1;
+
+End31.setSkinName("square");
+End31.tileType = "shape";
+End31.tileInd = 2;
+
+End32.setSkinName("green");
+End32.tileType = "color";
+End32.tileInd = 2;
+
+End33.setSkinName("num5");
+End33.tileType = "number";
+End33.tileInd = 2;
+
+End41.setSkinName("rectangle");
+End41.tileType = "shape";
+End41.tileInd = 3;
+
+End42.setSkinName("blue");
+End42.tileType = "color";
+End42.tileInd = 3;
+
+End43.setSkinName("num10");
+End43.tileType = "number";
+End43.tileInd = 3;
+
+End51.setSkinName("triangle");
+End51.tileType = "shape";
+End51.tileInd = 4;
+
+End52.setSkinName("purple");
+End52.tileType = "color";
+End52.tileInd = 4;
+
+End53.setSkinName("num25");
+End53.tileType = "number";
+End53.tileInd = 4;
+
+EndPoint.comboNum = 15;
+EndPoint.comboObj[0] = End11;
+EndPoint.comboSkin[0] = "circle";
+EndPoint.comboObj[1] = End12;
+EndPoint.comboSkin[1] = "red";
+EndPoint.comboObj[2] = End13;
+EndPoint.comboSkin[2] = "num1";
+EndPoint.comboObj[3] = End21;
+EndPoint.comboSkin[3] = "square";
+EndPoint.comboObj[4] = End22;
+EndPoint.comboSkin[4] = "yellow";
+EndPoint.comboObj[5] = End23;
+EndPoint.comboSkin[5] = "num10";
+EndPoint.comboObj[6] = End31;
+EndPoint.comboSkin[6] = "triangle";
+EndPoint.comboObj[7] = End32;
+EndPoint.comboSkin[7] = "green";
+EndPoint.comboObj[8] = End33;
+EndPoint.comboSkin[8] = "num2";
+EndPoint.comboObj[9] = End41;
+EndPoint.comboSkin[9] = "rectangle";
+EndPoint.comboObj[10] = End42;
+EndPoint.comboSkin[10] = "blue";
+EndPoint.comboObj[11] = End43;
+EndPoint.comboSkin[11] = "num5";
+EndPoint.comboObj[12] = End51;
+EndPoint.comboSkin[12] = "oval";
+EndPoint.comboObj[13] = End52;
+EndPoint.comboSkin[13] = "purple";
+EndPoint.comboObj[14] = End53;
+EndPoint.comboSkin[14] = "num25";
+
+StartS.field = StartField;
+StartS.callback = "StartSwitch";
+
+for (%i=0;%i<3;%i++)
+	for (%j=0;%j<3;%j++)
+		$ttt[%i, %j] = 0;
+
+function tttCallback(%obj) {
+	%row = (getWord(%obj.position, 1)-53)/4;
+	%col = (getWord(%obj.position, 0)-8)/4;
+    echo(%row SPC %col);
+	
+	if ($ttt[%row, %col] != 0)
+		return 1;
+	
+	$ttt[%row, %col] = 1;
+	schedule(20, 0, checkWin, 1);
+	return 0;
+}
+
+function makeAiMove() {
+	// If all 9 are full, break
+	if ($ttt[0, 0]*$ttt[0, 1]*$ttt[0, 2]*$ttt[1, 0]*$ttt[1, 1]*$ttt[1, 2]*$ttt[2, 0]*$ttt[2, 1]*$ttt[2, 2] != 0)
+		return;
+		
+	// Create a weight grid
+	for (%i=0;%i<3;%i++)
+		for (%j=0;%j<3;%j++)
+			%weight[%i, %j] = 0;
+
+	%weightTbl[-2] = 50;
+	%weightTbl[2] = 10;
+	%weightTbl[-1] = 5;
+	%weightTbl[1] = 1;
+	%weightTbl[0] = 0;
+	
+	for (%i=0;%i<3;%i++) {
+		%weightToAdd = %weightTbl[$ttt[%i, 0]+$ttt[%i, 1]+$ttt[%i, 2]];
+		for (%j=0;%j<3;%j++)
+			%weight[%i, %j] += %weightToAdd;
+	}
+	
+	for (%j=0;%j<3;%j++) {
+		%weightToAdd = %weightTbl[$ttt[0, %j]+$ttt[1, %j]+$ttt[2, %j]];
+		for (%i=0;%i<3;%i++)
+			%weight[%i, %j] += %weightToAdd;
+	}
+	
+	%weightToAdd = %weightTbl[$ttt[0, 0]+$ttt[1, 1]+$ttt[2, 2]];
+	for (%i=0;%i<3;%i++)
+		%weight[%i, %i] += %weightToAdd;
+		
+	%weightToAdd = %weightTbl[$ttt[0, 2]+$ttt[1, 1]+$ttt[2, 0]];
+	for (%i=0;%i<3;%i++)
+		%weight[%i, 2-%i] += %weightToAdd;
+		
+	// Find the max weight that's available
+	%bestRow = -1;
+	%bestCol = -1;
+	%bestWt = -1;
+	
+	for (%i=0;%i<3;%i++) {
+		for (%j=0;%j<3;%j++) {
+			if (%weight[%i, %j] > %bestWt && $ttt[%i, %j] == 0) {
+				%bestWt = %weight[%i, %j];
+				%bestRow = %i;
+				%bestCol = %j;
+			}
+		}
+	}
+	
+	("TTT"@(%bestRow*3+%bestCol+1)).setSkinName("bad");
+	$ttt[%bestRow, %bestCol] = -1;
+	
+}
+
+function checkWin(%first) {
+	MissionCleanup.add(%ss = new SimSet() {});
+	
+	for (%i=0;%i<3;%i++) {
+		if (mAbs($ttt[%i, 0]+$ttt[%i, 1]+$ttt[%i, 2]) == 3) {
+			%ss.add("TTT"@(3*%i+1));
+			%ss.add("TTT"@(3*%i+2));
+			%ss.add("TTT"@(3*%i+3));
+		}
+	}
+	
+	for (%j=0;%j<3;%j++) {
+		if (mAbs($ttt[0, %j]+$ttt[1, %j]+$ttt[2, %j]) == 3) {
+			%ss.add("TTT"@(1+%j));
+			%ss.add("TTT"@(4+%j));
+			%ss.add("TTT"@(7+%j));
+		}
+	}
+	
+	if (mAbs($ttt[0, 0]+$ttt[1, 1]+$ttt[2, 2]) == 3) {
+		%ss.add("TTT1");
+		%ss.add("TTT5");
+		%ss.add("TTT9");
+	}
+	
+	if (mAbs($ttt[0, 2]+$ttt[1, 1]+$ttt[2, 0]) == 3) {
+		%ss.add("TTT3");
+		%ss.add("TTT5");
+		%ss.add("TTT7");
+	}
+	
+	if (%ss.getCount() == 0 && $ttt[0, 0]*$ttt[0, 1]*$ttt[0, 2]*$ttt[1, 0]*$ttt[1, 1]*$ttt[1, 2]*$ttt[2, 0]*$ttt[2, 1]*$ttt[2, 2] != 0) {
+		for (%i=1;%i<=9;%i++)
+			%ss.add("TTT"@%i);
+	}
+	
+	if (%ss.getCount() > 0) {
+		%obj = %ss.getObject(0);
+        if (%ss.getCount() < 4 && %obj.getSkinName() $= "on") {
+            TTTIonPack.hide(false);
+        }
+        flash(%ss, 0);
+    }
+	
+	else if (%first) {
+		makeAiMove();
+		checkWin(0);
+	}
+}
+
+function flash(%ss, %n) {
+
+	if (%n >= 6) {
+		for (%i=1;%i<=9;%i++) {
+			%obj = "TTT"@%i;
+			%obj.setSkinName("base");
+			%obj.activated = 0;
+		}
+		
+		for (%i=0;%i<3;%i++)
+			for (%j=0;%j<3;%j++)
+				$ttt[%i, %j] = 0;
+	}
+	else {
+		schedule(500, 0, "flash", %ss, %n+1);
+	}
+	
+	for (%i=0; %i<%ss.getCount(); %i++) {
+		%obj = %ss.getObject(%i);
+		if (%n % 2) {
+			%obj.setSkinName(%obj.psn);
+		}
+		else {
+			%obj.psn = %obj.getSkinName();
+			%obj.setSkinName("base");
+		}
+	}
+	
+}
+
+TTT1.callback = "tttCallback";
+TTT2.callback = "tttCallback";
+TTT3.callback = "tttCallback";
+TTT4.callback = "tttCallback";
+TTT5.callback = "tttCallback";
+TTT6.callback = "tttCallback";
+TTT7.callback = "tttCallback";
+TTT8.callback = "tttCallback";
+TTT9.callback = "tttCallback";
+
+TTTIonPack.hide(true);

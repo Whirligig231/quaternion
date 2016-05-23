@@ -1,0 +1,53 @@
+//-----------------------------------------------------------------------------
+// Torque Game Engine
+// 
+// Copyright (c) 2001 GarageGames.Com
+//-----------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------
+
+datablock StaticShapeData(StartPad)
+{
+   className = "Pad";
+   category = "Pads";
+   shapeFile = "~/data/Shared/pads/teleport.dts";
+   scopeAlways = true;
+   emap = false;
+   
+   btShapeType = "raw";
+   btShapeFile = "~/data/Shared/pads/teleport.raw";
+   	btMass = 0;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+};
+
+function StartPad::onAdd(%this, %obj)
+{
+   Parent::onAdd(%this, %obj);
+   $Game::StartPad = %obj;
+   %obj.setName("StartPoint");
+   %obj.playThread(0,"ambient");
+}
+
+
+//-----------------------------------------------------------------------------
+
+datablock StaticShapeData(EndPad)
+{
+   className = "Pad";
+   category = "Pads";
+   shapeFile = "~/data/Shared/pads/endArea.dts";
+   scopeAlways = true;
+   emap = false;
+};
+
+function EndPad::onAdd(%this, %obj)
+{
+   Parent::onAdd(%this, %obj);
+   $Game::EndPad = %obj;
+   %obj.setName("EndPoint");
+   %obj.playThread(0,"ambient");
+}
+
+
