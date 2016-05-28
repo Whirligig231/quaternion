@@ -1,0 +1,21 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (BulletWorldImporter.dir\Debug\) contains files shared from another project (BulletWorldImporter.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/Extras/Serialize/BulletWorldImporter/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\Extras\Serialize\BulletWorldImporter\CMakeFiles\generate.stamp is up-to-date.
+  btBulletWorldImporter.cpp
+  btWorldImporter.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(997): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1001): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1004): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1275): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1324): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1324): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1325): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1331): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1331): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1332): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+  Generating Code...
+  BulletWorldImporter.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\BulletWorldImporter_Debug.lib

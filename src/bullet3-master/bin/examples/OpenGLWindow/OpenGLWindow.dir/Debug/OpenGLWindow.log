@@ -1,0 +1,30 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/OpenGLWindow/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\OpenGLWindow\CMakeFiles\generate.stamp is up-to-date.
+  glew.c
+  Win32OpenGLWindow.cpp
+  Win32Window.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(272): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(286): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(302): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(319): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(357): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(368): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(379): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(411): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\Win32Window.cpp(778): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  fontstash.cpp
+  GLInstancingRenderer.cpp
+  GLPrimitiveRenderer.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\GLPrimitiveRenderer.cpp(315): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  GLRenderToTexture.cpp
+  LoadShader.cpp
+  opengl_fontstashcallbacks.cpp
+  OpenSans.cpp
+  SimpleCamera.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\OpenGLWindow\SimpleCamera.cpp(42): warning C4316: 'SimpleCameraInternalData': object allocated on the heap may not be aligned 16
+  SimpleOpenGL2App.cpp
+  SimpleOpenGL2Renderer.cpp
+  SimpleOpenGL3App.cpp
+  TwFonts.cpp
+  Generating Code...
+  OpenGLWindow.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\OpenGLWindow_Debug.lib

@@ -1,0 +1,49 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/src/BulletDynamics/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\src\BulletDynamics\CMakeFiles\generate.stamp is up-to-date.
+  btKinematicCharacterController.cpp
+  btConeTwistConstraint.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(868): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(913): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(973): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp(975): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  btContactConstraint.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\src\bulletdynamics\constraintsolver\btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored.
+  btFixedConstraint.cpp
+  btGearConstraint.cpp
+  btGeneric6DofConstraint.cpp
+  btGeneric6DofSpringConstraint.cpp
+  btGeneric6DofSpring2Constraint.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpring2Constraint.cpp(786): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  btHinge2Constraint.cpp
+  btHingeConstraint.cpp
+  btPoint2PointConstraint.cpp
+  btSequentialImpulseConstraintSolver.cpp
+  btNNCGConstraintSolver.cpp
+  btSliderConstraint.cpp
+  btSolve2LinearConstraint.cpp
+  btTypedConstraint.cpp
+  btUniversalConstraint.cpp
+  btDiscreteDynamicsWorld.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics/ConstraintSolver/btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored.
+  btRigidBody.cpp
+  btSimpleDynamicsWorld.cpp
+  Generating Code...
+  Compiling...
+  btRaycastVehicle.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics/ConstraintSolver/btContactConstraint.h(25): warning C4359: 'btContactConstraint': Alignment specifier is less than actual alignment (128), and will be ignored.
+  btWheelInfo.cpp
+  btMultiBody.cpp
+  btMultiBodyConstraintSolver.cpp
+  btMultiBodyDynamicsWorld.cpp
+  btMultiBodyJointLimitConstraint.cpp
+  btMultiBodyConstraint.cpp
+  btMultiBodyPoint2Point.cpp
+  btMultiBodyJointMotor.cpp
+  btDantzigLCP.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp(1568): warning C4473: 'printf' : not enough arguments passed for format string
+  C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp(1568): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp(1568): note: the missing variadic argument 2 is required by format string '% s'
+  btMLCPSolver.cpp
+  btLemkeAlgorithm.cpp
+  Generating Code...
+  BulletDynamics.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\BulletDynamics_Debug.lib

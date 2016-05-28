@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\ce19eaa6deaf25a493c8ffdc869cd5e8\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{39A34B91-B21C-3A05-9880-04D530F9A629}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/Extras/HACD/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\Extras\HACD\CMakeFiles\generate.stamp is up-to-date.
+  hacdGraph.cpp
+  hacdHACD.cpp
+  hacdICHull.cpp
+  hacdManifoldMesh.cpp
+  Generating Code...
+  HACD.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\HACD_Debug.lib

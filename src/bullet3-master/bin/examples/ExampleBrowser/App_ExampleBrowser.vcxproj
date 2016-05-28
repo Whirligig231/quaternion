@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D21ECE67-373C-33FE-862D-84063FA597DC}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>App_ExampleBrowser</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">App_ExampleBrowser.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">App_ExampleBrowser</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">App_ExampleBrowser.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">App_ExampleBrowser</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">App_ExampleBrowser.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">App_ExampleBrowser</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">App_ExampleBrowser.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">App_ExampleBrowser</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Debug\Bullet3Common_Debug.lib;..\..\lib\Debug\BulletSoftBody_Debug.lib;..\..\lib\Debug\BulletDynamics_Debug.lib;..\..\lib\Debug\BulletCollision_Debug.lib;..\..\lib\Debug\LinearMath_Debug.lib;..\..\lib\Debug\OpenGLWindow_Debug.lib;..\..\lib\Debug\gwen_Debug.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/Debug/App_ExampleBrowser.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/Debug/App_ExampleBrowser.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\Release\Bullet3Common.lib;..\..\lib\Release\BulletSoftBody.lib;..\..\lib\Release\BulletDynamics.lib;..\..\lib\Release\BulletCollision.lib;..\..\lib\Release\LinearMath.lib;..\..\lib\Release\OpenGLWindow.lib;..\..\lib\Release\gwen.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/Release/App_ExampleBrowser.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/Release/App_ExampleBrowser.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\MinSizeRel\Bullet3Common_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletSoftBody_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletCollision_MinsizeRel.lib;..\..\lib\MinSizeRel\LinearMath_MinsizeRel.lib;..\..\lib\MinSizeRel\OpenGLWindow_MinsizeRel.lib;..\..\lib\MinSizeRel\gwen_MinsizeRel.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/MinSizeRel/App_ExampleBrowser.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/MinSizeRel/App_ExampleBrowser.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\.;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\lib\RelWithDebInfo\Bullet3Common_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletSoftBody_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletCollision_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\LinearMath_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\OpenGLWindow_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\gwen_RelWithDebugInfo.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/RelWithDebInfo/App_ExampleBrowser.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/RelWithDebInfo/App_ExampleBrowser.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleEntries.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\GyroscopicDemo\GyroscopicSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Planar2D\Planar2D.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RollingFrictionDemo\RollingFrictionDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\FractureDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureBody.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureDynamicsWorld.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\CoordinateSystemDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\landscapeData.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\TaruData.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspConverter.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBullet\SerializeSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspLoader.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\btMatrix4x4.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ColladaGraphicsInstance.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ImportColladaSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\ImportObjExample.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\LoadMeshFromObj.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\ImportSTLSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\LoadMeshFromSTL.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ConvertRigidBodies2MultiBody.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ImportURDFSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\URDF2Bullet.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\urdf_samples.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\btConvexConvexMprAlgorithm.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\MultiDofDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintPhysicsSetup.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\include\urdf_parser\urdf_parser.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_exception\include\urdf_exception\exception.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\pose.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\model.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\link.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\joint.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\lexical_cast.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\shared_ptr.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\printf_console.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Utils\b3Clock.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\EmptyBrowser.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\EmptyExample.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleBrowserInterface.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLExampleBrowser.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLGuiHelper.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GraphingTexture.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenInternalData.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenParameterInterface.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenProfileWindow.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenTextureWindow.h" />
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.h" />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\main.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleEntries.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsServer.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsClient.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PosixSharedMemory.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\Win32SharedMemory.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\GyroscopicDemo\GyroscopicSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Planar2D\Planar2D.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RollingFrictionDemo\RollingFrictionDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\FractureDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureBody.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureDynamicsWorld.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\CoordinateSystemDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Raycast\RaytestDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBullet\SerializeSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btBulletWorldImporter.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bChunk.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bDNA.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\btBulletFile.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspConverter.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspLoader.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ImportColladaSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\ImportObjExample.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\LoadMeshFromObj.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\ImportSTLSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ImportURDFSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\URDF2Bullet.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\btConvexConvexMprAlgorithm.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\MultiDofDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintPhysicsSetup.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinystr.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxml.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxmlerror.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxmlparser.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\pose.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\joint.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\printf_console.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Utils\b3Clock.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLExampleBrowser.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLGuiHelper.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GraphingTexture.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenParameterInterface.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenProfileWindow.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenTextureWindow.cpp"  />
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.cpp"  />
+    <ResourceCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\build3\bullet.rc"  />
+    <None Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport" />
+    <None Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\premake4.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/ZERO_CHECK.vcxproj">
+      <Project>63BCE0F0-9286-3A0E-9DCF-D4D175836335</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Common/Bullet3Common.vcxproj">
+      <Project>1AD22634-319C-3E8E-96AA-048A49DC215C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletCollision/BulletCollision.vcxproj">
+      <Project>D249482F-984D-3702-B98E-236155105003</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletDynamics/BulletDynamics.vcxproj">
+      <Project>F6E68AFE-AFF3-3E03-9F4C-CADBE84FB493</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletSoftBody/BulletSoftBody.vcxproj">
+      <Project>2190AA83-E824-3211-98EA-92F12181CB74</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/LinearMath/LinearMath.vcxproj">
+      <Project>4BEE6DE3-4CA7-3FCF-8233-CB28FA59E6B7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/OpenGLWindow/OpenGLWindow.vcxproj">
+      <Project>95ED887F-198A-359D-9A69-A1B833A948C0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ThirdPartyLibs/Gwen/gwen.vcxproj">
+      <Project>C1D63695-CD17-34BA-BEC8-FFB8DF9BB3E5</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

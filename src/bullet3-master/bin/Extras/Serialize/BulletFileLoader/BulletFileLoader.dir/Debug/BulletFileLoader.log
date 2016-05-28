@@ -1,0 +1,11 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/Extras/Serialize/BulletFileLoader/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\Extras\Serialize\BulletFileLoader\CMakeFiles\generate.stamp is up-to-date.
+  bChunk.cpp
+  bDNA.cpp
+  bFile.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1287): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1486): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'void *const '
+  btBulletFile.cpp
+  Generating Code...
+  BulletFileLoader.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\BulletFileLoader_Debug.lib

@@ -1,0 +1,18 @@
+﻿Build started 6/27/2015 19:20:09.
+     1>Project "C:\Users\schulzcc\Documents\Personal\Creations\Games\bullet3-master\bin\INSTALL.vcxproj" on node 2 (Build target(s)).
+     1>PostBuildEvent:
+         setlocal
+         "C:\Program Files (x86)\CMake\bin\cmake.exe" -DBUILD_TYPE=Debug -P cmake_install.cmake
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+     1>Done Building Project "C:\Users\schulzcc\Documents\Personal\Creations\Games\bullet3-master\bin\INSTALL.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.41

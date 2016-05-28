@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Bullet2FileLoader.dir\Debug\) contains files shared from another project (Bullet2FileLoader.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/src/Bullet3Serialize/Bullet2FileLoader/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\src\Bullet3Serialize\Bullet2FileLoader\CMakeFiles\generate.stamp is up-to-date.
+  b3BulletFile.cpp
+  b3Chunk.cpp
+  b3DNA.cpp
+  b3File.cpp
+  b3Serializer.cpp
+  Generating Code...
+  Bullet2FileLoader.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\Bullet2FileLoader_Debug.lib

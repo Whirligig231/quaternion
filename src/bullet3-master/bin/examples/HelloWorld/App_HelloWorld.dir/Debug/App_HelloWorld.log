@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/HelloWorld/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\HelloWorld\CMakeFiles\generate.stamp is up-to-date.
+  HelloWorld.cpp
+  App_HelloWorld.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\HelloWorld\Debug\App_HelloWorld.exe
+  App_HelloWorld.vcxproj -> C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/HelloWorld/Debug/App_HelloWorld.pdb (Full PDB)

@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/test/gtest-1.7.0/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\test\gtest-1.7.0\CMakeFiles\generate.stamp is up-to-date.
+  gtest-all.cc
+  gtest.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\gtest_Debug.lib

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleEntries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PosixSharedMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\Win32SharedMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\GyroscopicDemo\GyroscopicSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Planar2D\Planar2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RollingFrictionDemo\RollingFrictionDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\FractureDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureDynamicsWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\CoordinateSystemDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Raycast\RaytestDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBullet\SerializeSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btBulletWorldImporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bChunk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bDNA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\btBulletFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ImportColladaSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\ImportObjExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\LoadMeshFromObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\ImportSTLSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ImportURDFSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\URDF2Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\btConvexConvexMprAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\MultiDofDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintPhysicsSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\tinyxml\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\pose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\joint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\printf_console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Utils\b3Clock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLExampleBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLGuiHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GraphingTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenParameterInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenProfileWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenTextureWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleEntries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\GyroscopicDemo\GyroscopicSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Planar2D\Planar2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RollingFrictionDemo\RollingFrictionDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\FractureDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\btFractureDynamicsWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\CoordinateSystemDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\landscapeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\TaruData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBullet\SerializeSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\BspLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\btMatrix4x4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ColladaGraphicsInstance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ImportColladaSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\ImportObjExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\LoadMeshFromObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\ImportSTLSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\LoadMeshFromSTL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ConvertRigidBodies2MultiBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ImportURDFSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\URDF2Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\urdf_samples.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\btConvexConvexMprAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\MultiDofDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintPhysicsSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\include\urdf_parser\urdf_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_exception\include\urdf_exception\exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\pose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\link.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\joint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\lexical_cast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\shared_ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\printf_console.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\boost_replacement\string_split.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Utils\b3Clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\EmptyBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\EmptyExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\ExampleBrowserInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLExampleBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLGuiHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GraphingTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenInternalData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenParameterInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenProfileWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\GwenTextureWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport" />
+    <None Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\premake4.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\build3\bullet.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{DCD4A7E8-F707-3CC1-B5E6-0AD60AFC7915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{BD541D1A-B53D-3B6E-BAA8-1F9B39CB5756}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

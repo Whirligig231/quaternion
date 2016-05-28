@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/BasicDemo/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\BasicDemo\CMakeFiles\generate.stamp is up-to-date.
+  BasicExample.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.cpp(142): warning C4316: 'BasicExample': object allocated on the heap may not be aligned 16
+  main.cpp
+  Generating Code...
+  App_BasicExample.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\BasicDemo\Debug\App_BasicExample.exe
+  App_BasicExample.vcxproj -> C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/BasicDemo/Debug/App_BasicExample.pdb (Full PDB)

@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/src/Bullet3Collision/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\src\Bullet3Collision\CMakeFiles\generate.stamp is up-to-date.
+  b3DynamicBvh.cpp
+  b3DynamicBvhBroadphase.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\Bullet3Collision/BroadPhaseCollision/b3DynamicBvh.h(968): warning C4101: 'resultNormal': unreferenced local variable
+  C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\Bullet3Collision\BroadPhaseCollision\b3DynamicBvhBroadphase.cpp(249): note: see reference to function template instantiation 'void b3DynamicBvh::rayTestInternal<BroadphaseRayTester>(const b3DbvtNode *,const b3Vector3 &,const b3Vector3 &,const b3Vector3 &,unsigned int [],b3Scalar,const b3Vector3 &,const b3Vector3 &,T &) const' being compiled
+          with
+          [
+              T=BroadphaseRayTester
+          ]
+  b3OverlappingPairCache.cpp
+  b3ConvexUtility.cpp
+  b3CpuNarrowPhase.cpp
+  Generating Code...
+  Bullet3Collision.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\Bullet3Collision_Debug.lib

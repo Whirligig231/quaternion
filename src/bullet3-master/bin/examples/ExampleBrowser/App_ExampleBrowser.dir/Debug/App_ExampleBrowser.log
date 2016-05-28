@@ -1,0 +1,232 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (App_ExampleBrowser.dir\Debug\) contains files shared from another project (App_ExampleBrowser.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ExampleBrowser/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\CMakeFiles\generate.stamp is up-to-date.
+  main.cpp
+  ExampleEntries.cpp
+  PhysicsServer.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\sharedmemory\../CommonInterfaces/CommonMultiBodyBase.h(333): warning C4316: 'btMultiBodyPoint2Point': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsServer.cpp(164): warning C4316: 'btJointFeedback': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsServer.cpp(225): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsServer.cpp(279): warning C4316: 'PhysicsServer': object allocated on the heap may not be aligned 16
+  PhysicsClient.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\sharedmemory\../CommonInterfaces/CommonMultiBodyBase.h(333): warning C4316: 'btMultiBodyPoint2Point': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\SharedMemory\PhysicsClient.cpp(282): warning C4316: 'PhysicsClient': object allocated on the heap may not be aligned 16
+  PosixSharedMemory.cpp
+  Win32SharedMemory.cpp
+  BasicExample.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\BasicDemo\BasicExample.cpp(142): warning C4316: 'BasicExample': object allocated on the heap may not be aligned 16
+  ForkLiftDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp(535): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp(538): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp(541): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp(544): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ForkLift\ForkLiftDemo.cpp(1214): warning C4316: 'ForkLiftDemo': object allocated on the heap may not be aligned 16
+  GyroscopicSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\GyroscopicDemo\GyroscopicSetup.cpp(137): warning C4316: 'GyroscopicSetup': object allocated on the heap may not be aligned 16
+  Planar2D.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Planar2D\Planar2D.cpp(337): warning C4316: 'Planar2D': object allocated on the heap may not be aligned 16
+  RollingFrictionDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RollingFrictionDemo\RollingFrictionDemo.cpp(281): warning C4316: 'RollingFrictionDemo': object allocated on the heap may not be aligned 16
+  FractureDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\FractureDemo\FractureDemo.cpp(408): warning C4316: 'FractureDemo': object allocated on the heap may not be aligned 16
+  btFractureBody.cpp
+  btFractureDynamicsWorld.cpp
+  MotorDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(166): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(167): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(168): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(206): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(207): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(341): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(359): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\DynamicControlDemo\MotorDemo.cpp(449): warning C4316: 'MotorDemo': object allocated on the heap may not be aligned 16
+  CoordinateSystemDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\CoordinateSystemDemo.cpp(159): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\renderingexamples\../CommonInterfaces/CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+  RaytracerSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(106): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(125): warning C4316: 'RaytracerInternalData': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(261): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(302): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(303): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(337): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(338): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(339): warning C4244: 'initializing': conversion from 'btScalar' to 'unsigned char', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RaytracerSetup.cpp(294): warning C4101: 'y': unreferenced local variable
+  RenderInstancingDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.cpp(56): warning C4244: 'argument': conversion from 'int' to 'b3Scalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\RenderingExamples\RenderInstancingDemo.cpp(96): warning C4244: 'argument': conversion from 'int' to 'b3Scalar', possible loss of data
+  BenchmarkDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.cpp(1276): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\commoninterfaces\CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Benchmarks\BenchmarkDemo.cpp(1278): warning C4316: 'BenchmarkDemo': object allocated on the heap may not be aligned 16
+  RaytestDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Raycast\RaytestDemo.cpp(74): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Raycast\RaytestDemo.cpp(252): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Raycast\RaytestDemo.cpp(331): warning C4316: 'RaytestDemo': object allocated on the heap may not be aligned 16
+  Generating Code...
+  Compiling...
+  SerializeSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBullet\SerializeSetup.cpp(116): warning C4316: 'SerializeSetup': object allocated on the heap may not be aligned 16
+  btWorldImporter.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(997): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1001): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1004): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1275): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1324): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1324): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1325): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1327): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1331): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1331): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1332): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4800: 'char': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletWorldImporter\btWorldImporter.cpp(1334): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+  btBulletWorldImporter.cpp
+  bChunk.cpp
+  bFile.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1287): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1305): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\Extras\Serialize\BulletFileLoader\bFile.cpp(1486): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'void *const '
+  bDNA.cpp
+  btBulletFile.cpp
+  BspConverter.cpp
+  BspLoader.cpp
+  ImportBspExample.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.cpp(288): warning C4099: 'CommonExampleInterface': type name first seen using 'class' now seen using 'struct'
+  c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\commoninterfaces\CommonExampleInterface.h(25): note: see declaration of 'CommonExampleInterface'
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportBsp\ImportBspExample.cpp(290): warning C4316: 'BspDemo': object allocated on the heap may not be aligned 16
+  ImportColladaSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\ImportColladaSetup.cpp(211): warning C4316: 'ImportColladaSetup': object allocated on the heap may not be aligned 16
+  LoadMeshFromCollada.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(47): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(59): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(60): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp(497): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  ImportObjExample.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportObjDemo\ImportObjExample.cpp(114): warning C4316: 'ImportObjSetup': object allocated on the heap may not be aligned 16
+  LoadMeshFromObj.cpp
+  Wavefront2GLInstanceGraphicsShape.cpp
+  ImportSTLSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportSTLDemo\ImportSTLSetup.cpp(106): warning C4316: 'ImportSTLSetup': object allocated on the heap may not be aligned 16
+  ImportURDFSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\../CommonInterfaces/CommonMultiBodyBase.h(333): warning C4316: 'btMultiBodyPoint2Point': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\ImportURDFSetup.cpp(300): warning C4316: 'ImportUrdfSetup': object allocated on the heap may not be aligned 16
+  URDF2Bullet.cpp
+  MyMultiBodyCreator.cpp
+  MyURDFImporter.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(155): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(214): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(215): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(216): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(217): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(238): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(239): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(240): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(269): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(270): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(303): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(305): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(318): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(329): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(613): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(615): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(635): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(646): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(856): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(857): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(888): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Importers\ImportURDFDemo\MyURDFImporter.cpp(889): warning C4244: 'argument': conversion from 'const double' to 'const btScalar', possible loss of data
+  Generating Code...
+  Compiling...
+  VoronoiFractureDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp(722): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp(729): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp(737): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\VoronoiFracture\VoronoiFractureDemo.cpp(829): warning C4316: 'VoronoiFractureDemo': object allocated on the heap may not be aligned 16
+  btConvexConvexMprAlgorithm.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(152): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(156): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\src\BulletCollision/NarrowPhaseCollision/btMprPenetration.h(157): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Hinge2Vehicle.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.cpp(573): warning C4101: 'm': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.cpp(574): warning C4101: 'i': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Vehicles\Hinge2Vehicle.cpp(1182): warning C4316: 'Hinge2Vehicle': object allocated on the heap may not be aligned 16
+  TestJointTorqueSetup.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\multibody\../CommonInterfaces/CommonMultiBodyBase.h(333): warning C4316: 'btMultiBodyPoint2Point': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.cpp(229): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.cpp(262): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\TestJointTorqueSetup.cpp(285): warning C4316: 'TestJointTorqueSetup': object allocated on the heap may not be aligned 16
+  MultiDofDemo.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\multibody\../CommonInterfaces/CommonMultiBodyBase.h(333): warning C4316: 'btMultiBodyPoint2Point': object allocated on the heap may not be aligned 16
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\MultiBody\MultiDofDemo.cpp(433): warning C4316: 'MultiDofDemo': object allocated on the heap may not be aligned 16
+  ConstraintDemo.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp(151): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp(171): warning C4244: 'argument': conversion from 'double' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp(202): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintDemo.cpp(884): warning C4316: 'AllConstraintDemo': object allocated on the heap may not be aligned 16
+  Dof6Spring2Setup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp(364): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp(404): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp(423): warning C4244: 'argument': conversion from 'int' to 'const btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\Dof6Spring2Setup.cpp(502): warning C4316: 'Dof6Spring2Setup': object allocated on the heap may not be aligned 16
+  ConstraintPhysicsSetup.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\Constraints\ConstraintPhysicsSetup.cpp(160): warning C4316: 'ConstraintPhysicsSetup': object allocated on the heap may not be aligned 16
+  tiny_obj_loader.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp(174): warning C4018: '>': signed/unsigned mismatch
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  pose.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+  model.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp(106): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\model.cpp(163): warning C4101: 'e': unreferenced local variable
+  link.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(132): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(183): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(196): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(315): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\link.cpp(347): warning C4101: 'e': unreferenced local variable
+  joint.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf/urdfdom_headers/urdf_model/include/urdf_model/pose.h(82): warning C4101: 'e': unreferenced local variable
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\administrator\dropbox\documents\personal\creations\games\bullet3-master\examples\thirdpartylibs\urdf\urdfdom_headers\urdf_model\include\urdf_model\color.h(78): warning C4101: 'e': unreferenced local variable
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ThirdPartyLibs\urdf\urdfdom\urdf_parser\src\joint.cpp(107): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  printf_console.cpp
+  string_split.cpp
+  b3Clock.cpp
+  Generating Code...
+  Compiling...
+  GL_ShapeDrawer.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(163): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(164): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(167): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(168): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(173): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GL_ShapeDrawer.cpp(174): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  OpenGLExampleBrowser.cpp
+  OpenGLGuiHelper.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\OpenGLGuiHelper.cpp(465): warning C4316: 'MyDebugDrawer': object allocated on the heap may not be aligned 16
+  GraphingTexture.cpp
+  GwenParameterInterface.cpp
+  GwenProfileWindow.cpp
+  GwenTextureWindow.cpp
+  gwenUserInterface.cpp
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.cpp(171): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\examples\ExampleBrowser\GwenGUISupport\gwenUserInterface.cpp(566): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
+  App_ExampleBrowser.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ExampleBrowser\Debug\App_ExampleBrowser.exe
+  App_ExampleBrowser.vcxproj -> C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/Debug/App_ExampleBrowser.pdb (Full PDB)

@@ -1,0 +1,77 @@
+﻿  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/examples/ThirdPartyLibs/Gwen/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\examples\ThirdPartyLibs\Gwen\CMakeFiles\generate.stamp is up-to-date.
+  Anim.cpp
+  BaseRender.cpp
+  DragAndDrop.cpp
+  events.cpp
+  Gwen.cpp
+  Hook.cpp
+  inputhandler.cpp
+  Skin.cpp
+  ToolTip.cpp
+  Utility.cpp
+  Base.cpp
+  Button.cpp
+  Canvas.cpp
+  CheckBox.cpp
+  ColorControls.cpp
+  ColorPicker.cpp
+  ComboBox.cpp
+  CrossSplitter.cpp
+  DockBase.cpp
+  DockedTabControl.cpp
+  Generating Code...
+  Compiling...
+  Dragger.cpp
+  GroupBox.cpp
+  HorizontalScrollBar.cpp
+  HorizontalSlider.cpp
+  HSVColorPicker.cpp
+  ImagePanel.cpp
+  Label.cpp
+  LabelClickable.cpp
+  ListBox.cpp
+  Menu.cpp
+  MenuItem.cpp
+  MenuStrip.cpp
+  NumericUpDown.cpp
+  PanelListPanel.cpp
+  ProgressBar.cpp
+  Properties.cpp
+  RadioButton.cpp
+  RadioButtonController.cpp
+  ResizableControl.cpp
+  Resizer.cpp
+  Generating Code...
+  Compiling...
+  RichLabel.cpp
+  ScrollBar.cpp
+  ScrollBarBar.cpp
+  ScrollBarButton.cpp
+  ScrollControl.cpp
+  Slider.cpp
+  SplitterBar.cpp
+  TabButton.cpp
+  TabControl.cpp
+  TabStrip.cpp
+  Text.cpp
+  TextBox.cpp
+  TextBoxNumeric.cpp
+  TreeControl.cpp
+  TreeNode.cpp
+  VerticalScrollBar.cpp
+  VerticalSlider.cpp
+  WindowControl.cpp
+  FileOpen.cpp
+  FileSave.cpp
+  Generating Code...
+  Compiling...
+  Query.cpp
+  Null.cpp
+  Windows.cpp
+  OpenGL_DebugFont.cpp
+  Generating Code...
+Null.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+Query.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+ImagePanel.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  gwen.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\gwen_Debug.lib

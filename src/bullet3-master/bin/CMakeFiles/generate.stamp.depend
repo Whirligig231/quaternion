@@ -1,0 +1,28 @@
+# CMake generation dependency list for this directory.
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/CMakeFiles/3.5.1/CMakeSystem.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/CMakeFiles/3.5.1/CMakeCCompiler.cmake
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeGenericSystem.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/WindowsPaths.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeLanguageInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC.cmake
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/CMakeFiles/3.5.1/CMakeRCCompiler.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeRCInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCXXInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeLanguageInformation.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/FindOpenGL.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.5/Modules/CMakeParseArguments.cmake
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/BulletConfig.cmake.in

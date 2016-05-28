@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (BulletXmlWorldImporter.dir\Debug\) contains files shared from another project (BulletXmlWorldImporter.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/Extras/Serialize/BulletXmlWorldImporter/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\Extras\Serialize\BulletXmlWorldImporter\CMakeFiles\generate.stamp is up-to-date.
+  btBulletXmlWorldImporter.cpp
+  string_split.cpp
+  tinyxml.cpp
+  tinystr.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  Generating Code...
+  BulletXmlWorldImporter.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\lib\Debug\BulletXmlWorldImporter_Debug.lib

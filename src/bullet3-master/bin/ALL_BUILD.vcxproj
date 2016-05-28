@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{19F3B02B-6CBF-384A-A733-227C0E8444E3}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCCompiler.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\BulletConfig.cmake.in;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCCompiler.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\BulletConfig.cmake.in;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCCompiler.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\BulletConfig.cmake.in;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master -BC:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin --check-stamp-file C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCCompiler.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.5\Modules\CMakeParseArguments.cmake;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\BulletConfig.cmake.in;C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\bullet3-master\bin\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/ZERO_CHECK.vcxproj">
+      <Project>63BCE0F0-9286-3A0E-9DCF-D4D175836335</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/BasicDemo/App_BasicExample.vcxproj">
+      <Project>390C07A7-B9E5-3921-9219-283939C07182</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ExampleBrowser/App_ExampleBrowser.vcxproj">
+      <Project>D21ECE67-373C-33FE-862D-84063FA597DC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/HelloWorld/App_HelloWorld.vcxproj">
+      <Project>D1C4CA85-2DB4-3CBB-9608-92D7B50D5D94</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Serialize/Bullet2FileLoader/Bullet2FileLoader.vcxproj">
+      <Project>386C968D-F30B-38A4-8DBF-DBE2A4306EF3</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Collision/Bullet3Collision.vcxproj">
+      <Project>1BE0BC1B-CCB5-3C20-ADDB-3CA580728C30</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Common/Bullet3Common.vcxproj">
+      <Project>1AD22634-319C-3E8E-96AA-048A49DC215C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Dynamics/Bullet3Dynamics.vcxproj">
+      <Project>DE8F7CBF-E6C7-3EFA-A0D1-CA240F492D44</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3Geometry/Bullet3Geometry.vcxproj">
+      <Project>0D637E76-F036-347C-A1EA-311480BE20B1</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/Bullet3OpenCL/Bullet3OpenCL_clew.vcxproj">
+      <Project>1DCDFADB-2929-3EB2-816A-A315EAE34EF6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletCollision/BulletCollision.vcxproj">
+      <Project>D249482F-984D-3702-B98E-236155105003</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletDynamics/BulletDynamics.vcxproj">
+      <Project>F6E68AFE-AFF3-3E03-9F4C-CADBE84FB493</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/Serialize/BulletFileLoader/BulletFileLoader.vcxproj">
+      <Project>07F4A10D-4886-3B0B-B2E5-502931140740</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/BulletSoftBody/BulletSoftBody.vcxproj">
+      <Project>2190AA83-E824-3211-98EA-92F12181CB74</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/Serialize/BulletWorldImporter/BulletWorldImporter.vcxproj">
+      <Project>681E1CDA-E90D-33D7-BF80-2525476B82CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/Serialize/BulletXmlWorldImporter/BulletXmlWorldImporter.vcxproj">
+      <Project>FA439098-AFA7-3CF2-A89B-D7707014E984</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/ConvexDecomposition/ConvexDecomposition.vcxproj">
+      <Project>0DA3CB61-F164-3793-B655-22E2226F4475</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/GIMPACTUtils/GIMPACTUtils.vcxproj">
+      <Project>A4AB8822-E9E2-322B-880C-E8DC2742F59A</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/Extras/HACD/HACD.vcxproj">
+      <Project>A15CCB94-A1B3-391F-875E-F0E8E74CF87C</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/src/LinearMath/LinearMath.vcxproj">
+      <Project>4BEE6DE3-4CA7-3FCF-8233-CB28FA59E6B7</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/OpenGLWindow/OpenGLWindow.vcxproj">
+      <Project>95ED887F-198A-359D-9A69-A1B833A948C0</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/test/gtest-1.7.0/gtest.vcxproj">
+      <Project>ED67827C-DE20-3219-B8E8-B252F3127AB8</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/bullet3-master/bin/examples/ThirdPartyLibs/Gwen/gwen.vcxproj">
+      <Project>C1D63695-CD17-34BA-BEC8-FFB8DF9BB3E5</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
