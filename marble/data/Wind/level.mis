@@ -1,5 +1,5 @@
 DifRaw("TestPlane", "test_plane", "Test");
-DifRaw("TestPlat", "test_plat", "Test");
+DtsRaw("WindProp", "wind_prop", "Wind");
 
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
@@ -76,7 +76,7 @@ new SimGroup(MissionGroup) {
       position = "0 10 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
-      dataBlock = "TestPlat";
+      dataBlock = "WindProp";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/Shared/sound/Shell.ogg";
