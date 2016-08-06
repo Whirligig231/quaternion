@@ -1,4 +1,4 @@
-//-------------------------- 8/5/2016 -- 16:21:10 -----
+//-------------------------- 8/5/2016 -- 17:48:56 -----
 MBExtender Init:
    Initializing memory interface
       SSE detected
@@ -12,7 +12,7 @@ MBExtender: Initializing Plugins, Stage 1:
    Initializing plugins\QuaternionPlugins.dll
 
 Processor Init:
-   Intel Pentium III, 2692 Mhz
+   Intel Pentium III, 2679 Mhz
    FPU detected
    MMX detected
    SSE detected
@@ -213,7 +213,6 @@ Engine initialized...
 Exporting server prefs...
 Loading compiled script marble/server/scripts/utilities.cs.
 Loading compiled script marble/server/scripts/timeline.cs.
-Compiling marble/server/scripts/audioProfiles.cs...
 Loading compiled script marble/server/scripts/audioProfiles.cs.
 Loading compiled script marble/server/scripts/camera.cs.
 Loading compiled script marble/server/scripts/markers.cs.
@@ -248,56 +247,87 @@ Loading compiled script marble/server/scripts/pads.cs.
 Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Loading compiled script marble/server/scripts/fans.cs.
 Attempting to re-link namespace Fan from StaticShapeData to Fan with non-zero refcount.
-*** LOADING MISSION: marble/data/Security/level.mis
+*** LOADING MISSION: marble/data/Wind/level.mis
 *** Stage 1 load
 *** Stage 2 load
-Executing marble/data/Security/level.mis.
-Importing Security: SecurityLevel (DTS) ...
-Warning: shape marble/data/Security/level.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Importing Security: Pillar (DTS) ...
-Importing Security: Dome (DTS) ...
-Importing Security: Tent (DTS) ...
-Importing Security: Lamp (DTS) ...
+Executing marble/data/Wind/level.mis.
+Importing Test: TestPlane (DIF) ...
+Importing Wind: WindProp (DTS) ...
+Warning: shape marble/data/Wind/wind_prop.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+MAKING MissionCleanup
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 *** Mission loaded
 onLoad: Unknown command.
-Connect request from: IPX:F7025AFF:C8026BFF9502:65403
-Connection established 1598
-CADD: 1599 local
-*** Sending mission load to client: marble/data/Security/level.mis
+Connect request from: IPX:20207D3B:0D0A2020206E:30565
+Connection established 1517
+CADD: 1518 local
+*** Sending mission load to client: marble/data/Wind/level.mis
 Mapping string: ServerMessage to index: 0
 Mapping string: MsgConnectionError to index: 1
 Mapping string: MsgLoadInfo to index: 2
 Mapping string: MsgLoadInfoDone to index: 3
 Mapping string: MsgClientJoin to index: 4
 Mapping string: MissionStartPhase1 to index: 5
-*** New Mission: marble/data/Security/level.mis
+*** New Mission: marble/data/Wind/level.mis
 *** Phase 1: Download Datablocks & Targets
 Mapping string: MissionStartPhase1Ack to index: 0
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 Warning: shape marble/data/Shared/ions/ionpack.dts collision detail 0 (Collision-1) bounds exceed that of shape.
 Warning: shape marble/data/Shared/ions/ioncell.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-Warning: shape marble/data/Security/level.dts collision detail 0 (Collision-1) bounds exceed that of shape.
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
+Warning: shape marble/data/Wind/wind_prop.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 Mapping string: MissionStartPhase2 to index: 6
 *** Phase 2: Download Ghost Objects
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 Mapping string: MissionStartPhase2Ack to index: 1
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
 Ghost Always objects received.
 Mapping string: MissionStartPhase3 to index: 7
 *** Phase 3: Mission Lighting
-marble/server/scripts/pads.cs (212): Unable to find object: '' attempting to call function 'getTransform'
 Mapping string: MissionStartPhase3Ack to index: 2
-New Marble: 1611
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+New Marble: 1526
 Error: bad shape file.
 State Start
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
 startGame: End the game first!
 Mapping string: MissionStart to index: 8
 Mapping string: GameStart to index: 9
@@ -309,69 +339,569 @@ pushDialog(): Invalid control: MainChatHud
 marble/client/scripts/playGui.cs (23): Unable to find object: 'ChatHud' attempting to call function 'attach'
 Error: bad shape file.
 Mapping string: Test Guy to index: 10
-Mapping string: triangle to index: 11
-Mapping string: num10 to index: 12
-Mapping string: yellow to index: 13
-Mapping string: red to index: 14
-Mapping string: square to index: 15
-Mapping string: num1 to index: 16
-Mapping string: blue to index: 17
-Mapping string: oval to index: 18
-Mapping string: num2 to index: 19
-Mapping string: rectangle to index: 20
-Mapping string: circle to index: 21
-Mapping string: green to index: 22
-Mapping string: purple to index: 23
-Mapping string: num5 to index: 24
-Mapping string: num25 to index: 25
 State Ready
 State go
 State Play
-Error: bad shape file.
-State Start
-State Ready
-State go
-Mapping string: on to index: 26
-State Play
-Mapping string: base to index: 27
-Mapping string: MsgItemPickup to index: 28
-Mapping string: You already found this Ion Pack! to index: 29
-DELETE EVERYTHING!
-1696
-1711
-1708
-1705
-1704
-1701
-1700
-MissionCleanup is 1596
-Loading compiled script marble/server/scripts/reset.cs.
-Executing marble/data/Lights/level.mis.
-Importing Lights: LightsLevel (DTS) ...
-Importing Lights: LightsLevelN (DTS) ...
-Importing Lights: LightsLevelE (DTS) ...
-Importing Lights: LightsLevelS (DTS) ...
-Importing Lights: LightsLevelW (DTS) ...
-Importing Lights: BpxBridge (DTS) ...
-Error: bad shape file.
-State Start
-New Marble: 1611
-Error: bad shape file.
-State Start
-marble/server/scripts/game.cs (611): Unable to find object: '1501' attempting to call function 'getTransform'
-marble/server/scripts/game.cs (611): Unable to find object: '1501' attempting to call function 'getTransform'
-State Ready
-State go
-State Play
-Error: bad shape file.
-State Start
-marble/server/scripts/game.cs (611): Unable to find object: '1501' attempting to call function 'getTransform'
-marble/server/scripts/game.cs (611): Unable to find object: '1501' attempting to call function 'getTransform'
-State Ready
-State go
-State Play
+keyboard0 input device unacquired.
+==>$testcheats=1;
+keyboard0 input device acquired.
+Mapping string: ToggleCamera to index: 3
+Mapping string: DropPlayerAtCamera to index: 4
+keyboard0 input device unacquired.
+keyboard0 input device acquired.
+Loading compiled script common/editor/cursors.cs.
+Loading compiled script common/editor/editor.bind.cs.
+Loading compiled script common/editor/ObjectBuilderGui.gui.
+Loading compiled script common/editor/EditorGui.gui.
+Loading compiled script common/editor/EditorGui.cs.
+Loading compiled script common/editor/WorldEditorSettingsDlg.gui.
+Missing file: common/editor/TerrainEditorVSettingsGui.gui!
+common/editor/EditorGui.cs (110): Unable to instantiate non-conobject class Terraformer.
+common/editor/EditorGui.cs (497): Unable to find object: 'ETerrainEditor' attempting to call function 'setAction'
+common/editor/EditorGui.cs (543): Unable to find object: 'ETerrainEditor' attempting to call function 'setBrushType'
+common/editor/EditorGui.cs (552): Unable to find object: 'ETerrainEditor' attempting to call function 'setBrushSize'
+common/editor/EditorGui.cs (231): Unable to find object: 'ETerrainEditor' attempting to call function 'attachTerrain'
+common/editor/EditorGui.cs (2094): Unable to find object: 'Heightfield_options' attempting to call function 'clear'
+common/editor/EditorGui.cs (2095): Unable to find object: 'Heightfield_options' attempting to call function 'setText'
+common/editor/EditorGui.cs (2096): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2097): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2098): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2099): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2100): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2101): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2102): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2103): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2104): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2105): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2106): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2107): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2108): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2109): Unable to find object: 'Heightfield_options' attempting to call function 'add'
+common/editor/EditorGui.cs (2074): Unable to find object: 'tab_terrainFile' attempting to call function 'reset'
+common/editor/EditorGui.cs (2075): Unable to find object: 'tab_fBm' attempting to call function 'reset'
+common/editor/EditorGui.cs (2076): Unable to find object: 'tab_RMF' attempting to call function 'reset'
+common/editor/EditorGui.cs (2077): Unable to find object: 'tab_canyon' attempting to call function 'reset'
+common/editor/EditorGui.cs (2078): Unable to find object: 'tab_smooth' attempting to call function 'reset'
+common/editor/EditorGui.cs (2079): Unable to find object: 'tab_smoothWater' attempting to call function 'reset'
+common/editor/EditorGui.cs (2080): Unable to find object: 'tab_smoothRidge' attempting to call function 'reset'
+common/editor/EditorGui.cs (2081): Unable to find object: 'tab_filter' attempting to call function 'reset'
+common/editor/EditorGui.cs (2082): Unable to find object: 'tab_turbulence' attempting to call function 'reset'
+common/editor/EditorGui.cs (2083): Unable to find object: 'tab_thermal' attempting to call function 'reset'
+common/editor/EditorGui.cs (2084): Unable to find object: 'tab_hydraulic' attempting to call function 'reset'
+common/editor/EditorGui.cs (2085): Unable to find object: 'tab_general' attempting to call function 'reset'
+common/editor/EditorGui.cs (2086): Unable to find object: 'tab_bitmap' attempting to call function 'reset'
+common/editor/EditorGui.cs (2087): Unable to find object: 'tab_Blend' attempting to call function 'reset'
+common/editor/EditorGui.cs (2088): Unable to find object: 'tab_sinus' attempting to call function 'reset'
+common/editor/EditorGui.cs (2113): Unable to find object: 'Terrain' attempting to call function 'getHeightfieldScript'
+common/editor/EditorGui.cs (2117): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2119): Unable to find object: 'Heightfield_operation' attempting to call function 'clear'
+common/editor/EditorGui.cs (2595): Unable to find object: 'tab_terrainFile' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2596): Unable to find object: 'tab_fBm' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2597): Unable to find object: 'tab_RMF' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2598): Unable to find object: 'tab_canyon' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2599): Unable to find object: 'tab_smooth' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2600): Unable to find object: 'tab_smoothWater' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2601): Unable to find object: 'tab_smoothRidge' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2602): Unable to find object: 'tab_filter' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2603): Unable to find object: 'tab_turbulence' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2604): Unable to find object: 'tab_thermal' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2605): Unable to find object: 'tab_hydraulic' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2606): Unable to find object: 'tab_general' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2607): Unable to find object: 'tab_bitmap' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2608): Unable to find object: 'tab_Blend' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2609): Unable to find object: 'tab_sinus' attempting to call function 'setVisible'
+common/editor/EditorGui.cs (2305): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2306): Unable to find object: 'Heightfield_operation' attempting to call function 'addRow'
+common/editor/EditorGui.cs (2309): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowNumById'
+common/editor/EditorGui.cs (2495): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2503): Unable to find object: 'Terrain' attempting to call function 'setHeightfieldScript'
+common/editor/EditorGui.cs (2121): Unable to find object: 'Heightfield_operation' attempting to call function 'setSelectedById'
+common/editor/EditorGui.cs (2074): Unable to find object: 'tab_terrainFile' attempting to call function 'reset'
+common/editor/EditorGui.cs (2075): Unable to find object: 'tab_fBm' attempting to call function 'reset'
+common/editor/EditorGui.cs (2076): Unable to find object: 'tab_RMF' attempting to call function 'reset'
+common/editor/EditorGui.cs (2077): Unable to find object: 'tab_canyon' attempting to call function 'reset'
+common/editor/EditorGui.cs (2078): Unable to find object: 'tab_smooth' attempting to call function 'reset'
+common/editor/EditorGui.cs (2079): Unable to find object: 'tab_smoothWater' attempting to call function 'reset'
+common/editor/EditorGui.cs (2080): Unable to find object: 'tab_smoothRidge' attempting to call function 'reset'
+common/editor/EditorGui.cs (2081): Unable to find object: 'tab_filter' attempting to call function 'reset'
+common/editor/EditorGui.cs (2082): Unable to find object: 'tab_turbulence' attempting to call function 'reset'
+common/editor/EditorGui.cs (2083): Unable to find object: 'tab_thermal' attempting to call function 'reset'
+common/editor/EditorGui.cs (2084): Unable to find object: 'tab_hydraulic' attempting to call function 'reset'
+common/editor/EditorGui.cs (2085): Unable to find object: 'tab_general' attempting to call function 'reset'
+common/editor/EditorGui.cs (2086): Unable to find object: 'tab_bitmap' attempting to call function 'reset'
+common/editor/EditorGui.cs (2087): Unable to find object: 'tab_Blend' attempting to call function 'reset'
+common/editor/EditorGui.cs (2088): Unable to find object: 'tab_sinus' attempting to call function 'reset'
+common/editor/EditorGui.cs (2426): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2428): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowId'
+common/editor/EditorGui.cs (2430): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowNumById'
+common/editor/EditorGui.cs (2441): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2444): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowId'
+common/editor/EditorGui.cs (2210): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowTextById'
+common/editor/EditorGui.cs (2212): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowNumById'
+Heightfield::eval:  
+common/editor/EditorGui.cs (2448): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowId'
+common/editor/EditorGui.cs (2210): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowTextById'
+common/editor/EditorGui.cs (2212): Unable to find object: 'Heightfield_operation' attempting to call function 'getRowNumById'
+Heightfield::eval:  
+common/editor/EditorGui.cs (2495): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (2503): Unable to find object: 'Terrain' attempting to call function 'setHeightfieldScript'
+common/editor/EditorGui.cs (2433): Unable to find object: 'Terraformer' attempting to call function 'previewScaled'
+common/editor/EditorGui.cs (1361): Unable to find object: 'Texture_operation_menu' attempting to call function 'clear'
+common/editor/EditorGui.cs (1362): Unable to find object: 'Texture_operation_menu' attempting to call function 'setText'
+common/editor/EditorGui.cs (1363): Unable to find object: 'Texture_operation_menu' attempting to call function 'add'
+common/editor/EditorGui.cs (1364): Unable to find object: 'Texture_operation_menu' attempting to call function 'add'
+common/editor/EditorGui.cs (1365): Unable to find object: 'Texture_operation_menu' attempting to call function 'add'
+common/editor/EditorGui.cs (1366): Unable to find object: 'Texture_operation_menu' attempting to call function 'add'
+common/editor/EditorGui.cs (1368): Unable to find object: 'Heightfield_operation' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (1371): Unable to find object: 'HeightfieldPreview' attempting to call function 'getValue'
+common/editor/EditorGui.cs (1371): Unable to find object: 'TexturePreview' attempting to call function 'setValue'
+common/editor/EditorGui.cs (1372): Unable to find object: 'Terrain' attempting to call function 'getTextureScript'
+common/editor/EditorGui.cs (1897): Unable to find object: 'Texture_material' attempting to call function 'clear'
+common/editor/EditorGui.cs (1898): Unable to find object: 'Texture_operation' attempting to call function 'clear'
+common/editor/EditorGui.cs (1846): Unable to find object: 'Texture_material' attempting to call function 'addRow'
+common/editor/EditorGui.cs (1877): Unable to find object: 'Texture_material' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (1885): Unable to find object: 'Terrain' attempting to call function 'setTextureScript'
+common/editor/EditorGui.cs (1909): Unable to find object: 'Texture_material' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (1936): Unable to find object: 'Texture_material' attempting to call function 'getRowId'
+common/editor/EditorGui.cs (1936): Unable to find object: 'Texture_material' attempting to call function 'setSelectedById'
+common/editor/EditorGui.cs (1376): Unable to find object: 'Texture_material' attempting to call function 'rowCount'
+common/editor/EditorGui.cs (1378): Unable to find object: 'Texture_operation' attempting to call function 'clear'
+Obj: AudioDefault3d - 
+Obj: AudioClose3d - 
+Obj: AudioClosest3d - 
+Obj: AudioDefaultLooping3d - 
+Obj: AudioCloseLooping3d - 
+Obj: AudioClosestLooping3d - 
+Obj: Quieter3D - 
+Obj: Audio2D - 
+Obj: AudioLooping2D - 
+Obj: spawnSfx - 
+Obj: pickupSfx - 
+Obj: HelpDingSfx - 
+Obj: ReadyVoiceSfx - 
+Obj: SetVoiceSfx - 
+Obj: GetRollingVoiceSfx - 
+Obj: WonRaceSfx - 
+Obj: MissingGemsSfx - 
+Obj: jumpSfx - 
+Obj: bounceSfx - 
+Obj: PenaltyVoiceSfx - 
+Obj: OutOfBoundsVoiceSfx - 
+Obj: DestroyedVoiceSfx - 
+Obj: Observer - 
+Obj: InBoundsTrigger - 
+Obj: OutOfBoundsTrigger - 
+Obj: HelpTrigger - 
+Obj: SkyShape - 
+Obj: BounceParticle - 
+Obj: MarbleBounceEmitter - 
+Obj: TrailParticle - 
+Obj: MarbleTrailEmitter - 
+Obj: SuperJumpParticle - 
+Obj: MarbleSuperJumpEmitter - 
+Obj: SuperSpeedParticle - 
+Obj: MarbleSuperSpeedEmitter - 
+Obj: Bounce1Sfx - 
+Obj: Bounce2Sfx - 
+Obj: Bounce3Sfx - 
+Obj: Bounce4Sfx - 
+Obj: RollingHardSfx - 
+Obj: SlippingSfx - 
+Obj: DefaultMarble - 
+Obj: ExplodingBall - Effects
+Obj: BallDieSfx - 
+Obj: BallExplodeParticle - 
+Obj: BallExplodeEmitter - 
+Obj: BallNode - 
+Obj: FireWorkSmoke - 
+Obj: FireWorkSmokeEmitter - 
+Obj: RedFireWorkSpark - 
+Obj: RedFireWorkSparkEmitter - 
+Obj: RedFireWorkSparkExplosion - 
+Obj: RedFireWorkTrail - 
+Obj: RedFireWorkTrailEmitter - 
+Obj: RedFireWork - 
+Obj: RedFireWorkExplosion - 
+Obj: BlueFireWorkSpark - 
+Obj: BlueFireWorkSparkEmitter - 
+Obj: BlueFireWorkSparkExplosion - 
+Obj: BlueFireWorkTrail - 
+Obj: BlueFireWorkTrailEmitter - 
+Obj: BlueFireWork - 
+Obj: BlueFireWorkExplosion - 
+Obj: FireWorkNode - 
+Obj: GotCell1Sfx - 
+Obj: GotCell2Sfx - 
+Obj: GotCell3Sfx - 
+Obj: GotCell4Sfx - 
+Obj: GotPackSfx - 
+Obj: IonPackItem - Ions
+Obj: IonParticle - 
+Obj: IonParticleEmitter - 
+Obj: IonParticleEmitter2 - 
+Obj: IonNode - 
+Obj: IonCellItem - Ions
+Obj: ButtonPressSfx - 
+Obj: PressSwitch - Switches
+Obj: BallSwitch - Switches
+Obj: BallSwitchSmall - Switches
+Obj: teleOnSfx - 
+Obj: teleOffSfx - 
+Obj: TeleParticle - 
+Obj: TeleParticleEmitter - 
+Obj: TeleExplodeParticle - 
+Obj: TeleExplodeEmitter - 
+Obj: TeleNode - 
+Obj: StartPad - Pads
+Obj: EndPad - Pads
+Obj: EndPadFoot - Pads
+Obj: Fan - Fans
+Obj: TestPlane - Level - Test
+Obj: WindProp - Level - Wind
+Obj: FunBox - Level - Lights
+Loading compiled script common/editor/editorRender.cs.
 popDialog(): Invalid control: MainChatHud
-CDROP: 1599 IPX:F7025AFF:C8026BFF9502:65403
+common/editor/EditorGui.cs (652): Unable to find object: 'ETerrainEditor' attempting to call function 'setVisible'
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1519) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1519) InteriorInstance -> SceneObject -> NetObject -> SimObject
+common/editor/EditorGui.cs (2815): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (26): Unknown command getSyncId.
+  Object (1521) Sun -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1521) Sun -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1521) Sun -> NetObject -> SimObject
+common/editor/EditorGui.cs (2815): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1522) Sky -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1522) Sky -> SceneObject -> NetObject -> SimObject
+common/editor/EditorGui.cs (2815): Unknown command setActive.
+  Object (1522) Sky -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (26): Unknown command getSyncId.
+  Object (1523) MissionArea -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1523) MissionArea -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1523) MissionArea -> NetObject -> SimObject
+common/editor/EditorGui.cs (2815): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+pushDialog(): Invalid control: MainChatHud
+marble/client/scripts/playGui.cs (23): Unable to find object: 'ChatHud' attempting to call function 'attach'
+Error: bad shape file.
+common/editor/EditorGui.cs (2826): Unable to find object: 'MessageHud' attempting to call function 'close'
+common/editor/EditorGui.cs (0): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (26): Unknown command getSyncId.
+  Object (1521) Sun -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1521) Sun -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1521) Sun -> NetObject -> SimObject
+common/editor/EditorGui.cs (0): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+common/editor/EditorGui.cs (0): Unknown command setActive.
+  Object (1522) Sky -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (26): Unknown command getSyncId.
+  Object (1523) MissionArea -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command getTransformA.
+  Object (1523) MissionArea -> NetObject -> SimObject
+marble/server/scripts/physics.cs (29): Unknown command setTransformA.
+  Object (1523) MissionArea -> NetObject -> SimObject
+common/editor/EditorGui.cs (0): Unknown command setActive.
+  Object (1503) InteriorInstance -> SceneObject -> NetObject -> SimObject
+keyboard0 input device unacquired.
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>btCreateParentMovement(1505, 1507);
+Invalid body handle!
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>btCreateParentMovement(1505.btBody, 1507.btBody);
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+State Play
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (611): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+popDialog(): Invalid control: MainChatHud
+CDROP: 1518 IPX:20207D3B:0D0A2020206E:30565
 Exporting server prefs...
 Exporting server prefs...
 Exporting client prefs

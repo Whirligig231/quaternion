@@ -1,6 +1,48 @@
 DifRaw("TestPlane", "test_plane", "Test");
 DtsRaw("WindProp", "wind_prop", "Wind");
 
+datablock StaticShapeData(FunBox) {
+	category = "Level - Lights";
+
+	shapeFile = "~/data/Lights/box.dts";
+	
+	btShapeType = "box";
+	btHalfExtent = "4 4 1";
+	btMass = 0.3;
+	btFriction = 1.1;
+	btRestitution = 0.7;
+	btLinearDamping = 1;
+	btAngularDamping = 0.7;
+};
+
+function FunBox::onAdd(%this, %obj) {
+	Parent::onAdd(%this, %obj);
+	
+	%obj.setScale("4 4 1");
+	%obj.preferredPosition = %obj.position;
+	%obj.preferredRotation = getWords(%obj.rotation, 0, 2) SPC (getWord(%obj.rotation, 3) * 3.14159265358979 / 180);
+}
+
+function FunBox::onFrame(%this, %obj, %timeDelta) {
+	Parent::onFrame(%this, %obj, %timeDelta);
+	
+	%linearElasticity = 30;
+	%angularElasticity = 300;
+	
+	%vec1 = MatrixPos(%obj.getTransform());
+	%vec2 = %obj.preferredPosition;
+	%diff = VectorSub(%vec2, %vec1);
+	%obj.applyForce(VectorScale(%diff, %linearElasticity));
+	
+	%rot1 = MatrixRot(%obj.getTransform());
+	%mat1 = "0 0 0" SPC %rot1;
+	%mat2 = "0 0 0" SPC %obj.preferredRotation;
+	%matdiv = MatrixDivide(%mat2, %mat1);
+	%rotdiff = VectorScale(getWords(%matdiv, 3, 5), getWord(%matdiv, 6));
+
+	%obj.applyTorque(VectorScale(%rotdiff, -%angularElasticity));
+}
+
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
@@ -73,10 +115,64 @@ new SimGroup(MissionGroup) {
       dataBlock = "TestPlane";
    };
    new StaticShape() {
-      position = "0 10 0";
-      rotation = "1 0 0 0";
+      position = "0 10 22";
+      rotation = "1 0 0 180";
       scale = "1 1 1";
       dataBlock = "WindProp";
+   };
+   new StaticShape() {
+      position = "0 10 10";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 10 20";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 15 15";
+      rotation = "1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 5 15";
+      rotation = "1 0 0 90";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "5 10 15";
+      rotation = "0 1 0 90";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "-5 10 15";
+      rotation = "0 1 0 90";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 20 10";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 29 10";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
+   };
+   new StaticShape() {
+      position = "0 37 10";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "FunBox";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/Shared/sound/Shell.ogg";

@@ -60,6 +60,7 @@ function GameBaseData::onAdd(%this, %obj) {
 		$btGlobalBodyIndex[%obj.btBody] = %obj;
 		btSetFriction(%obj.btBody, %this.btFriction);
 		btSetRestitution(%obj.btBody, %this.btRestitution);
+		btSetLinearDamping(%obj.btBody, %this.btLinearDamping);
 		btSetAngularDamping(%obj.btBody, %this.btAngularDamping);
 		
 		if (isObject(EditorGui)) {
