@@ -50,7 +50,7 @@ function initServer()
    $Server::TestCheats = true;
 
    // Specify where the mission files are.
-   $Server::MissionFileSpec = "*/data/*/level.mis";
+   $Server::MissionFileSpec = "*/data/*/*.mis";
 
    // The common module provides the basic server functionality
    initBaseServer();

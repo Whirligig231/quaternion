@@ -1,0 +1,100 @@
+DifRaw("TestPlane", "test_plane", "Test");
+
+datablock AudioProfile(BellSfx) {
+	filename    = "~/data/Blast/bell.wav";
+	description = AudioDefault3d;
+	preload = true;
+};
+
+datablock StaticShapeData(Bell) {
+	category = "Level - Blast";
+
+	shapeFile = "~/data/Blast/bell.dts";
+};
+
+function Bell::onActivate(%this, %obj) {
+	%sound = fmodPlay(BellSfx);
+	fmodSetPosition(%sound, MatrixPos(%obj.getTransform()));
+	%obj.stopThread(0);
+    %obj.playThread(0, "clang");
+}
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         artist = "Alex Swanson";
+         type = "Beginner";
+         name = "Learning to Roll";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+         level = "20";
+         goldTime = "4750";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      SkySolidColor = "0.900000 0.900000 0.900000 1.000000";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      materialList = "~/data/Shared/skies/sky_day.dml";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      noRenderBans = "1";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+         locked = "true";
+   };
+   new StaticShape() {
+      position = "22.8777 50.4671 0.199999";
+      rotation = "1 0 0 0";
+      scale = "250 250 250";
+      dataBlock = "SkyShape";
+         locked = "0";
+         syncId = "-1";
+   };
+   new Sun() {
+      direction = "0.544508 0.439467 -0.714409";
+      color = "0.200000 0.200000 0.200000 1.000000";
+      ambient = "0.800000 0.800000 0.800000 1.000000";
+   };
+   new StaticShape(StartPoint) {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "StartPad";
+   };
+   new StaticShape() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "TestPlane";
+   };
+   new StaticShape() {
+      position = "5 0 2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Bell";
+   };
+};
+//--- OBJECT WRITE END ---
