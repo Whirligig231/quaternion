@@ -173,6 +173,8 @@ function onFrame(%timeDelta) {
     }
 }
 
+$globalFrameEvents = 0;
+
 function PlayGui::stopTimer(%this)
 {
    $PlayTimerActive = false;

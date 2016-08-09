@@ -441,6 +441,7 @@ datablock StaticShapeData(ExplodingBall)
 
 function ExplodingBall::onAdd(%this, %obj) {
     Parent::onAdd(%this, %obj);
+	%obj.setSkinName(p().getSkinName());
     %obj.startFade(1000, 2500, true);
     %obj.schedule(3500, delete);
 }

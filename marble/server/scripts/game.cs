@@ -45,6 +45,8 @@ function onServerCreated()
    // game elapsed time.
    $Game::StartTime = 0;
    
+   $globalFrameEvents = 0;
+   
    exec("./utilities.cs");
    
    exec("./timeline.cs");
@@ -72,6 +74,7 @@ function onServerCreated()
    exec("./switches.cs");
    exec("./pads.cs");
    exec("./fans.cs");
+   exec("./quanta.cs");
 
    // Keep track of when the game started
    $Game::StartTime = $Sim::Time;

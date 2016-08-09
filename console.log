@@ -1,4 +1,4 @@
-//-------------------------- 8/8/2016 -- 00:33:15 -----
+//-------------------------- 8/9/2016 -- 14:58:11 -----
 MBExtender Init:
    Initializing memory interface
       SSE detected
@@ -12,7 +12,7 @@ MBExtender: Initializing Plugins, Stage 1:
    Initializing plugins\QuaternionPlugins.dll
 
 Processor Init:
-   Intel Pentium III, 2683 Mhz
+   Intel Pentium III, 2695 Mhz
    FPU detected
    MMX detected
    SSE detected
@@ -83,3 +83,147 @@ Loading compiled script common/client/mission.cs.
 Loading compiled script common/client/missionDownload.cs.
 Loading compiled script common/client/actionMap.cs.
 Loading compiled script common/editor/editor.cs.
+Video Init:
+   Accelerated OpenGL display device detected.
+   Accelerated D3D device detected.
+   Voodoo 2 display device not detected.
+
+Activating the OpenGL display device...
+Activating the OpenGL display device...
+Setting screen mode to 1024x768x32 (w)...
+Creating a new window...
+Acquiring a new device context...
+Pixel format set:
+  32 color bits, 24 depth bits, 8 stencil bits
+Creating a new rendering context...
+Making the new rendering context current...
+OpenGL driver information:
+  Vendor: NVIDIA Corporation
+  Renderer: Quadro K1000M/PCIe/SSE2
+  Version: 4.5.0 NVIDIA 354.45
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 4)
+  EXT_compiled_vertex_array
+  NV_vertex_array_range
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16.000000)
+  WGL_EXT_swap_control
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  3DFX_texture_compression_FXT1
+  NPatch tessellation
+
+Loading compiled script common/ui/defaultProfiles.cs.
+Loading compiled script common/ui/GuiEditorGui.gui.
+Loading compiled script common/ui/ConsoleDlg.gui.
+Loading compiled script common/ui/InspectDlg.gui.
+Loading compiled script common/ui/InspectAddFieldDlg.gui.
+Loading compiled script common/ui/LoadFileDlg.gui.
+Loading compiled script common/ui/SaveFileDlg.gui.
+Loading compiled script common/ui/MessageBoxOkDlg.gui.
+Loading compiled script common/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script common/ui/MessageBoxOKCancelDlg.gui.
+Loading compiled script common/ui/MessagePopupDlg.gui.
+Loading compiled script common/ui/HelpDlg.gui.
+Missing file: common/ui/RecordingsDlg.gui!
+Loading compiled script common/client/metrics.cs.
+Loading compiled script common/ui/FrameOverlayGui.gui.
+Loading compiled script common/client/messageBox.cs.
+Loading compiled script common/client/screenshot.cs.
+Loading compiled script common/client/cursor.cs.
+Loading compiled script common/client/help.cs.
+Missing file: common/client/recordings.cs!
+
+OpenAL Driver Init:
+OpenAL
+   Vendor: Creative Labs Inc.
+   Version: OpenAL 1.0
+   Renderer: Software
+   Extensions: EAX 2.0, EAX 3.0, EAX Unified, and EAX-AC3
+common/client/audio.cs (30): Unable to find function fmodListenerf
+
+Loading compiled script marble/client/scripts/audioProfiles.cs.
+Loading compiled script marble/client/ui/defaultGameProfiles.cs.
+Loading compiled script marble/client/ui/PlayGui.gui.
+Loading compiled script marble/client/ui/ignitionGui.gui.
+Loading compiled script marble/client/ui/ignitionStatusGui.gui.
+Loading compiled script marble/client/ui/presentsGui.gui.
+Loading compiled script marble/client/ui/productionGui.gui.
+Loading compiled script marble/client/ui/titleGui.gui.
+Loading compiled script marble/client/ui/playMissionGui.gui.
+Loading compiled script marble/client/ui/mainMenuGui.gui.
+Loading compiled script marble/client/ui/aboutDlg.gui.
+Loading compiled script marble/client/ui/startMissionGui.gui.
+Loading compiled script marble/client/ui/chooseGui.gui.
+Loading compiled script marble/client/ui/joinServerGui.gui.
+Loading compiled script marble/client/ui/endGameGui.gui.
+Missing file: marble/client/ui/upsell/UpsellGui.gui!
+Loading compiled script marble/client/ui/loadingGui.gui.
+Loading compiled script marble/client/ui/optionsDlg.gui.
+Loading compiled script marble/client/ui/remapDlg.gui.
+Loading compiled script marble/client/ui/MOTDGui.gui.
+Loading compiled script marble/client/ui/EnterNameDlg.gui.
+Loading compiled script marble/client/ui/HelpCreditsGui.gui.
+Loading compiled script marble/client/ui/ExitGameDlg.gui.
+Loading compiled script marble/client/ui/MiniShotGui.gui.
+Loading compiled script marble/client/scripts/math.cs.
+Loading compiled script marble/client/scripts/client.cs.
+Loading compiled script marble/client/scripts/helpCredits.cs.
+Loading compiled script marble/client/scripts/missionDownload.cs.
+Loading compiled script marble/client/scripts/serverConnection.cs.
+Missing file: marble/client/scripts/playerList.cs!
+Loading compiled script marble/client/scripts/loadingGui.cs.
+Loading compiled script marble/client/scripts/optionsDlg.cs.
+Loading compiled script marble/client/scripts/chatHud.cs.
+Loading compiled script marble/client/scripts/messageHud.cs.
+Loading compiled script marble/client/scripts/playGui.cs.
+Loading compiled script marble/client/scripts/centerPrint.cs.
+Loading compiled script marble/client/scripts/game.cs.
+Loading compiled script marble/client/scripts/version.cs.
+Loading compiled script marble/client/scripts/demo.cs.
+Loading compiled script marble/client/scripts/default.bind.cs.
+Loading compiled script marble/client/config.cs.
+%missionInfoObject = new ScriptObject() { artist = "Alex Swanson"; type = "Beginner"; name = "Learning to Roll"; desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; level = "4"; goldTime = "4750"; };
+%missionInfoObject = new ScriptObject() { artist = "Alex Swanson"; type = "Beginner"; name = "Learning to Roll"; desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; level = "0"; goldTime = "4750"; };
+%missionInfoObject = new ScriptObject() { startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; level = "2"; artist = "Alex Swanson"; type = "Beginner"; goldTime = "4750"; name = "Learning to Roll"; desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; };
+%missionInfoObject = new ScriptObject() { startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; type = "Beginner"; level = "1"; name = "Learning to Roll"; artist = "Alex Swanson"; goldTime = "4750"; };
+%missionInfoObject = new ScriptObject() { desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; goldTime = "4750"; level = "20"; name = "Learning to Roll"; type = "Beginner"; artist = "Alex Swanson"; startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; };
+%missionInfoObject = new ScriptObject() { level = "3"; name = "Learning to Roll"; type = "Beginner"; goldTime = "4750"; startHelpText = "Press <func:bind moveforward> to roll the marble forward!"; artist = "Alex Swanson"; desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level."; };
+Found mission #4: marble/data/Wind/level.mis
+Found mission #0: marble/data/Test/level.mis
+Found mission #2: marble/data/Security/level.mis
+Found mission #1: marble/data/Lights/level.mis
+Found mission #20: marble/data/Blast/blast.mis
+Found mission #3: marble/data/Balls/level.mis
+Set::getObject index out of range.
+Set::getObject index out of range.
+marble/client/ui/playMissionGui.gui (292): Unable to find object: 'PM_NoQualOverlay' attempting to call function 'setVisible'
+marble/client/ui/playMissionGui.gui (293): Unable to find object: 'PM_NoQualText' attempting to call function 'setText'
+marble/client/ui/playMissionGui.gui (301): Unable to find object: 'PM_level_fgnd' attempting to call function 'setText'
+marble/client/ui/playMissionGui.gui (302): Unable to find object: 'PM_level_bkgnd' attempting to call function 'setText'
+marble/client/ui/playMissionGui.gui (318): Unable to find object: 'PM_description' attempting to call function 'setValue'
+marble/client/ui/playMissionGui.gui (320): Unable to find object: 'PM_preview' attempting to call function 'setBitmap'
+marble/client/ui/playMissionGui.gui (323): Unable to find object: 'PM_next' attempting to call function 'setActive'
+marble/client/ui/playMissionGui.gui (330): Unable to find object: 'PM_prev' attempting to call function 'setActive'
+Invalid sound handle!
+Engine initialized...
+Exporting client prefs
+Exporting save data
+Exporting server prefs
+marble/main.cs (120): Unable to find function BanList::export
+Exporting client prefs
+Exporting server prefs
+common/main.cs (147): Unable to find function BanList::export
+MBExtender: Unloading Plugins:
+   Unloading plugins\ExternalConsole.dll
+   Unloading plugins\FrameRateUnlock.dll
+   Unloading plugins\QuaternionPlugins.dll
+Shutting down the OpenGL display device...
+Making the GL rendering context not current...
+Deleting the GL rendering context...
+Releasing the device context...

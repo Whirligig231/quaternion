@@ -129,17 +129,32 @@ function MarbleData::onFrame(%this, %obj, %timeDelta) {
 		
 		%obj.rollSound = fmodPlay(%this.rollHardSound);
 		fmodSetVolume(%obj.rollSound, 0);
+		%obj.slipSound = fmodPlay(%this.slipSound);
+		fmodSetVolume(%obj.slipSound, 0);
 	}
 	else if (VectorLen(%nor) <= 0.001 && VectorLen(%obj.prevNor) > 0.001) {
 		fmodStop(%obj.rollSound);
+		fmodStop(%obj.slipSound);
 	}
 	%obj.prevNor = %nor;
 	%obj.prevVel = %vel;
 	
 	if (VectorLen(%nor) > 0.001) {
-		fmodSetFrequency(%obj.rollSound, VectorLen(btGetAngularVelocity(%obj.btBody))/50);
-		fmodSetVolume(%obj.rollSound, mPow(VectorLen(btGetAngularVelocity(%obj.btBody))/50,2));
+		// Compute the deviation
+		%expectedVel = VectorScale(VectorCross(btGetAngularVelocity(%obj.btBody), %nor), 0.2);
+		%deviation = VectorSub(%expectedVel, btGetVelocity(%obj.btBody));
+		%projDeviation = VectorRej(%deviation, %nor);
+		%projVelocity = VectorRej(btGetVelocity(%obj.btBody), %nor);
+		%slipSpeed = VectorLen(%projDeviation);
+		%rollSpeed = VectorLen(%projVelocity);
+
+		fmodSetFrequency(%obj.rollSound, %rollSpeed / 10);
+		fmodSetVolume(%obj.rollSound, mPow(%rollSpeed / 10, 2));
 		fmodSetPosition(%obj.rollSound, MatrixPos(btGetTransform(%obj.btBody)));
+		
+		fmodSetFrequency(%obj.slipSound, 1.5);
+		fmodSetVolume(%obj.slipSound, mPow(%slipSpeed / 20, 2));
+		fmodSetPosition(%obj.slipSound, MatrixPos(btGetTransform(%obj.btBody)));
 	}
 
 	if (($mvTriggerCount2 % 2) && !%obj.jumpDisabled && LocalClientConnection.getControlObject().getID() == %obj.getID()) {

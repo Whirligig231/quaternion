@@ -160,7 +160,7 @@ function playNextDemo()
 {
    if($NumDemoFiles != 0)
    {
-      playDemo($DemoFile[$NextDemoFile]);
+      //playDemo($DemoFile[$NextDemoFile]);
       $NextDemoFile++;
       if($NextDemoFile >= $NumDemoFiles)
          $NextDemoFile = 0;
