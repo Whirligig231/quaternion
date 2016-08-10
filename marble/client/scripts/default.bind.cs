@@ -261,6 +261,7 @@ moveMap.bind(keyboard, right, turnRight);
 function mouseFire(%val)
 {
    $mvTriggerCount0++;
+   $mouseFiring = %val;
 }
 
 function altTrigger(%val)

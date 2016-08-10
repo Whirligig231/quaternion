@@ -1,4 +1,4 @@
-//-------------------------- 8/9/2016 -- 14:58:11 -----
+//-------------------------- 8/9/2016 -- 22:34:05 -----
 MBExtender Init:
    Initializing memory interface
       SSE detected
@@ -12,7 +12,7 @@ MBExtender: Initializing Plugins, Stage 1:
    Initializing plugins\QuaternionPlugins.dll
 
 Processor Init:
-   Intel Pentium III, 2695 Mhz
+   Intel Pentium III, 2697 Mhz
    FPU detected
    MMX detected
    SSE detected
@@ -212,6 +212,362 @@ marble/client/ui/playMissionGui.gui (323): Unable to find object: 'PM_next' atte
 marble/client/ui/playMissionGui.gui (330): Unable to find object: 'PM_prev' attempting to call function 'setActive'
 Invalid sound handle!
 Engine initialized...
+Exporting server prefs...
+Loading compiled script marble/server/scripts/utilities.cs.
+Loading compiled script marble/server/scripts/timeline.cs.
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+marble/server/scripts/markers.cs (0): preload failed for WayPointMarker: ShapeBaseData: Couldn't load shape "marble/data/shapes/markers/octahedron.dts".
+marble/server/scripts/markers.cs (0): preload failed for SpawnSphereMarker: ShapeBaseData: Couldn't load shape "marble/data/shapes/markers/octahedron.dts".
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/physics.cs.
+Loading compiled script marble/server/scripts/models.cs.
+Loading compiled script marble/server/scripts/sky.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) velocityVariance > ejectionVelocity
+ParticleEmitterData(MarbleSuperBounceEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleSuperBounceEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleSuperBounceEmitter.
+ParticleEmitterData(MarbleShockAbsorberEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleShockAbsorberEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleShockAbsorberEmitter.
+ParticleEmitterData(MarbleHelicopterEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleHelicopterEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleHelicopterEmitter.
+ParticleEmitterData(BallExplodeEmitter) period < 1 ms
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/ions.cs.
+Warning: shape marble/data/Shared/ions/ionpack.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Shared/ions/ioncell.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/switches.cs.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fans.cs.
+Attempting to re-link namespace Fan from StaticShapeData to Fan with non-zero refcount.
+Loading compiled script marble/server/scripts/quanta.cs.
+*** LOADING MISSION: marble/data/Blast/blast.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/Blast/blast.mis.
+Importing Blast: Arch (DTS) ...
+Warning: shape marble/data/Blast/arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Importing Blast: Pillar (DTS) ...
+Importing Blast: Pillar2 (DTS) ...
+Importing Blast: BlastMap (DIF) ...
+Importing Blast: BlastGiver (DTS) ...
+Warning: shape marble/data/Blast/blastgiver.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+MAKING MissionCleanup
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+*** Mission loaded
+onLoad: Unknown command.
+Connect request from: IPX:20225069:6C6C6172223B:2573
+Connection established 1572
+CADD: 1573 local
+*** Sending mission load to client: marble/data/Blast/blast.mis
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgLoadInfo to index: 2
+Mapping string: MsgLoadInfoDone to index: 3
+Mapping string: MsgClientJoin to index: 4
+Mapping string: MissionStartPhase1 to index: 5
+*** New Mission: marble/data/Blast/blast.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 0
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Shared/ions/ionpack.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Shared/ions/ioncell.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Blast/arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Blast/blastgiver.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Mapping string: MissionStartPhase2 to index: 6
+*** Phase 2: Download Ghost Objects
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Mapping string: MissionStartPhase2Ack to index: 1
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1506) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 7
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 2
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+New Marble: 1581
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+startGame: End the game first!
+Mapping string: MissionStart to index: 8
+Mapping string: GameStart to index: 9
+*** Initial Control Object
+marble/client/scripts/loadingGui.cs (0): Unable to find object: 'LoadingProgressTxt' attempting to call function 'setValue'
+Activating DirectInput...
+keyboard0 input device acquired.
+pushDialog(): Invalid control: MainChatHud
+marble/client/scripts/playGui.cs (23): Unable to find object: 'ChatHud' attempting to call function 'attach'
+Error: bad shape file.
+Mapping string: Test Guy to index: 10
+State Ready
+State go
+State Play
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+State Play
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+State Play
+popDialog(): Invalid control: MainChatHud
+CDROP: 1573 IPX:20225069:6C6C6172223B:2573
+Exporting server prefs...
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+Exporting server prefs...
+Loading compiled script marble/server/scripts/utilities.cs.
+Loading compiled script marble/server/scripts/timeline.cs.
+Loading compiled script marble/server/scripts/audioProfiles.cs.
+Loading compiled script marble/server/scripts/camera.cs.
+Loading compiled script marble/server/scripts/markers.cs.
+marble/server/scripts/markers.cs (0): preload failed for WayPointMarker: ShapeBaseData: Couldn't load shape "marble/data/shapes/markers/octahedron.dts".
+marble/server/scripts/markers.cs (0): preload failed for SpawnSphereMarker: ShapeBaseData: Couldn't load shape "marble/data/shapes/markers/octahedron.dts".
+Loading compiled script marble/server/scripts/triggers.cs.
+Loading compiled script marble/server/scripts/inventory.cs.
+Loading compiled script marble/server/scripts/shapeBase.cs.
+Loading compiled script marble/server/scripts/staticShape.cs.
+Loading compiled script marble/server/scripts/item.cs.
+Loading compiled script marble/server/scripts/physics.cs.
+Compiling marble/server/scripts/models.cs...
+Loading compiled script marble/server/scripts/models.cs.
+Loading compiled script marble/server/scripts/sky.cs.
+Loading compiled script marble/server/scripts/marble.cs.
+ParticleEmitterData(MarbleTrailEmitter) velocityVariance > ejectionVelocity
+ParticleEmitterData(MarbleSuperBounceEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleSuperBounceEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleSuperBounceEmitter.
+ParticleEmitterData(MarbleShockAbsorberEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleShockAbsorberEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleShockAbsorberEmitter.
+ParticleEmitterData(MarbleHelicopterEmitter) unable to find particle datablock: MarbleStar
+ParticleEmitterData(MarbleHelicopterEmitter) unable to find any particle datablocks
+marble/server/scripts/marble.cs (0): Register object failed for object MarbleHelicopterEmitter.
+ParticleEmitterData(BallExplodeEmitter) period < 1 ms
+Loading compiled script marble/server/scripts/fireworks.cs.
+Loading compiled script marble/server/scripts/ions.cs.
+Warning: shape marble/data/Shared/ions/ionpack.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Shared/ions/ioncell.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/switches.cs.
+Loading compiled script marble/server/scripts/pads.cs.
+Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Loading compiled script marble/server/scripts/fans.cs.
+Attempting to re-link namespace Fan from StaticShapeData to Fan with non-zero refcount.
+Loading compiled script marble/server/scripts/quanta.cs.
+*** LOADING MISSION: marble/data/Blast/blast.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing marble/data/Blast/blast.mis.
+Importing Blast: Arch (DTS) ...
+Warning: shape marble/data/Blast/arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Importing Blast: Pillar (DTS) ...
+Importing Blast: Pillar2 (DTS) ...
+Importing Blast: BlastMap (DIF) ...
+Importing Blast: BlastGiver (DTS) ...
+Warning: shape marble/data/Blast/blastgiver.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+MAKING MissionCleanup
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+*** Mission loaded
+onLoad: Unknown command.
+Connect request from: IPX:30203022:3B0D0A202020:8224
+Connection established 1738
+CADD: 1739 local
+*** Sending mission load to client: marble/data/Blast/blast.mis
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgLoadInfo to index: 2
+Mapping string: MsgLoadInfoDone to index: 3
+Mapping string: MsgClientJoin to index: 4
+Mapping string: MissionStartPhase1 to index: 5
+*** New Mission: marble/data/Blast/blast.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 0
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Shared/ions/ionpack.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Shared/ions/ioncell.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Shared/pads/teleport_foot.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+Warning: shape marble/data/Blast/arch.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Warning: shape marble/data/Blast/blastgiver.dts collision detail 0 (Collision-1) bounds exceed that of shape.
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Mapping string: MissionStartPhase2 to index: 6
+*** Phase 2: Download Ghost Objects
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Mapping string: MissionStartPhase2Ack to index: 1
+marble/server/scripts/physics.cs (14): Unknown command getTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+marble/server/scripts/physics.cs (14): Unknown command setTransformA.
+  Object (1672) InteriorInstance -> SceneObject -> NetObject -> SimObject
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 7
+*** Phase 3: Mission Lighting
+Mapping string: MissionStartPhase3Ack to index: 2
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+New Marble: 1747
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+startGame: End the game first!
+Mapping string: MissionStart to index: 8
+Mapping string: GameStart to index: 9
+*** Initial Control Object
+marble/client/scripts/loadingGui.cs (0): Unable to find object: 'LoadingProgressTxt' attempting to call function 'setValue'
+pushDialog(): Invalid control: MainChatHud
+marble/client/scripts/playGui.cs (23): Unable to find object: 'ChatHud' attempting to call function 'attach'
+Error: bad shape file.
+Mapping string: Test Guy to index: 10
+State Ready
+State go
+State Play
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>giveQuantum(blast);
+(Returned value "1")
+Mapping string: blast to index: 11
+keyboard0 input device acquired.
+Mapping string: base to index: 12
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+State Play
+Error: bad shape file.
+State Start
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+marble/server/scripts/game.cs (614): Unable to find object: '' attempting to call function 'getTransform'
+State Ready
+State go
+State Play
+keyboard0 input device unacquired.
+==>$pref::Input::KeyboardTurnSpeed *= 5;
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>$pref::Input::KeyboardTurnSpeed *= 5;
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>$pref::Input::KeyboardTurnSpeed /= 5;
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+==>giveQuantum(blast);
+keyboard0 input device acquired.
+keyboard0 input device unacquired.
+DirectInput deactivated.
+   keyboard0 input device created.
+   mouse0 input device created.
+Activating DirectInput...
+keyboard0 input device acquired.
+popDialog(): Invalid control: MainChatHud
+CDROP: 1739 IPX:30203022:3B0D0A202020:8224
+Exporting server prefs...
+Exporting server prefs...
 Exporting client prefs
 Exporting save data
 Exporting server prefs
@@ -227,3 +583,4 @@ Shutting down the OpenGL display device...
 Making the GL rendering context not current...
 Deleting the GL rendering context...
 Releasing the device context...
+keyboard0 input device unacquired.

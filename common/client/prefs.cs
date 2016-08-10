@@ -40,6 +40,7 @@ $pref::interior::showdetailmaps = 0;
 $pref::Interior::ShowEnvironmentMaps = "1";
 $pref::Interior::TexturedFog = "0";
 $pref::Interior::VertexLighting = "0";
+$pref::keyboardTurnSpeed = 0;
 $pref::LastReadMOTD = "Welcome to MarbleBlast!";
 $pref::Master0 = "2:master.garagegames.com:28002";
 $Pref::Net::LagThreshold = "400";

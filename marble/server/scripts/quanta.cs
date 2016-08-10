@@ -58,4 +58,29 @@ $quantumSkin[""] = "base";
 $quantumTime[""] = 0;
 
 $quantumSkin["blast"] = "blast";
-$quantumTime["blast"] = 3000;
+$quantumTime["blast"] = 15000;
+
+function startBlast() {
+	$canBlast = 1;
+	$blastTimer = 0;
+}
+
+function updateBlast(%timeDelta) {
+	$blastTimer -= %timeDelta;
+
+	if (!$canBlast && $blastTimer <= 0 && VectorLen(btGetCollisionNormal(p().btBody)) > 0.001) {
+		$canBlast = 1;
+	}
+
+	if ($mouseFiring && $canBlast) {
+		$canBlast = 0;
+		$blastTimer = 100;
+		%vel = btGetVelocity(p().btBody);
+		%vel = VectorRej(%vel, "0 0 1");
+		%vel = VectorAdd(%vel, "0 0 7.5");
+		btSetVelocity(p().btBody, %vel);
+	}
+}
+
+$quantumStart["blast"] = "startBlast";
+$quantumUpdate["blast"] = "updateBlast";
