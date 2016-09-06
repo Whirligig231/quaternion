@@ -14,10 +14,11 @@ function NetObject::getClient(%this) {
 		%this.setTransformA(%this.getTransformA());
 	}
 	%cli = getClientSyncObject(%this.syncId);
-	//if (%cli < 0 && %this.getDataBlock().getName() $= "BallBig")
-		//warn("Unable to find client object on" SPC %this);
-	if (%cli < 0)
+	if (%cli < 0) {
+		warn("Unable to find client object on" SPC %this);
 		%cli = %this;
+		%this.forceNetUpdate();
+	}
 	return %cli;
 }
 

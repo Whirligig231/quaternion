@@ -1,0 +1,51 @@
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/Quaternion/MAPS/blast.dift
+
+
+
+Constructor Version: 1.0.3
+
+
+
+Date: 2016/08/22 21:37:06
+
+
+Detail Level 0
+
+
+
+  Zones:         1
+
+  Points:        454
+
+  Surfaces:      324
+
+  Null Surfaces: 0
+
+  BSP Nodes:     275
+
+
+
+  Textures From Brushes:
+
+
+
+    GRID
+
+    CHEVRONS
+
+    GRID_BLOCK
+
+    BORDER
+
+    BORDER_CORNER
+
+
+
+  Static Meshes and Textures:
+
+
+
+    -- None --
+
+
+

@@ -1,0 +1,43 @@
+C:/Users/Administrator/Dropbox/Documents/Personal/Creations/Games/Quaternion/MAPS/whoa.dif
+
+
+
+Constructor Version: 1.0.3
+
+
+
+Date: 2016/08/22 21:47:04
+
+
+Detail Level 0
+
+
+
+  Zones:         1
+
+  Points:        1125
+
+  Surfaces:      519
+
+  Null Surfaces: 0
+
+  BSP Nodes:     1419
+
+
+
+  Textures From Brushes:
+
+
+
+    GRID_COOL
+
+
+
+  Static Meshes and Textures:
+
+
+
+    -- None --
+
+
+

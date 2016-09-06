@@ -3265,11 +3265,17 @@ Reminder to me: Enable CoC for FOG, too.
 	float newy = IN.txcoord.y + ddyn * fac;
 	//color.xyz = 1;
 	//color /= (1 + mag);
-	color.xyz = lerp(color.xyz, tex2D(SamplerLDR, float2(newx, newy)).xyz, (1-pow(1 + k, -mag)));
+	color.xyz = color.xyz + 3*(1-pow(1 + k, -mag)) * tex2D(SamplerLDR, float2(newx, newy)).xyz;
+	//color.xyz = lerp(color.xyz, tex2D(SamplerLDR, float2(newx, newy)).xyz, (1-pow(1 + k, -mag)));
 	//if (tex2D(SamplerLDR, float2(IN.txcoord.x / 2, IN.txcoord.y / 2)).x > 0.8)
 	//	color.xyz = tex2D(SamplerLDR, float2((IN.txcoord.x + 1) / 2, IN.txcoord.y / 2)).xyz;
 	//else
 	//	color.xyz = tex2D(SamplerLDR, float2(IN.txcoord.x / 2, IN.txcoord.y / 2)).xyz;
+
+	color.xyz += min(1, pow(1 + k, mag) - 1) * float3(0.2, 0.2, 0.2);
+
+	color.xyz += depth*0.1*(GetRandom(IN.txcoord + color.xy) - 0.5);
+	
 #endif
 
 	return color;

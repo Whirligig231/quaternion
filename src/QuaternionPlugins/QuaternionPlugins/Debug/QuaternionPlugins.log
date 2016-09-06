@@ -1,3 +1,23 @@
-﻿  QuaternionPlugins.cpp
-  QuaternionPlugins.vcxproj -> C:\Users\Administrator\Dropbox\Documents\Personal\Creations\Games\Quaternion\src\QuaternionPlugins\Debug\QuaternionPlugins.dll
-          1 file(s) copied.
+﻿  sync.cpp
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(184): error C2039: 'writeFlag': is not a member of 'TGE::BitStream'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(482): note: see declaration of 'TGE::BitStream'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(198): warning C4800: 'S32': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(207): error C2039: 'getPing': is not a member of 'TGE::NetConnection'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(512): note: see declaration of 'TGE::NetConnection'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(213): error C2039: 'readFlag': is not a member of 'TGE::BitStream'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(482): note: see declaration of 'TGE::BitStream'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(257): warning C4800: 'S32': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(266): error C2039: 'getPing': is not a member of 'TGE::NetConnection'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(512): note: see declaration of 'TGE::NetConnection'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(293): error C3083: 'NetObject': the symbol to the left of a '::' must be a type
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(293): error C2039: 'onAdd': is not a member of 'TGE::Members'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(706): note: see declaration of 'TGE::Members'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(293): error C2065: 'onAdd': undeclared identifier
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(308): error C3083: 'NetObject': the symbol to the left of a '::' must be a type
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(308): error C2039: 'packUpdate': is not a member of 'TGE::Members'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(706): note: see declaration of 'TGE::Members'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(308): error C2065: 'packUpdate': undeclared identifier
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(319): error C3083: 'NetObject': the symbol to the left of a '::' must be a type
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(319): error C2039: 'unpackUpdate': is not a member of 'TGE::Members'
+  c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\mbextender-master\include\torquelib\tge.h(706): note: see declaration of 'TGE::Members'
+c:\users\administrator\dropbox\documents\personal\creations\games\quaternion\src\quaternionplugins\quaternionplugins\sync.cpp(319): error C2065: 'unpackUpdate': undeclared identifier

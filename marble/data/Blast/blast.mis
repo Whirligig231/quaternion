@@ -27,13 +27,13 @@ function Bell::onActivate(%this, %obj) {
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
          goldTime = "4750";
+         artist = "Alex Swanson";
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
+         desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
          level = "20";
          name = "Learning to Roll";
          type = "Beginner";
-         artist = "Alex Swanson";
-         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -70,11 +70,11 @@ new SimGroup(MissionGroup) {
          locked = "true";
    };
    new StaticShape() {
-      position = "-2.65276 30.4159 3.19294";
+      position = "0.00648382 0.000214798 0.440984";
       rotation = "1 0 0 0";
       scale = "250 250 250";
       dataBlock = "SkyShape";
-         
+         syncId = "47";
          locked = "0";
    };
    new Sun() {
@@ -87,10 +87,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         initialWorldBox = "-1.00917 -1.00917 -1.4469e-005 1.00917 1.00917 0.399978";
-         
-         initialTransform = "0 0 0 1 0 0 0";
          btBody = "0";
+         initialWorldBox = "-1.00917 -1.00917 -1.4469e-005 1.00917 1.00917 0.399978";
+         syncId = "1";
+         initialTransform = "0 0 0 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -98,11 +98,11 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "BlastMap";
-         initialWorldBox = "-1e-006 -1e-006 -1e-006 1e-006 1e-006 1e-006";
-         interior = "2096";
-         
-         initialTransform = "0 0 0 1 0 0 0";
          btBody = "1";
+         initialWorldBox = "-1e-006 -1e-006 -1e-006 1e-006 1e-006 1e-006";
+         interior = "1506";
+         syncId = "48";
+         initialTransform = "0 0 0 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -110,10 +110,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "3.00616 3.00616 0 4.99384 4.99384 9";
-         
-         initialTransform = "4 4 0 1 0 0 0";
          btBody = "2";
+         initialWorldBox = "3.00616 3.00616 0 4.99384 4.99384 9";
+         syncId = "53";
+         initialTransform = "4 4 0 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -121,10 +121,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-4.99384 3.00616 0 -3.00616 4.99384 9";
-         
-         initialTransform = "-4 4 0 1 0 0 0";
          btBody = "3";
+         initialWorldBox = "-4.99384 3.00616 0 -3.00616 4.99384 9";
+         syncId = "51";
+         initialTransform = "-4 4 0 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -132,10 +132,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-3.6 3.9 6.8 3.6 4.1 9.5";
-         
-         initialTransform = "0 4 0 1 0 0 0";
          btBody = "4";
+         initialWorldBox = "-3.6 3.9 6.8 3.6 4.1 9.5";
+         syncId = "57";
+         initialTransform = "0 4 0 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -151,10 +151,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-3.6 11.9 8.2 3.6 12.1 10.9";
-         
-         initialTransform = "0 12 1.4 1 0 0 0";
-         btBody = "17";
+         btBody = "5";
+         initialWorldBox = "-3.6 11.9 8.3 3.6 12.1 11";
+         syncId = "5";
+         initialTransform = "0 12 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -162,10 +162,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "6";
          initialWorldBox = "-4.99384 -4.99384 0 -3.00616 -3.00616 9";
-         
+         syncId = "52";
          initialTransform = "-4 -4 0 1 0 0 0";
-         btBody = "5";
          locked = "0";
    };
    new StaticShape() {
@@ -173,10 +173,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "7";
          initialWorldBox = "3.00616 -4.99384 0 4.99384 -3.00616 9";
-         
+         syncId = "50";
          initialTransform = "4 -4 0 1 0 0 0";
-         btBody = "6";
          locked = "0";
    };
    new StaticShape() {
@@ -184,10 +184,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "8";
          initialWorldBox = "-3.6 -4.1 6.8 3.6 -3.9 9.5";
-         
+         syncId = "56";
          initialTransform = "0 -4 0 1 0 0 0";
-         btBody = "7";
          locked = "0";
    };
    new StaticShape() {
@@ -195,10 +195,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "9";
          initialWorldBox = "3.89999 -3.6 6.8 4.10001 3.6 9.5";
-         
+         syncId = "54";
          initialTransform = "4 2.98023e-007 0 0 0 1 1.5708";
-         btBody = "8";
          locked = "0";
    };
    new StaticShape() {
@@ -206,10 +206,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "10";
          initialWorldBox = "-4.10001 -3.6 6.8 -3.89999 3.6 9.5";
-         
+         syncId = "55";
          initialTransform = "-4 -1.78814e-007 0 0 0 1 1.5708";
-         btBody = "9";
          locked = "0";
    };
    new StaticShape() {
@@ -217,10 +217,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "3.00616 11.0062 1.4 4.99384 12.9938 10.4";
-         
-         initialTransform = "4 12 1.4 1 0 0 0";
-         btBody = "10";
+         btBody = "11";
+         initialWorldBox = "3.00616 11.0062 1.5 4.99384 12.9938 10.5";
+         syncId = "4";
+         initialTransform = "4 12 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -228,10 +228,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "3.89999 12.4 8.2 4.10001 19.6 10.9";
-         
-         initialTransform = "4 16 1.4 0 0 1 1.5708";
-         btBody = "11";
+         btBody = "12";
+         initialWorldBox = "3.89999 12.4 8.3 4.10001 19.6 11";
+         syncId = "8";
+         initialTransform = "4 16 1.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -239,10 +239,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "3.00616 19.0062 1.4 4.99384 20.9938 10.4";
-         
-         initialTransform = "4 20 1.4 1 0 0 0";
-         btBody = "12";
+         btBody = "13";
+         initialWorldBox = "3.00616 19.0062 1.5 4.99384 20.9938 10.5";
+         syncId = "9";
+         initialTransform = "4 20 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -250,10 +250,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-3.6 19.9 8.2 3.6 20.1 10.9";
-         
-         initialTransform = "0 20 1.4 1 0 0 0";
-         btBody = "13";
+         btBody = "14";
+         initialWorldBox = "-3.6 19.9 8.3 3.6 20.1 11";
+         syncId = "11";
+         initialTransform = "0 20 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -261,10 +261,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-4.10001 12.4 8.2 -3.89999 19.6 10.9";
-         
-         initialTransform = "-4 16 1.4 0 0 1 1.5708";
-         btBody = "14";
+         btBody = "15";
+         initialWorldBox = "-4.10001 12.4 8.3 -3.89999 19.6 11";
+         syncId = "7";
+         initialTransform = "-4 16 1.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -272,10 +272,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-4.99384 19.0062 1.4 -3.00616 20.9938 10.4";
-         
-         initialTransform = "-4 20 1.4 1 0 0 0";
-         btBody = "15";
+         btBody = "16";
+         initialWorldBox = "-4.99384 19.0062 1.5 -3.00616 20.9938 10.5";
+         syncId = "10";
+         initialTransform = "-4 20 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -283,10 +283,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-4.99384 11.0062 1.4 -3.00616 12.9938 10.4";
-         
-         initialTransform = "-4 12 1.4 1 0 0 0";
-         btBody = "16";
+         btBody = "17";
+         initialWorldBox = "-4.99384 11.0062 1.5 -3.00616 12.9938 10.5";
+         syncId = "3";
+         initialTransform = "-4 12 1.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -294,10 +294,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-27.6 35.9 11.2 -20.4 36.1 13.9";
-         
-         initialTransform = "-24 36 4.4 1 0 0 0";
-         btBody = "70";
+         btBody = "18";
+         initialWorldBox = "-27.6 35.9 11.3 -20.4 36.1 14";
+         syncId = "41";
+         initialTransform = "-24 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -305,10 +305,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "19";
          initialWorldBox = "3.00616 35.0062 3 4.99384 36.9938 12";
-         
+         syncId = "26";
          initialTransform = "4 36 3 1 0 0 0";
-         btBody = "27";
          locked = "0";
    };
    new StaticShape() {
@@ -316,10 +316,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "20";
          initialWorldBox = "3.89999 28.4 9.8 4.10001 35.6 12.5";
-         
+         syncId = "18";
          initialTransform = "4 32 3 0 0 1 1.5708";
-         btBody = "28";
          locked = "0";
    };
    new StaticShape() {
@@ -327,10 +327,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "21";
          initialWorldBox = "3.00616 27.0062 3 4.99384 28.9938 12";
-         
+         syncId = "13";
          initialTransform = "4 28 3 1 0 0 0";
-         btBody = "29";
          locked = "0";
    };
    new StaticShape() {
@@ -338,10 +338,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "22";
          initialWorldBox = "-3.6 27.9 9.8 3.6 28.1 12.5";
-         
+         syncId = "14";
          initialTransform = "0 28 3 1 0 0 0";
-         btBody = "30";
          locked = "0";
    };
    new StaticShape() {
@@ -349,10 +349,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "23";
          initialWorldBox = "-4.99384 27.0062 3 -3.00616 28.9938 12";
-         
+         syncId = "12";
          initialTransform = "-4 28 3 1 0 0 0";
-         btBody = "31";
          locked = "0";
    };
    new StaticShape() {
@@ -360,10 +360,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "24";
          initialWorldBox = "-4.10001 28.4 9.8 -3.89999 35.6 12.5";
-         
+         syncId = "17";
          initialTransform = "-4 32 3 0 0 1 1.5708";
-         btBody = "32";
          locked = "0";
    };
    new StaticShape() {
@@ -371,10 +371,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
+         btBody = "25";
          initialWorldBox = "-4.99384 35.0062 3 -3.00616 36.9938 12";
-         
+         syncId = "25";
          initialTransform = "-4 36 3 1 0 0 0";
-         btBody = "33";
          locked = "0";
    };
    new StaticShape() {
@@ -382,10 +382,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
+         btBody = "26";
          initialWorldBox = "-3.6 35.9 9.8 3.6 36.1 12.5";
-         
+         syncId = "27";
          initialTransform = "0 36 3 1 0 0 0";
-         btBody = "34";
          locked = "0";
    };
    new StaticShape() {
@@ -393,10 +393,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-12.9938 35.0062 4.4 -11.0062 36.9938 13.4";
-         
-         initialTransform = "-12 36 4.4 1 0 0 0";
-         btBody = "35";
+         btBody = "27";
+         initialWorldBox = "-12.9938 35.0062 4.5 -11.0062 36.9938 13.5";
+         syncId = "30";
+         initialTransform = "-12 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -404,10 +404,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-12.1 28.4 11.2 -11.9 35.6 13.9";
-         
-         initialTransform = "-12 32 4.4 0 0 1 1.5708";
-         btBody = "36";
+         btBody = "28";
+         initialWorldBox = "-12.1 28.4 11.3 -11.9 35.6 14";
+         syncId = "24";
+         initialTransform = "-12 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -415,10 +415,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-12.9938 27.0062 4.4 -11.0062 28.9938 13.4";
-         
-         initialTransform = "-12 28 4.4 1 0 0 0";
-         btBody = "37";
+         btBody = "29";
+         initialWorldBox = "-12.9938 27.0062 4.5 -11.0062 28.9938 13.5";
+         syncId = "16";
+         initialTransform = "-12 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -426,10 +426,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-19.6 27.9 11.2 -12.4 28.1 13.9";
-         
-         initialTransform = "-16 28 4.4 1 0 0 0";
-         btBody = "38";
+         btBody = "30";
+         initialWorldBox = "-19.6 27.9 11.3 -12.4 28.1 14";
+         syncId = "20";
+         initialTransform = "-16 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -437,10 +437,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "-20.9938 27.0062 4.4 -19.0062 28.9938 13.4";
-         
-         initialTransform = "-20 28 4.4 1 0 0 0";
-         btBody = "39";
+         btBody = "31";
+         initialWorldBox = "-21 27 8.5 -19 29 13.5";
+         syncId = "22";
+         initialTransform = "-20 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -448,10 +448,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-20.1 28.4 11.2 -19.9 35.6 13.9";
-         
-         initialTransform = "-20 32 4.4 0 0 1 1.5708";
-         btBody = "40";
+         btBody = "32";
+         initialWorldBox = "-20.1 28.4 11.3 -19.9 35.6 14";
+         syncId = "33";
+         initialTransform = "-20 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -459,10 +459,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "-20.9938 35.0062 4.4 -19.0062 36.9938 13.4";
-         
-         initialTransform = "-20 36 4.4 1 0 0 0";
-         btBody = "41";
+         btBody = "33";
+         initialWorldBox = "-21 35 8.5 -19 37 13.5";
+         syncId = "37";
+         initialTransform = "-20 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -470,10 +470,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-19.6 35.9 11.2 -12.4 36.1 13.9";
-         
-         initialTransform = "-16 36 4.4 1 0 0 0";
-         btBody = "42";
+         btBody = "34";
+         initialWorldBox = "-19.6 35.9 11.3 -12.4 36.1 14";
+         syncId = "35";
+         initialTransform = "-16 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -481,10 +481,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "-28.9938 35.0062 4.4 -27.0062 36.9938 13.4";
-         
-         initialTransform = "-28 36 4.4 1 0 0 0";
-         btBody = "43";
+         btBody = "35";
+         initialWorldBox = "-29 35 8.5 -27 37 13.5";
+         syncId = "43";
+         initialTransform = "-28 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -492,10 +492,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-28.1 28.4 11.2 -27.9 35.6 13.9";
-         
-         initialTransform = "-28 32 4.4 0 0 1 1.5708";
-         btBody = "44";
+         btBody = "36";
+         initialWorldBox = "-28.1 28.4 11.3 -27.9 35.6 14";
+         syncId = "39";
+         initialTransform = "-28 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -503,10 +503,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "-28.9938 27.0062 4.4 -27.0062 28.9938 13.4";
-         
-         initialTransform = "-28 28 4.4 1 0 0 0";
-         btBody = "45";
+         btBody = "37";
+         initialWorldBox = "-29 27 8.5 -27 29 13.5";
+         syncId = "59";
+         initialTransform = "-28 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -514,10 +514,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-35.6 27.9 11.2 -28.4 28.1 13.9";
-         
-         initialTransform = "-32 28 4.4 1 0 0 0";
-         btBody = "46";
+         btBody = "38";
+         initialWorldBox = "-35.6 27.9 11.3 -28.4 28.1 14";
+         syncId = "60";
+         initialTransform = "-32 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -525,10 +525,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-36.9938 27.0062 4.4 -35.0062 28.9938 13.4";
-         
-         initialTransform = "-36 28 4.4 1 0 0 0";
-         btBody = "47";
+         btBody = "39";
+         initialWorldBox = "-36.9938 27.0062 4.5 -35.0062 28.9938 13.5";
+         syncId = "62";
+         initialTransform = "-36 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -536,10 +536,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-36.1 28.4 11.2 -35.9 35.6 13.9";
-         
-         initialTransform = "-36 32 4.4 0 0 1 1.5708";
-         btBody = "48";
+         btBody = "40";
+         initialWorldBox = "-36.1 28.4 11.3 -35.9 35.6 14";
+         syncId = "65";
+         initialTransform = "-36 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -547,10 +547,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "-36.9938 35.0062 4.4 -35.0062 36.9938 13.4";
-         
-         initialTransform = "-36 36 4.4 1 0 0 0";
-         btBody = "49";
+         btBody = "41";
+         initialWorldBox = "-36.9938 35.0062 4.5 -35.0062 36.9938 13.5";
+         syncId = "66";
+         initialTransform = "-36 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -558,10 +558,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-35.6 35.9 11.2 -28.4 36.1 13.9";
-         
-         initialTransform = "-32 36 4.4 1 0 0 0";
-         btBody = "50";
+         btBody = "42";
+         initialWorldBox = "-35.6 35.9 11.3 -28.4 36.1 14";
+         syncId = "45";
+         initialTransform = "-32 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -569,10 +569,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "35.0062 35.0062 4.4 36.9938 36.9938 13.4";
-         
-         initialTransform = "36 36 4.4 1 0 0 0";
-         btBody = "51";
+         btBody = "43";
+         initialWorldBox = "35.0062 35.0062 4.5 36.9938 36.9938 13.5";
+         syncId = "67";
+         initialTransform = "36 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -580,10 +580,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "35.9 28.4 11.2 36.1 35.6 13.9";
-         
-         initialTransform = "36 32 4.4 0 0 1 1.5708";
-         btBody = "52";
+         btBody = "44";
+         initialWorldBox = "35.9 28.4 11.3 36.1 35.6 14";
+         syncId = "64";
+         initialTransform = "36 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -591,10 +591,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "35.0062 27.0062 4.4 36.9938 28.9938 13.4";
-         
-         initialTransform = "36 28 4.4 1 0 0 0";
-         btBody = "53";
+         btBody = "45";
+         initialWorldBox = "35.0062 27.0062 4.5 36.9938 28.9938 13.5";
+         syncId = "63";
+         initialTransform = "36 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -602,10 +602,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "28.4 27.9 11.2 35.6 28.1 13.9";
-         
-         initialTransform = "32 28 4.4 1 0 0 0";
-         btBody = "54";
+         btBody = "46";
+         initialWorldBox = "28.4 27.9 11.3 35.6 28.1 14";
+         syncId = "61";
+         initialTransform = "32 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -613,10 +613,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "27.0062 27.0062 4.4 28.9938 28.9938 13.4";
-         
-         initialTransform = "28 28 4.4 1 0 0 0";
-         btBody = "55";
+         btBody = "47";
+         initialWorldBox = "27 27 8.5 29 29 13.5";
+         syncId = "58";
+         initialTransform = "28 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -624,10 +624,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "27.9 28.4 11.2 28.1 35.6 13.9";
-         
-         initialTransform = "28 32 4.4 0 0 1 1.5708";
-         btBody = "56";
+         btBody = "48";
+         initialWorldBox = "27.9 28.4 11.3 28.1 35.6 14";
+         syncId = "38";
+         initialTransform = "28 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -635,10 +635,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "27.0062 35.0062 4.4 28.9938 36.9938 13.4";
-         
-         initialTransform = "28 36 4.4 1 0 0 0";
-         btBody = "57";
+         btBody = "49";
+         initialWorldBox = "27 35 8.5 29 37 13.5";
+         syncId = "42";
+         initialTransform = "28 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -646,10 +646,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "28.4 35.9 11.2 35.6 36.1 13.9";
-         
-         initialTransform = "32 36 4.4 1 0 0 0";
-         btBody = "58";
+         btBody = "50";
+         initialWorldBox = "28.4 35.9 11.3 35.6 36.1 14";
+         syncId = "44";
+         initialTransform = "32 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -657,10 +657,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "19.0062 35.0062 4.4 20.9938 36.9938 13.4";
-         
-         initialTransform = "20 36 4.4 1 0 0 0";
-         btBody = "59";
+         btBody = "51";
+         initialWorldBox = "19 35 8.5 21 37 13.5";
+         syncId = "36";
+         initialTransform = "20 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -668,10 +668,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "19.9 28.4 11.2 20.1 35.6 13.9";
-         
-         initialTransform = "20 32 4.4 0 0 1 1.5708";
-         btBody = "60";
+         btBody = "52";
+         initialWorldBox = "19.9 28.4 11.3 20.1 35.6 14";
+         syncId = "32";
+         initialTransform = "20 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -679,10 +679,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         initialWorldBox = "19.0062 27.0062 4.4 20.9938 28.9938 13.4";
-         
-         initialTransform = "20 28 4.4 1 0 0 0";
-         btBody = "61";
+         btBody = "53";
+         initialWorldBox = "19 27 8.5 21 29 13.5";
+         syncId = "21";
+         initialTransform = "20 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -690,10 +690,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "12.4 27.9 11.2 19.6 28.1 13.9";
-         
-         initialTransform = "16 28 4.4 1 0 0 0";
-         btBody = "62";
+         btBody = "54";
+         initialWorldBox = "12.4 27.9 11.3 19.6 28.1 14";
+         syncId = "19";
+         initialTransform = "16 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -701,10 +701,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "11.0062 27.0062 4.4 12.9938 28.9938 13.4";
-         
-         initialTransform = "12 28 4.4 1 0 0 0";
-         btBody = "63";
+         btBody = "55";
+         initialWorldBox = "11.0062 27.0062 4.5 12.9938 28.9938 13.5";
+         syncId = "15";
+         initialTransform = "12 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -712,10 +712,10 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "11.9 28.4 11.2 12.1 35.6 13.9";
-         
-         initialTransform = "12 32 4.4 0 0 1 1.5708";
-         btBody = "64";
+         btBody = "56";
+         initialWorldBox = "11.9 28.4 11.3 12.1 35.6 14";
+         syncId = "23";
+         initialTransform = "12 32 4.5 0 0 1 1.5708";
          locked = "0";
    };
    new StaticShape() {
@@ -723,10 +723,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         initialWorldBox = "11.0062 35.0062 4.4 12.9938 36.9938 13.4";
-         
-         initialTransform = "12 36 4.4 1 0 0 0";
-         btBody = "65";
+         btBody = "57";
+         initialWorldBox = "11.0062 35.0062 4.5 12.9938 36.9938 13.5";
+         syncId = "31";
+         initialTransform = "12 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -734,10 +734,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "12.4 35.9 11.2 19.6 36.1 13.9";
-         
-         initialTransform = "16 36 4.4 1 0 0 0";
-         btBody = "66";
+         btBody = "58";
+         initialWorldBox = "12.4 35.9 11.3 19.6 36.1 14";
+         syncId = "34";
+         initialTransform = "16 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -745,10 +745,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "20.4 27.9 11.2 27.6 28.1 13.9";
-         
-         initialTransform = "24 28 4.4 1 0 0 0";
-         btBody = "67";
+         btBody = "59";
+         initialWorldBox = "20.4 27.9 11.3 27.6 28.1 14";
+         syncId = "29";
+         initialTransform = "24 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -756,10 +756,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "20.4 35.9 11.2 27.6 36.1 13.9";
-         
-         initialTransform = "24 36 4.4 1 0 0 0";
-         btBody = "68";
+         btBody = "60";
+         initialWorldBox = "20.4 35.9 11.3 27.6 36.1 14";
+         syncId = "40";
+         initialTransform = "24 36 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -767,10 +767,10 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         initialWorldBox = "-27.6 27.9 11.2 -20.4 28.1 13.9";
-         
-         initialTransform = "-24 28 4.4 1 0 0 0";
-         btBody = "69";
+         btBody = "61";
+         initialWorldBox = "-27.6 27.9 11.3 -20.4 28.1 14";
+         syncId = "28";
+         initialTransform = "-24 28 4.5 1 0 0 0";
          locked = "0";
    };
    new StaticShape() {
@@ -778,6 +778,11 @@ new SimGroup(MissionGroup) {
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "BlastGiver";
+         btBody = "62";
+         initialWorldBox = "-1.14 14.86 1.5 1.14 17.14 2.1";
+         syncId = "6";
+         initialTransform = "0 16 1.5 0 0 1 1.5708";
+         locked = "0";
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/Shared/sound/Shell.ogg";
