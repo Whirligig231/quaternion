@@ -3,6 +3,8 @@ DtsRaw("Pillar", "pillar", "Blast");
 DtsRaw("Pillar2", "pillar2", "Blast");
 DifRaw("BlastMap", "blast", "Blast");
 DtsRaw("BlastGiver", "blastgiver", "Blast");
+DtsRaw("Mirror", "mirror", "Blast");
+DtsRaw("ForceField", "forcefield", "Blast");
 
 datablock AudioProfile(BellSfx) {
 	filename    = "~/data/Blast/bell.wav";
@@ -16,11 +18,29 @@ datablock StaticShapeData(Bell) {
 	shapeFile = "~/data/Blast/bell.dts";
 };
 
+datablock StaticShapeData(Stream) {
+	category = "Level - Blast";
+
+	shapeFile = "~/data/Blast/stream.dts";
+};
+
 function Bell::onActivate(%this, %obj) {
 	%sound = fmodPlay(BellSfx);
 	fmodSetPosition(%sound, MatrixPos(%obj.getTransform()));
 	%obj.stopThread(0);
     %obj.playThread(0, "clang");
+}
+
+function BlastGiver::onAdd(%this, %obj) {
+	Parent::onAdd(%this, %obj);
+	%obj.playThread(0, "ambient");
+}
+
+function BlastGiver::onFrame(%this, %obj, %timeDelta) {
+	if ($quantumIndex $= "") {
+		if (VectorDist(MatrixPos(%obj.getTransform()), MatrixPos(p().getTransform())) < 0.5)
+			giveQuantum("blast");
+	}
 }
 
 //--- OBJECT WRITE BEGIN ---
