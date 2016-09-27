@@ -64,6 +64,9 @@ function GameBaseData::onAdd(%this, %obj) {
 		btSetLinearDamping(%obj.btBody, %this.btLinearDamping);
 		btSetAngularDamping(%obj.btBody, %this.btAngularDamping);
 		
+		if (%this.btMass == 0)
+			%obj.skipUpdate = 1;
+		
 		if (isObject(EditorGui)) {
 			%obj.locked = !EditorGui.isAwake();
 			btSetActive(%obj.btBody, !EditorGui.isAwake());
@@ -86,7 +89,7 @@ function GameBaseData::onFrame(%this, %obj, %timeDelta) {
     //%obj.TD += %timeDelta;
     //if (%obj.TD < 0) return;
     //%obj.TD = 0;
-	if (%obj.btBody !$= "" && %obj.locked) {
+	if (%obj.btBody !$= "" && %obj.locked && !%obj.skipUpdate) {
 		%objc = %obj.getClient();
 		//%obj.setTransformA(MatInterpolate(%objc.getTransformA(), btGetTransform(%obj.btBody), 0.9));
 		//%objc.setTransformA(MatInterpolate(%objc.getTransformA(), btGetTransform(%obj.btBody), 0.9));

@@ -151,12 +151,12 @@ function makeBlastParticle() {
 }
 
 function makeBlastLeakParticle() {
-    %obj = new ParticleEmitterNode(){
+    $blastLeaker = new ParticleEmitterNode(){
         datablock = BlastNode;
         emitter = BlastLeakEmitter;
         position = getWords(p().getTransform(), 0, 2);
     };
-    addToMissionCleanup(%obj);
+    addToMissionCleanup($blastLeaker);
 }
 
 $quantumSkin["blast"] = "blast";
@@ -197,11 +197,20 @@ function updateBlast(%timeDelta) {
 		fmodSetPosition(fmodPlay(BlastSfx), MatrixPos(p().getTransform()));
 		
 		makeBlastParticle();
+		
+		event("onBlast", MatrixPos(p().getTransform()));
 	}
+}
+
+function onBlast(%pos) {
+	// Prevent warning
 }
 
 function stopBlast() {
 	makeBlastParticle();
+	
+	if (isObject($blastLeaker))
+		$blastLeaker.delete();
 }
 
 $quantumStart["blast"] = "startBlast";

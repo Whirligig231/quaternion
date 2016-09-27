@@ -1473,6 +1473,17 @@ ConsoleFunction(btSetSolid, void, 3, 3, "btSetSolid( body, solid )") {
 		body->setCollisionFlags(body->getCollisionFlags() | btCollisionObject::CF_NO_CONTACT_RESPONSE);
 }
 
+ConsoleFunction(btDeleteBody, void, 2, 2, "btDeleteBody( body )") {
+	U32 ind = atoi(argv[1]);
+	if (ind < 0 || ind >= bodies.size()) {
+		TGE::Con::errorf("Invalid body handle!");
+		return;
+	}
+	btRigidBody *body = bodies[ind].body;
+
+	dynamicsWorld->removeRigidBody(body);
+}
+
 std::string getBodyInfo(int i) {
 	std::ostringstream s;
 	s << "Body #";

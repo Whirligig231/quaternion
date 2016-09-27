@@ -1,4 +1,2 @@
-ObjectBuilderGui.newObject = new ParticleEmitterNode(blast) {
-   dataBlock = "BlastNode";
-   emitter = "BlastEmitter";
+ObjectBuilderGui.newObject = new Marker(wallmark) {
 };

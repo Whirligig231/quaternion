@@ -4,7 +4,19 @@ DtsRaw("Pillar2", "pillar2", "Blast");
 DifRaw("BlastMap", "blast", "Blast");
 DtsRaw("BlastGiver", "blastgiver", "Blast");
 DtsRaw("Mirror", "mirror", "Blast");
+DtsRaw("MirrorBroken", "mirror_broken", "Blast");
 DtsRaw("ForceField", "forcefield", "Blast");
+DtsRaw("BellPole", "bellpole", "Blast");
+DtsRaw("BeamGun", "beamgun", "Blast");
+
+function Mirror::onAdd(%this, %obj) {
+	Parent::onAdd(%this, %obj);
+	%obj.skipUpdate = 0;
+}
+
+function rotateMirror(%obj) {
+	
+}
 
 datablock AudioProfile(BellSfx) {
 	filename    = "~/data/Blast/bell.wav";
@@ -18,17 +30,47 @@ datablock StaticShapeData(Bell) {
 	shapeFile = "~/data/Blast/bell.dts";
 };
 
+function Bell::onActivate(%this, %obj) {
+	%sound = fmodPlay(BellSfx);
+	fmodSetPosition(%sound, MatrixPos(%obj.getTransform()));
+	%obj.stopThread(0);
+    %obj.playThread(0, "clang");
+	call(%obj.callback, %obj.arg0, %obj.arg1);
+}
+
+function Bell::onBlast(%this, %obj, %pos) {
+	if (VectorDist(%pos, VectorAdd(MatrixPos(%obj.getTransform()), "0 0 1")) < 3)
+		%this.onActivate(%obj);
+}
+
 datablock StaticShapeData(Stream) {
 	category = "Level - Blast";
 
 	shapeFile = "~/data/Blast/stream.dts";
 };
 
-function Bell::onActivate(%this, %obj) {
-	%sound = fmodPlay(BellSfx);
-	fmodSetPosition(%sound, MatrixPos(%obj.getTransform()));
-	%obj.stopThread(0);
-    %obj.playThread(0, "clang");
+function Stream::onAdd(%this, %obj) {
+	%obj.playThread(0, "ambient");
+}
+
+datablock StaticShapeData(StreamEnd) {
+	category = "Level - Blast";
+
+	shapeFile = "~/data/Blast/stream_end.dts";
+};
+
+function StreamEnd::onAdd(%this, %obj) {
+	%obj.playThread(0, "ambient");
+}
+
+datablock StaticShapeData(StreamBall) {
+	category = "Level - Blast";
+
+	shapeFile = "~/data/Blast/stream_ball.dts";
+};
+
+function StreamBall::onAdd(%this, %obj) {
+	%obj.playThread(0, "ambient");
 }
 
 function BlastGiver::onAdd(%this, %obj) {
@@ -37,23 +79,134 @@ function BlastGiver::onAdd(%this, %obj) {
 }
 
 function BlastGiver::onFrame(%this, %obj, %timeDelta) {
-	if ($quantumIndex $= "") {
+	if ($quantumTimer < 14000) {
 		if (VectorDist(MatrixPos(%obj.getTransform()), MatrixPos(p().getTransform())) < 0.5)
 			giveQuantum("blast");
 	}
 }
 
+function ForceField::setActive(%this, %obj, %act) {
+	%obj.startFade(0,0,!%act);
+	btSetSolid(%obj.btBody, %act);
+}
+
+function lowerField(%field) {
+	ForceField.setActive(%field, 0);
+}
+
+function recomputeField() {
+	%currentTransform = MatrixMultiply(TheGun.getTransform(), "0 -4 0.8 1 0 0 0");
+	stepField(%currentTransform, 0);
+}
+
+function stepField(%currentTransform, %index) {
+	if (%index > 20)
+		return;
+	%index++;
+	
+	if (!isObject("MissionGroup"))
+		return;
+	
+	if (!isObject("StreamPart" @ %index)) {
+		StreamGroup.add(%obj = new StaticShape() {
+			position = "100000 100000 100000";
+			rotation = "1 0 0 0";
+			scale = "1 1 1";
+			dataBlock = "Stream";
+		});
+		%obj.setName("StreamPart" @ %index);
+	}
+	
+	%obj = ("StreamPart" @ %index).getId();
+		
+	if (!isObject("StreamBallPart" @ %index)) {
+		StreamGroup.add(%obj2 = new StaticShape() {
+			position = "100000 100000 100000";
+			rotation = "1 0 0 0";
+			scale = "1 1 1";
+			dataBlock = "StreamBall";
+		});
+		%obj2.setName("StreamBallPart" @ %index);
+	}
+	
+	%obj2 = ("StreamBallPart" @ %index).getId();
+	%obj2.getClient().setTransform("100000 100000 100000 1 0 0 0");
+	
+	if (!isObject("StreamEndPart" @ %index)) {
+		StreamGroup.add(%obj3 = new StaticShape() {
+			position = "100000 100000 100000";
+			rotation = "1 0 0 0";
+			scale = "1 1 1";
+			dataBlock = "StreamEnd";
+		});
+		%obj3.setName("StreamEndPart" @ %index);
+	}
+	
+	%obj3 = ("StreamEndPart" @ %index).getId();
+	%obj3.getClient().setTransform("100000 100000 100000 1 0 0 0");
+	
+	%obj.setScale($streamscale SPC $streamscale SPC 1);
+	%obj2.setScale($streamscale SPC $streamscale SPC $streamscale);
+	%obj3.setScale($streamscale SPC $streamscale SPC 1);
+	
+	%obj.getClient().setTransform(MatrixMultiply(%currentTransform, "0 0 0 -1 0 0 1.57079633"));
+	%forward = MatrixMulVector(%currentTransform, "0 -3 0");
+	
+	for (%i = 0; %i < WallGroup.getCount(); %i++) {
+		%pos = WallGroup.getObject(%i).position;
+		%dist = VectorDist(%pos, MatrixPos(%currentTransform));
+		if (%dist < 0.3) {
+			%obj.getClient().setTransform("100000 100000 100000 1 0 0 0");
+			
+			%obj3.getClient().setTransform(MatrixMultiply(%currentTransform, "0 3 0 -1 0 0 1.57079633"));
+			
+			return;
+		}
+	}
+	
+	for (%i = 0; %i < MirrorGroup.getCount(); %i++) {
+		%pos = MirrorGroup.getObject(%i).position;
+		%dist = VectorDist(%pos, VectorAdd("0 0 -0.8", VectorAdd(MatrixPos(%currentTransform), %forward)));
+		if (%dist < 0.3) {
+			%mirror = MatrixDivide(MatrixMultiply("0 0 0 0 0 1 0.785398", MirrorGroup.getObject(%i).getTransform()), %currentTransform);
+			%rotMat = "0 0 0" SPC MatrixRot(MatrixMultiply(%mirror, %mirror));
+			%currentTransform = MatrixMultiply(%currentTransform, %rotMat);
+
+			%obj2.getClient().setTransform(MatrixMultiply(MirrorGroup.getObject(%i).getTransform(), "0 0 0.8 0 0 1 -2.35619"));
+			
+			break;
+		}
+	}
+	
+	%currentTransform = MatrixMultiply(MatrixMultiply(%forward SPC "1 0 0 0", %currentTransform), "0 -3 0 1 0 0 0");
+	
+	schedule($SFS, 0, "stepField", %currentTransform, %index);
+}
+
+function recomputeLoop() {
+	recomputeField();
+	
+	if (!isObject("MissionGroup"))
+		return;
+		
+	schedule($RFS, 0, recomputeLoop);
+}
+
+$RFS = 100;
+$SFS = 10;
+$streamscale = 1;
+
 //--- OBJECT WRITE BEGIN ---
 new SimGroup(MissionGroup) {
 
    new ScriptObject(MissionInfo) {
-         goldTime = "4750";
-         artist = "Alex Swanson";
-         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
          desc = "A very simple level to help you get used to rolling around.  Follow the track around and roll on to the exit pad to finish the level.";
          level = "20";
          name = "Learning to Roll";
+         goldTime = "4750";
+         artist = "Alex Swanson";
          type = "Beginner";
+         startHelpText = "Press <func:bind moveforward> to roll the marble forward!";
    };
    new MissionArea(MissionArea) {
       area = "-360 -648 720 1296";
@@ -90,12 +243,11 @@ new SimGroup(MissionGroup) {
          locked = "true";
    };
    new StaticShape() {
-      position = "0.00648382 0.000214798 0.440984";
+      position = "0.00652948 0.00176746 0.414628";
       rotation = "1 0 0 0";
       scale = "250 250 250";
       dataBlock = "SkyShape";
-         syncId = "47";
-         locked = "0";
+         
    };
    new Sun() {
       direction = "0.544508 0.439467 -0.714409";
@@ -107,702 +259,4807 @@ new SimGroup(MissionGroup) {
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "StartPad";
-         btBody = "0";
+         locked = "1";
          initialWorldBox = "-1.00917 -1.00917 -1.4469e-005 1.00917 1.00917 0.399978";
-         syncId = "1";
+         skipUpdate = "1";
          initialTransform = "0 0 0 1 0 0 0";
-         locked = "0";
+         btBody = "0";
    };
    new StaticShape() {
       position = "0 0 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "BlastMap";
-         btBody = "1";
-         initialWorldBox = "-1e-006 -1e-006 -1e-006 1e-006 1e-006 1e-006";
-         interior = "1506";
-         syncId = "48";
-         initialTransform = "0 0 0 1 0 0 0";
          locked = "0";
+         initialWorldBox = "-1e-006 -1e-006 -1e-006 1e-006 1e-006 1e-006";
+         interior = "1508";
+         skipUpdate = "1";
+         
+         initialTransform = "0 0 0 1 0 0 0";
+         btBody = "1";
    };
    new StaticShape() {
       position = "4 4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "2";
-         initialWorldBox = "3.00616 3.00616 0 4.99384 4.99384 9";
-         syncId = "53";
+         locked = "1";
+         initialWorldBox = "3 3 0 5 5 9";
+         skipUpdate = "1";
          initialTransform = "4 4 0 1 0 0 0";
-         locked = "0";
+         btBody = "2";
    };
    new StaticShape() {
       position = "-4 4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "3";
-         initialWorldBox = "-4.99384 3.00616 0 -3.00616 4.99384 9";
-         syncId = "51";
+         locked = "1";
+         initialWorldBox = "-5 3 0 -3 5 9";
+         skipUpdate = "1";
          initialTransform = "-4 4 0 1 0 0 0";
-         locked = "0";
+         btBody = "3";
    };
    new StaticShape() {
       position = "0 4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "4";
+         locked = "1";
          initialWorldBox = "-3.6 3.9 6.8 3.6 4.1 9.5";
-         syncId = "57";
+         skipUpdate = "1";
          initialTransform = "0 4 0 1 0 0 0";
-         locked = "0";
+         btBody = "4";
    };
    new StaticShape() {
-      position = "5 0 2";
+      position = "4 0 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Bell";
-         initialWorldBox = "3.86316 -1.13684 2.35677 6.13684 1.13684 4.04067";
-         initialTransform = "5 0 2 1 0 0 0";
+         initialWorldBox = "2.86316 -1.13684 1.85677 5.13684 1.13684 3.54067";
+         initialTransform = "4 0 1.5 1 0 0 0";
+         callback = "lowerField";
+         arg0 = "FF1";
    };
    new StaticShape() {
       position = "0 12 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "5";
+         locked = "1";
          initialWorldBox = "-3.6 11.9 8.3 3.6 12.1 11";
-         syncId = "5";
+         skipUpdate = "1";
          initialTransform = "0 12 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "5";
    };
    new StaticShape() {
       position = "-4 -4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "6";
-         initialWorldBox = "-4.99384 -4.99384 0 -3.00616 -3.00616 9";
-         syncId = "52";
+         locked = "1";
+         initialWorldBox = "-5 -5 0 -3 -3 9";
+         skipUpdate = "1";
          initialTransform = "-4 -4 0 1 0 0 0";
-         locked = "0";
+         btBody = "6";
    };
    new StaticShape() {
       position = "4 -4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "7";
-         initialWorldBox = "3.00616 -4.99384 0 4.99384 -3.00616 9";
-         syncId = "50";
+         locked = "1";
+         initialWorldBox = "3 -5 0 5 -3 9";
+         skipUpdate = "1";
          initialTransform = "4 -4 0 1 0 0 0";
-         locked = "0";
+         btBody = "7";
    };
    new StaticShape() {
       position = "0 -4 0";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "8";
+         locked = "1";
          initialWorldBox = "-3.6 -4.1 6.8 3.6 -3.9 9.5";
-         syncId = "56";
+         skipUpdate = "1";
          initialTransform = "0 -4 0 1 0 0 0";
-         locked = "0";
+         btBody = "8";
    };
    new StaticShape() {
       position = "4 2.98023e-007 0";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "9";
+         locked = "1";
          initialWorldBox = "3.89999 -3.6 6.8 4.10001 3.6 9.5";
-         syncId = "54";
+         skipUpdate = "1";
          initialTransform = "4 2.98023e-007 0 0 0 1 1.5708";
-         locked = "0";
+         btBody = "9";
    };
    new StaticShape() {
       position = "-4 -1.78814e-007 0";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "10";
+         locked = "1";
          initialWorldBox = "-4.10001 -3.6 6.8 -3.89999 3.6 9.5";
-         syncId = "55";
+         skipUpdate = "1";
          initialTransform = "-4 -1.78814e-007 0 0 0 1 1.5708";
-         locked = "0";
+         btBody = "10";
    };
    new StaticShape() {
       position = "4 12 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "11";
-         initialWorldBox = "3.00616 11.0062 1.5 4.99384 12.9938 10.5";
-         syncId = "4";
+         locked = "1";
+         initialWorldBox = "3 11 1.5 5 13 10.5";
+         skipUpdate = "1";
          initialTransform = "4 12 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "11";
    };
    new StaticShape() {
       position = "4 16 1.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "12";
+         locked = "1";
          initialWorldBox = "3.89999 12.4 8.3 4.10001 19.6 11";
-         syncId = "8";
+         skipUpdate = "1";
          initialTransform = "4 16 1.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "12";
    };
    new StaticShape() {
       position = "4 20 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "13";
-         initialWorldBox = "3.00616 19.0062 1.5 4.99384 20.9938 10.5";
-         syncId = "9";
+         locked = "1";
+         initialWorldBox = "3 19 1.5 5 21 10.5";
+         skipUpdate = "1";
          initialTransform = "4 20 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "13";
    };
    new StaticShape() {
       position = "0 20 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "14";
+         locked = "1";
          initialWorldBox = "-3.6 19.9 8.3 3.6 20.1 11";
-         syncId = "11";
+         skipUpdate = "1";
          initialTransform = "0 20 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "14";
    };
    new StaticShape() {
       position = "-4 16 1.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "15";
+         locked = "1";
          initialWorldBox = "-4.10001 12.4 8.3 -3.89999 19.6 11";
-         syncId = "7";
+         skipUpdate = "1";
          initialTransform = "-4 16 1.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "15";
    };
    new StaticShape() {
       position = "-4 20 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "16";
-         initialWorldBox = "-4.99384 19.0062 1.5 -3.00616 20.9938 10.5";
-         syncId = "10";
+         locked = "1";
+         initialWorldBox = "-5 19 1.5 -3 21 10.5";
+         skipUpdate = "1";
          initialTransform = "-4 20 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "16";
    };
    new StaticShape() {
       position = "-4 12 1.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "17";
-         initialWorldBox = "-4.99384 11.0062 1.5 -3.00616 12.9938 10.5";
-         syncId = "3";
+         locked = "1";
+         initialWorldBox = "-5 11 1.5 -3 13 10.5";
+         skipUpdate = "1";
          initialTransform = "-4 12 1.5 1 0 0 0";
-         locked = "0";
+         btBody = "17";
    };
    new StaticShape() {
       position = "-24 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "18";
+         locked = "1";
          initialWorldBox = "-27.6 35.9 11.3 -20.4 36.1 14";
-         syncId = "41";
+         skipUpdate = "1";
          initialTransform = "-24 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "18";
    };
    new StaticShape() {
       position = "4 36 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "19";
-         initialWorldBox = "3.00616 35.0062 3 4.99384 36.9938 12";
-         syncId = "26";
+         locked = "1";
+         initialWorldBox = "3 35 3 5 37 12";
+         skipUpdate = "1";
          initialTransform = "4 36 3 1 0 0 0";
-         locked = "0";
+         btBody = "19";
    };
    new StaticShape() {
       position = "4 32 3";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "20";
+         locked = "1";
          initialWorldBox = "3.89999 28.4 9.8 4.10001 35.6 12.5";
-         syncId = "18";
+         skipUpdate = "1";
          initialTransform = "4 32 3 0 0 1 1.5708";
-         locked = "0";
+         btBody = "20";
    };
    new StaticShape() {
       position = "4 28 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "21";
-         initialWorldBox = "3.00616 27.0062 3 4.99384 28.9938 12";
-         syncId = "13";
+         locked = "1";
+         initialWorldBox = "3 27 3 5 29 12";
+         skipUpdate = "1";
          initialTransform = "4 28 3 1 0 0 0";
-         locked = "0";
+         btBody = "21";
    };
    new StaticShape() {
       position = "0 28 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "22";
+         locked = "1";
          initialWorldBox = "-3.6 27.9 9.8 3.6 28.1 12.5";
-         syncId = "14";
+         skipUpdate = "1";
          initialTransform = "0 28 3 1 0 0 0";
-         locked = "0";
+         btBody = "22";
    };
    new StaticShape() {
       position = "-4 28 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "23";
-         initialWorldBox = "-4.99384 27.0062 3 -3.00616 28.9938 12";
-         syncId = "12";
+         locked = "1";
+         initialWorldBox = "-5 27 3 -3 29 12";
+         skipUpdate = "1";
          initialTransform = "-4 28 3 1 0 0 0";
-         locked = "0";
+         btBody = "23";
    };
    new StaticShape() {
       position = "-4 32 3";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "24";
+         locked = "1";
          initialWorldBox = "-4.10001 28.4 9.8 -3.89999 35.6 12.5";
-         syncId = "17";
+         skipUpdate = "1";
          initialTransform = "-4 32 3 0 0 1 1.5708";
-         locked = "0";
+         btBody = "24";
    };
    new StaticShape() {
       position = "-4 36 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "25";
-         initialWorldBox = "-4.99384 35.0062 3 -3.00616 36.9938 12";
-         syncId = "25";
+         locked = "1";
+         initialWorldBox = "-5 35 3 -3 37 12";
+         skipUpdate = "1";
          initialTransform = "-4 36 3 1 0 0 0";
-         locked = "0";
+         btBody = "25";
    };
    new StaticShape() {
       position = "0 36 3";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "26";
+         locked = "1";
          initialWorldBox = "-3.6 35.9 9.8 3.6 36.1 12.5";
-         syncId = "27";
+         skipUpdate = "1";
          initialTransform = "0 36 3 1 0 0 0";
-         locked = "0";
+         btBody = "26";
    };
    new StaticShape() {
       position = "-12 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "27";
-         initialWorldBox = "-12.9938 35.0062 4.5 -11.0062 36.9938 13.5";
-         syncId = "30";
+         locked = "1";
+         initialWorldBox = "-13 35 4.5 -11 37 13.5";
+         skipUpdate = "1";
          initialTransform = "-12 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "27";
    };
    new StaticShape() {
       position = "-12 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "28";
+         locked = "1";
          initialWorldBox = "-12.1 28.4 11.3 -11.9 35.6 14";
-         syncId = "24";
+         skipUpdate = "1";
          initialTransform = "-12 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "28";
    };
    new StaticShape() {
       position = "-12 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "29";
-         initialWorldBox = "-12.9938 27.0062 4.5 -11.0062 28.9938 13.5";
-         syncId = "16";
+         locked = "1";
+         initialWorldBox = "-13 27 4.5 -11 29 13.5";
+         skipUpdate = "1";
          initialTransform = "-12 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "29";
    };
    new StaticShape() {
       position = "-16 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "30";
+         locked = "1";
          initialWorldBox = "-19.6 27.9 11.3 -12.4 28.1 14";
-         syncId = "20";
+         skipUpdate = "1";
          initialTransform = "-16 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "30";
    };
    new StaticShape() {
       position = "-20 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "31";
+         locked = "1";
          initialWorldBox = "-21 27 8.5 -19 29 13.5";
-         syncId = "22";
+         skipUpdate = "1";
          initialTransform = "-20 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "31";
    };
    new StaticShape() {
       position = "-20 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "32";
+         locked = "1";
          initialWorldBox = "-20.1 28.4 11.3 -19.9 35.6 14";
-         syncId = "33";
+         skipUpdate = "1";
          initialTransform = "-20 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "32";
    };
    new StaticShape() {
       position = "-20 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "33";
+         locked = "1";
          initialWorldBox = "-21 35 8.5 -19 37 13.5";
-         syncId = "37";
+         skipUpdate = "1";
          initialTransform = "-20 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "33";
    };
    new StaticShape() {
       position = "-16 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "34";
+         locked = "1";
          initialWorldBox = "-19.6 35.9 11.3 -12.4 36.1 14";
-         syncId = "35";
+         skipUpdate = "1";
          initialTransform = "-16 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "34";
    };
    new StaticShape() {
       position = "-28 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "35";
+         locked = "1";
          initialWorldBox = "-29 35 8.5 -27 37 13.5";
-         syncId = "43";
+         skipUpdate = "1";
          initialTransform = "-28 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "35";
    };
    new StaticShape() {
       position = "-28 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "36";
+         locked = "1";
          initialWorldBox = "-28.1 28.4 11.3 -27.9 35.6 14";
-         syncId = "39";
+         skipUpdate = "1";
          initialTransform = "-28 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "36";
    };
    new StaticShape() {
       position = "-28 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "37";
+         locked = "1";
          initialWorldBox = "-29 27 8.5 -27 29 13.5";
-         syncId = "59";
+         skipUpdate = "1";
          initialTransform = "-28 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "37";
    };
    new StaticShape() {
       position = "-32 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "38";
+         locked = "1";
          initialWorldBox = "-35.6 27.9 11.3 -28.4 28.1 14";
-         syncId = "60";
+         skipUpdate = "1";
          initialTransform = "-32 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "38";
    };
    new StaticShape() {
       position = "-36 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "39";
-         initialWorldBox = "-36.9938 27.0062 4.5 -35.0062 28.9938 13.5";
-         syncId = "62";
+         locked = "1";
+         initialWorldBox = "-37 27 4.5 -35 29 13.5";
+         skipUpdate = "1";
          initialTransform = "-36 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "39";
    };
    new StaticShape() {
       position = "-36 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "40";
+         locked = "1";
          initialWorldBox = "-36.1 28.4 11.3 -35.9 35.6 14";
-         syncId = "65";
+         skipUpdate = "1";
          initialTransform = "-36 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "40";
    };
    new StaticShape() {
       position = "-36 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "41";
-         initialWorldBox = "-36.9938 35.0062 4.5 -35.0062 36.9938 13.5";
-         syncId = "66";
+         locked = "1";
+         initialWorldBox = "-37 35 4.5 -35 37 13.5";
+         skipUpdate = "1";
          initialTransform = "-36 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "41";
    };
    new StaticShape() {
       position = "-32 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "42";
+         locked = "1";
          initialWorldBox = "-35.6 35.9 11.3 -28.4 36.1 14";
-         syncId = "45";
+         skipUpdate = "1";
          initialTransform = "-32 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "42";
    };
    new StaticShape() {
       position = "36 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "43";
-         initialWorldBox = "35.0062 35.0062 4.5 36.9938 36.9938 13.5";
-         syncId = "67";
+         locked = "1";
+         initialWorldBox = "35 35 4.5 37 37 13.5";
+         skipUpdate = "1";
          initialTransform = "36 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "43";
    };
    new StaticShape() {
       position = "36 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "44";
+         locked = "1";
          initialWorldBox = "35.9 28.4 11.3 36.1 35.6 14";
-         syncId = "64";
+         skipUpdate = "1";
          initialTransform = "36 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "44";
    };
    new StaticShape() {
       position = "36 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "45";
-         initialWorldBox = "35.0062 27.0062 4.5 36.9938 28.9938 13.5";
-         syncId = "63";
+         locked = "1";
+         initialWorldBox = "35 27 4.5 37 29 13.5";
+         skipUpdate = "1";
          initialTransform = "36 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "45";
    };
    new StaticShape() {
       position = "32 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "46";
+         locked = "1";
          initialWorldBox = "28.4 27.9 11.3 35.6 28.1 14";
-         syncId = "61";
+         skipUpdate = "1";
          initialTransform = "32 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "46";
    };
    new StaticShape() {
       position = "28 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "47";
+         locked = "1";
          initialWorldBox = "27 27 8.5 29 29 13.5";
-         syncId = "58";
+         skipUpdate = "1";
          initialTransform = "28 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "47";
    };
    new StaticShape() {
       position = "28 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "48";
+         locked = "1";
          initialWorldBox = "27.9 28.4 11.3 28.1 35.6 14";
-         syncId = "38";
+         skipUpdate = "1";
          initialTransform = "28 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "48";
    };
    new StaticShape() {
       position = "28 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "49";
+         locked = "1";
          initialWorldBox = "27 35 8.5 29 37 13.5";
-         syncId = "42";
+         skipUpdate = "1";
          initialTransform = "28 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "49";
    };
    new StaticShape() {
       position = "32 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "50";
+         locked = "1";
          initialWorldBox = "28.4 35.9 11.3 35.6 36.1 14";
-         syncId = "44";
+         skipUpdate = "1";
          initialTransform = "32 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "50";
    };
    new StaticShape() {
       position = "20 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "51";
+         locked = "1";
          initialWorldBox = "19 35 8.5 21 37 13.5";
-         syncId = "36";
+         skipUpdate = "1";
          initialTransform = "20 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "51";
    };
    new StaticShape() {
       position = "20 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "52";
+         locked = "1";
          initialWorldBox = "19.9 28.4 11.3 20.1 35.6 14";
-         syncId = "32";
+         skipUpdate = "1";
          initialTransform = "20 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "52";
    };
    new StaticShape() {
       position = "20 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar2";
-         btBody = "53";
+         locked = "1";
          initialWorldBox = "19 27 8.5 21 29 13.5";
-         syncId = "21";
+         skipUpdate = "1";
          initialTransform = "20 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "53";
    };
    new StaticShape() {
       position = "16 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "54";
+         locked = "1";
          initialWorldBox = "12.4 27.9 11.3 19.6 28.1 14";
-         syncId = "19";
+         skipUpdate = "1";
          initialTransform = "16 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "54";
    };
    new StaticShape() {
       position = "12 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "55";
-         initialWorldBox = "11.0062 27.0062 4.5 12.9938 28.9938 13.5";
-         syncId = "15";
+         locked = "1";
+         initialWorldBox = "11 27 4.5 13 29 13.5";
+         skipUpdate = "1";
          initialTransform = "12 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "55";
    };
    new StaticShape() {
       position = "12 32 4.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "56";
+         locked = "1";
          initialWorldBox = "11.9 28.4 11.3 12.1 35.6 14";
-         syncId = "23";
+         skipUpdate = "1";
          initialTransform = "12 32 4.5 0 0 1 1.5708";
-         locked = "0";
+         btBody = "56";
    };
    new StaticShape() {
       position = "12 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Pillar";
-         btBody = "57";
-         initialWorldBox = "11.0062 35.0062 4.5 12.9938 36.9938 13.5";
-         syncId = "31";
+         locked = "1";
+         initialWorldBox = "11 35 4.5 13 37 13.5";
+         skipUpdate = "1";
          initialTransform = "12 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "57";
    };
    new StaticShape() {
       position = "16 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "58";
+         locked = "1";
          initialWorldBox = "12.4 35.9 11.3 19.6 36.1 14";
-         syncId = "34";
+         skipUpdate = "1";
          initialTransform = "16 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "58";
    };
    new StaticShape() {
       position = "24 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "59";
+         locked = "1";
          initialWorldBox = "20.4 27.9 11.3 27.6 28.1 14";
-         syncId = "29";
+         skipUpdate = "1";
          initialTransform = "24 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "59";
    };
    new StaticShape() {
       position = "24 36 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "60";
+         locked = "1";
          initialWorldBox = "20.4 35.9 11.3 27.6 36.1 14";
-         syncId = "40";
+         skipUpdate = "1";
          initialTransform = "24 36 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "60";
    };
    new StaticShape() {
       position = "-24 28 4.5";
       rotation = "1 0 0 0";
       scale = "1 1 1";
       dataBlock = "Arch";
-         btBody = "61";
+         locked = "1";
          initialWorldBox = "-27.6 27.9 11.3 -20.4 28.1 14";
-         syncId = "28";
+         skipUpdate = "1";
          initialTransform = "-24 28 4.5 1 0 0 0";
-         locked = "0";
+         btBody = "61";
    };
    new StaticShape() {
       position = "0 16 1.5";
       rotation = "0 0 1 90.0002";
       scale = "1 1 1";
       dataBlock = "BlastGiver";
-         btBody = "62";
-         initialWorldBox = "-1.14 14.86 1.5 1.14 17.14 2.1";
-         syncId = "6";
-         initialTransform = "0 16 1.5 0 0 1 1.5708";
          locked = "0";
+         initialWorldBox = "-1.19803 14.802 1.5 1.19803 17.198 2.1";
+         skipUpdate = "1";
+         
+         initialTransform = "0 16 1.5 0 0 1 1.5708";
+         btBody = "62";
+   };
+   new StaticShape(FF1) {
+      position = "0 20 5.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ForceField";
+         locked = "1";
+         initialWorldBox = "-4 20 0.2 4 20 10.2";
+         skipUpdate = "1";
+         initialTransform = "0 20 5.2 1 0 0 0";
+         btBody = "63";
+   };
+   new StaticShape(FF2_1) {
+      position = "0 35.93 6.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ForceField";
+         locked = "1";
+         initialWorldBox = "-4 35.93 1.7 4 35.93 11.7";
+         skipUpdate = "1";
+         initialTransform = "0 35.93 6.7 1 0 0 0";
+         btBody = "64";
+   };
+   new StaticShape(FF2_2) {
+      position = "0 36.07 6.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "ForceField";
+         locked = "1";
+         initialWorldBox = "-4 36.07 1.7 4 36.07 11.7";
+         skipUpdate = "1";
+         initialTransform = "0 36.07 6.7 1 0 0 0";
+         btBody = "65";
+   };
+   new StaticShape() {
+      position = "4 0 3.5";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BellPole";
+         locked = "1";
+         initialWorldBox = "3.89999 -4 3.5 4.10001 4 4.6";
+         skipUpdate = "1";
+         initialTransform = "4 0 3.5 0 0 -1 1.5708";
+         btBody = "66";
+   };
+   new StaticShape() {
+      position = "36.2 32 8.3";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BellPole";
+         locked = "1";
+         initialWorldBox = "36.1 28 8.3 36.3 36 9.4";
+         skipUpdate = "1";
+         initialTransform = "36.2 32 8.3 0 0 -1 1.5708";
+         btBody = "67";
+   };
+   new StaticShape() {
+      position = "0 32 3";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BlastGiver";
+         locked = "0";
+         initialWorldBox = "-1.19803 30.802 3 1.19803 33.198 3.6";
+         skipUpdate = "1";
+         
+         initialTransform = "0 32 3 0 0 1 1.5708";
+         btBody = "68";
+   };
+   new StaticShape() {
+      position = "-14 32 11.3";
+      rotation = "0 0 -1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "BellPole";
+         locked = "1";
+         initialWorldBox = "-14.1 28 11.3 -13.9 36 12.4";
+         skipUpdate = "1";
+         initialTransform = "-14 32 11.3 0 0 -1 1.5708";
+         btBody = "69";
+   };
+   new StaticShape() {
+      position = "-14 32 9.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Bell";
+         initialWorldBox = "-15.1368 30.8632 9.65677 -12.8632 33.1368 11.3407";
+         initialTransform = "-14 32 9.3 1 0 0 0";
+         callback = "lowerField";
+         arg0 = "FF2_1";
+   };
+   new StaticShape() {
+      position = "36.2 32 6.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Bell";
+         initialWorldBox = "35.0632 30.8632 6.65677 37.3368 33.1368 8.34067";
+         initialTransform = "36.2 32 6.3 1 0 0 0";
+         callback = "lowerField";
+         arg0 = "FF2_2";
+   };
+   new StaticShape(TheGun) {
+      position = "0 232 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "BeamGun";
+         locked = "1";
+         initialWorldBox = "-1.5 230 10.5 1.5 237.5 13";
+         skipUpdate = "1";
+         initialTransform = "0 232 10.5 1 0 0 0";
+         btBody = "70";
+   };
+   new StaticShape() {
+      position = "31 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 133 10.5 32 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 134 10.5 1 0 0 0";
+         btBody = "71";
+   };
+   new StaticShape() {
+      position = "27 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 133 10.5 28 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "27 134 10.5 1 0 0 0";
+         btBody = "72";
+   };
+   new StaticShape() {
+      position = "23 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 133 10.5 24 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "23 134 10.5 1 0 0 0";
+         btBody = "73";
+   };
+   new StaticShape() {
+      position = "19 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 133 10.5 20 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "19 134 10.5 1 0 0 0";
+         btBody = "74";
+   };
+   new StaticShape() {
+      position = "15 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 133 10.5 16 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "15 134 10.5 1 0 0 0";
+         btBody = "75";
+   };
+   new StaticShape() {
+      position = "11 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 133 10.5 12 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "11 134 10.5 1 0 0 0";
+         btBody = "76";
+   };
+   new StaticShape() {
+      position = "7 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 133 10.5 8 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "7 134 10.5 1 0 0 0";
+         btBody = "77";
+   };
+   new StaticShape() {
+      position = "3 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 133 10.5 4 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "3 134 10.5 1 0 0 0";
+         btBody = "78";
+   };
+   new StaticShape() {
+      position = "-3 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 133 10.5 -2 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-3 134 10.5 1 0 0 0";
+         btBody = "79";
+   };
+   new StaticShape() {
+      position = "-7 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 133 10.5 -6 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-7 134 10.5 1 0 0 0";
+         btBody = "80";
+   };
+   new StaticShape() {
+      position = "-11 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 133 10.5 -10 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-11 134 10.5 1 0 0 0";
+         btBody = "81";
+   };
+   new StaticShape() {
+      position = "-15 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 133 10.5 -14 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-15 134 10.5 1 0 0 0";
+         btBody = "82";
+   };
+   new StaticShape() {
+      position = "-19 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 133 10.5 -18 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-19 134 10.5 1 0 0 0";
+         btBody = "83";
+   };
+   new StaticShape() {
+      position = "-23 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 133 10.5 -22 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-23 134 10.5 1 0 0 0";
+         btBody = "84";
+   };
+   new StaticShape() {
+      position = "-27 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 133 10.5 -26 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-27 134 10.5 1 0 0 0";
+         btBody = "85";
+   };
+   new StaticShape() {
+      position = "-31 134 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 133 10.5 -30 135 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 134 10.5 1 0 0 0";
+         btBody = "86";
+   };
+   new StaticShape() {
+      position = "31 138 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 137 10.5 32 139 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 138 10.5 1 0 0 0";
+         btBody = "87";
+   };
+   new StaticShape() {
+      position = "31 142 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 141 10.5 32 143 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 142 10.5 1 0 0 0";
+         btBody = "88";
+   };
+   new StaticShape() {
+      position = "31 146 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 145 10.5 32 147 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 146 10.5 1 0 0 0";
+         btBody = "89";
+   };
+   new StaticShape() {
+      position = "31 150 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 149 10.5 32 151 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 150 10.5 1 0 0 0";
+         btBody = "90";
+   };
+   new StaticShape() {
+      position = "31 154 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 153 10.5 32 155 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 154 10.5 1 0 0 0";
+         btBody = "91";
+   };
+   new StaticShape() {
+      position = "31 158 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 157 10.5 32 159 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 158 10.5 1 0 0 0";
+         btBody = "92";
+   };
+   new StaticShape() {
+      position = "31 162 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 161 10.5 32 163 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 162 10.5 1 0 0 0";
+         btBody = "93";
+   };
+   new StaticShape() {
+      position = "31 166 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 165 10.5 32 167 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 166 10.5 1 0 0 0";
+         btBody = "94";
+   };
+   new StaticShape() {
+      position = "31 170 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 169 10.5 32 171 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 170 10.5 1 0 0 0";
+         btBody = "95";
+   };
+   new StaticShape() {
+      position = "31 174 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 173 10.5 32 175 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 174 10.5 1 0 0 0";
+         btBody = "96";
+   };
+   new StaticShape() {
+      position = "31 178 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 177 10.5 32 179 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 178 10.5 1 0 0 0";
+         btBody = "97";
+   };
+   new StaticShape() {
+      position = "31 182 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 181 10.5 32 183 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 182 10.5 1 0 0 0";
+         btBody = "98";
+   };
+   new StaticShape() {
+      position = "31 186 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 185 10.5 32 187 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 186 10.5 1 0 0 0";
+         btBody = "99";
+   };
+   new StaticShape() {
+      position = "31 190 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 189 10.5 32 191 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 190 10.5 1 0 0 0";
+         btBody = "100";
+   };
+   new StaticShape() {
+      position = "31 194 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 193 10.5 32 195 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 194 10.5 1 0 0 0";
+         btBody = "101";
+   };
+   new StaticShape() {
+      position = "31 198 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 197 10.5 32 199 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 198 10.5 1 0 0 0";
+         btBody = "102";
+   };
+   new StaticShape() {
+      position = "31 202 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 201 10.5 32 203 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 202 10.5 1 0 0 0";
+         btBody = "103";
+   };
+   new StaticShape() {
+      position = "31 206 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 205 10.5 32 207 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 206 10.5 1 0 0 0";
+         btBody = "104";
+   };
+   new StaticShape() {
+      position = "31 210 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 209 10.5 32 211 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 210 10.5 1 0 0 0";
+         btBody = "105";
+   };
+   new StaticShape() {
+      position = "31 214 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 213 10.5 32 215 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 214 10.5 1 0 0 0";
+         btBody = "106";
+   };
+   new StaticShape() {
+      position = "31 218 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 217 10.5 32 219 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 218 10.5 1 0 0 0";
+         btBody = "107";
+   };
+   new StaticShape() {
+      position = "31 222 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 221 10.5 32 223 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 222 10.5 1 0 0 0";
+         btBody = "108";
+   };
+   new StaticShape() {
+      position = "31 226 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 225 10.5 32 227 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 226 10.5 1 0 0 0";
+         btBody = "109";
+   };
+   new StaticShape() {
+      position = "31 230 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 229 10.5 32 231 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 230 10.5 1 0 0 0";
+         btBody = "110";
+   };
+   new StaticShape() {
+      position = "31 234 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 233 10.5 32 235 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 234 10.5 1 0 0 0";
+         btBody = "111";
+   };
+   new StaticShape() {
+      position = "31 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 237 10.5 32 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "31 238 10.5 1 0 0 0";
+         btBody = "112";
+   };
+   new StaticShape() {
+      position = "-31 138 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 137 10.5 -30 139 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 138 10.5 1 0 0 0";
+         btBody = "113";
+   };
+   new StaticShape() {
+      position = "-31 142 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 141 10.5 -30 143 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 142 10.5 1 0 0 0";
+         btBody = "114";
+   };
+   new StaticShape() {
+      position = "-31 146 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 145 10.5 -30 147 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 146 10.5 1 0 0 0";
+         btBody = "115";
+   };
+   new StaticShape() {
+      position = "-31 150 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 149 10.5 -30 151 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 150 10.5 1 0 0 0";
+         btBody = "116";
+   };
+   new StaticShape() {
+      position = "-31 154 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 153 10.5 -30 155 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 154 10.5 1 0 0 0";
+         btBody = "117";
+   };
+   new StaticShape() {
+      position = "-31 158 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 157 10.5 -30 159 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 158 10.5 1 0 0 0";
+         btBody = "118";
+   };
+   new StaticShape() {
+      position = "-31 162 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 161 10.5 -30 163 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 162 10.5 1 0 0 0";
+         btBody = "119";
+   };
+   new StaticShape() {
+      position = "-31 166 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 165 10.5 -30 167 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 166 10.5 1 0 0 0";
+         btBody = "120";
+   };
+   new StaticShape() {
+      position = "-31 170 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 169 10.5 -30 171 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 170 10.5 1 0 0 0";
+         btBody = "121";
+   };
+   new StaticShape() {
+      position = "-31 174 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 173 10.5 -30 175 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 174 10.5 1 0 0 0";
+         btBody = "122";
+   };
+   new StaticShape() {
+      position = "-31 178 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 177 10.5 -30 179 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 178 10.5 1 0 0 0";
+         btBody = "123";
+   };
+   new StaticShape() {
+      position = "-31 182 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 181 10.5 -30 183 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 182 10.5 1 0 0 0";
+         btBody = "124";
+   };
+   new StaticShape() {
+      position = "-31 186 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 185 10.5 -30 187 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 186 10.5 1 0 0 0";
+         btBody = "125";
+   };
+   new StaticShape() {
+      position = "-31 190 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 189 10.5 -30 191 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 190 10.5 1 0 0 0";
+         btBody = "126";
+   };
+   new StaticShape() {
+      position = "-31 194 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 193 10.5 -30 195 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 194 10.5 1 0 0 0";
+         btBody = "127";
+   };
+   new StaticShape() {
+      position = "-31 198 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 197 10.5 -30 199 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 198 10.5 1 0 0 0";
+         btBody = "128";
+   };
+   new StaticShape() {
+      position = "-31 202 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 201 10.5 -30 203 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 202 10.5 1 0 0 0";
+         btBody = "129";
+   };
+   new StaticShape() {
+      position = "-31 206 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 205 10.5 -30 207 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 206 10.5 1 0 0 0";
+         btBody = "130";
+   };
+   new StaticShape() {
+      position = "-31 210 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 209 10.5 -30 211 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 210 10.5 1 0 0 0";
+         btBody = "131";
+   };
+   new StaticShape() {
+      position = "-31 214 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 213 10.5 -30 215 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 214 10.5 1 0 0 0";
+         btBody = "132";
+   };
+   new StaticShape() {
+      position = "-31 218 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 217 10.5 -30 219 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 218 10.5 1 0 0 0";
+         btBody = "133";
+   };
+   new StaticShape() {
+      position = "-31 222 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 221 10.5 -30 223 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 222 10.5 1 0 0 0";
+         btBody = "134";
+   };
+   new StaticShape() {
+      position = "-31 226 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 225 10.5 -30 227 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 226 10.5 1 0 0 0";
+         btBody = "135";
+   };
+   new StaticShape() {
+      position = "-31 230 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 229 10.5 -30 231 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 230 10.5 1 0 0 0";
+         btBody = "136";
+   };
+   new StaticShape() {
+      position = "-31 234 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 233 10.5 -30 235 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 234 10.5 1 0 0 0";
+         btBody = "137";
+   };
+   new StaticShape() {
+      position = "-31 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 237 10.5 -30 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-31 238 10.5 1 0 0 0";
+         btBody = "138";
+   };
+   new StaticShape() {
+      position = "27 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 237 10.5 28 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "27 238 10.5 1 0 0 0";
+         btBody = "139";
+   };
+   new StaticShape() {
+      position = "23 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 237 10.5 24 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "23 238 10.5 1 0 0 0";
+         btBody = "140";
+   };
+   new StaticShape() {
+      position = "19 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 237 10.5 20 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "19 238 10.5 1 0 0 0";
+         btBody = "141";
+   };
+   new StaticShape() {
+      position = "15 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 237 10.5 16 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "15 238 10.5 1 0 0 0";
+         btBody = "142";
+   };
+   new StaticShape() {
+      position = "11 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 237 10.5 12 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "11 238 10.5 1 0 0 0";
+         btBody = "143";
+   };
+   new StaticShape() {
+      position = "7 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 237 10.5 8 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "7 238 10.5 1 0 0 0";
+         btBody = "144";
+   };
+   new StaticShape() {
+      position = "3 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 237 10.5 4 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "3 238 10.5 1 0 0 0";
+         btBody = "145";
+   };
+   new StaticShape() {
+      position = "-3 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 237 10.5 -2 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-3 238 10.5 1 0 0 0";
+         btBody = "146";
+   };
+   new StaticShape() {
+      position = "-7 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 237 10.5 -6 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-7 238 10.5 1 0 0 0";
+         btBody = "147";
+   };
+   new StaticShape() {
+      position = "-11 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 237 10.5 -10 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-11 238 10.5 1 0 0 0";
+         btBody = "148";
+   };
+   new StaticShape() {
+      position = "-15 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 237 10.5 -14 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-15 238 10.5 1 0 0 0";
+         btBody = "149";
+   };
+   new StaticShape() {
+      position = "-19 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 237 10.5 -18 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-19 238 10.5 1 0 0 0";
+         btBody = "150";
+   };
+   new StaticShape() {
+      position = "-23 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 237 10.5 -22 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-23 238 10.5 1 0 0 0";
+         btBody = "151";
+   };
+   new StaticShape() {
+      position = "-27 238 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 237 10.5 -26 239 19.5";
+         skipUpdate = "1";
+         initialTransform = "-27 238 10.5 1 0 0 0";
+         btBody = "152";
+   };
+   new StaticShape() {
+      position = "31 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 133 21.5 32 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 134 21.5 1 0 0 0";
+         btBody = "153";
+   };
+   new StaticShape() {
+      position = "27 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 133 21.5 28 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "27 134 21.5 1 0 0 0";
+         btBody = "154";
+   };
+   new StaticShape() {
+      position = "23 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 133 21.5 24 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "23 134 21.5 1 0 0 0";
+         btBody = "155";
+   };
+   new StaticShape() {
+      position = "19 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 133 21.5 20 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "19 134 21.5 1 0 0 0";
+         btBody = "156";
+   };
+   new StaticShape() {
+      position = "15 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 133 21.5 16 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "15 134 21.5 1 0 0 0";
+         btBody = "157";
+   };
+   new StaticShape() {
+      position = "11 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 133 21.5 12 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "11 134 21.5 1 0 0 0";
+         btBody = "158";
+   };
+   new StaticShape() {
+      position = "7 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 133 21.5 8 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "7 134 21.5 1 0 0 0";
+         btBody = "159";
+   };
+   new StaticShape() {
+      position = "3 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 133 21.5 4 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "3 134 21.5 1 0 0 0";
+         btBody = "160";
+   };
+   new StaticShape() {
+      position = "-3 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 133 21.5 -2 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-3 134 21.5 1 0 0 0";
+         btBody = "161";
+   };
+   new StaticShape() {
+      position = "-7 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 133 21.5 -6 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-7 134 21.5 1 0 0 0";
+         btBody = "162";
+   };
+   new StaticShape() {
+      position = "-11 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 133 21.5 -10 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-11 134 21.5 1 0 0 0";
+         btBody = "163";
+   };
+   new StaticShape() {
+      position = "-15 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 133 21.5 -14 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-15 134 21.5 1 0 0 0";
+         btBody = "164";
+   };
+   new StaticShape() {
+      position = "-19 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 133 21.5 -18 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-19 134 21.5 1 0 0 0";
+         btBody = "165";
+   };
+   new StaticShape() {
+      position = "-23 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 133 21.5 -22 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-23 134 21.5 1 0 0 0";
+         btBody = "166";
+   };
+   new StaticShape() {
+      position = "-27 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 133 21.5 -26 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-27 134 21.5 1 0 0 0";
+         btBody = "167";
+   };
+   new StaticShape() {
+      position = "-31 134 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 133 21.5 -30 135 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 134 21.5 1 0 0 0";
+         btBody = "168";
+   };
+   new StaticShape() {
+      position = "31 138 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 137 21.5 32 139 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 138 21.5 1 0 0 0";
+         btBody = "169";
+   };
+   new StaticShape() {
+      position = "31 142 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 141 21.5 32 143 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 142 21.5 1 0 0 0";
+         btBody = "170";
+   };
+   new StaticShape() {
+      position = "31 146 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 145 21.5 32 147 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 146 21.5 1 0 0 0";
+         btBody = "171";
+   };
+   new StaticShape() {
+      position = "31 150 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 149 21.5 32 151 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 150 21.5 1 0 0 0";
+         btBody = "172";
+   };
+   new StaticShape() {
+      position = "31 154 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 153 21.5 32 155 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 154 21.5 1 0 0 0";
+         btBody = "173";
+   };
+   new StaticShape() {
+      position = "31 158 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 157 21.5 32 159 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 158 21.5 1 0 0 0";
+         btBody = "174";
+   };
+   new StaticShape() {
+      position = "31 162 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 161 21.5 32 163 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 162 21.5 1 0 0 0";
+         btBody = "175";
+   };
+   new StaticShape() {
+      position = "31 166 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 165 21.5 32 167 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 166 21.5 1 0 0 0";
+         btBody = "176";
+   };
+   new StaticShape() {
+      position = "31 170 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 169 21.5 32 171 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 170 21.5 1 0 0 0";
+         btBody = "177";
+   };
+   new StaticShape() {
+      position = "31 174 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 173 21.5 32 175 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 174 21.5 1 0 0 0";
+         btBody = "178";
+   };
+   new StaticShape() {
+      position = "31 178 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 177 21.5 32 179 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 178 21.5 1 0 0 0";
+         btBody = "179";
+   };
+   new StaticShape() {
+      position = "31 182 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 181 21.5 32 183 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 182 21.5 1 0 0 0";
+         btBody = "180";
+   };
+   new StaticShape() {
+      position = "31 186 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 185 21.5 32 187 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 186 21.5 1 0 0 0";
+         btBody = "181";
+   };
+   new StaticShape() {
+      position = "31 190 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 189 21.5 32 191 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 190 21.5 1 0 0 0";
+         btBody = "182";
+   };
+   new StaticShape() {
+      position = "31 194 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 193 21.5 32 195 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 194 21.5 1 0 0 0";
+         btBody = "183";
+   };
+   new StaticShape() {
+      position = "31 198 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 197 21.5 32 199 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 198 21.5 1 0 0 0";
+         btBody = "184";
+   };
+   new StaticShape() {
+      position = "31 202 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 201 21.5 32 203 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 202 21.5 1 0 0 0";
+         btBody = "185";
+   };
+   new StaticShape() {
+      position = "31 206 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 205 21.5 32 207 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 206 21.5 1 0 0 0";
+         btBody = "186";
+   };
+   new StaticShape() {
+      position = "31 210 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 209 21.5 32 211 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 210 21.5 1 0 0 0";
+         btBody = "187";
+   };
+   new StaticShape() {
+      position = "31 214 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 213 21.5 32 215 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 214 21.5 1 0 0 0";
+         btBody = "188";
+   };
+   new StaticShape() {
+      position = "31 218 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 217 21.5 32 219 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 218 21.5 1 0 0 0";
+         btBody = "189";
+   };
+   new StaticShape() {
+      position = "31 222 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 221 21.5 32 223 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 222 21.5 1 0 0 0";
+         btBody = "190";
+   };
+   new StaticShape() {
+      position = "31 226 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 225 21.5 32 227 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 226 21.5 1 0 0 0";
+         btBody = "191";
+   };
+   new StaticShape() {
+      position = "31 230 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 229 21.5 32 231 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 230 21.5 1 0 0 0";
+         btBody = "192";
+   };
+   new StaticShape() {
+      position = "31 234 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 233 21.5 32 235 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 234 21.5 1 0 0 0";
+         btBody = "193";
+   };
+   new StaticShape() {
+      position = "31 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 237 21.5 32 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "31 238 21.5 1 0 0 0";
+         btBody = "194";
+   };
+   new StaticShape() {
+      position = "-31 138 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 137 21.5 -30 139 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 138 21.5 1 0 0 0";
+         btBody = "195";
+   };
+   new StaticShape() {
+      position = "-31 142 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 141 21.5 -30 143 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 142 21.5 1 0 0 0";
+         btBody = "196";
+   };
+   new StaticShape() {
+      position = "-31 146 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 145 21.5 -30 147 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 146 21.5 1 0 0 0";
+         btBody = "197";
+   };
+   new StaticShape() {
+      position = "-31 150 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 149 21.5 -30 151 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 150 21.5 1 0 0 0";
+         btBody = "198";
+   };
+   new StaticShape() {
+      position = "-31 154 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 153 21.5 -30 155 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 154 21.5 1 0 0 0";
+         btBody = "199";
+   };
+   new StaticShape() {
+      position = "-31 158 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 157 21.5 -30 159 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 158 21.5 1 0 0 0";
+         btBody = "200";
+   };
+   new StaticShape() {
+      position = "-31 162 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 161 21.5 -30 163 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 162 21.5 1 0 0 0";
+         btBody = "201";
+   };
+   new StaticShape() {
+      position = "-31 166 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 165 21.5 -30 167 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 166 21.5 1 0 0 0";
+         btBody = "202";
+   };
+   new StaticShape() {
+      position = "-31 170 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 169 21.5 -30 171 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 170 21.5 1 0 0 0";
+         btBody = "203";
+   };
+   new StaticShape() {
+      position = "-31 174 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 173 21.5 -30 175 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 174 21.5 1 0 0 0";
+         btBody = "204";
+   };
+   new StaticShape() {
+      position = "-31 178 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 177 21.5 -30 179 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 178 21.5 1 0 0 0";
+         btBody = "205";
+   };
+   new StaticShape() {
+      position = "-31 182 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 181 21.5 -30 183 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 182 21.5 1 0 0 0";
+         btBody = "206";
+   };
+   new StaticShape() {
+      position = "-31 186 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 185 21.5 -30 187 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 186 21.5 1 0 0 0";
+         btBody = "207";
+   };
+   new StaticShape() {
+      position = "-31 190 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 189 21.5 -30 191 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 190 21.5 1 0 0 0";
+         btBody = "208";
+   };
+   new StaticShape() {
+      position = "-31 194 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 193 21.5 -30 195 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 194 21.5 1 0 0 0";
+         btBody = "209";
+   };
+   new StaticShape() {
+      position = "-31 198 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 197 21.5 -30 199 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 198 21.5 1 0 0 0";
+         btBody = "210";
+   };
+   new StaticShape() {
+      position = "-31 202 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 201 21.5 -30 203 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 202 21.5 1 0 0 0";
+         btBody = "211";
+   };
+   new StaticShape() {
+      position = "-31 206 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 205 21.5 -30 207 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 206 21.5 1 0 0 0";
+         btBody = "212";
+   };
+   new StaticShape() {
+      position = "-31 210 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 209 21.5 -30 211 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 210 21.5 1 0 0 0";
+         btBody = "213";
+   };
+   new StaticShape() {
+      position = "-31 214 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 213 21.5 -30 215 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 214 21.5 1 0 0 0";
+         btBody = "214";
+   };
+   new StaticShape() {
+      position = "-31 218 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 217 21.5 -30 219 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 218 21.5 1 0 0 0";
+         btBody = "215";
+   };
+   new StaticShape() {
+      position = "-31 222 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 221 21.5 -30 223 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 222 21.5 1 0 0 0";
+         btBody = "216";
+   };
+   new StaticShape() {
+      position = "-31 226 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 225 21.5 -30 227 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 226 21.5 1 0 0 0";
+         btBody = "217";
+   };
+   new StaticShape() {
+      position = "-31 230 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 229 21.5 -30 231 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 230 21.5 1 0 0 0";
+         btBody = "218";
+   };
+   new StaticShape() {
+      position = "-31 234 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 233 21.5 -30 235 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 234 21.5 1 0 0 0";
+         btBody = "219";
+   };
+   new StaticShape() {
+      position = "-31 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 237 21.5 -30 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-31 238 21.5 1 0 0 0";
+         btBody = "220";
+   };
+   new StaticShape() {
+      position = "27 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 237 21.5 28 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "27 238 21.5 1 0 0 0";
+         btBody = "221";
+   };
+   new StaticShape() {
+      position = "23 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 237 21.5 24 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "23 238 21.5 1 0 0 0";
+         btBody = "222";
+   };
+   new StaticShape() {
+      position = "19 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 237 21.5 20 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "19 238 21.5 1 0 0 0";
+         btBody = "223";
+   };
+   new StaticShape() {
+      position = "15 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 237 21.5 16 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "15 238 21.5 1 0 0 0";
+         btBody = "224";
+   };
+   new StaticShape() {
+      position = "11 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 237 21.5 12 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "11 238 21.5 1 0 0 0";
+         btBody = "225";
+   };
+   new StaticShape() {
+      position = "7 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 237 21.5 8 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "7 238 21.5 1 0 0 0";
+         btBody = "226";
+   };
+   new StaticShape() {
+      position = "3 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 237 21.5 4 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "3 238 21.5 1 0 0 0";
+         btBody = "227";
+   };
+   new StaticShape() {
+      position = "-3 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 237 21.5 -2 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-3 238 21.5 1 0 0 0";
+         btBody = "228";
+   };
+   new StaticShape() {
+      position = "-7 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 237 21.5 -6 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-7 238 21.5 1 0 0 0";
+         btBody = "229";
+   };
+   new StaticShape() {
+      position = "-11 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 237 21.5 -10 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-11 238 21.5 1 0 0 0";
+         btBody = "230";
+   };
+   new StaticShape() {
+      position = "-15 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 237 21.5 -14 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-15 238 21.5 1 0 0 0";
+         btBody = "231";
+   };
+   new StaticShape() {
+      position = "-19 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 237 21.5 -18 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-19 238 21.5 1 0 0 0";
+         btBody = "232";
+   };
+   new StaticShape() {
+      position = "-23 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 237 21.5 -22 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-23 238 21.5 1 0 0 0";
+         btBody = "233";
+   };
+   new StaticShape() {
+      position = "-27 238 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 237 21.5 -26 239 30.5";
+         skipUpdate = "1";
+         initialTransform = "-27 238 21.5 1 0 0 0";
+         btBody = "234";
+   };
+   new StaticShape() {
+      position = "31 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 133 32.5 32 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 134 32.5 1 0 0 0";
+         btBody = "235";
+   };
+   new StaticShape() {
+      position = "27 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 133 32.5 28 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "27 134 32.5 1 0 0 0";
+         btBody = "236";
+   };
+   new StaticShape() {
+      position = "23 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 133 32.5 24 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "23 134 32.5 1 0 0 0";
+         btBody = "237";
+   };
+   new StaticShape() {
+      position = "19 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 133 32.5 20 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "19 134 32.5 1 0 0 0";
+         btBody = "238";
+   };
+   new StaticShape() {
+      position = "15 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 133 32.5 16 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "15 134 32.5 1 0 0 0";
+         btBody = "239";
+   };
+   new StaticShape() {
+      position = "11 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 133 32.5 12 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "11 134 32.5 1 0 0 0";
+         btBody = "240";
+   };
+   new StaticShape() {
+      position = "7 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 133 32.5 8 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "7 134 32.5 1 0 0 0";
+         btBody = "241";
+   };
+   new StaticShape() {
+      position = "3 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 133 32.5 4 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "3 134 32.5 1 0 0 0";
+         btBody = "242";
+   };
+   new StaticShape() {
+      position = "-3 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 133 32.5 -2 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-3 134 32.5 1 0 0 0";
+         btBody = "243";
+   };
+   new StaticShape() {
+      position = "-7 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 133 32.5 -6 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-7 134 32.5 1 0 0 0";
+         btBody = "244";
+   };
+   new StaticShape() {
+      position = "-11 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 133 32.5 -10 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-11 134 32.5 1 0 0 0";
+         btBody = "245";
+   };
+   new StaticShape() {
+      position = "-15 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 133 32.5 -14 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-15 134 32.5 1 0 0 0";
+         btBody = "246";
+   };
+   new StaticShape() {
+      position = "-19 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 133 32.5 -18 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-19 134 32.5 1 0 0 0";
+         btBody = "247";
+   };
+   new StaticShape() {
+      position = "-23 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 133 32.5 -22 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-23 134 32.5 1 0 0 0";
+         btBody = "248";
+   };
+   new StaticShape() {
+      position = "-27 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 133 32.5 -26 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-27 134 32.5 1 0 0 0";
+         btBody = "249";
+   };
+   new StaticShape() {
+      position = "-31 134 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 133 32.5 -30 135 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 134 32.5 1 0 0 0";
+         btBody = "250";
+   };
+   new StaticShape() {
+      position = "31 138 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 137 32.5 32 139 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 138 32.5 1 0 0 0";
+         btBody = "251";
+   };
+   new StaticShape() {
+      position = "31 142 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 141 32.5 32 143 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 142 32.5 1 0 0 0";
+         btBody = "252";
+   };
+   new StaticShape() {
+      position = "31 146 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 145 32.5 32 147 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 146 32.5 1 0 0 0";
+         btBody = "253";
+   };
+   new StaticShape() {
+      position = "31 150 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 149 32.5 32 151 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 150 32.5 1 0 0 0";
+         btBody = "254";
+   };
+   new StaticShape() {
+      position = "31 154 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 153 32.5 32 155 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 154 32.5 1 0 0 0";
+         btBody = "255";
+   };
+   new StaticShape() {
+      position = "31 158 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 157 32.5 32 159 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 158 32.5 1 0 0 0";
+         btBody = "256";
+   };
+   new StaticShape() {
+      position = "31 162 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 161 32.5 32 163 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 162 32.5 1 0 0 0";
+         btBody = "257";
+   };
+   new StaticShape() {
+      position = "31 166 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 165 32.5 32 167 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 166 32.5 1 0 0 0";
+         btBody = "258";
+   };
+   new StaticShape() {
+      position = "31 170 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 169 32.5 32 171 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 170 32.5 1 0 0 0";
+         btBody = "259";
+   };
+   new StaticShape() {
+      position = "31 174 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 173 32.5 32 175 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 174 32.5 1 0 0 0";
+         btBody = "260";
+   };
+   new StaticShape() {
+      position = "31 178 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 177 32.5 32 179 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 178 32.5 1 0 0 0";
+         btBody = "261";
+   };
+   new StaticShape() {
+      position = "31 182 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 181 32.5 32 183 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 182 32.5 1 0 0 0";
+         btBody = "262";
+   };
+   new StaticShape() {
+      position = "31 186 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 185 32.5 32 187 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 186 32.5 1 0 0 0";
+         btBody = "263";
+   };
+   new StaticShape() {
+      position = "31 190 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 189 32.5 32 191 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 190 32.5 1 0 0 0";
+         btBody = "264";
+   };
+   new StaticShape() {
+      position = "31 194 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 193 32.5 32 195 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 194 32.5 1 0 0 0";
+         btBody = "265";
+   };
+   new StaticShape() {
+      position = "31 198 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 197 32.5 32 199 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 198 32.5 1 0 0 0";
+         btBody = "266";
+   };
+   new StaticShape() {
+      position = "31 202 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 201 32.5 32 203 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 202 32.5 1 0 0 0";
+         btBody = "267";
+   };
+   new StaticShape() {
+      position = "31 206 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 205 32.5 32 207 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 206 32.5 1 0 0 0";
+         btBody = "268";
+   };
+   new StaticShape() {
+      position = "31 210 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 209 32.5 32 211 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 210 32.5 1 0 0 0";
+         btBody = "269";
+   };
+   new StaticShape() {
+      position = "31 214 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 213 32.5 32 215 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 214 32.5 1 0 0 0";
+         btBody = "270";
+   };
+   new StaticShape() {
+      position = "31 218 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 217 32.5 32 219 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 218 32.5 1 0 0 0";
+         btBody = "271";
+   };
+   new StaticShape() {
+      position = "31 222 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 221 32.5 32 223 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 222 32.5 1 0 0 0";
+         btBody = "272";
+   };
+   new StaticShape() {
+      position = "31 226 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 225 32.5 32 227 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 226 32.5 1 0 0 0";
+         btBody = "273";
+   };
+   new StaticShape() {
+      position = "31 230 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 229 32.5 32 231 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 230 32.5 1 0 0 0";
+         btBody = "274";
+   };
+   new StaticShape() {
+      position = "31 234 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 233 32.5 32 235 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 234 32.5 1 0 0 0";
+         btBody = "275";
+   };
+   new StaticShape() {
+      position = "31 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 237 32.5 32 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "31 238 32.5 1 0 0 0";
+         btBody = "276";
+   };
+   new StaticShape() {
+      position = "-31 138 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 137 32.5 -30 139 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 138 32.5 1 0 0 0";
+         btBody = "277";
+   };
+   new StaticShape() {
+      position = "-31 142 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 141 32.5 -30 143 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 142 32.5 1 0 0 0";
+         btBody = "278";
+   };
+   new StaticShape() {
+      position = "-31 146 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 145 32.5 -30 147 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 146 32.5 1 0 0 0";
+         btBody = "279";
+   };
+   new StaticShape() {
+      position = "-31 150 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 149 32.5 -30 151 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 150 32.5 1 0 0 0";
+         btBody = "280";
+   };
+   new StaticShape() {
+      position = "-31 154 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 153 32.5 -30 155 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 154 32.5 1 0 0 0";
+         btBody = "281";
+   };
+   new StaticShape() {
+      position = "-31 158 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 157 32.5 -30 159 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 158 32.5 1 0 0 0";
+         btBody = "282";
+   };
+   new StaticShape() {
+      position = "-31 162 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 161 32.5 -30 163 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 162 32.5 1 0 0 0";
+         btBody = "283";
+   };
+   new StaticShape() {
+      position = "-31 166 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 165 32.5 -30 167 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 166 32.5 1 0 0 0";
+         btBody = "284";
+   };
+   new StaticShape() {
+      position = "-31 170 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 169 32.5 -30 171 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 170 32.5 1 0 0 0";
+         btBody = "285";
+   };
+   new StaticShape() {
+      position = "-31 174 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 173 32.5 -30 175 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 174 32.5 1 0 0 0";
+         btBody = "286";
+   };
+   new StaticShape() {
+      position = "-31 178 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 177 32.5 -30 179 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 178 32.5 1 0 0 0";
+         btBody = "287";
+   };
+   new StaticShape() {
+      position = "-31 182 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 181 32.5 -30 183 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 182 32.5 1 0 0 0";
+         btBody = "288";
+   };
+   new StaticShape() {
+      position = "-31 186 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 185 32.5 -30 187 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 186 32.5 1 0 0 0";
+         btBody = "289";
+   };
+   new StaticShape() {
+      position = "-31 190 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 189 32.5 -30 191 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 190 32.5 1 0 0 0";
+         btBody = "290";
+   };
+   new StaticShape() {
+      position = "-31 194 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 193 32.5 -30 195 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 194 32.5 1 0 0 0";
+         btBody = "291";
+   };
+   new StaticShape() {
+      position = "-31 198 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 197 32.5 -30 199 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 198 32.5 1 0 0 0";
+         btBody = "292";
+   };
+   new StaticShape() {
+      position = "-31 202 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 201 32.5 -30 203 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 202 32.5 1 0 0 0";
+         btBody = "293";
+   };
+   new StaticShape() {
+      position = "-31 206 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 205 32.5 -30 207 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 206 32.5 1 0 0 0";
+         btBody = "294";
+   };
+   new StaticShape() {
+      position = "-31 210 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 209 32.5 -30 211 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 210 32.5 1 0 0 0";
+         btBody = "295";
+   };
+   new StaticShape() {
+      position = "-31 214 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 213 32.5 -30 215 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 214 32.5 1 0 0 0";
+         btBody = "296";
+   };
+   new StaticShape() {
+      position = "-31 218 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 217 32.5 -30 219 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 218 32.5 1 0 0 0";
+         btBody = "297";
+   };
+   new StaticShape() {
+      position = "-31 222 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 221 32.5 -30 223 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 222 32.5 1 0 0 0";
+         btBody = "298";
+   };
+   new StaticShape() {
+      position = "-31 226 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 225 32.5 -30 227 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 226 32.5 1 0 0 0";
+         btBody = "299";
+   };
+   new StaticShape() {
+      position = "-31 230 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 229 32.5 -30 231 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 230 32.5 1 0 0 0";
+         btBody = "300";
+   };
+   new StaticShape() {
+      position = "-31 234 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 233 32.5 -30 235 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 234 32.5 1 0 0 0";
+         btBody = "301";
+   };
+   new StaticShape() {
+      position = "-31 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 237 32.5 -30 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-31 238 32.5 1 0 0 0";
+         btBody = "302";
+   };
+   new StaticShape() {
+      position = "27 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 237 32.5 28 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "27 238 32.5 1 0 0 0";
+         btBody = "303";
+   };
+   new StaticShape() {
+      position = "23 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 237 32.5 24 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "23 238 32.5 1 0 0 0";
+         btBody = "304";
+   };
+   new StaticShape() {
+      position = "19 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 237 32.5 20 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "19 238 32.5 1 0 0 0";
+         btBody = "305";
+   };
+   new StaticShape() {
+      position = "15 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 237 32.5 16 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "15 238 32.5 1 0 0 0";
+         btBody = "306";
+   };
+   new StaticShape() {
+      position = "11 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 237 32.5 12 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "11 238 32.5 1 0 0 0";
+         btBody = "307";
+   };
+   new StaticShape() {
+      position = "7 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 237 32.5 8 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "7 238 32.5 1 0 0 0";
+         btBody = "308";
+   };
+   new StaticShape() {
+      position = "3 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 237 32.5 4 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "3 238 32.5 1 0 0 0";
+         btBody = "309";
+   };
+   new StaticShape() {
+      position = "-3 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 237 32.5 -2 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-3 238 32.5 1 0 0 0";
+         btBody = "310";
+   };
+   new StaticShape() {
+      position = "-7 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 237 32.5 -6 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-7 238 32.5 1 0 0 0";
+         btBody = "311";
+   };
+   new StaticShape() {
+      position = "-11 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 237 32.5 -10 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-11 238 32.5 1 0 0 0";
+         btBody = "312";
+   };
+   new StaticShape() {
+      position = "-15 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 237 32.5 -14 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-15 238 32.5 1 0 0 0";
+         btBody = "313";
+   };
+   new StaticShape() {
+      position = "-19 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 237 32.5 -18 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-19 238 32.5 1 0 0 0";
+         btBody = "314";
+   };
+   new StaticShape() {
+      position = "-23 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 237 32.5 -22 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-23 238 32.5 1 0 0 0";
+         btBody = "315";
+   };
+   new StaticShape() {
+      position = "-27 238 32.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 237 32.5 -26 239 41.5";
+         skipUpdate = "1";
+         initialTransform = "-27 238 32.5 1 0 0 0";
+         btBody = "316";
+   };
+   new StaticShape() {
+      position = "31 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 133 43.5 32 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 134 43.5 1 0 0 0";
+         btBody = "317";
+   };
+   new StaticShape() {
+      position = "27 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 133 43.5 28 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "27 134 43.5 1 0 0 0";
+         btBody = "318";
+   };
+   new StaticShape() {
+      position = "23 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 133 43.5 24 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "23 134 43.5 1 0 0 0";
+         btBody = "319";
+   };
+   new StaticShape() {
+      position = "19 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 133 43.5 20 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "19 134 43.5 1 0 0 0";
+         btBody = "320";
+   };
+   new StaticShape() {
+      position = "15 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 133 43.5 16 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "15 134 43.5 1 0 0 0";
+         btBody = "321";
+   };
+   new StaticShape() {
+      position = "11 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 133 43.5 12 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "11 134 43.5 1 0 0 0";
+         btBody = "322";
+   };
+   new StaticShape() {
+      position = "7 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 133 43.5 8 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "7 134 43.5 1 0 0 0";
+         btBody = "323";
+   };
+   new StaticShape() {
+      position = "3 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 133 43.5 4 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "3 134 43.5 1 0 0 0";
+         btBody = "324";
+   };
+   new StaticShape() {
+      position = "-3 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 133 43.5 -2 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-3 134 43.5 1 0 0 0";
+         btBody = "325";
+   };
+   new StaticShape() {
+      position = "-7 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 133 43.5 -6 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-7 134 43.5 1 0 0 0";
+         btBody = "326";
+   };
+   new StaticShape() {
+      position = "-11 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 133 43.5 -10 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-11 134 43.5 1 0 0 0";
+         btBody = "327";
+   };
+   new StaticShape() {
+      position = "-15 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 133 43.5 -14 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-15 134 43.5 1 0 0 0";
+         btBody = "328";
+   };
+   new StaticShape() {
+      position = "-19 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 133 43.5 -18 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-19 134 43.5 1 0 0 0";
+         btBody = "329";
+   };
+   new StaticShape() {
+      position = "-23 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 133 43.5 -22 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-23 134 43.5 1 0 0 0";
+         btBody = "330";
+   };
+   new StaticShape() {
+      position = "-27 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 133 43.5 -26 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-27 134 43.5 1 0 0 0";
+         btBody = "331";
+   };
+   new StaticShape() {
+      position = "-31 134 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 133 43.5 -30 135 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 134 43.5 1 0 0 0";
+         btBody = "332";
+   };
+   new StaticShape() {
+      position = "31 138 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 137 43.5 32 139 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 138 43.5 1 0 0 0";
+         btBody = "333";
+   };
+   new StaticShape() {
+      position = "31 142 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 141 43.5 32 143 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 142 43.5 1 0 0 0";
+         btBody = "334";
+   };
+   new StaticShape() {
+      position = "31 146 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 145 43.5 32 147 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 146 43.5 1 0 0 0";
+         btBody = "335";
+   };
+   new StaticShape() {
+      position = "31 150 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 149 43.5 32 151 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 150 43.5 1 0 0 0";
+         btBody = "336";
+   };
+   new StaticShape() {
+      position = "31 154 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 153 43.5 32 155 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 154 43.5 1 0 0 0";
+         btBody = "337";
+   };
+   new StaticShape() {
+      position = "31 158 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 157 43.5 32 159 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 158 43.5 1 0 0 0";
+         btBody = "338";
+   };
+   new StaticShape() {
+      position = "31 162 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 161 43.5 32 163 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 162 43.5 1 0 0 0";
+         btBody = "339";
+   };
+   new StaticShape() {
+      position = "31 166 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 165 43.5 32 167 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 166 43.5 1 0 0 0";
+         btBody = "340";
+   };
+   new StaticShape() {
+      position = "31 170 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 169 43.5 32 171 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 170 43.5 1 0 0 0";
+         btBody = "341";
+   };
+   new StaticShape() {
+      position = "31 174 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 173 43.5 32 175 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 174 43.5 1 0 0 0";
+         btBody = "342";
+   };
+   new StaticShape() {
+      position = "31 178 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 177 43.5 32 179 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 178 43.5 1 0 0 0";
+         btBody = "343";
+   };
+   new StaticShape() {
+      position = "31 182 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 181 43.5 32 183 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 182 43.5 1 0 0 0";
+         btBody = "344";
+   };
+   new StaticShape() {
+      position = "31 186 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 185 43.5 32 187 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 186 43.5 1 0 0 0";
+         btBody = "345";
+   };
+   new StaticShape() {
+      position = "31 190 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 189 43.5 32 191 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 190 43.5 1 0 0 0";
+         btBody = "346";
+   };
+   new StaticShape() {
+      position = "31 194 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 193 43.5 32 195 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 194 43.5 1 0 0 0";
+         btBody = "347";
+   };
+   new StaticShape() {
+      position = "31 198 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 197 43.5 32 199 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 198 43.5 1 0 0 0";
+         btBody = "348";
+   };
+   new StaticShape() {
+      position = "31 202 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 201 43.5 32 203 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 202 43.5 1 0 0 0";
+         btBody = "349";
+   };
+   new StaticShape() {
+      position = "31 206 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 205 43.5 32 207 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 206 43.5 1 0 0 0";
+         btBody = "350";
+   };
+   new StaticShape() {
+      position = "31 210 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 209 43.5 32 211 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 210 43.5 1 0 0 0";
+         btBody = "351";
+   };
+   new StaticShape() {
+      position = "31 214 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 213 43.5 32 215 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 214 43.5 1 0 0 0";
+         btBody = "352";
+   };
+   new StaticShape() {
+      position = "31 218 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 217 43.5 32 219 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 218 43.5 1 0 0 0";
+         btBody = "353";
+   };
+   new StaticShape() {
+      position = "31 222 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 221 43.5 32 223 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 222 43.5 1 0 0 0";
+         btBody = "354";
+   };
+   new StaticShape() {
+      position = "31 226 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 225 43.5 32 227 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 226 43.5 1 0 0 0";
+         btBody = "355";
+   };
+   new StaticShape() {
+      position = "31 230 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 229 43.5 32 231 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 230 43.5 1 0 0 0";
+         btBody = "356";
+   };
+   new StaticShape() {
+      position = "31 234 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 233 43.5 32 235 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 234 43.5 1 0 0 0";
+         btBody = "357";
+   };
+   new StaticShape() {
+      position = "31 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "30 237 43.5 32 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "31 238 43.5 1 0 0 0";
+         btBody = "358";
+   };
+   new StaticShape() {
+      position = "-31 138 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 137 43.5 -30 139 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 138 43.5 1 0 0 0";
+         btBody = "359";
+   };
+   new StaticShape() {
+      position = "-31 142 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 141 43.5 -30 143 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 142 43.5 1 0 0 0";
+         btBody = "360";
+   };
+   new StaticShape() {
+      position = "-31 146 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 145 43.5 -30 147 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 146 43.5 1 0 0 0";
+         btBody = "361";
+   };
+   new StaticShape() {
+      position = "-31 150 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 149 43.5 -30 151 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 150 43.5 1 0 0 0";
+         btBody = "362";
+   };
+   new StaticShape() {
+      position = "-31 154 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 153 43.5 -30 155 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 154 43.5 1 0 0 0";
+         btBody = "363";
+   };
+   new StaticShape() {
+      position = "-31 158 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 157 43.5 -30 159 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 158 43.5 1 0 0 0";
+         btBody = "364";
+   };
+   new StaticShape() {
+      position = "-31 162 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 161 43.5 -30 163 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 162 43.5 1 0 0 0";
+         btBody = "365";
+   };
+   new StaticShape() {
+      position = "-31 166 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 165 43.5 -30 167 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 166 43.5 1 0 0 0";
+         btBody = "366";
+   };
+   new StaticShape() {
+      position = "-31 170 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 169 43.5 -30 171 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 170 43.5 1 0 0 0";
+         btBody = "367";
+   };
+   new StaticShape() {
+      position = "-31 174 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 173 43.5 -30 175 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 174 43.5 1 0 0 0";
+         btBody = "368";
+   };
+   new StaticShape() {
+      position = "-31 178 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 177 43.5 -30 179 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 178 43.5 1 0 0 0";
+         btBody = "369";
+   };
+   new StaticShape() {
+      position = "-31 182 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 181 43.5 -30 183 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 182 43.5 1 0 0 0";
+         btBody = "370";
+   };
+   new StaticShape() {
+      position = "-31 186 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 185 43.5 -30 187 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 186 43.5 1 0 0 0";
+         btBody = "371";
+   };
+   new StaticShape() {
+      position = "-31 190 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 189 43.5 -30 191 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 190 43.5 1 0 0 0";
+         btBody = "372";
+   };
+   new StaticShape() {
+      position = "-31 194 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 193 43.5 -30 195 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 194 43.5 1 0 0 0";
+         btBody = "373";
+   };
+   new StaticShape() {
+      position = "-31 198 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 197 43.5 -30 199 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 198 43.5 1 0 0 0";
+         btBody = "374";
+   };
+   new StaticShape() {
+      position = "-31 202 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 201 43.5 -30 203 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 202 43.5 1 0 0 0";
+         btBody = "375";
+   };
+   new StaticShape() {
+      position = "-31 206 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 205 43.5 -30 207 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 206 43.5 1 0 0 0";
+         btBody = "376";
+   };
+   new StaticShape() {
+      position = "-31 210 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 209 43.5 -30 211 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 210 43.5 1 0 0 0";
+         btBody = "377";
+   };
+   new StaticShape() {
+      position = "-31 214 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 213 43.5 -30 215 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 214 43.5 1 0 0 0";
+         btBody = "378";
+   };
+   new StaticShape() {
+      position = "-31 218 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 217 43.5 -30 219 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 218 43.5 1 0 0 0";
+         btBody = "379";
+   };
+   new StaticShape() {
+      position = "-31 222 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 221 43.5 -30 223 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 222 43.5 1 0 0 0";
+         btBody = "380";
+   };
+   new StaticShape() {
+      position = "-31 226 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 225 43.5 -30 227 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 226 43.5 1 0 0 0";
+         btBody = "381";
+   };
+   new StaticShape() {
+      position = "-31 230 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 229 43.5 -30 231 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 230 43.5 1 0 0 0";
+         btBody = "382";
+   };
+   new StaticShape() {
+      position = "-31 234 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 233 43.5 -30 235 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 234 43.5 1 0 0 0";
+         btBody = "383";
+   };
+   new StaticShape() {
+      position = "-31 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-32 237 43.5 -30 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-31 238 43.5 1 0 0 0";
+         btBody = "384";
+   };
+   new StaticShape() {
+      position = "27 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "26 237 43.5 28 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "27 238 43.5 1 0 0 0";
+         btBody = "385";
+   };
+   new StaticShape() {
+      position = "23 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "22 237 43.5 24 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "23 238 43.5 1 0 0 0";
+         btBody = "386";
+   };
+   new StaticShape() {
+      position = "19 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "18 237 43.5 20 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "19 238 43.5 1 0 0 0";
+         btBody = "387";
+   };
+   new StaticShape() {
+      position = "15 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "14 237 43.5 16 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "15 238 43.5 1 0 0 0";
+         btBody = "388";
+   };
+   new StaticShape() {
+      position = "11 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "10 237 43.5 12 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "11 238 43.5 1 0 0 0";
+         btBody = "389";
+   };
+   new StaticShape() {
+      position = "7 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "6 237 43.5 8 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "7 238 43.5 1 0 0 0";
+         btBody = "390";
+   };
+   new StaticShape() {
+      position = "3 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "2 237 43.5 4 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "3 238 43.5 1 0 0 0";
+         btBody = "391";
+   };
+   new StaticShape() {
+      position = "-3 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-4 237 43.5 -2 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-3 238 43.5 1 0 0 0";
+         btBody = "392";
+   };
+   new StaticShape() {
+      position = "-7 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-8 237 43.5 -6 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-7 238 43.5 1 0 0 0";
+         btBody = "393";
+   };
+   new StaticShape() {
+      position = "-11 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-12 237 43.5 -10 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-11 238 43.5 1 0 0 0";
+         btBody = "394";
+   };
+   new StaticShape() {
+      position = "-15 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-16 237 43.5 -14 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-15 238 43.5 1 0 0 0";
+         btBody = "395";
+   };
+   new StaticShape() {
+      position = "-19 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-20 237 43.5 -18 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-19 238 43.5 1 0 0 0";
+         btBody = "396";
+   };
+   new StaticShape() {
+      position = "-23 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-24 237 43.5 -22 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-23 238 43.5 1 0 0 0";
+         btBody = "397";
+   };
+   new StaticShape() {
+      position = "-27 238 43.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-28 237 43.5 -26 239 52.5";
+         skipUpdate = "1";
+         initialTransform = "-27 238 43.5 1 0 0 0";
+         btBody = "398";
+   };
+   new StaticShape() {
+      position = "9 216 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "8 215 21.5 10 217 30.5";
+         skipUpdate = "1";
+         initialTransform = "9 216 21.5 1 0 0 0";
+         btBody = "399";
+   };
+   new StaticShape() {
+      position = "-9 216 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-10 215 21.5 -8 217 30.5";
+         skipUpdate = "1";
+         initialTransform = "-9 216 21.5 1 0 0 0";
+         btBody = "400";
+   };
+   new StaticShape() {
+      position = "9 198 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "8 197 21.5 10 199 30.5";
+         skipUpdate = "1";
+         initialTransform = "9 198 21.5 1 0 0 0";
+         btBody = "401";
+   };
+   new StaticShape() {
+      position = "-9 198 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-10 197 21.5 -8 199 30.5";
+         skipUpdate = "1";
+         initialTransform = "-9 198 21.5 1 0 0 0";
+         btBody = "402";
+   };
+   new StaticShape() {
+      position = "9 180 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "8 179 21.5 10 181 30.5";
+         skipUpdate = "1";
+         initialTransform = "9 180 21.5 1 0 0 0";
+         btBody = "403";
+   };
+   new StaticShape() {
+      position = "-9 180 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-10 179 21.5 -8 181 30.5";
+         skipUpdate = "1";
+         initialTransform = "-9 180 21.5 1 0 0 0";
+         btBody = "404";
+   };
+   new StaticShape() {
+      position = "9 162 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "8 161 21.5 10 163 30.5";
+         skipUpdate = "1";
+         initialTransform = "9 162 21.5 1 0 0 0";
+         btBody = "405";
+   };
+   new StaticShape() {
+      position = "-9 162 21.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Pillar";
+         locked = "1";
+         initialWorldBox = "-10 161 21.5 -8 163 30.5";
+         skipUpdate = "1";
+         initialTransform = "-9 162 21.5 1 0 0 0";
+         btBody = "406";
+   };
+   new StaticShape() {
+      position = "18 189 10.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "MirrorBroken";
+         locked = "1";
+         initialWorldBox = "14.4402 187.094 10.4955 22.4611 190.502 12.6139";
+         skipUpdate = "1";
+         initialTransform = "18 189 10.5 1 0 0 0";
+         btBody = "407";
+   };
+   new SimGroup(MirrorGroup) {
+
+      new StaticShape() {
+         position = "-18 225 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-19 224 10.5 -17 226 13.6";
+            skipUpdate = "1";
+            initialTransform = "-18 225 10.5 1 0 0 0";
+            btBody = "408";
+      };
+      new StaticShape() {
+         position = "18 153 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "17 152 10.5 19 154 13.6";
+            skipUpdate = "1";
+            initialTransform = "18 153 10.5 1 0 0 0";
+            btBody = "409";
+      };
+      new StaticShape() {
+         position = "-18 171 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-19 170 10.5 -17 172 13.6";
+            skipUpdate = "1";
+            initialTransform = "-18 171 10.5 1 0 0 0";
+            btBody = "410";
+      };
+      new StaticShape() {
+         position = "18 171 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "17 170 10.5 19 172 13.6";
+            skipUpdate = "1";
+            initialTransform = "18 171 10.5 1 0 0 0";
+            btBody = "411";
+      };
+      new StaticShape() {
+         position = "-18 189 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-19 188 10.5 -17 190 13.6";
+            skipUpdate = "1";
+            initialTransform = "-18 189 10.5 1 0 0 0";
+            btBody = "412";
+      };
+      new StaticShape() {
+         position = "0 189 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-1 188 10.5 1 190 13.6";
+            skipUpdate = "1";
+            initialTransform = "0 189 10.5 1 0 0 0";
+            btBody = "413";
+      };
+      new StaticShape() {
+         position = "-18 207 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-19 206 10.5 -17 208 13.6";
+            skipUpdate = "1";
+            initialTransform = "-18 207 10.5 1 0 0 0";
+            btBody = "414";
+      };
+      new StaticShape() {
+         position = "0 207 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "-1 206 10.5 1 208 13.6";
+            skipUpdate = "1";
+            initialTransform = "0 207 10.5 1 0 0 0";
+            btBody = "415";
+      };
+      new StaticShape() {
+         position = "18 207 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "17 206 10.5 19 208 13.6";
+            skipUpdate = "1";
+            initialTransform = "18 207 10.5 1 0 0 0";
+            btBody = "416";
+      };
+      new StaticShape() {
+         position = "18 225 10.5";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "Mirror";
+            locked = "1";
+            initialWorldBox = "17 224 10.5 19 226 13.6";
+            skipUpdate = "1";
+            initialTransform = "18 225 10.5 1 0 0 0";
+            btBody = "417";
+      };
+   };
+   new SimGroup(StreamGroup) {
+   };
+   new SimGroup(WallGroup) {
+      new Marker(wallmark) {
+      position = "9 225 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "27 225 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "18 234 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-18 234 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-18 216 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-27 225 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-27 207 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-9 207 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "27 207 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "0 198 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-27 189 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "27 189 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "0 180 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "27 171 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-27 171 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-27 153 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-9 153 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "9 153 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "27 153 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "18 144 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
+   new Marker(wallmark) {
+      position = "-18 144 11.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      seqNum = "0";
+      msToNext = "1000";
+      smoothingType = "Linear";
+   };
    };
    new AudioProfile(MusicProfile) {
       fileName = "~/data/Shared/sound/Shell.ogg";
@@ -811,3 +5068,4 @@ new SimGroup(MissionGroup) {
    };
 };
 //--- OBJECT WRITE END ---
+
